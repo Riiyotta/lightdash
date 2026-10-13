@@ -1,0 +1,135 @@
+{
+  "fontFamily": {
+    "britti": {
+      "$value": "Britti Sans Medium",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:80",
+          "quote": "britti: ["
+        },
+        {
+          "ref": "src/index.css:3",
+          "quote": "font-family: 'Britti Sans Medium';"
+        }
+      ]
+    },
+    "inter": {
+      "$value": "Inter",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:81",
+          "quote": "inter: ["
+        },
+        {
+          "ref": "src/index.css:28",
+          "quote": "font-family: 'Inter';"
+        }
+      ]
+    },
+    "britti-semi": {
+      "$value": "Britti Sans Trial Semibold",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:82",
+          "quote": "'britti-semi': ["
+        },
+        {
+          "ref": "src/index.css:16",
+          "quote": "font-family: 'Britti Sans Trial Semibold';"
+        }
+      ]
+    },
+    "inter-var": {
+      "$value": "Inter Variable",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:83",
+          "quote": "'inter-var': ["
+        },
+        {
+          "ref": "src/index.css:52",
+          "quote": "font-family: 'Inter Variable';"
+        }
+      ]
+    },
+    "pixelify": {
+      "$value": "Pixelify Sans",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:84",
+          "quote": "pixelify: ["
+        },
+        {
+          "ref": "src/index.css:96",
+          "quote": "font-family: 'Pixelify Sans';"
+        }
+      ]
+    },
+    "fragment-mono": {
+      "$value": "Fragment Mono",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:85",
+          "quote": "'fragment-mono': ["
+        },
+        {
+          "ref": "src/index.css:103",
+          "quote": "font-family: 'Fragment Mono';"
+        }
+      ]
+    },
+    "geist": {
+      "$value": "Geist",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:86",
+          "quote": "geist: ["
+        },
+        {
+          "ref": "src/index.css:110",
+          "quote": "font-family: 'Geist';"
+        }
+      ]
+    },
+    "britti-regular": {
+      "$value": "Britti Sans Trial Regular",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "src/index.css:10",
+          "quote": "font-family: 'Britti Sans Trial Regular';"
+        }
+      ],
+      "note": "declared only (CLONE_SPEC 1.3)"
+    },
+    "britti-bold": {
+      "$value": "Britti Sans Trial Bold",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "src/index.css:22",
+          "quote": "font-family: 'Britti Sans Trial Bold';"
+        }
+      ],
+      "note": "declared only"
+    },
+    "press-start": {
+      "$value": "Press Start 2P",
+      "$type": "fontFamily",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:87",
+          "quote": "| Press Start 2P |"
+        }
+      ],
+      "note": "Game Boy iframe app only; not used by any authorable section"
+    }
+  }
+}

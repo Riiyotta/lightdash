@@ -1,0 +1,88 @@
+{
+  "id": "features.alternating-rows",
+  "category": "FEATURES",
+  "purpose": "Boxed 1280x1620 block on /bi-as-code: centred heading then three 408-tall rows alternating image left/right (576x408 image, h3-32 + 14px body), dashed rules and pixel-tile decorations.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/bi-as-code/AlternatingRows.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 13,
+        "observedMaxWords": 10,
+        "wcRef": "features.alternating-rows.heading"
+      },
+      "rows": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 9,
+            "observedMaxWords": 7,
+            "wcRef": "features.alternating-rows.rows[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 42,
+            "observedMaxWords": 33,
+            "wcRef": "features.alternating-rows.rows[].body"
+          },
+          "image": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "screenshot.product-ui"
+            ]
+          },
+          "imageSide": {
+            "type": "enum",
+            "required": true,
+            "values": [
+              "left",
+              "right"
+            ]
+          }
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "text above image (order-1 / order-2), rows lose the fixed 408 height",
+      "cssCite": "src/components/pages/bi-as-code/AlternatingRows.jsx:22"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/bi-as-code/AlternatingRows.jsx:4",
+    "src/pages/data/bi-as-code.jsx:63"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-bi-as-code"
+  ]
+}

@@ -1,0 +1,28 @@
+/* Page-local overrides for /data-apps (specs/product-pages.md §2.2 + Appendix B). */
+
+/* Live-site quirk (reference/pages/data-apps-390.png, page height 16524): the 1x3 feature grids keep
+   3 columns at every width, so on phones the copy breaks letter by letter. Replicated on purpose. */
+.da-force3 .grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.da-force3 .grid h3,
+.da-force3 .grid p {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* "A request that used to take a sprint…" (Appendix B): image well 358×477 (heading/lead phone sizes
+   come from the shared AccordionTabs). */
+.da-sprint .aspect-\[608\/609\] {
+  aspect-ratio: 358 / 477;
+}
+@media (min-width: 810px) {
+  .da-sprint .aspect-\[608\/609\] {
+    aspect-ratio: auto;
+  }
+}
+/* …and the heading / grid keep their desktop 72px side padding on phones too. */
+.da-force3 > div {
+  padding-left: 72px;
+  padding-right: 72px;
+}

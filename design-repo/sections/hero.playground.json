@@ -1,0 +1,88 @@
+{
+  "id": "hero.playground",
+  "category": "HERO",
+  "purpose": "Unfinished-draft hero on /playground: a two-line headline built from separate words with inline pixel-icon slots, lead, and \"Book a demo\" (opens the Cal modal) / \"Start for free\" (no href on live).",
+  "status": "unfinished-live-page",
+  "composable": true,
+  "evidenceNote": "/playground is a WIP duplicate of the old homepage on the live site; most blocks render empty there (ia.json template.playground).",
+  "implementedBy": "src/components/pages/playground/PlaygroundHero.jsx",
+  "content": {
+    "fields": {
+      "sub": {
+        "type": "text",
+        "required": true,
+        "maxWords": 18,
+        "observedMaxWords": 14,
+        "wcRef": "hero.playground.sub"
+      },
+      "buttons": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "cta",
+          "required": true,
+          "actions": [
+            "navigate-route",
+            "open-external",
+            "open-talk-modal"
+          ],
+          "labelMaxWords": 5,
+          "observedLabelMaxWords": 3,
+          "labelRef": "hero.playground.buttons[]Label"
+        },
+        "minItems": 0,
+        "maxItems": 2
+      },
+      "line1": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "hero.playground.line1"
+      },
+      "line2": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "hero.playground.line2"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "H1 48/46 instead of 76/68.4 and the 73px inner indent is removed",
+      "cssCite": "src/components/pages/playground/PlaygroundHero.jsx:43"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/playground/PlaygroundHero.jsx:4",
+    "src/pages/data/playground.js:7"
+  ],
+  "notes": [
+    "PlaygroundHero.jsx comments describe a word-reveal motion with [data-pg-word] hooks, but nothing in src/motion/useRouteMotion.js implements it and ia.json records \"the live page has no word-reveal\": the comment is stale, so no motion pattern is claimed.",
+    "Known gap: live shows a phone-only chat mockup below 810 that the clone does not build."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "playground"
+  ]
+}

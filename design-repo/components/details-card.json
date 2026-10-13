@@ -1,0 +1,17 @@
+{
+  "id": "details-card",
+  "kind": "component",
+  "purpose": "Light #F8FAFB well containing a white card: event details rows or the customer-story company facts, dashed rules.",
+  "props": [
+    "rows"
+  ],
+  "usedBySections": [
+    "content.event-details-card",
+    "content.story-sidebar"
+  ],
+  "measuredFrom": [
+    "src/pages/Event.jsx:11",
+    "src/pages/CustomerStory.jsx:16"
+  ],
+  "schemaVersion": "1.0.0"
+}

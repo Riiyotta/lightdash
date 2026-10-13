@@ -1,0 +1,70 @@
+{
+  "id": "content.hiring-callout",
+  "category": "CONTENT",
+  "purpose": "\"Join us - we are hiring!\" block (dashed top/bottom) with a lead line and a purple \"See open roles\" button. About only.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/About.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "observedMaxWords": 6,
+        "wcRef": "content.hiring-callout.heading"
+      },
+      "lead": {
+        "type": "text",
+        "required": true,
+        "maxWords": 17,
+        "observedMaxWords": 13,
+        "wcRef": "content.hiring-callout.lead"
+      },
+      "cta": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route",
+          "open-talk-modal"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "content.hiring-callout.ctaLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "heading 32/35.2 instead of 48/43.2",
+      "cssCite": "src/pages/About.jsx:100"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/About.jsx:96"
+  ],
+  "notes": [
+    "The live button targets the real job board (jobs.ashbyhq.com/lightdash): never reproduce it in a PageSpec (assets/asset-roles.json data.job-postings)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "about"
+  ]
+}

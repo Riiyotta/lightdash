@@ -1,0 +1,24 @@
+{
+  "elevation": {
+    "modal-card": {
+      "$value": "rgba(0,0,0,0.25) 0 1px 2px 0",
+      "$type": "shadow",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:89",
+          "quote": "'modal-card': 'rgba(0,0,0,0.25) 0 1px 2px 0'"
+        }
+      ]
+    },
+    "cta-card": {
+      "$value": "rgba(39,40,53,.1) 0 0 0 1px, rgba(39,40,53,.08) 0 24px 24px -12px, rgba(39,40,53,.08) 0 12px 12px -6px, rgba(39,40,53,.08) 0 6px 6px -3px, rgba(39,40,53,.08) 0 2px 2px -1px",
+      "$type": "shadow",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:92",
+          "quote": "'rgba(39,40,53,.1) 0 0 0 1px, rgba(39,40,53,.08) 0 24px 24px -12px"
+        }
+      ]
+    }
+  }
+}

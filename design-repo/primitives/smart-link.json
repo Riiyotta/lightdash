@@ -1,0 +1,37 @@
+{
+  "id": "smart-link",
+  "kind": "primitive",
+  "purpose": "Internal paths (\"./x\" or \"/x\") render a react-router Link; https hrefs render a plain anchor; no href renders a bare tag.",
+  "props": [
+    "href",
+    "newTab",
+    "as"
+  ],
+  "tokensUsed": [],
+  "usedBySections": [
+    "chrome.announcement-bar",
+    "chrome.footer",
+    "chrome.mobile-nav-dark",
+    "chrome.mobile-nav-light",
+    "chrome.navbar-dark",
+    "chrome.navbar-light",
+    "chrome.talk-modal",
+    "content.event-header",
+    "content.hiring-callout",
+    "content.not-found",
+    "content.youtube-replay",
+    "conversion.booking-split",
+    "cta.inline-post",
+    "cta.snake-band",
+    "cta.snake-band-narrow",
+    "hero.partnerships",
+    "listing.related-articles",
+    "listing.related-stories",
+    "proof.customer-quote-stats",
+    "proof.dark-testimonial-stats"
+  ],
+  "measuredFrom": [
+    "src/components/shared/SmartLink.jsx:4-16"
+  ],
+  "schemaVersion": "1.0.0"
+}

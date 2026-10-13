@@ -1,0 +1,110 @@
+{
+  "id": "content.roadmap-board",
+  "category": "CONTENT",
+  "purpose": "Four-column roadmap board (Backlog / Building / Beta / Completed): header (icon, title, sub) and a list of emoji + title items, some linking out. Completed scrolls independently (526 tall).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Roadmap.jsx > Column, Item",
+  "content": {
+    "fields": {
+      "columns": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "observedMaxWords": 1,
+            "wcRef": "content.roadmap-board.columns[].title"
+          },
+          "subtitle": {
+            "type": "text",
+            "required": true,
+            "maxWords": 7,
+            "observedMaxWords": 5,
+            "wcRef": "content.roadmap-board.columns[].subtitle"
+          },
+          "icon": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "icon.pixel-art"
+            ]
+          },
+          "items": {
+            "type": "list",
+            "required": true,
+            "item": {
+              "emoji": {
+                "type": "text",
+                "required": true,
+                "maxWords": 3,
+                "observedMaxWords": 1,
+                "wcRef": "content.roadmap-board.columns[].items[].emoji"
+              },
+              "title": {
+                "type": "text",
+                "required": true,
+                "maxWords": 18,
+                "observedMaxWords": 14,
+                "wcRef": "content.roadmap-board.columns[].items[].title"
+              },
+              "target": {
+                "type": "link",
+                "required": false,
+                "actions": [
+                  "navigate-route",
+                  "open-external"
+                ]
+              }
+            },
+            "minItems": 1,
+            "maxItems": 100
+          }
+        },
+        "minItems": 4,
+        "maxItems": 4
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "roadmap-pixel-slide",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "roadmap-pixel-slide": "static-final-state",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "roadmap-pixel-slide": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "columns stack; pixel strips hidden on phone",
+      "cssCite": "src/pages/Roadmap.jsx:90"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Roadmap.jsx:8",
+    "src/pages/data/roadmap.js:6",
+    "src/pages/data/roadmap.js:13"
+  ],
+  "notes": [
+    "Roadmap items are the real company roadmap (95 shipped items in the Completed column) with live docs links: real proprietary content.",
+    "Source note: the Building column reads \"Embed AI agents\" (the spec table had a capital-i/lowercase-L ambiguity)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "roadmap"
+  ]
+}

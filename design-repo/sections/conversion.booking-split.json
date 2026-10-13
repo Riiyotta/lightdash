@@ -1,0 +1,107 @@
+{
+  "id": "conversion.booking-split",
+  "category": "CONVERSION",
+  "purpose": "/start booking page: left column (H3, three bullets, a \"Want to skip the intro?\" box with a Sign Up button) and a 560x619 inline Cal.com embed on the right (iframe 1344 tall clipped). No banner, no CTA band.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Start.jsx > CalInline + src/components/shared/useCalInline.js",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "observedMaxWords": 6,
+        "wcRef": "conversion.booking-split.heading"
+      },
+      "intro": {
+        "type": "text",
+        "required": true,
+        "maxWords": 9,
+        "observedMaxWords": 7,
+        "wcRef": "conversion.booking-split.intro"
+      },
+      "bullets": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 10,
+          "observedMaxWords": 8,
+          "wcRef": "conversion.booking-split.bullets[]"
+        },
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "skipHeading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "conversion.booking-split.skipHeading"
+      },
+      "skipBody": {
+        "type": "text",
+        "required": true,
+        "maxWords": 22,
+        "observedMaxWords": 17,
+        "wcRef": "conversion.booking-split.skipBody"
+      },
+      "skipCta": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "open-external",
+          "navigate-route"
+        ],
+        "labelMaxWords": 4,
+        "observedLabelMaxWords": 2,
+        "labelRef": "conversion.booking-split.skipCtaLabel"
+      },
+      "booking": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "embed.booking-cal"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "the 747-tall one-row layout (padding 64, gap 32) stacks: text block then a 358x596 Cal block; bullets use shorter phone copy",
+      "cssCite": "src/pages/Start.jsx:29"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Start.jsx:5",
+    "src/pages/Start.jsx:10",
+    "src/components/shared/useCalInline.js:9"
+  ],
+  "notes": [
+    "The Cal embed is a LIVE booking endpoint (lightdash.cal.com): PageSpec carries only an embed.booking-cal slot reference (pinned must-not-reuse-live-endpoint).",
+    "The \"Sign Up\" button targets the real app.lightdash.cloud/register."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "start"
+  ]
+}

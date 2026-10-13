@@ -1,0 +1,42 @@
+{
+  "id": "app.view-pricing",
+  "category": "APP",
+  "purpose": "Game Boy app view \"Pricing\": three framed plan cards (Open Source / Cloud Pro $3000 / Enterprise) with mascots. An iframe state reached via the planet menu, NOT a route and NOT a PageSpec node.",
+  "status": "iframe-opaque",
+  "composable": false,
+  "fixedContent": true,
+  "evidenceNote": "Documented from CLONE_SPEC section 6 text and reference/sections screenshots; the app DOM is not inspected.",
+  "implementedBy": "src/components/Hero.jsx > iframe public/gameboy/index.html",
+  "content": {
+    "fields": {},
+    "additionalProperties": false
+  },
+  "constraints": {
+    "iframeStateOf": "hero.gameboy-app"
+  },
+  "motion": {
+    "allowedPatterns": [
+      "iframe-app"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "iframe-app": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "iframe-app": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "CLONE_SPEC.md:300",
+    "src/components/Hero.jsx:62"
+  ],
+  "notes": [
+    "Listed in templates.json template.home iframeStates, never in nodes (the schema has no node alternative for it)."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "home"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "content.story-header",
+  "category": "CONTENT",
+  "purpose": "Customer story header: breadcrumb (Customer stories / Company), H1 (max 780) and a 64px person row (\"A conversation with\" name . role).",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Titles and person names/roles are measured (specs/cms/customer-stories.json, 12 stories); story bodies, stats and quotes were not copied.",
+  "implementedBy": "src/pages/CustomerStory.jsx (inline) + src/components/cms/Breadcrumb.jsx",
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 20,
+        "observedMaxWords": 16,
+        "wcRef": "content.story-header.title"
+      },
+      "companyName": {
+        "type": "text",
+        "required": false,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "content.story-header.companyName"
+      },
+      "personName": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.story-header.personName"
+      },
+      "personRole": {
+        "type": "text",
+        "required": true,
+        "maxWords": 9,
+        "observedMaxWords": 7,
+        "wcRef": "content.story-header.personRole"
+      },
+      "personAvatar": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "photo.person-avatar"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "person row shows only name/role stacked; \"A conversation with\" hidden",
+      "cssCite": "src/pages/CustomerStory.jsx:70"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/CustomerStory.jsx:43",
+    "src/pages/CustomerStory.jsx:70",
+    "specs/cms/customer-stories.json:5"
+  ],
+  "notes": [
+    "/customer-story/ubie-jp is live but unlisted and Japanese (lang ja)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "customer-story"
+  ]
+}

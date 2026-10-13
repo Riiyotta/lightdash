@@ -1,0 +1,17 @@
+{
+  "id": "story-card",
+  "kind": "component",
+  "purpose": "Customer story card: logo row, 65px corner pixel, 20px title, \"Read full story\" + chevron; hover bg #F8F7FA and purple label.",
+  "props": [
+    "story",
+    "side"
+  ],
+  "usedBySections": [
+    "listing.story-card-grid",
+    "listing.related-stories"
+  ],
+  "measuredFrom": [
+    "src/components/cms/StoryCard.jsx:7"
+  ],
+  "schemaVersion": "1.0.0"
+}

@@ -1,0 +1,102 @@
+{
+  "id": "hero.company-centered",
+  "category": "HERO",
+  "purpose": "Centred hero on /startups, /roadmap, /lightdash-security and /jp: Template A title (display-56 or 72) between dashed rules, subtitle, optional button pair, optional corner pixel tiles.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "inline in src/pages/Startups.jsx, Roadmap.jsx, LightdashSecurity.jsx, Jp.jsx (pixel tiles: src/components/pages/startups/PixelTiles.jsx on startups/jp)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "hero.company-centered.heading"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 52,
+        "observedMaxWords": 41,
+        "wcRef": "hero.company-centered.subtitle"
+      },
+      "buttons": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "cta",
+          "required": true,
+          "actions": [
+            "navigate-route",
+            "open-external",
+            "open-talk-modal"
+          ],
+          "labelMaxWords": 6,
+          "observedLabelMaxWords": 4,
+          "labelRef": "hero.company-centered.buttons[]Label"
+        },
+        "minItems": 0,
+        "maxItems": 2
+      },
+      "pixelTiles": {
+        "type": "boolean",
+        "required": false
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "pixel-drop",
+      "roadmap-pixel-slide",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "pixel-drop": "static-final-state",
+      "roadmap-pixel-slide": "static-final-state",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "pixel-drop": "source-implemented",
+      "roadmap-pixel-slide": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "top spacer 100 -> 56 (security) and the h1 drops from 56px to 42px on /roadmap and /lightdash-security, 36px on /startups, 32px on /jp",
+      "cssCite": "src/pages/LightdashSecurity.jsx:39"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "only some left-cluster pixel tiles show (startups 3, jp 3)",
+      "cssCite": "src/components/pages/startups/PixelTiles.jsx:6"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Startups.jsx:94",
+    "src/pages/Roadmap.jsx:113",
+    "src/pages/LightdashSecurity.jsx:38",
+    "src/pages/Jp.jsx:65",
+    "src/motion/useRouteMotion.js:31"
+  ],
+  "notes": [
+    "/jp is Japanese copy (lang ja glyphs fall back to the OS CJK font; src/pages/Jp.jsx:7). Roadmap pixel strips are 16px and slide in (roadmap-pixel-slide); startups/jp tiles drop (pixel-drop).",
+    "Startups \"Talk to our team\" links to a live Cal.com page (lightdash.cal.com/lightdash/startups) and /jp \"デモ予約\" links to the absolute live URL https://www.lightdash.com/start: both are live endpoints that a PageSpec must express as open-talk-modal / navigate-route, never copy. Japanese copy has no spaces, so whitespace word counts treat a Japanese sentence as 1 word: maxWords is not a meaningful budget for /jp copy.",
+    "Startups renders two heading spans (\"Lightdash for startups\" phone / \"Lightdash for Startups\" desktop); the PageSpec carries the desktop casing."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "jp",
+    "lightdash-security",
+    "roadmap",
+    "startups"
+  ]
+}

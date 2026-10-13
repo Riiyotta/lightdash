@@ -1,0 +1,78 @@
+{
+  "id": "chrome.footer",
+  "category": "CHROME",
+  "purpose": "Dark #1A1B25 footer (600 tall at >=810, 826 at 390): 3 link columns, newsletter form (UI only), 8 G2 badges and 5 social links. Fixed data in Footer.jsx; not composable per page.",
+  "status": "measured",
+  "composable": true,
+  "fixedContent": true,
+  "implementedBy": "src/components/shared/Footer.jsx (mounted by src/layouts/InnerLayout.jsx)",
+  "content": {
+    "fields": {},
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeTalkModal": true,
+    "excludedFromChrome": [
+      "dark-home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "footer grows from 600 to 826 tall as columns stack",
+      "cssCite": "src/components/shared/Footer.jsx:3"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/Footer.jsx:6-47",
+    "src/components/shared/Footer.jsx:65-70"
+  ],
+  "notes": [
+    "The newsletter form is UI only: Footer.jsx comments that the live HubSpot endpoint was not inspected, so onSubmit just calls preventDefault. Footer links include live third-party endpoints (jobs.ashbyhq.com careers board, YouTube channel, Slack invite); they are fixed chrome data, never PageSpec content."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "about",
+    "beyond-copilots",
+    "blog-category",
+    "blog-index",
+    "blog-post",
+    "customer-stories",
+    "customer-story",
+    "event",
+    "fintech",
+    "integrations",
+    "jp",
+    "legal",
+    "lightdash-security",
+    "not-found",
+    "padel-apply",
+    "partnerships",
+    "playground",
+    "pricing",
+    "product-bi-as-code",
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-data-apps",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-metrics-catalog",
+    "product-self-improving-analytics",
+    "roadmap",
+    "start",
+    "startups"
+  ]
+}

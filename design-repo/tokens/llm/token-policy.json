@@ -1,0 +1,72 @@
+{
+  "$description": "What is enforced vs convention for token use. Category keys are real token-catalog.json keys (checked by verify_all.py).",
+  "allowlistVersion": "1.0.0",
+  "rawValueRestrictions": {
+    "color": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "fontFamily": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "typography": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "radius": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "spacing": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "breakpoint": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "elevation": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "iconSize": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "layout": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "easing": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "spring": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "duration": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "delay": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    },
+    "distance": {
+      "rule": "reference-tokens-only",
+      "enforcement": "convention"
+    }
+  },
+  "overrides": {
+    "perInstanceTokenOverrides": "not-supported",
+    "note": "PageSpec nodes carry only section, content and motion (the structural variant of a section is a content enum field named by the variantField key of its contract). There is no style / token-override field, so styling is owned entirely by the section and component contracts and there is nothing to validate or mutate at PageSpec level. Token drift is guarded at the catalog / policy layer (verify_all.py parity checks), not per page."
+  },
+  "enforced": [
+    "motion.pattern is a closed enum per section; reducedMotionFallback and reducedMotionBasis are const-locked per pattern (schema + semantic_validate.py against tokens/00-foundation/motion-patterns.json)",
+    "media assetRole is a closed enum per field and assetRef must be a slot id (^slot-[a-z0-9-]+$), never a URL (schema)",
+    "no live third-party endpoint string anywhere in a PageSpec (semantic_validate.py NO_LIVE_ENDPOINT, patterns in assets/asset-roles.json)"
+  ],
+  "scopeNote": "The nine color.local-* tokens are page-local (scope \"page-local\" in color.json): they exist for fidelity to specific pages and should not be used to restyle other templates."
+}

@@ -1,0 +1,85 @@
+{
+  "id": "features.icon-benefits-grid",
+  "category": "FEATURES",
+  "purpose": "Centred h2 and a 2-column grid of benefit cells: 84x84 pixel-art icon cell, 84-tall title row and a body row, all dashed. Used by /conversational-analytics, /context-layer and /bi-as-code.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/IconBenefits.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "features.icon-benefits-grid.heading"
+      },
+      "items": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "icon": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "icon.pixel-art"
+            ]
+          },
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 6,
+            "observedMaxWords": 4,
+            "wcRef": "features.icon-benefits-grid.items[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 29,
+            "observedMaxWords": 23,
+            "wcRef": "features.icon-benefits-grid.items[].body"
+          }
+        },
+        "minItems": 4,
+        "maxItems": 6
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "two columns become one; side padding 65 -> 20",
+      "cssCite": "src/components/shared/IconBenefits.jsx:15"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/IconBenefits.jsx:3",
+    "src/pages/data/conversational-analytics.jsx:101",
+    "src/pages/data/bi-as-code.jsx:97"
+  ],
+  "notes": [
+    "The heading may contain a forced line break on /conversational-analytics (\"AI that gets better / the more you use it.\"); PageSpec heading is plain text."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-bi-as-code",
+    "product-context-layer",
+    "product-conversational-analytics"
+  ]
+}

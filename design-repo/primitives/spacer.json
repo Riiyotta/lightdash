@@ -1,0 +1,36 @@
+{
+  "id": "spacer",
+  "kind": "primitive",
+  "purpose": "Empty graph-paper spacer row (20/24/32/40/58/66/88/100 px) with a dashed bottom line.",
+  "props": [
+    "height",
+    "lines",
+    "dashed"
+  ],
+  "tokensUsed": [
+    "color.ld-line"
+  ],
+  "usedBySections": [
+    "content.event-details-card",
+    "content.event-header",
+    "content.legal-body",
+    "content.legal-header",
+    "content.not-found",
+    "content.post-header",
+    "content.post-toc",
+    "content.story-header",
+    "content.story-sidebar",
+    "content.story-stats-row",
+    "content.story-timeline",
+    "listing.blog-card-grid",
+    "listing.blog-filter-bar",
+    "listing.blog-header",
+    "listing.related-articles",
+    "listing.related-stories",
+    "listing.stories-header"
+  ],
+  "measuredFrom": [
+    "src/components/shared/Frame.jsx:57-65"
+  ],
+  "schemaVersion": "1.0.0"
+}

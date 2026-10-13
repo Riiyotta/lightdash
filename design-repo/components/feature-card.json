@@ -1,0 +1,21 @@
+{
+  "id": "feature-card",
+  "kind": "component",
+  "purpose": "Link-less card (title 24px, body 16px) in four layouts: 1x3 top rule, 3x2 bordered, 3x2-images with 228px screenshot, 2x2 dashed.",
+  "props": [
+    "title",
+    "body",
+    "image",
+    "layout"
+  ],
+  "usedBySections": [
+    "features.cards-1x3",
+    "features.cards-2x2-text",
+    "features.cards-3x2",
+    "features.cards-3x2-image"
+  ],
+  "measuredFrom": [
+    "src/components/shared/FeatureCards.jsx:8-16"
+  ],
+  "schemaVersion": "1.0.0"
+}

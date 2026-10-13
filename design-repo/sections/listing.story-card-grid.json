@@ -1,0 +1,62 @@
+{
+  "id": "listing.story-card-grid",
+  "category": "LISTING",
+  "purpose": "Story card grid (2 / 2 / 1 columns) of the 11 listed customer stories: #F8FAFB card with a 22px logo, 65px corner pixel, 20px title and \"Read full story\" with a chevron (grey to purple on hover).",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Story titles, order and logos are measured (specs/cms/customer-stories.json, 11 listed); story bodies are not.",
+  "implementedBy": "src/components/cms/StoryCard.jsx",
+  "content": {
+    "fields": {
+      "cardMode": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "from-cms"
+        ]
+      },
+      "readLabel": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "listing.story-card-grid.readLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "cards go from 2 columns to one with 24px padding",
+      "cssCite": "src/components/cms/StoryCard.jsx:8"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/cms/StoryCard.jsx:4",
+    "src/pages/CustomerStories.jsx:25",
+    "src/pages/data/cms.js:41"
+  ],
+  "notes": [
+    "ubie-jp is live but unlisted: it has a route and a story page but no card here."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "customer-stories"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "hero.gameboy-app",
+  "category": "HERO",
+  "purpose": "The entire homepage: a full-viewport iframe (public/gameboy/index.html, a Three.js Game Boy app) under the dark navbar. One viewport tall, no scroll, no footer. All content lives inside the opaque iframe app; the page has no PageSpec-composable DOM.",
+  "status": "iframe-opaque",
+  "composable": true,
+  "fixedContent": true,
+  "evidenceNote": "Only the iframe placement is measured from the parent DOM; the app internals are documented from CLONE_SPEC section 6 screenshots and are not re-derivable from DOM.",
+  "implementedBy": "src/components/Hero.jsx",
+  "content": {
+    "fields": {},
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "iframe-app"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "iframe-app": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "iframe-app": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(min-width: 1100px)",
+      "change": "iframe top 104, height 100vh-104, ?navh=104",
+      "cssCite": "src/components/Hero.jsx:4"
+    },
+    {
+      "query": "(min-width: 810px) and (max-width: 1099.98px)",
+      "change": "iframe top 64, height 100vh-64, ?navh=104",
+      "cssCite": "src/components/Hero.jsx:5"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "iframe top 0, height 100vh, ?navh=64 (nav overlays it)",
+      "cssCite": "src/components/Hero.jsx:6"
+    },
+    {
+      "query": "(max-width: 700px), (orientation: portrait)",
+      "change": "the app switches to its own mobile layout internally (not a page breakpoint)",
+      "cssCite": "CLONE_SPEC.md:41"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/Hero.jsx:3-7",
+    "src/components/Hero.jsx:62-69",
+    "CLONE_SPEC.md:277",
+    "src/components/Hero.jsx:20"
+  ],
+  "notes": [
+    "A visually-hidden SeoContent block (src/components/Hero.jsx) carries the h1 and customer copy for crawlers; it is not part of the visible design.",
+    "The Three.js bundle and assets live under public/gameboy/ (3.4 MB). Per CLONE_SPEC section 0 the iframe still loads three.js / three-mesh-bvh / three-bvh-csg from jsDelivr: an external dependency of the original design.",
+    "The sixth planet \"Book a demo\" opens /start in a new tab instead of an app view (ia.json template.home notes)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "home"
+  ]
+}

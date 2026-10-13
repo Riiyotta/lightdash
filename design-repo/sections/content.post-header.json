@@ -1,0 +1,88 @@
+{
+  "id": "content.post-header",
+  "category": "CONTENT",
+  "purpose": "Blog post header rows: breadcrumb (Blog . Category . Title), H1 (max 780), author avatar 40px + name . date; 7 decorative 24px pixel squares anchored to the frame right.",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Metadata (title, category, date, author) is measured live (specs/cms/blog.json, 62 posts); article bodies were NOT copied.",
+  "implementedBy": "src/pages/BlogPost.jsx (inline) + src/components/cms/Breadcrumb.jsx",
+  "content": {
+    "fields": {
+      "category": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "content.post-header.category"
+      },
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 20,
+        "observedMaxWords": 16,
+        "wcRef": "content.post-header.title"
+      },
+      "authorName": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "content.post-header.authorName"
+      },
+      "date": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.post-header.date"
+      },
+      "authorAvatar": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "photo.person-avatar"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "the two left-most decorative pixel squares (x < 1100) are hidden below 1100",
+      "cssCite": "src/pages/BlogPost.jsx:23"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "H1 36/39.6 instead of 48/52.8",
+      "cssCite": "src/pages/BlogPost.jsx:63"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/BlogPost.jsx:13",
+    "src/pages/BlogPost.jsx:53",
+    "specs/cms/blog.json:5"
+  ],
+  "notes": [
+    "62 routes share this section; one slug contains a typographic apostrophe stored percent-encoded in the sitemap (it%E2%80%99s-time-to-build-on-your-data) and as a raw apostrophe in specs/cms/blog.json."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "blog-post"
+  ]
+}

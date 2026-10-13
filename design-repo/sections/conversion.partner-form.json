@@ -1,0 +1,89 @@
+{
+  "id": "conversion.partner-form",
+  "category": "CONVERSION",
+  "purpose": "#partner-form section on /partnerships (dotted-pattern background, 1200 card radius 16): heading, six inputs (Name, Email, Company, Role required; LinkedIn profile, BI tools optional), 200x42 submit and a consent line. UI only; on submit it shows \"Form submitted\" locally.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/partnerships/PartnerForm.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "observedMaxWords": 6,
+        "wcRef": "conversion.partner-form.heading"
+      },
+      "fields": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 9,
+          "observedMaxWords": 7,
+          "wcRef": "conversion.partner-form.fields[]"
+        },
+        "minItems": 4,
+        "maxItems": 6
+      },
+      "submitLabel": {
+        "type": "text",
+        "required": true,
+        "maxWords": 3,
+        "observedMaxWords": 1,
+        "wcRef": "conversion.partner-form.submitLabel"
+      },
+      "consent": {
+        "type": "text",
+        "required": true,
+        "maxWords": 22,
+        "observedMaxWords": 17,
+        "wcRef": "conversion.partner-form.consent"
+      },
+      "submission": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "form.submission-endpoint"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "two-column input grid becomes one column",
+      "cssCite": "src/components/pages/partnerships/PartnerForm.jsx:31"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/partnerships/PartnerForm.jsx:3",
+    "src/components/pages/partnerships/PartnerForm.jsx:9",
+    "src/pages/Partnerships.jsx:276"
+  ],
+  "notes": [
+    "The clone sends nothing (PartnerForm.jsx e.preventDefault, \"no network request\"); the live form posts to a real backend that was not inspected. A generated page must reference an assetRef slot (form.submission-endpoint, pinned must-not-reuse-live-endpoint) and never a real endpoint."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "partnerships"
+  ]
+}

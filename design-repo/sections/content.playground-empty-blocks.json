@@ -1,0 +1,60 @@
+{
+  "id": "content.playground-empty-blocks",
+  "category": "CONTENT",
+  "purpose": "The unfinished parts of /playground, used twice (blockMode card-band before the logo grid, blockMode blocks after it): a 1280x629 CTA-style 8px-grid band holding an EMPTY white 1152x549 card, then five empty blocks (598, 724 with a 32px lines header, 692 with a 100px hatched header, 716 with a 32px lines footer, 573 gradient #F8FAFB to #FFF). Nothing renders inside them on the live site.",
+  "status": "unfinished-live-page",
+  "composable": true,
+  "variantField": "blockMode",
+  "evidenceNote": "/playground is a WIP duplicate of the old homepage; the live page shows these blocks empty (src PlaygroundBlocks.jsx header comment, reference/pages/playground-1440.png).",
+  "implementedBy": "src/components/pages/playground/PlaygroundBlocks.jsx > EmptyCardBand, EmptyBlocks",
+  "content": {
+    "fields": {
+      "blockMode": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "card-band",
+          "blocks"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 2,
+    "routeOnly": [
+      "/playground"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "the empty card band card is 300 tall (549 at >=810) and padding shrinks",
+      "cssCite": "src/components/pages/playground/PlaygroundBlocks.jsx:14"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/playground/PlaygroundBlocks.jsx:3",
+    "src/components/pages/playground/PlaygroundBlocks.jsx:54",
+    "src/components/pages/playground/PlaygroundBlocks.jsx:11"
+  ],
+  "notes": [
+    "These are intentionally empty (aria-hidden) blocks; a PageSpec must not invent content for them. The card radius (12) was sampled from a screenshot, not specified (PlaygroundBlocks.jsx comment)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "playground"
+  ]
+}

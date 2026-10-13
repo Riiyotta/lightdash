@@ -1,0 +1,18 @@
+{
+  "id": "cta-card",
+  "kind": "component",
+  "purpose": "Dark #1A1B25 CTA card (1152x326, shadow ld-cta-card) holding the cta-56 title, two buttons and the Snake game, on an 8px-grid band.",
+  "props": [
+    "title",
+    "primary",
+    "secondary"
+  ],
+  "usedBySections": [
+    "cta.snake-band",
+    "cta.snake-band-narrow"
+  ],
+  "measuredFrom": [
+    "src/components/shared/CtaBand.jsx:28"
+  ],
+  "schemaVersion": "1.0.0"
+}

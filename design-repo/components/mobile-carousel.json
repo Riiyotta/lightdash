@@ -1,0 +1,19 @@
+{
+  "id": "mobile-carousel",
+  "kind": "component",
+  "purpose": "Phone swipe carousel: 358x400 clip, scroll-snap x mandatory, 280x400 cards, dots; hook + CarouselDots.",
+  "props": [
+    "count"
+  ],
+  "usedBySections": [
+    "features.cards-1x3",
+    "features.cards-2x2-text",
+    "features.cards-3x2",
+    "features.cards-3x2-image"
+  ],
+  "measuredFrom": [
+    "src/components/shared/MobileCarousel.jsx:15",
+    "src/components/shared/mobile-carousel.css:4"
+  ],
+  "schemaVersion": "1.0.0"
+}

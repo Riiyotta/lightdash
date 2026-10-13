@@ -1,0 +1,67 @@
+{
+  "id": "proof.logos-strip-5",
+  "category": "PROOF",
+  "purpose": "Bordered fintech logo strip on /fintech: caption \"Loved by fintech data teams\" and 5 logos in a 122px-tall row (3 columns, 44px rows on phone).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Fintech.jsx (inline)",
+  "content": {
+    "fields": {
+      "caption": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "proof.logos-strip-5.caption"
+      },
+      "logos": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "media",
+          "required": true,
+          "assetRoles": [
+            "logo.customer-partner"
+          ],
+          "altMaxWords": 3
+        },
+        "minItems": 5,
+        "maxItems": 5
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "row height 122 -> 44 and logos scale to .62",
+      "cssCite": "src/pages/Fintech.jsx:97"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Fintech.jsx:90",
+    "src/pages/data/fintech.jsx:6"
+  ],
+  "notes": [
+    "Source file names mismatch the logos they contain: public/assets/pages/fintech/hypebeast-*.png renders the Wise logo and kraken-*.png renders Titanbay, alma-*.png renders Peach Payments (checked by viewing the files; alt text matches the rendered logo in every case). Use the alt text."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "fintech"
+  ]
+}

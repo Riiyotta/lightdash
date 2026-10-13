@@ -1,0 +1,19 @@
+{
+  "id": "quote-block",
+  "kind": "component",
+  "purpose": "Centred customer quote (40px or 32px Britti Semibold) with logo, gradient #F8FAFB well, 24px/72px corner pixels and an attribution row.",
+  "props": [
+    "logo",
+    "quote",
+    "person",
+    "quoteSize"
+  ],
+  "usedBySections": [
+    "proof.customer-quote",
+    "proof.customer-quote-stats"
+  ],
+  "measuredFrom": [
+    "src/components/shared/CustomerQuote.jsx:54-70"
+  ],
+  "schemaVersion": "1.0.0"
+}

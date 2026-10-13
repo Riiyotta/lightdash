@@ -1,0 +1,36 @@
+/* Phone swipe carousel (see MobileCarousel.jsx for the live measurements). Two-class selectors so these
+   beat the single-class Tailwind utilities on the same elements regardless of stylesheet order. */
+@media (max-width: 809.98px) {
+  .ld-mcar.ld-mcar {
+    padding-bottom: 48px;
+  }
+  .ld-mcar .ld-mcar-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ld-mcar .ld-mcar-viewport {
+    height: 400px;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: clip;
+  }
+  .ld-mcar .ld-mcar-track {
+    display: flex;
+    gap: 20px;
+    height: 420px;
+    padding-left: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 24px;
+  }
+  .ld-mcar .ld-mcar-track > * {
+    flex: 0 0 280px;
+    height: 400px;
+    min-height: 0 !important;
+    scroll-snap-align: start;
+  }
+  .ld-mcar .ld-mcar-img {
+    height: 173.9px;
+  }
+}

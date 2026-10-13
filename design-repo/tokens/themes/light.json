@@ -1,0 +1,50 @@
+{
+  "theme": "light",
+  "description": "Inner pages (117 routes): white light navbar + footer.",
+  "resolves": {
+    "color.text.display": "{color.ld-display}",
+    "color.text.heading": "{color.ld-ink-700}",
+    "color.text.primary": "{color.ld-ink}",
+    "color.text.strong": "{color.ld-ink-strong}",
+    "color.text.body": "{color.ld-body}",
+    "color.text.muted": "{color.ld-muted}",
+    "color.text.sub": "{color.ld-sub}",
+    "color.text.inverse": "{color.text-white}",
+    "color.text.accent": "{color.brand-purple}",
+    "color.text.black": "{color.black}",
+    "color.surface.page": "{color.page-bg}",
+    "color.surface.dark": "{color.ld-dark}",
+    "color.surface.well": "{color.ld-well}",
+    "color.surface.well-tab": "{color.ld-well-tab}",
+    "color.surface.subtle": "{color.ld-surface}",
+    "color.surface.icon-cell": "{color.ld-icon-cell}",
+    "color.surface.highlight": "{color.ld-purple-10}",
+    "color.border.hairline": "{color.ld-line}",
+    "color.border.dark-hairline": "{color.ld-ink-700}",
+    "color.action.primary.bg": "{color.brand-purple}",
+    "color.action.primary.border": "{color.brand-purple-border}",
+    "color.action.light.bg": "{color.btn-light-bg}",
+    "color.action.light.bg-hover": "{color.btn-light-bg-hover}",
+    "color.action.light.border": "{color.btn-light-border}",
+    "color.action.light.text": "{color.btn-light-text}",
+    "color.action.dark.bg": "{color.ld-dark}",
+    "color.chrome.nav.bg": "{color.page-bg}",
+    "color.chrome.nav.border": "{color.ld-line}",
+    "color.chrome.menu.panel": "{color.page-bg}",
+    "color.chrome.menu.overlay": "{color.menu-overlay}",
+    "color.chrome.modal.overlay": "{color.modal-overlay}",
+    "color.chrome.footer.bg": "{color.ld-dark}",
+    "color.chrome.footer.link": "{color.ld-footer-link}",
+    "color.chrome.footer.link-hover": "{color.ld-footer-link-hover}"
+  },
+  "evidence": [
+    {
+      "ref": "specs/SHARED.md:48",
+      "quote": "| bar bg | #080808 | **#FFFFFF** |"
+    },
+    {
+      "ref": "specs/SHARED.md:59",
+      "quote": "Panel bg **#FFFFFF**; grid lines dashed light grey"
+    }
+  ]
+}

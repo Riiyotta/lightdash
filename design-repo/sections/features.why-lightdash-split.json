@@ -1,0 +1,70 @@
+{
+  "id": "features.why-lightdash-split",
+  "category": "FEATURES",
+  "purpose": "\"Why Lightdash?\" two-column (2 x 640) boxed section on /partnerships with a left statement and right-hand reasons.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Partnerships.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "features.why-lightdash-split.heading"
+      },
+      "reasons": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 8,
+            "observedMaxWords": 6,
+            "wcRef": "features.why-lightdash-split.reasons[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 43,
+            "observedMaxWords": 34,
+            "wcRef": "features.why-lightdash-split.reasons[].body"
+          }
+        },
+        "minItems": 5,
+        "maxItems": 5
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/pages/Partnerships.jsx:189",
+    "src/pages/Partnerships.jsx:18"
+  ],
+  "notes": [
+    "No responsive change is separately specified in source for this block."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "partnerships"
+  ]
+}

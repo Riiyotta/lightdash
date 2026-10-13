@@ -1,0 +1,83 @@
+{
+  "id": "hero.about-stickers",
+  "category": "HERO",
+  "purpose": "About hero: draggable sticker layer (968x307, six brand stickers) over a Template A title and a two-sentence lead between dashed rules.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/About.jsx (inline) + src/components/pages/about/Stickers.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 9,
+        "observedMaxWords": 7,
+        "wcRef": "hero.about-stickers.heading"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 48,
+        "observedMaxWords": 38,
+        "wcRef": "hero.about-stickers.subtitle"
+      },
+      "stickers": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "media",
+          "required": true,
+          "assetRoles": [
+            "decor.sticker"
+          ]
+        },
+        "minItems": 2,
+        "maxItems": 6
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "drag-stickers",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "drag-stickers": "static-final-state",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "drag-stickers": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "phone shows a second sticker layer with only stickers 1 and 6 (50px each) instead of all 6",
+      "cssCite": "src/pages/About.jsx:46"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "H1 42px instead of 56px; top spacer 56 instead of 100",
+      "cssCite": "src/pages/About.jsx:47"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/About.jsx:43",
+    "src/components/pages/about/Stickers.jsx:3",
+    "src/pages/data/about.jsx:7"
+  ],
+  "notes": [
+    "Desktop breakpoint on /about is 1000 (ia.json template.about notes); tokens breakpoint.about-desktop."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "about"
+  ]
+}

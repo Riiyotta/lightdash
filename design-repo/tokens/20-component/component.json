@@ -1,0 +1,206 @@
+{
+  "$description": "Approved component-level applications of foundation tokens (button variants from SHARED §5 / Button.jsx, CTA band, footer...).",
+  "component": {
+    "button.primary": {
+      "bg": "{color.page-bg}",
+      "text": "{color.btn-light-text}",
+      "border": "{color.btn-light-border}",
+      "hoverBg": "{color.ld-dark}",
+      "hoverText": "{color.text-white}",
+      "height": "40px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:9",
+          "quote": "// bg #FFF + 1px #DFE1E7, text #272835 -> hover bg #1A1B25, no border, text #FFF"
+        }
+      ]
+    },
+    "button.secondary": {
+      "bg": "transparent",
+      "text": "{color.text-white}",
+      "border": "{color.ld-body}",
+      "hoverBg": "{color.ld-body}",
+      "height": "40px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:12",
+          "quote": "// transparent + 1px #666D80, text #FFF -> hover bg #666D80"
+        }
+      ]
+    },
+    "button.third": {
+      "bg": "{color.ld-dark}",
+      "text": "{color.text-white}",
+      "hoverBg": "{color.brand-purple}",
+      "height": "40px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:14",
+          "quote": "// bg #1A1B25, text #FFF, padding 0 20, 40 tall -> hover bg #5E4CFF (measured)"
+        }
+      ]
+    },
+    "button.fourth": {
+      "bg": "{color.btn-light-bg}",
+      "text": "{color.btn-light-text}",
+      "border": "{color.btn-light-border}",
+      "hoverBg": "{color.btn-light-bg-hover}",
+      "height": "40px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:16",
+          "quote": "// bg #F8FAFB + 1px #DFE1E7, text #272835 -> hover #ECEFF3 (measured)"
+        }
+      ]
+    },
+    "button.fifth": {
+      "bg": "{color.brand-purple}",
+      "text": "{color.btn-light-bg}",
+      "hoverBg": "{color.ld-purple-77-70}",
+      "height": "40px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:19",
+          "quote": "// bg #5E4CFF, text #F8FAFB -> hover rgba(94,77,255,.7)"
+        }
+      ]
+    },
+    "button.sixth": {
+      "bg": "{color.brand-purple}",
+      "text": "{color.btn-light-bg}",
+      "hoverBg": "{color.ld-purple-70}",
+      "height": "50px",
+      "heightPhone": "40px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:21",
+          "quote": "// CTA primary: padding 16/32 (50 tall); phone 8/12 (40 tall) -> hover rgba(94,76,255,.7)"
+        }
+      ]
+    },
+    "button.seventh": {
+      "bg": "{color.ld-purple-20}",
+      "text": "{color.ld-seventh-text}",
+      "hoverBg": "{color.ld-purple-60}",
+      "hoverText": "{color.ld-seventh-text-hover}",
+      "height": "50px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:24",
+          "quote": "// CTA secondary: bg rgba(94,76,255,.2), text #B4ACFF -> hover bg rgba(94,76,255,.6), text #DDD9FA"
+        }
+      ]
+    },
+    "button.v1-purple": {
+      "bg": "{color.brand-purple}",
+      "text": "{color.text-white}",
+      "border": "{color.brand-purple-border}",
+      "height": "42px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:27",
+          "quote": "// \"Variant 1\" purple: #5E4CFF + 1px #4835F2, text #FFF ls -0.3, padding 12/20 (42 tall), gap 8. No hover measured."
+        }
+      ]
+    },
+    "button.v1-light": {
+      "bg": "{color.btn-light-bg}",
+      "text": "{color.btn-light-text}",
+      "border": "{color.btn-light-border}",
+      "height": "42px",
+      "evidence": [
+        {
+          "ref": "src/components/shared/Button.jsx:30",
+          "quote": "// \"Variant 1\" light: #F8FAFB + 1px #DFE1E7, text #272835 ls -0.3, padding 12/20. No hover measured."
+        }
+      ]
+    },
+    "cta-band": {
+      "surface": "{color.ld-well}",
+      "gridLine": "{color.ld-cta-grid}",
+      "card": "{color.ld-dark}",
+      "cardShadow": "{elevation.cta-card}",
+      "title": "{typography.cta-56}",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:268",
+          "quote": "Background: base **#CDD2D9** with an overlay"
+        }
+      ]
+    },
+    "footer": {
+      "bg": "{color.ld-dark}",
+      "frame": "{color.ld-footer-frame}",
+      "line": "{color.ld-footer-line}",
+      "head": "{color.ld-footer-head}",
+      "link": "{color.ld-footer-link}",
+      "linkHover": "{color.ld-footer-link-hover}",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:308",
+          "quote": "Full-bleed bg **#1A1B25**, 1440×600"
+        }
+      ]
+    },
+    "faq": {
+      "heading": "{typography.faq-h-48}",
+      "question": "{typography.faq-q-20}",
+      "answer": "{typography.faq-a-14}",
+      "divider": "{color.ld-line}",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:243",
+          "quote": "Item: padding **24/0/23**, 1px solid #E5E7EB bottom line"
+        }
+      ]
+    },
+    "customer-quote": {
+      "quote": "{typography.quote-40}",
+      "quoteShort": "{typography.quote-32}",
+      "stat": "{typography.stat-48}",
+      "wellEnd": "{color.ld-quote-well}",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:218",
+          "quote": "Background `linear-gradient(180deg, rgba(255,255,255,0) 0%, #F8FAFB 100%)`"
+        }
+      ]
+    },
+    "section-hero": {
+      "title": "{typography.display-72}",
+      "titleAlt": "{typography.display-56}",
+      "subtitle": "{typography.lead-18}",
+      "pixelSize": "{layout.hero.pixel-size}",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:165",
+          "quote": "H1 w1024 (display-72) at y+100"
+        }
+      ]
+    },
+    "comparison-table": {
+      "header": "{color.ld-surface}",
+      "highlight": "{color.ld-purple-10}",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:233",
+          "quote": "Column 2 (Lightdash) is **rgba(94,76,255,.1)**"
+        }
+      ]
+    },
+    "nav-dark": {
+      "bg": "{color.nav-bg}",
+      "border": "{color.nav-border}",
+      "panel": "{color.menu-panel}",
+      "overlay": "{color.menu-overlay}",
+      "cardWell": "{color.menu-card-well}",
+      "card": "{color.menu-card}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:51",
+          "quote": "| menu-card-well | `#141416` rgb(20,20,22)"
+        }
+      ]
+    }
+  }
+}

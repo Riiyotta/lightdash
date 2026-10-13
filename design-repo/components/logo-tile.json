@@ -1,0 +1,17 @@
+{
+  "id": "logo-tile",
+  "kind": "component",
+  "purpose": "48x48 bordered logo tile (1px #DFE1E7, 5px 5% halo) with the company name beneath.",
+  "props": [
+    "logo",
+    "name"
+  ],
+  "usedBySections": [
+    "proof.logo-tiles-named",
+    "content.roadmap-community"
+  ],
+  "measuredFrom": [
+    "src/components/pages/lightdash-security/LogoTile.jsx:4"
+  ],
+  "schemaVersion": "1.0.0"
+}

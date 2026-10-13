@@ -1,0 +1,59 @@
+{
+  "id": "listing.blog-header",
+  "category": "LISTING",
+  "purpose": "Blog listing header: 168/120/72-tall spacer row with a 762x168 pixel-art block pinned top-right, then a 50-tall H1 \"Lightning posts\" (second word grey) with a 193x50 pixel decoration at >=1100.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/cms/BlogListing.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "listing.blog-header.heading"
+      },
+      "headingMuted": {
+        "type": "text",
+        "required": false,
+        "maxWords": 3,
+        "observedMaxWords": 1,
+        "wcRef": "listing.blog-header.headingMuted"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "header spacer 168 -> 120 (810) -> 72 (phone); H1 48/48 -> 40/44",
+      "cssCite": "src/components/cms/BlogListing.jsx:19"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/cms/BlogListing.jsx:9",
+    "src/components/cms/BlogListing.jsx:32"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "blog-category",
+    "blog-index"
+  ]
+}

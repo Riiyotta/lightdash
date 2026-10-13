@@ -1,0 +1,119 @@
+{
+  "id": "conversion.plan-cards",
+  "category": "CONVERSION",
+  "purpose": "Three plan cards on a #F6F8FA band (3 x 376, gap 12; 2 x 367 at 810): Open Source / Cloud Pro (dark) / Enterprise, each with a pixel corner, price, description, button, eyebrow and feature list.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/pricing/PlanCard.jsx",
+  "content": {
+    "fields": {
+      "plans": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "label": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "conversion.plan-cards.plans[].label"
+          },
+          "price": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "conversion.plan-cards.plans[].price"
+          },
+          "description": {
+            "type": "text",
+            "required": true,
+            "maxWords": 15,
+            "observedMaxWords": 12,
+            "wcRef": "conversion.plan-cards.plans[].description"
+          },
+          "button": {
+            "type": "cta",
+            "required": true,
+            "actions": [
+              "navigate-route",
+              "open-external"
+            ],
+            "labelMaxWords": 5,
+            "observedLabelMaxWords": 3,
+            "labelRef": "conversion.plan-cards.plans[].buttonLabel"
+          },
+          "eyebrow": {
+            "type": "text",
+            "required": true,
+            "maxWords": 6,
+            "observedMaxWords": 4,
+            "wcRef": "conversion.plan-cards.plans[].eyebrow"
+          },
+          "features": {
+            "type": "list",
+            "required": true,
+            "item": {
+              "type": "text",
+              "required": true,
+              "maxWords": 15,
+              "observedMaxWords": 12,
+              "wcRef": "conversion.plan-cards.plans[].features[]"
+            },
+            "minItems": 4,
+            "maxItems": 11
+          },
+          "dark": {
+            "type": "boolean",
+            "required": false
+          },
+          "corner": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "decor.pixel-tile"
+            ]
+          }
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "3 x 376 grid becomes 2 x 367 (810) and one column on phone with per-plan min heights (700 / 990 / 845)",
+      "cssCite": "src/pages/Pricing.jsx:43"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/pricing/PlanCard.jsx:4",
+    "src/pages/data/pricing.jsx:13",
+    "src/pages/Pricing.jsx:41"
+  ],
+  "notes": [
+    "Prices ($3000 Cloud Pro, \"Let’s talk\" Enterprise) and plan features are real commercial terms of a real company: do not alter or invent plans; the Open Source button targets the real GitHub repo and the Cloud Pro button the real trial path.",
+    "The \"/ month\" label is rendered invisible (white on white) on Open Source on the live site (data/pricing.jsx hiddenMonth)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "pricing"
+  ]
+}

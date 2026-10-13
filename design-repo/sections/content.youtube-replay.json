@@ -1,0 +1,96 @@
+{
+  "id": "content.youtube-replay",
+  "category": "CONTENT",
+  "purpose": "Replay block (1100 wide, dashed bottom): heading, caption, a 970x545 poster with a play button that swaps in a YouTube iframe on click, then an \"After-video booking\" row with a purple button.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/beyond-copilots/Replay.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "content.youtube-replay.heading"
+      },
+      "caption": {
+        "type": "text",
+        "required": true,
+        "maxWords": 19,
+        "observedMaxWords": 15,
+        "wcRef": "content.youtube-replay.caption"
+      },
+      "video": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "embed.youtube"
+        ]
+      },
+      "poster": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "image.cms-cover"
+        ]
+      },
+      "bookingText": {
+        "type": "text",
+        "required": true,
+        "maxWords": 14,
+        "observedMaxWords": 11,
+        "wcRef": "content.youtube-replay.bookingText"
+      },
+      "bookingCta": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route",
+          "open-talk-modal"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "content.youtube-replay.bookingCtaLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "manual-only",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "manual-only": "manual-only",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "manual-only": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "padding 72/65 -> 56/24; booking row stacks",
+      "cssCite": "src/components/pages/beyond-copilots/Replay.jsx:14"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/beyond-copilots/Replay.jsx:4",
+    "src/components/pages/beyond-copilots/Replay.jsx:33",
+    "src/pages/data/beyond-copilots.js:28"
+  ],
+  "notes": [
+    "The embed is a LIVE third-party YouTube video of real speakers (youtube.com/embed/S9NJrqRYRhs): assets/asset-roles.json embed.youtube is pinned must-not-reuse-live-endpoint."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "beyond-copilots"
+  ]
+}

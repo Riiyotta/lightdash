@@ -1,0 +1,167 @@
+{
+  "$description": "Rhythm and position rules JSON Schema cannot express. Enforced by schema/semantic_validate.py; every rule id here has an implementation there and vice versa (checked by verify_all.py). Each rule was checked against the real node sequences in templates/templates.json when written (Master guide 3.18); exceptions are named with reasons.",
+  "graphVersion": "1.0.0",
+  "rules": [
+    {
+      "id": "SECTION_CONSTRAINTS",
+      "severity": "error",
+      "params": {},
+      "description": "Per-section constraints from each contract: onePerPage, maxPerPage, mustBeFirst, mustBeLast, mustFollowNav, mustPrecedeFooter, mustPrecedeTalkModal, mustFollowSection, homeRouteOnly, routeOnly, chromeAxis. Checked against all 30 templates.",
+      "exceptions": []
+    },
+    {
+      "id": "CHROME_FRAME",
+      "severity": "error",
+      "params": {},
+      "description": "Nodes start with the chrome frame for the declared chrome axis and end with it: dark-home = navbar-dark, mobile-nav-dark ... talk-modal (no footer, no banner, no CTA band); light-banner-cta = announcement-bar, navbar-light, mobile-nav-light ... footer, talk-modal; light-cta / light-no-cta = navbar-light, mobile-nav-light ... footer, talk-modal.",
+      "exceptions": []
+    },
+    {
+      "id": "CTA_BAND_MATCHES_CHROME",
+      "severity": "error",
+      "params": {
+        "bands": [
+          "cta.snake-band",
+          "cta.snake-band-narrow"
+        ]
+      },
+      "description": "A snake CTA band is present exactly once when chrome is light-banner-cta or light-cta (and then sits directly before the footer), and absent for light-no-cta and dark-home.",
+      "exceptions": []
+    },
+    {
+      "id": "OPENER_IS_HERO",
+      "severity": "error",
+      "params": {
+        "openerCategory": "HERO"
+      },
+      "description": "The first non-chrome node is a HERO-category section, except the templates that open with a CMS / listing / utility header.",
+      "exceptions": [
+        {
+          "template": "blog-index",
+          "reason": "opens with listing.blog-header (a listing header, no hero section in the source DOM)"
+        },
+        {
+          "template": "blog-category",
+          "reason": "opens with listing.blog-header (same shape as /blog)"
+        },
+        {
+          "template": "blog-post",
+          "reason": "opens with content.post-header (breadcrumb, H1, byline rows)"
+        },
+        {
+          "template": "customer-stories",
+          "reason": "opens with listing.stories-header"
+        },
+        {
+          "template": "customer-story",
+          "reason": "opens with content.story-header"
+        },
+        {
+          "template": "event",
+          "reason": "opens with content.event-header"
+        },
+        {
+          "template": "legal",
+          "reason": "opens with content.legal-header"
+        },
+        {
+          "template": "not-found",
+          "reason": "the 404 page is stripes + art + message with no hero section"
+        },
+        {
+          "template": "padel-apply",
+          "reason": "a single application column that opens with content.padel-apply"
+        },
+        {
+          "template": "start",
+          "reason": "opens directly with the booking split (conversion.booking-split); no hero section"
+        }
+      ]
+    },
+    {
+      "id": "ONE_HERO_PER_PAGE",
+      "severity": "error",
+      "params": {
+        "category": "HERO",
+        "max": 1,
+        "companions": {
+          "hero.product-visual": "hero.centered-product",
+          "hero.startups-visual": "hero.company-centered"
+        }
+      },
+      "description": "At most one HERO node per page; a companion visual (hero.product-visual, hero.startups-visual) does not count and must directly follow its parent hero.",
+      "exceptions": []
+    },
+    {
+      "id": "NO_ADJACENT_DUPLICATE",
+      "severity": "error",
+      "params": {},
+      "description": "The same (section, variant) never appears twice in a row. Variant = the content field named by the contract variantField (features.accordion-tabs imageSide, content.playground-empty-blocks blockMode), so two stacked accordion rows must alternate image side.",
+      "exceptions": []
+    },
+    {
+      "id": "LOGOS_ROW_ORDER",
+      "severity": "error",
+      "params": {
+        "section": "proof.logos-row",
+        "afterAnyOf": [
+          "hero.product-visual",
+          "content.video-section"
+        ]
+      },
+      "description": "proof.logos-row directly follows hero.product-visual (7 product pages) or content.video-section (/bi-as-code).",
+      "exceptions": []
+    },
+    {
+      "id": "BLOG_POSTS_AFTER_FAQ",
+      "severity": "warn",
+      "params": {
+        "section": "content.blog-posts",
+        "after": "content.faq"
+      },
+      "description": "content.blog-posts, when present, directly follows content.faq (true on /data-apps, /self-improving-analytics, /bi-as-code).",
+      "exceptions": []
+    },
+    {
+      "id": "MAX_RUN_SAME_CATEGORY",
+      "severity": "warn",
+      "params": {
+        "maxRun": 3,
+        "ignoreCategories": [
+          "CHROME"
+        ]
+      },
+      "description": "No more than three consecutive nodes of the same category (CHROME ignored).",
+      "exceptions": [
+        {
+          "template": "product-conversational-analytics",
+          "reason": "real page runs four FEATURES sections in a row (two accordion rows, 2x2 cards, icon grid)"
+        },
+        {
+          "template": "product-context-layer",
+          "reason": "real page runs four FEATURES sections in a row (split, 1x3 cards, icon grid, comparison table)"
+        }
+      ]
+    },
+    {
+      "id": "HATCHED_BAND_BUDGET",
+      "severity": "warn",
+      "params": {
+        "section": "decor.hatched-band",
+        "max": 3
+      },
+      "description": "At most three hatched bands per page (/embedding has exactly three).",
+      "exceptions": []
+    },
+    {
+      "id": "AUTOPLAY_CAROUSEL_BUDGET",
+      "severity": "warn",
+      "params": {
+        "pattern": "autoplay-carousel",
+        "max": 1
+      },
+      "description": "At most one auto-advancing carousel / accordion per page (/partnerships and /fintech have exactly one each).",
+      "exceptions": []
+    }
+  ]
+}

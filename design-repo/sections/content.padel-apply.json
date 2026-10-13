@@ -1,0 +1,67 @@
+{
+  "id": "content.padel-apply",
+  "category": "CONTENT",
+  "purpose": "Intro block of the Padel application page: purple uppercase eyebrow, \"Apply to play\" H1 and a note that places are limited. Single 760-wide centred column.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/PadelApply.jsx (inline)",
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.padel-apply.eyebrow"
+      },
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.padel-apply.heading"
+      },
+      "note": {
+        "type": "text",
+        "required": true,
+        "maxWords": 25,
+        "observedMaxWords": 20,
+        "wcRef": "content.padel-apply.note"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "content column is 342 wide at 390 (24 side padding) vs 712 at 1440",
+      "cssCite": "src/pages/PadelApply.jsx:43"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/PadelApply.jsx:44",
+    "src/pages/PadelApply.jsx:46"
+  ],
+  "notes": [
+    "/padel-apply is linked from the Padel event page CTA (specs/cms/events.json)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "padel-apply"
+  ]
+}

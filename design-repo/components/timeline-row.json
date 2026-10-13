@@ -1,0 +1,17 @@
+{
+  "id": "timeline-row",
+  "kind": "component",
+  "purpose": "About timeline year row (44, dashed) + two 427 content cells (text or 357x236 photo) with purple milestone squares, scroll-reveal fade.",
+  "props": [
+    "year",
+    "entries"
+  ],
+  "usedBySections": [
+    "content.story-timeline"
+  ],
+  "measuredFrom": [
+    "src/components/pages/about/Timeline.jsx:11",
+    "src/components/pages/about/Timeline.jsx:45"
+  ],
+  "schemaVersion": "1.0.0"
+}

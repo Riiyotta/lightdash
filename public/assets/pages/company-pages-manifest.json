@@ -1,0 +1,8224 @@
+{
+ "source": "https://www.lightdash.com/",
+ "generated": "2026-10-13",
+ "spec": "specs/company-pages.md",
+ "note": "file = path under public/. src = original URL (Framer resize params stripped). rendered = CSS px at 1440 unless noted. widths = breakpoints where the asset was seen.",
+ "pages": {
+  "pricing": [
+   {
+    "file": "/assets/pages/pricing/image-Hlu1ShLNLazxpcPi812eZcUqlU8.png",
+    "src": "https://framerusercontent.com/images/Hlu1ShLNLazxpcPi812eZcUqlU8.png",
+    "framerName": "Content-wrapper > Hero > Image",
+    "alt": "",
+    "rendered": [
+     223,
+     209
+    ],
+    "at1440": [
+     1137,
+     106,
+     223,
+     209
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 24090,
+    "format": "png",
+    "intrinsic": [
+     446,
+     418
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/card-S7Ir9ic7GOf6zKsRMNuNHoP0oc.png",
+    "src": "https://framerusercontent.com/images/S7Ir9ic7GOf6zKsRMNuNHoP0oc.png",
+    "framerName": "Content-wrapper > Pricings > Plan > Card",
+    "alt": "",
+    "rendered": [
+     40,
+     40
+    ],
+    "at1440": [
+     479,
+     428,
+     40,
+     40
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2445,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/card-1mb87xFfUlBMpFIuNHsAf26PFI.png",
+    "src": "https://framerusercontent.com/images/1mb87xFfUlBMpFIuNHsAf26PFI.png",
+    "framerName": "Content-wrapper > Pricings > Plan > Card",
+    "alt": "",
+    "rendered": [
+     60,
+     60
+    ],
+    "at1440": [
+     847,
+     428,
+     60,
+     60
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4593,
+    "format": "png",
+    "intrinsic": [
+     192,
+     192
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/card-MXdKTLEx5uZ0rO5k3F7Jbiozno.png",
+    "src": "https://framerusercontent.com/images/MXdKTLEx5uZ0rO5k3F7Jbiozno.png",
+    "framerName": "Content-wrapper > Pricings > Plan > Card",
+    "alt": "",
+    "rendered": [
+     80,
+     80
+    ],
+    "at1440": [
+     1215,
+     428,
+     80,
+     80
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 7453,
+    "format": "png",
+    "intrinsic": [
+     256,
+     256
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/phantom-tLi5MYBeYQyeZco1DQOGZ3BO00.svg",
+    "src": "https://framerusercontent.com/images/tLi5MYBeYQyeZco1DQOGZ3BO00.svg",
+    "framerName": "Variant 1 > hypebeast > Phantom > Phantom",
+    "alt": "",
+    "rendered": [
+     93,
+     18.3
+    ],
+    "at1440": [
+     780.2,
+     1447.8,
+     93,
+     18.3
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2717,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/tempo-PeTCrjuAAnFT2xhJsDAlZGXMLn8.svg",
+    "src": "https://framerusercontent.com/images/PeTCrjuAAnFT2xhJsDAlZGXMLn8.svg",
+    "framerName": "Variant 1 > justwatch > Tempo > Tempo",
+    "alt": "",
+    "rendered": [
+     70,
+     15.5
+    ],
+    "at1440": [
+     151.7,
+     1513.3,
+     70,
+     15.5
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1255,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/modelml-XJpm5wcFVC6H6oxQ3hJNf20D0M4.svg",
+    "src": "https://framerusercontent.com/images/XJpm5wcFVC6H6oxQ3hJNf20D0M4.svg",
+    "framerName": "Variant 1 > ocean bottle > Ocean Bottle > ModelML",
+    "alt": "",
+    "rendered": [
+     92,
+     16
+    ],
+    "at1440": [
+     567.3,
+     1513,
+     92,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4054,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/servicenow-AIq32rD3yBVpA6v6vT01ljT5sc.svg",
+    "src": "https://framerusercontent.com/images/AIq32rD3yBVpA6v6vT01ljT5sc.svg",
+    "framerName": "Variant 1 > service trade > ServiceNow > ServiceNow",
+    "alt": "",
+    "rendered": [
+     95,
+     13.9
+    ],
+    "at1440": [
+     992.5,
+     1514.1,
+     95,
+     13.9
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2499,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/oaknorth-HhSegQkhKevRNHfWjhD792tCyBc.svg",
+    "src": "https://framerusercontent.com/images/HhSegQkhKevRNHfWjhD792tCyBc.svg",
+    "framerName": "Variant 1 > zigzag > OakNorth > OakNorth",
+    "alt": "",
+    "rendered": [
+     88,
+     14.9
+    ],
+    "at1440": [
+     1209.3,
+     1513.5,
+     88,
+     14.9
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 5281,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/image-sbgi0qMeD5BtjahnztIVUXjtQ.png",
+    "src": "https://framerusercontent.com/images/sbgi0qMeD5BtjahnztIVUXjtQ.png",
+    "framerName": "TablesWrapper > Table > Header > Image",
+    "alt": "",
+    "rendered": [
+     22,
+     22
+    ],
+    "at1440": [
+     176,
+     1842.2,
+     22,
+     22
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1385,
+    "format": "png",
+    "intrinsic": [
+     126,
+     126
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/variant-1-ac8pM0Numit2MMAYrLC0mGhVyj8.png",
+    "src": "https://framerusercontent.com/images/ac8pM0Numit2MMAYrLC0mGhVyj8.png",
+    "framerName": "TablesWrapper > Table > Row > Variant 1",
+    "alt": "",
+    "rendered": [
+     19,
+     18
+    ],
+    "at1440": [
+     709,
+     1940.2,
+     19,
+     18
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 419,
+    "format": "png",
+    "intrinsic": [
+     37,
+     36
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/variant-1-No57bVqVEzUsaazUxqOWybLek.png",
+    "src": "https://framerusercontent.com/images/No57bVqVEzUsaazUxqOWybLek.png",
+    "framerName": "TablesWrapper > Table > Row-Even > Variant 1",
+    "alt": "",
+    "rendered": [
+     19,
+     18
+    ],
+    "at1440": [
+     709,
+     2380.2,
+     19,
+     18
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4799,
+    "format": "png",
+    "intrinsic": [
+     176,
+     176
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/image-xlvWTiMdcpFvlpQYgenC3Kh0qmc.png",
+    "src": "https://framerusercontent.com/images/xlvWTiMdcpFvlpQYgenC3Kh0qmc.png",
+    "framerName": "TablesWrapper > Table > Header > Image",
+    "alt": "",
+    "rendered": [
+     22,
+     22
+    ],
+    "at1440": [
+     176,
+     2882.2,
+     22,
+     22
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1494,
+    "format": "png",
+    "intrinsic": [
+     126,
+     126
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/image-ePqwBYwX7ktZxXm0WXyI6teCY6M.png",
+    "src": "https://framerusercontent.com/images/ePqwBYwX7ktZxXm0WXyI6teCY6M.png",
+    "framerName": "TablesWrapper > Table > Header > Image",
+    "alt": "",
+    "rendered": [
+     22,
+     22
+    ],
+    "at1440": [
+     176,
+     3183.2,
+     22,
+     22
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1357,
+    "format": "png",
+    "intrinsic": [
+     126,
+     126
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/image-PvfMjeTsl7CcrRi6kcl7c5YdiuU.png",
+    "src": "https://framerusercontent.com/images/PvfMjeTsl7CcrRi6kcl7c5YdiuU.png",
+    "framerName": "TablesWrapper > Table > Header > Image",
+    "alt": "",
+    "rendered": [
+     22,
+     22
+    ],
+    "at1440": [
+     176,
+     3713.2,
+     22,
+     22
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1821,
+    "format": "png",
+    "intrinsic": [
+     126,
+     126
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/group-2085662431-Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "src": "https://framerusercontent.com/images/Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "framerName": "Desktop > Stack > Right Dotted Pattern > Group 2085662431",
+    "alt": "",
+    "rendered": [
+     64,
+     64
+    ],
+    "at1440": [
+     144,
+     4995.7,
+     64,
+     64
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2276,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/pricing/kraken-6a49e554.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Variant 1 > kraken > Kraken",
+    "rendered": [
+     75,
+     13
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1531,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/alma-d392c0ab.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Variant 1 > octopus > Alma",
+    "rendered": [
+     124,
+     17
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 5875,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/workday-2a3c4858.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Variant 1 > workday > Workday",
+    "rendered": [
+     66,
+     26
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 8528,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/hyperbound-3f4bc42b.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Variant 1 > adobe > hyperbound",
+    "rendered": [
+     85,
+     22
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 3107,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/swappie-4b1d4971.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Variant 1 > fal > Swappie",
+    "rendered": [
+     23,
+     17
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 2104,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/swappie-25726fc4.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Variant 1 > fal > Swappie",
+    "rendered": [
+     17,
+     16
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 858,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/collectors-e79ee675.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Variant 1 > collectors > Collectors",
+    "rendered": [
+     90,
+     16
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 7683,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/clair-7ec699a5.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Variant 1 > clair > Clair",
+    "rendered": [
+     70,
+     17
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 4904,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/content-ce111248.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1424,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/content-783abede.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1351,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/icon-feature-9bd89522.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Pricings > Plan > Features > Feature",
+    "rendered": [
+     9,
+     7
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 291,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/icon-feature-e37a4d73.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Pricings > Plan > Features > Feature",
+    "rendered": [
+     9,
+     7
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 344,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/icon-trigger-1f3ea972.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Content-wrapper > FAQ > Closed > Trigger",
+    "rendered": [
+     14,
+     14
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 372,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/stack-e7634aec.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > CTA > Mobile > Stack",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "390"
+    ],
+    "bytes": 1425,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/pricing/stack-d25f2ef6.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > CTA > Mobile > Stack",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "390"
+    ],
+    "bytes": 1217,
+    "format": "svg"
+   }
+  ],
+  "start": [],
+  "startups": [
+   {
+    "file": "/assets/pages/startups/image-u7dNRCA7eBT5ijuB3LwSSfJMPw.png",
+    "src": "https://framerusercontent.com/images/u7dNRCA7eBT5ijuB3LwSSfJMPw.png",
+    "framerName": "Hero > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     80,
+     106,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1674,
+    "format": "png",
+    "intrinsic": [
+     64,
+     64
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/image-1mJCqq22wlHJTEtL6wg98s8lIc8.png",
+    "src": "https://framerusercontent.com/images/1mJCqq22wlHJTEtL6wg98s8lIc8.png",
+    "framerName": "Hero > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     112,
+     138,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1510,
+    "format": "png",
+    "intrinsic": [
+     64,
+     64
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/image-1kZ2cjGoFa40wKm8T64QebKfrR8.png",
+    "src": "https://framerusercontent.com/images/1kZ2cjGoFa40wKm8T64QebKfrR8.png",
+    "framerName": "Hero > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     80,
+     170,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 964,
+    "format": "png",
+    "intrinsic": [
+     64,
+     64
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/image-1dXtMtg8ao6Uylqs5vsrxyDAmvM.png",
+    "src": "https://framerusercontent.com/images/1dXtMtg8ao6Uylqs5vsrxyDAmvM.png",
+    "framerName": "Hero > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     144,
+     106,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1193,
+    "format": "png",
+    "intrinsic": [
+     64,
+     65
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/heroimage-cSMwpvaQWkHp3Yhk4eEhvPwj4.png",
+    "src": "https://framerusercontent.com/images/cSMwpvaQWkHp3Yhk4eEhvPwj4.png",
+    "framerName": "Content-wrapper > HeroImage",
+    "alt": "",
+    "rendered": [
+     1280,
+     883
+    ],
+    "at1440": [
+     80,
+     467.4,
+     1280,
+     883
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 389555,
+    "format": "png",
+    "intrinsic": [
+     2784,
+     1960
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/rectangle-240687995-1GE1QaDy20VenZT6csRDX3flhY.png",
+    "src": "https://framerusercontent.com/images/1GE1QaDy20VenZT6csRDX3flhY.png",
+    "framerName": "Features > First row > Feature01 > Rectangle 240687995",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     80,
+     1714.3,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 477,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/rectangle-240687995-xDrzUuuwwZFCD1HzUeVTjWDTik.png",
+    "src": "https://framerusercontent.com/images/xDrzUuuwwZFCD1HzUeVTjWDTik.png",
+    "framerName": "Features > First row > Feature02 > Rectangle 240687995",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     506.7,
+     1714.3,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 541,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/rectangle-240687995-imRdWA2Jmc2uXNFnWflaVmRvNoE.png",
+    "src": "https://framerusercontent.com/images/imRdWA2Jmc2uXNFnWflaVmRvNoE.png",
+    "framerName": "Features > First row > Feature03 > Rectangle 240687995",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     933.3,
+     1714.3,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 450,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/rectangle-240687995-MSfUL6XyyGbhrzPFywT2zC2KrI.png",
+    "src": "https://framerusercontent.com/images/MSfUL6XyyGbhrzPFywT2zC2KrI.png",
+    "framerName": "Features > Second row > Feature04 > Rectangle 240687995",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     80,
+     1912.3,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 594,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/rectangle-240687995-HVFK8L6xteZ94FZ5HaVlx5kpI.png",
+    "src": "https://framerusercontent.com/images/HVFK8L6xteZ94FZ5HaVlx5kpI.png",
+    "framerName": "Features > Second row > Feature05 > Rectangle 240687995",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     506.7,
+     1912.3,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 560,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/rectangle-240687995-jf0EM1m2SKidDl0zNOLApJLd9CI.png",
+    "src": "https://framerusercontent.com/images/jf0EM1m2SKidDl0zNOLApJLd9CI.png",
+    "framerName": "Features > Second row > Feature06 > Rectangle 240687995",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     933.3,
+     1912.3,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 289,
+    "format": "png",
+    "intrinsic": [
+     96,
+     97
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/content-wrapper-6SAvm5QrWZHaUgTNO6f77dMR4zQ.png",
+    "src": "https://framerusercontent.com/images/6SAvm5QrWZHaUgTNO6f77dMR4zQ.png",
+    "framerName": "Content-wrapper",
+    "alt": "",
+    "rendered": [
+     1280,
+     80
+    ],
+    "at1440": [
+     80,
+     2110.3,
+     1280,
+     80
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 9367,
+    "format": "png",
+    "intrinsic": [
+     3840,
+     372
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/image-TCmH07CpJz9KnFnriUU61CsZuI.png",
+    "src": "https://framerusercontent.com/images/TCmH07CpJz9KnFnriUU61CsZuI.png",
+    "framerName": "Content-wrapper > Grid > Placeholder > Image",
+    "alt": "",
+    "rendered": [
+     565,
+     307
+    ],
+    "at1440": [
+     145,
+     2482.3,
+     565,
+     307
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 23736,
+    "format": "png",
+    "intrinsic": [
+     1106,
+     561
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/placeholder-U5YIPk2pDXLwdtmeQk9EdGHIgA.png",
+    "src": "https://framerusercontent.com/images/U5YIPk2pDXLwdtmeQk9EdGHIgA.png",
+    "framerName": "Content-wrapper > Grid > Placeholder",
+    "alt": "",
+    "rendered": [
+     565,
+     360
+    ],
+    "at1440": [
+     730,
+     2421.3,
+     565,
+     360
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1342,
+    "format": "png",
+    "intrinsic": [
+     1124,
+     734
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/image-1teNRTMPZ0ZmdsRzttniUjQMZPA.png",
+    "src": "https://framerusercontent.com/images/1teNRTMPZ0ZmdsRzttniUjQMZPA.png",
+    "framerName": "Content-wrapper > Grid > Placeholder > Image",
+    "alt": "",
+    "rendered": [
+     411,
+     360
+    ],
+    "at1440": [
+     883,
+     2476.3,
+     411,
+     360
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 14375,
+    "format": "png",
+    "intrinsic": [
+     848,
+     513
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/image-kyItmKY1ktmf02N2bElsVyM0w0.png",
+    "src": "https://framerusercontent.com/images/kyItmKY1ktmf02N2bElsVyM0w0.png",
+    "framerName": "Content-wrapper > Grid > Placeholder > Image",
+    "alt": "",
+    "rendered": [
+     331,
+     322
+    ],
+    "at1440": [
+     262,
+     3014,
+     331,
+     322
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 15843,
+    "format": "png",
+    "intrinsic": [
+     731,
+     543
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/placeholder-UfhAmEzi2JL5c6IsWYI3ByKAZIY.png",
+    "src": "https://framerusercontent.com/images/UfhAmEzi2JL5c6IsWYI3ByKAZIY.png",
+    "framerName": "Content-wrapper > Grid > Placeholder",
+    "alt": "",
+    "rendered": [
+     565,
+     360
+    ],
+    "at1440": [
+     730,
+     2995,
+     565,
+     360
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1310,
+    "format": "png",
+    "intrinsic": [
+     1124,
+     734
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/image-fxYBss5q9tJlY47rj1oyNrgM0.png",
+    "src": "https://framerusercontent.com/images/fxYBss5q9tJlY47rj1oyNrgM0.png",
+    "framerName": "Content-wrapper > Grid > Placeholder > Image",
+    "alt": "",
+    "rendered": [
+     498.7,
+     440
+    ],
+    "at1440": [
+     794.3,
+     2915,
+     498.7,
+     440
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 39591,
+    "format": "png",
+    "intrinsic": [
+     1060,
+     515
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/frame-2147233107-YZgEFDVihSQQS8ZIuqSsj8Uu1PE.png",
+    "src": "https://framerusercontent.com/images/YZgEFDVihSQQS8ZIuqSsj8Uu1PE.png",
+    "framerName": "Content-wrapper > Testimonial > Frame 2147233107",
+    "alt": "",
+    "rendered": [
+     124,
+     124
+    ],
+    "at1440": [
+     272,
+     3821.8,
+     124,
+     124
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 11382,
+    "format": "png",
+    "intrinsic": [
+     218,
+     219
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/image-NZLtS7MabFwrjf6BA1sbhrTWDMU.png",
+    "src": "https://framerusercontent.com/images/NZLtS7MabFwrjf6BA1sbhrTWDMU.png",
+    "framerName": "Content-wrapper > Testimonial > Image",
+    "alt": "",
+    "rendered": [
+     61,
+     48
+    ],
+    "at1440": [
+     97,
+     3687.8,
+     61,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 19083,
+    "format": "png",
+    "intrinsic": [
+     393,
+     306
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/group-2085662431-Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "src": "https://framerusercontent.com/images/Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "framerName": "Desktop > Stack > Right Dotted Pattern > Group 2085662431",
+    "alt": "",
+    "rendered": [
+     64,
+     64
+    ],
+    "at1440": [
+     144,
+     4169.3,
+     64,
+     64
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2276,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/startups/title-b80c8ad9.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Title",
+    "rendered": [
+     38,
+     37
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1407,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/startups/icon-card-c08eab20.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Content-wrapper > HeroImage > Card",
+    "rendered": [
+     22,
+     22
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1314,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/startups/icon-card-37918730.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Content-wrapper > HeroImage > Card",
+    "rendered": [
+     22,
+     22
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1462,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/startups/title-0efd969c.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Title",
+    "rendered": [
+     27,
+     26
+    ],
+    "widths": [
+     "390"
+    ],
+    "bytes": 1375,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/startups/hipaa-emblem.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 21324,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/startups/lightdash-motion-dashboard-8RgDUjdkC7xmQytT53AmJUGvms.riv",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 936255,
+    "format": "riv"
+   }
+  ],
+  "fintech": [
+   {
+    "file": "/assets/pages/fintech/ellipse-370-AWB82f6CxAvCGwmYf3RdnaKQIo.png",
+    "src": "https://framerusercontent.com/images/AWB82f6CxAvCGwmYf3RdnaKQIo.png",
+    "framerName": "Hero > Illustration > Variant 7 > Ellipse 370",
+    "alt": "",
+    "rendered": [
+     26,
+     26
+    ],
+    "at1440": [
+     1268,
+     256,
+     26,
+     26
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 760,
+    "format": "png",
+    "intrinsic": [
+     75,
+     75
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/bg-XWNyKQ4uuYfmRmWxQWesDEdL18.jpg",
+    "src": "https://framerusercontent.com/images/XWNyKQ4uuYfmRmWxQWesDEdL18.jpg",
+    "framerName": "Hero > Illustration > Variant 7 > BG",
+    "alt": "",
+    "rendered": [
+     564,
+     604
+    ],
+    "at1440": [
+     796,
+     106,
+     564,
+     604
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 101113,
+    "format": "jpg",
+    "intrinsic": [
+     564,
+     604
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/frame-2147234198-Wt9778OuGJnGtOOmgQJ7FFz3itY.png",
+    "src": "https://framerusercontent.com/images/Wt9778OuGJnGtOOmgQJ7FFz3itY.png",
+    "framerName": "Content-wrapper > Hero > Frame 2147234198",
+    "alt": "",
+    "rendered": [
+     161,
+     416
+    ],
+    "at1440": [
+     80,
+     106,
+     161,
+     416
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 19681,
+    "format": "png",
+    "intrinsic": [
+     640,
+     1664
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/group-2085662009-6G8yEPoIoue6E7YNcGR3uJXUsg.png",
+    "src": "https://framerusercontent.com/images/6G8yEPoIoue6E7YNcGR3uJXUsg.png",
+    "framerName": "Frame 2147234196 > Group 2085662327 > Group 2085662325 > Group 2085662009",
+    "alt": "",
+    "rendered": [
+     225,
+     129
+    ],
+    "at1440": [
+     1200,
+     106,
+     225,
+     129
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 45232,
+    "format": "png",
+    "intrinsic": [
+     896,
+     512
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/hypebeast-X1Rd8CLxwvNU4Tf1KCa2OWalT0.png",
+    "src": "https://framerusercontent.com/images/X1Rd8CLxwvNU4Tf1KCa2OWalT0.png",
+    "framerName": "Trusted By > Logos > Hypebeast > HYPEBEAST",
+    "alt": "",
+    "rendered": [
+     97,
+     25.5
+    ],
+    "at1440": [
+     159.5,
+     845.7,
+     97,
+     25.5
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1711,
+    "format": "png",
+    "intrinsic": [
+     264,
+     60
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/swappie-ggPEyATL8MbnC0lAJYVTopJ7Thc.png",
+    "src": "https://framerusercontent.com/images/ggPEyATL8MbnC0lAJYVTopJ7Thc.png",
+    "framerName": "Trusted By > Logos > Swappie > Swappie",
+    "alt": "",
+    "rendered": [
+     97,
+     23.8
+    ],
+    "at1440": [
+     415.5,
+     846.5,
+     97,
+     23.8
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 861,
+    "format": "png",
+    "intrinsic": [
+     191,
+     60
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/neo-3xZrmqPbNl94upPc3clOzv5PXCk.png",
+    "src": "https://framerusercontent.com/images/3xZrmqPbNl94upPc3clOzv5PXCk.png",
+    "framerName": "Trusted By > Logos > Neo > Neo",
+    "alt": "",
+    "rendered": [
+     77,
+     23.6
+    ],
+    "at1440": [
+     681.5,
+     846.6,
+     77,
+     23.6
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 902,
+    "format": "png",
+    "intrinsic": [
+     153,
+     47
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/kraken-adzhFZdy5jMFUPo6pMJgrSsdL1Y.png",
+    "src": "https://framerusercontent.com/images/adzhFZdy5jMFUPo6pMJgrSsdL1Y.png",
+    "framerName": "Trusted By > Logos > Kraken > Kraken",
+    "alt": "",
+    "rendered": [
+     97,
+     16.5
+    ],
+    "at1440": [
+     927.5,
+     850.2,
+     97,
+     16.5
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1142,
+    "format": "png",
+    "intrinsic": [
+     295,
+     50
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/alma-CyF0pGviedxvkYqcKUeio838BY0.png",
+    "src": "https://framerusercontent.com/images/CyF0pGviedxvkYqcKUeio838BY0.png",
+    "framerName": "Trusted By > Logos > Alma > Alma",
+    "alt": "",
+    "rendered": [
+     85,
+     24
+    ],
+    "at1440": [
+     1189.5,
+     846.4,
+     85,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1470,
+    "format": "png",
+    "intrinsic": [
+     232,
+     60
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/grad-DAzJJlDpYDsBxuEjwoR2T3iLU0.png",
+    "src": "https://framerusercontent.com/images/DAzJJlDpYDsBxuEjwoR2T3iLU0.png",
+    "framerName": "Reason 01 > Icon > block-v1 > grad",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     153,
+     1127.4,
+     48,
+     48
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1818,
+    "format": "png",
+    "intrinsic": [
+     192,
+     192
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/variant-4-o50LHXdXY3yojXmHSrVvTFH8Y.png",
+    "src": "https://framerusercontent.com/images/o50LHXdXY3yojXmHSrVvTFH8Y.png",
+    "framerName": "Benifit Section > Cards > Benefit 02 > Variant 4",
+    "alt": "",
+    "rendered": [
+     25,
+     25
+    ],
+    "at1440": [
+     820.6,
+     1672.1,
+     25,
+     25
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 5462,
+    "format": "png",
+    "intrinsic": [
+     101,
+     101
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-E1kWGbmYoL7eYvddDB6OCLTzM.png",
+    "src": "https://framerusercontent.com/images/E1kWGbmYoL7eYvddDB6OCLTzM.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1232,
+     2841.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1181,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-EkNC4wRWARgqYS2HRX4x9gjJos.png",
+    "src": "https://framerusercontent.com/images/EkNC4wRWARgqYS2HRX4x9gjJos.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1209,
+     2841.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1001,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/grad-8wv1AxccWAnN3OUMe7KFeFj2Nuk.png",
+    "src": "https://framerusercontent.com/images/8wv1AxccWAnN3OUMe7KFeFj2Nuk.png",
+    "framerName": "Desktop > BG Pattern > Block-Master > grad",
+    "alt": "",
+    "rendered": [
+     23,
+     23
+    ],
+    "at1440": [
+     1161.8,
+     2841.4,
+     23,
+     23
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 606,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-5xUmJO1puutfElB9sEs21uiHk.png",
+    "src": "https://framerusercontent.com/images/5xUmJO1puutfElB9sEs21uiHk.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1139,
+     2841.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2066,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-RvagZAeEMLrHhAAnB9nH1LZGmA.png",
+    "src": "https://framerusercontent.com/images/RvagZAeEMLrHhAAnB9nH1LZGmA.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1092,
+     2841.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1366,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-3O4EKHJxQiq8P6Modh8LegrHvUo.png",
+    "src": "https://framerusercontent.com/images/3O4EKHJxQiq8P6Modh8LegrHvUo.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1256,
+     2841.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1566,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-7h5DHw9Ih0HU00zhwOpGBaZXZ68.png",
+    "src": "https://framerusercontent.com/images/7h5DHw9Ih0HU00zhwOpGBaZXZ68.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1209,
+     2747.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1858,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-DC14QNwkXo15tzFVKM00AG3nJY.png",
+    "src": "https://framerusercontent.com/images/DC14QNwkXo15tzFVKM00AG3nJY.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1232,
+     2771.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1070,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-YMsOT2qz1YkzTuUZmk3cD6nbi1I.png",
+    "src": "https://framerusercontent.com/images/YMsOT2qz1YkzTuUZmk3cD6nbi1I.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1256,
+     2771.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1603,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-2u79ISLrqmWzwdlB5IMQhfiyYg.png",
+    "src": "https://framerusercontent.com/images/2u79ISLrqmWzwdlB5IMQhfiyYg.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1115,
+     2817.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1852,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-cpbtvZupY5JNiCSpB7fLDbe3Oc.png",
+    "src": "https://framerusercontent.com/images/cpbtvZupY5JNiCSpB7fLDbe3Oc.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1185,
+     2817.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2047,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-ZZKU9XDPDnPOJUPv0PglqsYQA.png",
+    "src": "https://framerusercontent.com/images/ZZKU9XDPDnPOJUPv0PglqsYQA.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1209,
+     2817.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1341,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-06brq6A16uaTRRlYr9ucrY27w.png",
+    "src": "https://framerusercontent.com/images/06brq6A16uaTRRlYr9ucrY27w.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1256,
+     2817.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1274,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-zbzl1JbJ9BKEiwJy42x0Es4YDA.png",
+    "src": "https://framerusercontent.com/images/zbzl1JbJ9BKEiwJy42x0Es4YDA.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1256,
+     2794.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 894,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-1mY2vbq6kTUgSPdLaSnEVC2rtw.png",
+    "src": "https://framerusercontent.com/images/1mY2vbq6kTUgSPdLaSnEVC2rtw.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1162,
+     2794.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1416,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-vyxzfG6HrFRJDobTl0kbKDTlXY.png",
+    "src": "https://framerusercontent.com/images/vyxzfG6HrFRJDobTl0kbKDTlXY.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1232,
+     2704.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3913,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/block-master-VEksqL8lGXpmIFqCuukdFNuuBtA.png",
+    "src": "https://framerusercontent.com/images/VEksqL8lGXpmIFqCuukdFNuuBtA.png",
+    "framerName": "Testimonial > Desktop > BG Pattern > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1256,
+     2681.4,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3428,
+    "format": "png",
+    "intrinsic": [
+     94,
+     94
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/person-gnaALe5A2PvVeKJOfM2FSTyw.png",
+    "src": "https://framerusercontent.com/images/gnaALe5A2PvVeKJOfM2FSTyw.png",
+    "framerName": "Content > Person details > Image > Person",
+    "alt": "",
+    "rendered": [
+     64,
+     64
+    ],
+    "at1440": [
+     208,
+     2686.9,
+     64,
+     64
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 5181,
+    "format": "png",
+    "intrinsic": [
+     124,
+     124
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/bg-element-o00XVYnTMA96BZ1vVmgf5ONccjI.png",
+    "src": "https://framerusercontent.com/images/o00XVYnTMA96BZ1vVmgf5ONccjI.png",
+    "framerName": "Section > Bottom content > Title & CTA > BG Element",
+    "alt": "",
+    "rendered": [
+     224,
+     128
+    ],
+    "at1440": [
+     425.6,
+     3737,
+     224,
+     128
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 43694,
+    "format": "png",
+    "intrinsic": [
+     896,
+     512
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/graphic-border-lc6YRJAGTi8i3sQyemwJrMzsReo.png",
+    "src": "https://framerusercontent.com/images/lc6YRJAGTi8i3sQyemwJrMzsReo.png",
+    "framerName": "Graphic Border > Graphic Border",
+    "alt": "",
+    "rendered": [
+     1440,
+     60
+    ],
+    "at1440": [
+     0,
+     3945,
+     1440,
+     60
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 156979,
+    "format": "png",
+    "intrinsic": [
+     5120,
+     240
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/group-2085662431-Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "src": "https://framerusercontent.com/images/Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "framerName": "Desktop > Stack > Right Dotted Pattern > Group 2085662431",
+    "alt": "",
+    "rendered": [
+     64,
+     64
+    ],
+    "at1440": [
+     80,
+     4742.5,
+     64,
+     64
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2276,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/group-48095555-6125e5ac.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Hero > Illustration > Variant 7 > Group 48095555",
+    "rendered": [
+     26,
+     26
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 792,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-648dd287.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Section > Reason 01 > Icon > Icon",
+    "rendered": [
+     24,
+     24
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 276,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/frame-df4cef0c.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Section > Reason 02 > Icon > Frame",
+    "rendered": [
+     24,
+     24
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1359,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/frame-da9b4e57.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Section > Reason 03 > Icon > Frame",
+    "rendered": [
+     24,
+     24
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 689,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/grid-01-a85697b0.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Cards > Benefit 02 > Variant 4 > grid-01",
+    "rendered": [
+     11,
+     11
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 2811,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/chevron-down-6d19eb12.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Cards > Benefit 02 > Variant 4 > chevron-down",
+    "rendered": [
+     11,
+     11
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 304,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/noun-face-1-9f14ef01.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Reason 03 > Closed > Icon 01 > noun-face 1",
+    "rendered": [
+     32,
+     32
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 5728,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/noun-face-2-ea0d3d34.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Reason 03 > Closed > Icon 02 > noun-face 2",
+    "rendered": [
+     32,
+     32
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 6573,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/noun-face-3-be958a53.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Reason 03 > Open > Icon 03 > noun-face 3",
+    "rendered": [
+     32,
+     32
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 5543,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/noun-face-4-18a7f1a0.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Reason 03 > Closed > Icon 04 > noun-face-4",
+    "rendered": [
+     32,
+     32
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 2301,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/content-2f8faa6f.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1214,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/content-d25f2ef6.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1217,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/content-783abede.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1351,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/content-d81f0272.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1355,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/content-ce111248.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1424,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-chevron-up-68b3af0f.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Illustration > Variant 7 > Variant 8 > chevron-up",
+    "rendered": [
+     14,
+     14
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 279,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-line-7-5f32a8b4.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Icon > block-v1 > stripes > Line 7",
+    "rendered": [
+     50,
+     4
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 202,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-line-16-ff3e6ea0.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Icon > block-v1 > stripes > Line 16",
+    "rendered": [
+     4,
+     50
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 225,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-vector-730-237891b3.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Benefit 02 > Variant 4 > Variant 5 > Vector 730",
+    "rendered": [
+     267,
+     116
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 743,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-vector-729-2270012c.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Benefit 02 > Variant 4 > Variant 5 > Vector 729",
+    "rendered": [
+     267,
+     94
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 826,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-line-1045-185f0aeb.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Benefit 02 > Variant 4 > Variant 5 > Line 1045",
+    "rendered": [
+     3,
+     107
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 594,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-cursor-c85f13ed.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Benefit 02 > Variant 4 > Variant 5 > Cursor",
+    "rendered": [
+     20,
+     20
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1682,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-search-lg-2c234c3b.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Benefit 03 > Usecase/Illustration 04 > Variant 3 > search-lg",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 472,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-header-tag-e9981eff.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Benefit 03 > Usecase/Illustration 04 > Variant 3 > header / tag",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1295,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-header-hash-af1f51e3.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > header / hash",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 545,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-arrows-sort-0c581fb4.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > arrows-sort",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 607,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-header-description-110bc89e.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > header / description",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1060,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-header-tag-e0ce4785.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > header / tag",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1295,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-header-popularity-12e78e7d.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > header / popularity",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 747,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-arrow-down-bb1e6c41.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > arrow-down",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 327,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-plus-12178169.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > plus",
+    "rendered": [
+     9,
+     9
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 277,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-bar-chart-10-02696f7e.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > bar-chart-10",
+    "rendered": [
+     8,
+     8
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 4020,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-icon-8a36c2a9.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Usecase/Illustration 04 > Variant 3 > Table > Icon",
+    "rendered": [
+     10,
+     10
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 379,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-cursor-ea9057ea.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Benefit 03 > Usecase/Illustration 04 > Variant 3 > Cursor",
+    "rendered": [
+     24,
+     24
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1678,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-stripes-0c72c678.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Desktop > BG Pattern > Block-Master > stripes",
+    "rendered": [
+     23,
+     24
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1378,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-stripes-b1812305.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Desktop > BG Pattern > Block-Master > stripes",
+    "rendered": [
+     23,
+     24
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 2013,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/icon-trigger-1f3ea972.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "FAQ > Content right > Closed > Trigger",
+    "rendered": [
+     14,
+     14
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 372,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/stack-e7634aec.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Mobile > Stack",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "390"
+    ],
+    "bytes": 1425,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/hipaa-emblem.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 21295,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/fintech/renders/benefit-01-illustration@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 55304,
+    "format": "png",
+    "intrinsic": [
+     1136,
+     612
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/benefit-02-illustration@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 42916,
+    "format": "png",
+    "intrinsic": [
+     1136,
+     612
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/benefit-03-illustration@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 67464,
+    "format": "png",
+    "intrinsic": [
+     1136,
+     612
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/benefit-04-illustration@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 44494,
+    "format": "png",
+    "intrinsic": [
+     1136,
+     610
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/graphic-border@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 465006,
+    "format": "png",
+    "intrinsic": [
+     2880,
+     120
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/hero-illustration@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 169077,
+    "format": "png",
+    "intrinsic": [
+     1128,
+     1208
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/reason-icon-01@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 4657,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/reason-icon-02@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 6417,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/reason-icon-03@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 5339,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/stamps@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 57676,
+    "format": "png",
+    "intrinsic": [
+     928,
+     418
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/testimonial-bg-pattern@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 65215,
+    "format": "png",
+    "intrinsic": [
+     376,
+     368
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/testimonial-card@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 152081,
+    "format": "png",
+    "intrinsic": [
+     2240,
+     450
+    ]
+   },
+   {
+    "file": "/assets/pages/fintech/renders/title-cta-bg-element@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 62911,
+    "format": "png",
+    "intrinsic": [
+     450,
+     258
+    ]
+   }
+  ],
+  "partnerships": [
+   {
+    "file": "/assets/pages/partnerships/block-master-x3Z4NKlNcV0qWh3L4QRIWx0fyIc.png",
+    "src": "https://framerusercontent.com/images/x3Z4NKlNcV0qWh3L4QRIWx0fyIc.png",
+    "framerName": "Main > Hero > BG Element 01 > Block-Master",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     104,
+     130,
+     24,
+     24
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3048,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/grad-8wv1AxccWAnN3OUMe7KFeFj2Nuk.png",
+    "src": "https://framerusercontent.com/images/8wv1AxccWAnN3OUMe7KFeFj2Nuk.png",
+    "framerName": "Hero > BG Element 01 > Block-Master > grad",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     80,
+     106,
+     24,
+     24
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 606,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/texture-gUzZDqhafShmMAeXzIjqrQwZsG4.jpg",
+    "src": "https://framerusercontent.com/images/gUzZDqhafShmMAeXzIjqrQwZsG4.jpg",
+    "framerName": "Hero > BG Element 01 > Block-Master > texture",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     80,
+     106,
+     24,
+     24
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 20322,
+    "format": "jpg",
+    "intrinsic": [
+     375,
+     375
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/block-master-BhL1WtWLynqh1Pjg4G9bbbViQhs.png",
+    "src": "https://framerusercontent.com/images/BhL1WtWLynqh1Pjg4G9bbbViQhs.png",
+    "framerName": "Main > Hero > BG Element 02 > Block-Master",
+    "alt": "",
+    "rendered": [
+     28,
+     28
+    ],
+    "at1440": [
+     1252,
+     683,
+     28,
+     28
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4135,
+    "format": "png",
+    "intrinsic": [
+     109,
+     109
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/grad-152SErwTdqgjMe2OHNVORcm1OeA.png",
+    "src": "https://framerusercontent.com/images/152SErwTdqgjMe2OHNVORcm1OeA.png",
+    "framerName": "Hero > BG Element 02 > Block-Master > grad",
+    "alt": "",
+    "rendered": [
+     27,
+     27
+    ],
+    "at1440": [
+     1332.5,
+     656,
+     27,
+     27
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 719,
+    "format": "png",
+    "intrinsic": [
+     112,
+     112
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/nayuta-mr8uAghSvtTFWPKdjwe40rk2318.png",
+    "src": "https://framerusercontent.com/images/mr8uAghSvtTFWPKdjwe40rk2318.png",
+    "framerName": "Variant 1 > Logos > Nayuta > Nayuta",
+    "alt": "",
+    "rendered": [
+     113,
+     34
+    ],
+    "at1440": [
+     151.5,
+     820.4,
+     113,
+     34
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 989,
+    "format": "png",
+    "intrinsic": [
+     226,
+     68
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/database-tycoon-wnBqGBkGWUrP0E4suiYXPv02WQ.svg",
+    "src": "https://framerusercontent.com/images/wnBqGBkGWUrP0E4suiYXPv02WQ.svg",
+    "framerName": "Variant 1 > Logos > Database tycoon > Database tycoon",
+    "alt": "",
+    "rendered": [
+     155,
+     18.9
+    ],
+    "at1440": [
+     386.5,
+     827.9,
+     155,
+     18.9
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 5486,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/snowpack-data-mdQmUtnKJVr2Bv776Mn8MgpxA.png",
+    "src": "https://framerusercontent.com/images/mdQmUtnKJVr2Bv776Mn8MgpxA.png",
+    "framerName": "Variant 1 > Logos > Snowpack data > Snowpack data",
+    "alt": "",
+    "rendered": [
+     155,
+     33.6
+    ],
+    "at1440": [
+     642.5,
+     820.6,
+     155,
+     33.6
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 55714,
+    "format": "png",
+    "intrinsic": [
+     3500,
+     762
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/pyne-nwS4nOJmIf4PpipNFvz9fEW4fSI.svg",
+    "src": "https://framerusercontent.com/images/nwS4nOJmIf4PpipNFvz9fEW4fSI.svg",
+    "framerName": "Variant 1 > Logos > Pyne > Pyne",
+    "alt": "",
+    "rendered": [
+     130,
+     56
+    ],
+    "at1440": [
+     911,
+     809.4,
+     130,
+     56
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4795,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/driftwave-A9BLX9WDLuZWDDIyhYnvbCHkj0.png",
+    "src": "https://framerusercontent.com/images/A9BLX9WDLuZWDDIyhYnvbCHkj0.png",
+    "framerName": "Variant 1 > Logos > Driftwave > Driftwave",
+    "alt": "",
+    "rendered": [
+     116,
+     36.5
+    ],
+    "at1440": [
+     1174,
+     819.2,
+     116,
+     36.5
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1779,
+    "format": "png",
+    "intrinsic": [
+     286,
+     90
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/grad-eRuexfrxqg7XftutULyE6qYZU.png",
+    "src": "https://framerusercontent.com/images/eRuexfrxqg7XftutULyE6qYZU.png",
+    "framerName": "Headings > BG Element > block > grad",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     144,
+     1461.4,
+     32,
+     32
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1097,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/grad-WqD3An1uhWgQCR6XAMQRJIN6gGk.png",
+    "src": "https://framerusercontent.com/images/WqD3An1uhWgQCR6XAMQRJIN6gGk.png",
+    "framerName": "Headings > BG Element > block > grad",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     144,
+     1557.4,
+     32,
+     32
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1533,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/texture-oWV6y53yvwqSUhclRSXwleQ.jpg",
+    "src": "https://framerusercontent.com/images/oWV6y53yvwqSUhclRSXwleQ.jpg",
+    "framerName": "Headings > BG Element > block > texture",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     144,
+     1557.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 14527,
+    "format": "jpg",
+    "intrinsic": [
+     375,
+     375
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/grad-xyGnPBnBrK8mgw1FCd59fEceA.png",
+    "src": "https://framerusercontent.com/images/xyGnPBnBrK8mgw1FCd59fEceA.png",
+    "framerName": "Headings > BG Element > block > grad",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     176,
+     1525.4,
+     32,
+     32
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 883,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/texture-sq4eGGW6L1yKSbi0wzaXnrCtC0.jpg",
+    "src": "https://framerusercontent.com/images/sq4eGGW6L1yKSbi0wzaXnrCtC0.jpg",
+    "framerName": "Headings > BG Element > block > texture",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     176,
+     1525.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 21271,
+    "format": "jpg",
+    "intrinsic": [
+     375,
+     375
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/texture-tARYjWJ7Fn17iRJpTMioKf7FH0.jpg",
+    "src": "https://framerusercontent.com/images/tARYjWJ7Fn17iRJpTMioKf7FH0.jpg",
+    "framerName": "Headings > BG Element > block > texture",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     176,
+     1589.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 19663,
+    "format": "jpg",
+    "intrinsic": [
+     375,
+     375
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/grad-CNHRQRO8juvUN4vNIT9f3xi61PE.png",
+    "src": "https://framerusercontent.com/images/CNHRQRO8juvUN4vNIT9f3xi61PE.png",
+    "framerName": "Headings > BG Element > block > grad",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     208,
+     1525.4,
+     32,
+     32
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1127,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/texture-aSXkjZrfg10oF3i3wPxHnZDiKU.jpg",
+    "src": "https://framerusercontent.com/images/aSXkjZrfg10oF3i3wPxHnZDiKU.jpg",
+    "framerName": "Headings > BG Element > block > texture",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     240,
+     1621.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 11607,
+    "format": "jpg",
+    "intrinsic": [
+     375,
+     375
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/texture-5CvwaAFqlHLPZrkYW4uVi4RNIs.jpg",
+    "src": "https://framerusercontent.com/images/5CvwaAFqlHLPZrkYW4uVi4RNIs.jpg",
+    "framerName": "Headings > BG Element > block > texture",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     304,
+     1557.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 23189,
+    "format": "jpg",
+    "intrinsic": [
+     375,
+     375
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/texture-NL4JIZ8Zd5Nzi9HGBJ9HYdi5jec.jpg",
+    "src": "https://framerusercontent.com/images/NL4JIZ8Zd5Nzi9HGBJ9HYdi5jec.jpg",
+    "framerName": "Headings > BG Element > block > texture",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     368,
+     1493.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 15375,
+    "format": "jpg",
+    "intrinsic": [
+     375,
+     375
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-4CdGa577cCOKeb71APBe3n7jF4.png",
+    "src": "https://framerusercontent.com/images/4CdGa577cCOKeb71APBe3n7jF4.png",
+    "framerName": "Section > Cards > Reason 01 > icon",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     784,
+     982.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 946,
+    "format": "png",
+    "intrinsic": [
+     480,
+     480
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-rJrChVv7AIg3AWfjxqeXK8AZc.png",
+    "src": "https://framerusercontent.com/images/rJrChVv7AIg3AWfjxqeXK8AZc.png",
+    "framerName": "Section > Cards > Reason 02 > icon",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     784,
+     1138.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1022,
+    "format": "png",
+    "intrinsic": [
+     480,
+     480
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-GFNcLCaX81x5gPuHhatG0VPx9I.png",
+    "src": "https://framerusercontent.com/images/GFNcLCaX81x5gPuHhatG0VPx9I.png",
+    "framerName": "Section > Cards > Reason 03 > icon",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     784,
+     1294.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1058,
+    "format": "png",
+    "intrinsic": [
+     480,
+     480
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-dtp2UVGLloD3F0aNhJMv1LZbdu8.png",
+    "src": "https://framerusercontent.com/images/dtp2UVGLloD3F0aNhJMv1LZbdu8.png",
+    "framerName": "Section > Cards > Reason 04 > icon",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     784,
+     1450.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1056,
+    "format": "png",
+    "intrinsic": [
+     480,
+     480
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/call-hWPKoSXEznuiSGjDNAW2Zpqjk.png",
+    "src": "https://framerusercontent.com/images/hWPKoSXEznuiSGjDNAW2Zpqjk.png",
+    "framerName": "Section > Cards > Reason 05 > Call",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     784,
+     1585.4,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1013,
+    "format": "png",
+    "intrinsic": [
+     480,
+     480
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/vector-HWBHS3BXy2W535FIa6fbhb6s3o.png",
+    "src": "https://framerusercontent.com/images/HWBHS3BXy2W535FIa6fbhb6s3o.png",
+    "framerName": "Main > Testimonial 02 > Off > Vector",
+    "alt": "",
+    "rendered": [
+     150,
+     150
+    ],
+    "at1440": [
+     417.3,
+     2085.4,
+     150,
+     150
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390"
+    ],
+    "bytes": 7625,
+    "format": "png",
+    "intrinsic": [
+     150,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/vector-IJfOGdGlEqt2ziEJzbarYmvFu0.png",
+    "src": "https://framerusercontent.com/images/IJfOGdGlEqt2ziEJzbarYmvFu0.png",
+    "framerName": "Main > Testimonial 02 > On  > Vector",
+    "alt": "",
+    "rendered": [
+     150,
+     150
+    ],
+    "at1440": [
+     640.9,
+     2085.4,
+     150,
+     150
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390"
+    ],
+    "bytes": 7157,
+    "format": "png",
+    "intrinsic": [
+     151,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/vector-ovgkAGPryHE0vYVrpegdNYUw4XQ.png",
+    "src": "https://framerusercontent.com/images/ovgkAGPryHE0vYVrpegdNYUw4XQ.png",
+    "framerName": "Main > Testimonial 02 > Off > Vector",
+    "alt": "",
+    "rendered": [
+     150,
+     150
+    ],
+    "at1440": [
+     868.6,
+     2085.4,
+     150,
+     150
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 6352,
+    "format": "png",
+    "intrinsic": [
+     151,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/grad-N66kHC3C0rYNu8PyNMeXelzw.png",
+    "src": "https://framerusercontent.com/images/N66kHC3C0rYNu8PyNMeXelzw.png",
+    "framerName": "Main > Testimonial 02 > block-v1 > grad",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     152,
+     2085.4,
+     24,
+     24
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 744,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/grad-G3sDXpMFLOQ5OOvtUuGF4biQEkI.png",
+    "src": "https://framerusercontent.com/images/G3sDXpMFLOQ5OOvtUuGF4biQEkI.png",
+    "framerName": "Main > Testimonial 02 > block-v1 > grad",
+    "alt": "",
+    "rendered": [
+     24,
+     24
+    ],
+    "at1440": [
+     1264,
+     2210.4,
+     24,
+     24
+    ],
+    "fit": "fill",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 739,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/bg-pattern-KsQ21PJT6e9XU2YmglGUiR4.png",
+    "src": "https://framerusercontent.com/images/KsQ21PJT6e9XU2YmglGUiR4.png",
+    "framerName": "Main > Form Section > BG Pattern",
+    "alt": "",
+    "rendered": [
+     1280,
+     1068
+    ],
+    "at1440": [
+     80,
+     3117.4,
+     1280,
+     1068
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 42427,
+    "format": "png",
+    "intrinsic": [
+     5112,
+     4152
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/business-product-startup-1-streamline-pi-012e51c1.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Benefits > Benefit 01 > Icon > business-product-startup-1--Streamline-Pixel",
+    "rendered": [
+     48,
+     48
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 6570,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/business-product-check-streamline-pixel-93d5f35e.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Benefits > Benefit 02 > Icon > business-product-check--Streamline-Pixel",
+    "rendered": [
+     48,
+     48
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 5757,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/business-money-coin-currency-streamline--bf12d370.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Benefits > Benefit 03 > Icon > business-money-coin-currency--Streamline-Pixel",
+    "rendered": [
+     48,
+     48
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 6820,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/email-mail-chat-streamline-pixel-e7c8e22a.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Benefits > Benefit 04 > Icon > email-mail-chat--Streamline-Pixel",
+    "rendered": [
+     48,
+     48
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 3480,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/business-products-deal-handshake-streaml-94e5f35c.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Benefits > Benefit 05 > Icon > business-products-deal-handshake--Streamline-Pixel",
+    "rendered": [
+     48,
+     48
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 4995,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/business-products-climb-top-streamline-p-90acf7b2.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Benefits > Benefit 06 > Icon > business-products-climb-top--Streamline-Pixel",
+    "rendered": [
+     48,
+     48
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 6822,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-be52be02.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Form Section > Card > Icon > Icon",
+    "rendered": [
+     64,
+     64
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 5567,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-line-7-e50cf4f8.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element 01 > Block-Master > stripes > Line 7",
+    "rendered": [
+     3,
+     26
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 238,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-077e6d53.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element 01 > Block-Master > stripes > Clip path group",
+    "rendered": [
+     24,
+     24
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1996,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-bad3187e.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element 01 > Block-Master > stripes > Clip path group",
+    "rendered": [
+     24,
+     24
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1993,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-45d4dc03.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element 02 > Block-Master > stripes > Clip path group",
+    "rendered": [
+     28,
+     28
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1993,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-99cdbdd7.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element 02 > Block-Master > stripes > Clip path group",
+    "rendered": [
+     28,
+     28
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1993,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-f806a3be.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element 02 > Block-Master > stripes > Clip path group",
+    "rendered": [
+     28,
+     28
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1996,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-line-7-1f378339.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element 02 > Block-Master > stripes > Line 7",
+    "rendered": [
+     3,
+     29
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 238,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-line-11-e980c7c5.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element 02 > Block-Master > stripes > Line 11",
+    "rendered": [
+     3,
+     29
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 236,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-line-7-70f914c6.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Line 7",
+    "rendered": [
+     34,
+     3
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 209,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-54f7357e.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1561,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-line-7-c629e2c0.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Line 7",
+    "rendered": [
+     34,
+     3
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 208,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-cd16899e.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1570,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-78100071.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1597,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-line-7-80a15730.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Line 7",
+    "rendered": [
+     34,
+     3
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 207,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-588a5515.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1598,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-line-7-632ff4ef.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Line 7",
+    "rendered": [
+     3,
+     34
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 205,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-fe8e1aec.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1594,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-86e3af2a.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Testimonial 02 > block-v1 > stripes > Clip path group",
+    "rendered": [
+     24,
+     24
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1872,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-d2dad570.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Testimonial 02 > block-v1 > stripes > Clip path group",
+    "rendered": [
+     24,
+     24
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1872,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-d29cab0a.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "BG Element > block-v1 > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1568,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-eebeea1c.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Card > BG Element > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1565,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-2575afb4.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Frame 2147234448 > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1565,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-7cdcb492.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Frame 2147234448 > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1568,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-372be965.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Frame 2147234448 > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1589,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-17ceaac3.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Frame 2147234448 > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1590,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/icon-clip-path-group-62479444.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Frame 2147234448 > block > stripes > Clip path group",
+    "rendered": [
+     32,
+     32
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1592,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/vector-RSU66IHxPwpBMno8Z7OYsJFaKE.png",
+    "src": "https://framerusercontent.com/images/RSU66IHxPwpBMno8Z7OYsJFaKE.png",
+    "framerName": "Main > Testimonial 01 > On  > Vector",
+    "alt": "",
+    "rendered": [
+     150,
+     150
+    ],
+    "at1440": null,
+    "fit": "contain",
+    "widths": [
+     "810"
+    ],
+    "bytes": 9820,
+    "format": "png",
+    "intrinsic": [
+     150,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/vector-Q6kb2nTn3Tl1upjb6w4KY2jw1SI.png",
+    "src": "https://framerusercontent.com/images/Q6kb2nTn3Tl1upjb6w4KY2jw1SI.png",
+    "framerName": "Main > Testimonial 01 > Off > Vector",
+    "alt": "",
+    "rendered": [
+     150,
+     150
+    ],
+    "at1440": null,
+    "fit": "contain",
+    "widths": [
+     "810"
+    ],
+    "bytes": 5545,
+    "format": "png",
+    "intrinsic": [
+     150,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/hero-hand-cursor.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 33866,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/hero-rocket.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 24987,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/partnerships/renders/form-card-bottom-right-cluster@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 65586,
+    "format": "png",
+    "intrinsic": [
+     512,
+     384
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/renders/form-card-corner-block@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 3967,
+    "format": "png",
+    "intrinsic": [
+     64,
+     64
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/renders/hero-bg-element-01@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 14895,
+    "format": "png",
+    "intrinsic": [
+     240,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/renders/hero-bg-element-02@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 17998,
+    "format": "png",
+    "intrinsic": [
+     216,
+     108
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/renders/testimonial-block-left@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 2106,
+    "format": "png",
+    "intrinsic": [
+     48,
+     48
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/renders/testimonial-block-right@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 2289,
+    "format": "png",
+    "intrinsic": [
+     48,
+     48
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/renders/testimonial-photos@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 260976,
+    "format": "png",
+    "intrinsic": [
+     1316,
+     464
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/renders/why-bg-element@2x.png",
+    "src": "render (2x element capture, see spec)",
+    "bytes": 67591,
+    "format": "png",
+    "intrinsic": [
+     512,
+     512
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/people/chloe-anderson-off.png",
+    "src": "partner portrait on/off (partnerships \u00a76.4)",
+    "bytes": 6352,
+    "format": "png",
+    "intrinsic": [
+     151,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/people/chloe-anderson-on.png",
+    "src": "partner portrait on/off (partnerships \u00a76.4)",
+    "bytes": 7191,
+    "format": "png",
+    "intrinsic": [
+     151,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/people/colin-lee-off.png",
+    "src": "partner portrait on/off (partnerships \u00a76.4)",
+    "bytes": 7625,
+    "format": "png",
+    "intrinsic": [
+     150,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/people/colin-lee-on.png",
+    "src": "partner portrait on/off (partnerships \u00a76.4)",
+    "bytes": 9820,
+    "format": "png",
+    "intrinsic": [
+     150,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/people/david-olodort-off.png",
+    "src": "partner portrait on/off (partnerships \u00a76.4)",
+    "bytes": 5545,
+    "format": "png",
+    "intrinsic": [
+     150,
+     150
+    ]
+   },
+   {
+    "file": "/assets/pages/partnerships/people/david-olodort-on.png",
+    "src": "partner portrait on/off (partnerships \u00a76.4)",
+    "bytes": 7157,
+    "format": "png",
+    "intrinsic": [
+     151,
+     150
+    ]
+   }
+  ],
+  "about": [
+   {
+    "file": "/assets/pages/about/sticker-3jDAfrYsb5KDuuOTsrf6Mf69t5M.png",
+    "src": "https://framerusercontent.com/images/3jDAfrYsb5KDuuOTsrf6Mf69t5M.png",
+    "framerName": "Content-wrapper",
+    "alt": "Sticker",
+    "rendered": [
+     80,
+     80
+    ],
+    "at1440": [
+     263,
+     160.5,
+     80,
+     80
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2565,
+    "format": "png",
+    "intrinsic": [
+     159,
+     159
+    ]
+   },
+   {
+    "file": "/assets/pages/about/sticker-DlEXpkvcod13UbFuJK5SfJhbZE.png",
+    "src": "https://framerusercontent.com/images/DlEXpkvcod13UbFuJK5SfJhbZE.png",
+    "framerName": "Content-wrapper",
+    "alt": "Sticker",
+    "rendered": [
+     80,
+     80
+    ],
+    "at1440": [
+     392,
+     152.5,
+     80,
+     80
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2803,
+    "format": "png",
+    "intrinsic": [
+     162,
+     155
+    ]
+   },
+   {
+    "file": "/assets/pages/about/sticker-MUUZbVAiGjvOSCXQKxPwckDjko.png",
+    "src": "https://framerusercontent.com/images/MUUZbVAiGjvOSCXQKxPwckDjko.png",
+    "framerName": "Content-wrapper",
+    "alt": "Sticker",
+    "rendered": [
+     80,
+     80
+    ],
+    "at1440": [
+     328,
+     249.5,
+     80,
+     80
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1976,
+    "format": "png",
+    "intrinsic": [
+     161,
+     157
+    ]
+   },
+   {
+    "file": "/assets/pages/about/sticker-juWoChWJuM2NEvCg3e5kICWUn0.png",
+    "src": "https://framerusercontent.com/images/juWoChWJuM2NEvCg3e5kICWUn0.png",
+    "framerName": "Content-wrapper",
+    "alt": "Sticker",
+    "rendered": [
+     80,
+     80
+    ],
+    "at1440": [
+     1119,
+     170.5,
+     80,
+     80
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1975,
+    "format": "png",
+    "intrinsic": [
+     161,
+     157
+    ]
+   },
+   {
+    "file": "/assets/pages/about/sticker-cOkRzlkSX0kvBdkYeEfPHwBt8.png",
+    "src": "https://framerusercontent.com/images/cOkRzlkSX0kvBdkYeEfPHwBt8.png",
+    "framerName": "Content-wrapper",
+    "alt": "Sticker",
+    "rendered": [
+     80,
+     80
+    ],
+    "at1440": [
+     1004,
+     160.5,
+     80,
+     80
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2768,
+    "format": "png",
+    "intrinsic": [
+     163,
+     163
+    ]
+   },
+   {
+    "file": "/assets/pages/about/sticker-67o8LS0xz9NCxTx0Jz1dlmiU.png",
+    "src": "https://framerusercontent.com/images/67o8LS0xz9NCxTx0Jz1dlmiU.png",
+    "framerName": "Content-wrapper",
+    "alt": "Sticker",
+    "rendered": [
+     80,
+     80
+    ],
+    "at1440": [
+     1065,
+     242.5,
+     80,
+     80
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2688,
+    "format": "png",
+    "intrinsic": [
+     168,
+     158
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-pjYBnLBB3jppdo5NH5Jcl2ayGw.png",
+    "src": "https://framerusercontent.com/images/pjYBnLBB3jppdo5NH5Jcl2ayGw.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     337.5,
+     554.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2673,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-beoaHcox9toIDk7otfX3DmaGzkg.png",
+    "src": "https://framerusercontent.com/images/beoaHcox9toIDk7otfX3DmaGzkg.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     510.5,
+     554.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3699,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-ePysoirkk88HMnJvYj8Wm8mE4.png",
+    "src": "https://framerusercontent.com/images/ePysoirkk88HMnJvYj8Wm8mE4.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     683.5,
+     554.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3711,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-q7C36GCqiEge32p3uHA4XdsQ.png",
+    "src": "https://framerusercontent.com/images/q7C36GCqiEge32p3uHA4XdsQ.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     856.5,
+     554.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3207,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-4fkCiDTngZwF7UNhj1UV0Q7AP4.png",
+    "src": "https://framerusercontent.com/images/4fkCiDTngZwF7UNhj1UV0Q7AP4.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     1029.5,
+     554.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4200,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-j4nRlqLzHExD1UHdpmys2WAbzbE.png",
+    "src": "https://framerusercontent.com/images/j4nRlqLzHExD1UHdpmys2WAbzbE.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     337.5,
+     739.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4051,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-wSoTZXOZwPefGPTEPaYrHlkHnJw.png",
+    "src": "https://framerusercontent.com/images/wSoTZXOZwPefGPTEPaYrHlkHnJw.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     510.5,
+     739.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3391,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-9I1lw4QOgZx08msHZvAJfAchsc.png",
+    "src": "https://framerusercontent.com/images/9I1lw4QOgZx08msHZvAJfAchsc.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     683.5,
+     739.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2979,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-Ldee5LQNgbQ4GnTbKk8gmHKAY.png",
+    "src": "https://framerusercontent.com/images/Ldee5LQNgbQ4GnTbKk8gmHKAY.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     856.5,
+     739.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1935,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-Zzo0Dlcn3rOpqAZdqzx7aoZxvtw.png",
+    "src": "https://framerusercontent.com/images/Zzo0Dlcn3rOpqAZdqzx7aoZxvtw.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     1029.5,
+     739.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3571,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-dlyODgmjA7P1UgesR546PTLrEy4.png",
+    "src": "https://framerusercontent.com/images/dlyODgmjA7P1UgesR546PTLrEy4.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     337.5,
+     924.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 8651,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-vLTD50njybKui4MhY6ttXAW47rQ.png",
+    "src": "https://framerusercontent.com/images/vLTD50njybKui4MhY6ttXAW47rQ.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     510.5,
+     924.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4295,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-ZQJun5JNtSWIUPWjZXRt9Sy7Sg.png",
+    "src": "https://framerusercontent.com/images/ZQJun5JNtSWIUPWjZXRt9Sy7Sg.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     683.5,
+     924.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 6094,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-NhOQxhCCiwJoL5oPOk8skkzuU.png",
+    "src": "https://framerusercontent.com/images/NhOQxhCCiwJoL5oPOk8skkzuU.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     856.5,
+     924.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2961,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-wpMsDKt1Y7m4pVLnjNUcP8P36E.png",
+    "src": "https://framerusercontent.com/images/wpMsDKt1Y7m4pVLnjNUcP8P36E.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     1029.5,
+     924.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 7085,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-h3zdubByQjS5NvU6zaSJNN63aI.png",
+    "src": "https://framerusercontent.com/images/h3zdubByQjS5NvU6zaSJNN63aI.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     337.5,
+     1109.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 6977,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-jNZ9BhaIaQeUkmJpe4lF4qaSQ.png",
+    "src": "https://framerusercontent.com/images/jNZ9BhaIaQeUkmJpe4lF4qaSQ.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     510.5,
+     1109.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 8327,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-WUFxY5UfdTfZXmruO5iWGxGFow.png",
+    "src": "https://framerusercontent.com/images/WUFxY5UfdTfZXmruO5iWGxGFow.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     683.5,
+     1109.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4556,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-e6MAUmbAcs5yJY5RoxsnWD9dfuc.png",
+    "src": "https://framerusercontent.com/images/e6MAUmbAcs5yJY5RoxsnWD9dfuc.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     856.5,
+     1109.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 5558,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-EFc02eeMWADA7FrlIyRexHfGWAs.png",
+    "src": "https://framerusercontent.com/images/EFc02eeMWADA7FrlIyRexHfGWAs.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     1029.5,
+     1109.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 5736,
+    "format": "png",
+    "intrinsic": [
+     108,
+     108
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-MMPy2T9ByLKVQUS7XV3y9dcvIs.png",
+    "src": "https://framerusercontent.com/images/MMPy2T9ByLKVQUS7XV3y9dcvIs.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     337.5,
+     1294.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4562,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-4qK0sCLMwNF5p7tyxQWxyceBXM.png",
+    "src": "https://framerusercontent.com/images/4qK0sCLMwNF5p7tyxQWxyceBXM.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     510.5,
+     1294.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4470,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-RKgbSDy0C2ihtGJ4N0oiZPNVXA.png",
+    "src": "https://framerusercontent.com/images/RKgbSDy0C2ihtGJ4N0oiZPNVXA.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     683.5,
+     1294.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4479,
+    "format": "png",
+    "intrinsic": [
+     226,
+     226
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-u18q6aMOURbfOpkamUWtzkIf5A.png",
+    "src": "https://framerusercontent.com/images/u18q6aMOURbfOpkamUWtzkIf5A.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     856.5,
+     1294.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 7336,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-7Kut7U3LxO1VV2T1T2B0LMFxvY.png",
+    "src": "https://framerusercontent.com/images/7Kut7U3LxO1VV2T1T2B0LMFxvY.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     1029.5,
+     1294.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 9721,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-B5NZmDDUkSn1meT0AgDdwdpsOQ.png",
+    "src": "https://framerusercontent.com/images/B5NZmDDUkSn1meT0AgDdwdpsOQ.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     337.5,
+     1479.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 9015,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-Y3MyoJqoEtGz2Gp8LIhxzLquGUc.png",
+    "src": "https://framerusercontent.com/images/Y3MyoJqoEtGz2Gp8LIhxzLquGUc.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     510.5,
+     1479.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 7235,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/variant-1-ytvAZIw4DXdCfCCc4YV7V7lgE84.png",
+    "src": "https://framerusercontent.com/images/ytvAZIw4DXdCfCCc4YV7V7lgE84.png",
+    "framerName": "Content-wrapper > Team > Item > Variant 1",
+    "alt": "",
+    "rendered": [
+     73,
+     72
+    ],
+    "at1440": [
+     683.5,
+     1479.4,
+     73,
+     72
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 3540,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/image-tSOCKXwBErpovdEAN3dG7BJpZyw.png",
+    "src": "https://framerusercontent.com/images/tSOCKXwBErpovdEAN3dG7BJpZyw.png",
+    "framerName": "Content-wrapper > Story > Icon > Image",
+    "alt": "",
+    "rendered": [
+     53,
+     52.5
+    ],
+    "at1440": [
+     693.5,
+     1779.6,
+     53,
+     52.5
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1611,
+    "format": "png",
+    "intrinsic": [
+     106,
+     105
+    ]
+   },
+   {
+    "file": "/assets/pages/about/image-qEi3UXD6LnzJbUwQ7CSkkyiobvU.png",
+    "src": "https://framerusercontent.com/images/qEi3UXD6LnzJbUwQ7CSkkyiobvU.png",
+    "framerName": "Content > Row > Left > Image",
+    "alt": "",
+    "rendered": [
+     357,
+     236
+    ],
+    "at1440": [
+     293,
+     1908.4,
+     357,
+     236
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 12406,
+    "format": "png",
+    "intrinsic": [
+     726,
+     480
+    ]
+   },
+   {
+    "file": "/assets/pages/about/image-44WXvHssPoGe5dPfkaAEIMHeds.png",
+    "src": "https://framerusercontent.com/images/44WXvHssPoGe5dPfkaAEIMHeds.png",
+    "framerName": "Content > Row > Right > Image",
+    "alt": "",
+    "rendered": [
+     358,
+     236.7
+    ],
+    "at1440": [
+     789,
+     2184.4,
+     358,
+     236.7
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 140552,
+    "format": "png",
+    "intrinsic": [
+     726,
+     480
+    ]
+   },
+   {
+    "file": "/assets/pages/about/image-nB0elRiD7izPuHjBwayFAOd4Uhg.gif",
+    "src": "https://framerusercontent.com/images/nB0elRiD7izPuHjBwayFAOd4Uhg.gif",
+    "framerName": "Content > Row > Left > Image",
+    "alt": "",
+    "rendered": [
+     357,
+     236
+    ],
+    "at1440": [
+     293,
+     2529.1,
+     357,
+     236
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2452494,
+    "format": "gif",
+    "intrinsic": [
+     1194,
+     788
+    ],
+    "animated": true
+   },
+   {
+    "file": "/assets/pages/about/image-e5LM3H0M9dYT8crO6nnbJb74.gif",
+    "src": "https://framerusercontent.com/images/e5LM3H0M9dYT8crO6nnbJb74.gif",
+    "framerName": "Content > Row > Right > Image",
+    "alt": "",
+    "rendered": [
+     358,
+     236.7
+    ],
+    "at1440": [
+     789,
+     2805.1,
+     358,
+     236.7
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2972752,
+    "format": "gif",
+    "intrinsic": [
+     490,
+     333
+    ],
+    "animated": true
+   },
+   {
+    "file": "/assets/pages/about/image-0HevjUNOs4bEKWVJE5c4rahsPEM.gif",
+    "src": "https://framerusercontent.com/images/0HevjUNOs4bEKWVJE5c4rahsPEM.gif",
+    "framerName": "Content > Row > Left > Image",
+    "alt": "",
+    "rendered": [
+     357,
+     235.4
+    ],
+    "at1440": [
+     293,
+     3081.8,
+     357,
+     235.4
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1777841,
+    "format": "gif",
+    "intrinsic": [
+     1194,
+     788
+    ],
+    "animated": true
+   },
+   {
+    "file": "/assets/pages/about/image-9ynMf2CzCfno26Ag6XjnEVCsBdE.png",
+    "src": "https://framerusercontent.com/images/9ynMf2CzCfno26Ag6XjnEVCsBdE.png",
+    "framerName": "Content > Row > Right > Image",
+    "alt": "",
+    "rendered": [
+     358,
+     236.7
+    ],
+    "at1440": [
+     789,
+     3433.2,
+     358,
+     236.7
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 17858,
+    "format": "png",
+    "intrinsic": [
+     726,
+     480
+    ]
+   },
+   {
+    "file": "/assets/pages/about/image-FvpztNaFU3zkpIghB0kooGEZKU.gif",
+    "src": "https://framerusercontent.com/images/FvpztNaFU3zkpIghB0kooGEZKU.gif",
+    "framerName": "Content > Row > Left > Image",
+    "alt": "",
+    "rendered": [
+     357,
+     236
+    ],
+    "at1440": [
+     293,
+     3777.9,
+     357,
+     236
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1220932,
+    "format": "gif",
+    "intrinsic": [
+     1194,
+     788
+    ],
+    "animated": true
+   },
+   {
+    "file": "/assets/pages/about/image-iOttjsTEpxsLbCEsryRLkVYSKc.gif",
+    "src": "https://framerusercontent.com/images/iOttjsTEpxsLbCEsryRLkVYSKc.gif",
+    "framerName": "Content > Row > Right > Image",
+    "alt": "",
+    "rendered": [
+     358,
+     236.7
+    ],
+    "at1440": [
+     789,
+     4211.9,
+     358,
+     236.7
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2734032,
+    "format": "gif",
+    "intrinsic": [
+     1194,
+     788
+    ],
+    "animated": true
+   },
+   {
+    "file": "/assets/pages/about/group-2085662431-Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "src": "https://framerusercontent.com/images/Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "framerName": "Desktop > Stack > Right Dotted Pattern > Group 2085662431",
+    "alt": "",
+    "rendered": [
+     64,
+     64
+    ],
+    "at1440": [
+     144,
+     4827.9,
+     64,
+     64
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2276,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/about/content-e7634aec.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1425,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/about/content-ce111248.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1424,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/about/content-d25f2ef6.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1217,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/about/content-d81f0272.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1355,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/about/content-783abede.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1351,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/about/content-c6cc0617.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1368,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/about/stack-2f8faa6f.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Mobile > Stack",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "390"
+    ],
+    "bytes": 1214,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/about/team/ash-evans-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 36713,
+    "format": "png",
+    "intrinsic": [
+     226,
+     226
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/ash-evans-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 4479,
+    "format": "png",
+    "intrinsic": [
+     226,
+     226
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/bruno-almeida-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 5963,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/bruno-almeida-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 3571,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/charlie-dowler-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 8774,
+    "format": "png",
+    "intrinsic": [
+     108,
+     108
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/charlie-dowler-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 4470,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/cloudy-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 4952,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/cloudy-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 3540,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/giorgi-bagdavadze-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 7366,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/giorgi-bagdavadze-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 6094,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/gwyneth-windflower-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 27007,
+    "format": "png",
+    "intrinsic": [
+     226,
+     226
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/gwyneth-windflower-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 7235,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/hamzah-chaudhary-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 9420,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/hamzah-chaudhary-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 2673,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/idris-affrin-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 31420,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/idris-affrin-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 9015,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/irakli-janiashvili-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 17051,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/irakli-janiashvili-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 3391,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/jake-peterson-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 15429,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/jake-peterson-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 8651,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/javier-rengel-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 14046,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/javier-rengel-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 4200,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/jess-hitchcock-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 9278,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/jess-hitchcock-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 5558,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/jo-o-viana-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 9339,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/jo-o-viana-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 2979,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/jose-rego-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 7557,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/jose-rego-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 3711,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/josh-elston-green-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 57251,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/josh-elston-green-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 9721,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/lan-ahuja-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 16906,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/lan-ahuja-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 4051,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/llonna-babakhanova-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 14774,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/llonna-babakhanova-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 6977,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/lukas-spiss-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 15533,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/lukas-spiss-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 4562,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/marshall-agnew-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 15358,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/marshall-agnew-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 1935,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/oli-ramsay-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 14116,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/oli-ramsay-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 4295,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/oliver-laslett-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 11557,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/oliver-laslett-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 3699,
+    "format": "png",
+    "intrinsic": [
+     145,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/priyanka-patel-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 5591,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/priyanka-patel-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 3207,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/rohan-bedi-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 8504,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/rohan-bedi-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 2961,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/sandro-dolidze-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 16624,
+    "format": "png",
+    "intrinsic": [
+     226,
+     226
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/sandro-dolidze-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 7336,
+    "format": "png",
+    "intrinsic": [
+     452,
+     452
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/shanz-munir-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 12068,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/shanz-munir-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 7085,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/tatiana-inama-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 11964,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/tatiana-inama-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 4556,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/tori-whaley-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 7134,
+    "format": "png",
+    "intrinsic": [
+     108,
+     108
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/tori-whaley-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 5736,
+    "format": "png",
+    "intrinsic": [
+     108,
+     108
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/yegor-borisenco-hover.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 6718,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   },
+   {
+    "file": "/assets/pages/about/team/yegor-borisenco-static.png",
+    "src": "team avatar static/hover pair (about \u00a77.2)",
+    "bytes": 8327,
+    "format": "png",
+    "intrinsic": [
+     144,
+     144
+    ]
+   }
+  ],
+  "roadmap": [
+   {
+    "file": "/assets/pages/roadmap/image-eGIJtqHNnLKlHn4OPP5wTggLk.png",
+    "src": "https://framerusercontent.com/images/eGIJtqHNnLKlHn4OPP5wTggLk.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     80,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 465,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-V9fOc553gB941BFoA9emiiRHo.png",
+    "src": "https://framerusercontent.com/images/V9fOc553gB941BFoA9emiiRHo.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     96,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 484,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-TxTkmTJwjCYV30qzak2MpvczfY.png",
+    "src": "https://framerusercontent.com/images/TxTkmTJwjCYV30qzak2MpvczfY.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     112,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 1185,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-F6YQ7d8vjCQMBeLJ25zZF59c9Eo.png",
+    "src": "https://framerusercontent.com/images/F6YQ7d8vjCQMBeLJ25zZF59c9Eo.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     128,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 985,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-5kptNMpS3QfyG8hCiCu6rcxE.png",
+    "src": "https://framerusercontent.com/images/5kptNMpS3QfyG8hCiCu6rcxE.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     144,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 1512,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-tZeVVRsEvSUR3Cx3JiZ6AjRE.png",
+    "src": "https://framerusercontent.com/images/tZeVVRsEvSUR3Cx3JiZ6AjRE.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1314,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 925,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-XRNrpdvHTshS8CZ5VloCFYItY.png",
+    "src": "https://framerusercontent.com/images/XRNrpdvHTshS8CZ5VloCFYItY.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1298,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 596,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-a2BwdMgBJtmGsS4PWc3Z4W5aGec.png",
+    "src": "https://framerusercontent.com/images/a2BwdMgBJtmGsS4PWc3Z4W5aGec.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1282,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 778,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-CHL1xEGDZvBYacYZ2ztPG7eDj0.png",
+    "src": "https://framerusercontent.com/images/CHL1xEGDZvBYacYZ2ztPG7eDj0.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1266,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 484,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-w6IVh92bELThruZi55kYBAhqTN4.png",
+    "src": "https://framerusercontent.com/images/w6IVh92bELThruZi55kYBAhqTN4.png",
+    "framerName": "Content-wrapper > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1250,
+     190,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 546,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-L0jAGzxnuXxJ8oawIZ4jnQDWE.png",
+    "src": "https://framerusercontent.com/images/L0jAGzxnuXxJ8oawIZ4jnQDWE.png",
+    "framerName": "Content-wrapper > Title > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     136,
+     240.4,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 478,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-R8TdKWOCKchcTcco2erQCZ5zE.png",
+    "src": "https://framerusercontent.com/images/R8TdKWOCKchcTcco2erQCZ5zE.png",
+    "framerName": "Content-wrapper > Title > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     184,
+     240.4,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 784,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-kNVRGwadNczTITNhLiB4X0zEU.png",
+    "src": "https://framerusercontent.com/images/kNVRGwadNczTITNhLiB4X0zEU.png",
+    "framerName": "Content-wrapper > Title > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1277,
+     240.4,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 866,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-p7YZgQ0Mcx8wu9ZAT1cfU3MgDE.png",
+    "src": "https://framerusercontent.com/images/p7YZgQ0Mcx8wu9ZAT1cfU3MgDE.png",
+    "framerName": "Content-wrapper > Title > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1261,
+     240.4,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 749,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-3H5SzizGHk8njXhLV0hR6OFQ.png",
+    "src": "https://framerusercontent.com/images/3H5SzizGHk8njXhLV0hR6OFQ.png",
+    "framerName": "Content-wrapper > Title > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1245,
+     240.4,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 809,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-M3SDxGOf2loNijmkzjuVDOHXih0.png",
+    "src": "https://framerusercontent.com/images/M3SDxGOf2loNijmkzjuVDOHXih0.png",
+    "framerName": "Content-wrapper > Title > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1229,
+     240.4,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 394,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-Kf5cFtWiLCgjz8Ws4DIKOoAFw.png",
+    "src": "https://framerusercontent.com/images/Kf5cFtWiLCgjz8Ws4DIKOoAFw.png",
+    "framerName": "Content-wrapper > Title > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     16,
+     16
+    ],
+    "at1440": [
+     1213,
+     240.4,
+     16,
+     16
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "810"
+    ],
+    "bytes": 413,
+    "format": "png",
+    "intrinsic": [
+     32,
+     32
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/footergrid-sziZa7Zd6CtOQPFaPS2FWqAvQc.png",
+    "src": "https://framerusercontent.com/images/sziZa7Zd6CtOQPFaPS2FWqAvQc.png",
+    "framerName": "Content-wrapper > FooterGrid",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     376,
+     1076.6,
+     48,
+     48
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 125,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-s5BCCTUj6yG82Eysn6O61cPRrfw.png",
+    "src": "https://framerusercontent.com/images/s5BCCTUj6yG82Eysn6O61cPRrfw.png",
+    "framerName": "Content-wrapper > FooterGrid > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     376,
+     1076.6,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 307,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/image-G7wNz6DtEDhrQkI3MKEq2C5ROiI.png",
+    "src": "https://framerusercontent.com/images/G7wNz6DtEDhrQkI3MKEq2C5ROiI.png",
+    "framerName": "Content-wrapper > FooterGrid > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     1016,
+     1076.6,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 493,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/group-2085662431-Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "src": "https://framerusercontent.com/images/Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "framerName": "Desktop > Stack > Right Dotted Pattern > Group 2085662431",
+    "alt": "",
+    "rendered": [
+     64,
+     64
+    ],
+    "at1440": [
+     144,
+     1403.6,
+     64,
+     64
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2276,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/roadmap/header-29bac276.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Header",
+    "rendered": [
+     24,
+     24
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 552,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/header-02b608e1.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Header",
+    "rendered": [
+     24,
+     24
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 364,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/header-2c131c47.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Header",
+    "rendered": [
+     24,
+     24
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 396,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/header-87ea6ae5.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > Header",
+    "rendered": [
+     24,
+     24
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 493,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/content-ce111248.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1424,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/content-2f8faa6f.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1214,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/content-d81f0272.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1355,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/content-c6cc0617.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1368,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/content-783abede.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1351,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/content-e7634aec.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1425,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/icon-variant-1-09837b54.svg",
+    "src": "inline <svg>/<symbol>",
+    "framerName": "Content-wrapper > Content > Variant 1",
+    "rendered": [
+     8,
+     8
+    ],
+    "color": "rgb(0, 0, 0)",
+    "widths": [
+     "1440"
+    ],
+    "bytes": 317,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/roadmap/content-d25f2ef6.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     14,
+     29
+    ],
+    "widths": [
+     "810"
+    ],
+    "bytes": 1217,
+    "format": "svg"
+   }
+  ],
+  "lightdash-security": [
+   {
+    "file": "/assets/pages/lightdash-security/image-2L86heL3bauYGKrITTrkqSsyc.png",
+    "src": "https://framerusercontent.com/images/2L86heL3bauYGKrITTrkqSsyc.png",
+    "framerName": "Content-wrapper > Logos > Image",
+    "alt": "",
+    "rendered": [
+     104,
+     104
+    ],
+    "at1440": [
+     600,
+     508.8,
+     104,
+     104
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 599853,
+    "format": "png",
+    "intrinsic": [
+     2919,
+     2916
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-ygOWTA0haiIuEe5ZnkTUUQ68gNI.png",
+    "src": "https://framerusercontent.com/images/ygOWTA0haiIuEe5ZnkTUUQ68gNI.png",
+    "framerName": "Content-wrapper > Logos > Image",
+    "alt": "",
+    "rendered": [
+     104,
+     104
+    ],
+    "at1440": [
+     736,
+     508.8,
+     104,
+     104
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 7525,
+    "format": "png",
+    "intrinsic": [
+     208,
+     208
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/gridwrapper-sziZa7Zd6CtOQPFaPS2FWqAvQc.png",
+    "src": "https://framerusercontent.com/images/sziZa7Zd6CtOQPFaPS2FWqAvQc.png",
+    "framerName": "Content-wrapper > GridWrapper",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     376,
+     760.8,
+     48,
+     48
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 125,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-ugwP8VFseGRaEWDX17VNeBzyIg.png",
+    "src": "https://framerusercontent.com/images/ugwP8VFseGRaEWDX17VNeBzyIg.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     376,
+     760.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1280,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-99fOj1sWPBoAbwWAK0R6L8PGk.png",
+    "src": "https://framerusercontent.com/images/99fOj1sWPBoAbwWAK0R6L8PGk.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     504,
+     760.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1072,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-UyI2YFHX6mjyykhzY03zZKEcAo.png",
+    "src": "https://framerusercontent.com/images/UyI2YFHX6mjyykhzY03zZKEcAo.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     632,
+     760.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 825,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-0kwNqxCmYafuGGFNtIMT3dp9EBc.png",
+    "src": "https://framerusercontent.com/images/0kwNqxCmYafuGGFNtIMT3dp9EBc.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     760,
+     760.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1397,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-nHrKWxtJNwV8qKEtgpd0lqkycZI.png",
+    "src": "https://framerusercontent.com/images/nHrKWxtJNwV8qKEtgpd0lqkycZI.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     888,
+     760.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 815,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-k14rJDgm3Cu4TnryhXzVYu55jfo.png",
+    "src": "https://framerusercontent.com/images/k14rJDgm3Cu4TnryhXzVYu55jfo.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     1016,
+     760.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1287,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-2vNbd8rQE7i1Or7G0M8GzGRWoNI.png",
+    "src": "https://framerusercontent.com/images/2vNbd8rQE7i1Or7G0M8GzGRWoNI.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     376,
+     911.7,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2397,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-oLBfegNuLAI3ekMBmewiZomOpM.png",
+    "src": "https://framerusercontent.com/images/oLBfegNuLAI3ekMBmewiZomOpM.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     504,
+     911.7,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 824,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-pXFaHkgk4ULhSF8H0qMF33Ss8.png",
+    "src": "https://framerusercontent.com/images/pXFaHkgk4ULhSF8H0qMF33Ss8.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     632,
+     911.7,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1552,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-pZqpnpIOxf1lwrFX3zbqKT2Gk4c.png",
+    "src": "https://framerusercontent.com/images/pZqpnpIOxf1lwrFX3zbqKT2Gk4c.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     760,
+     911.7,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1909,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-uX5UVQmrcdj8P71xM1iqvRWATQ.png",
+    "src": "https://framerusercontent.com/images/uX5UVQmrcdj8P71xM1iqvRWATQ.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     888,
+     911.7,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 789,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-9P9aaPqU1aTfi4OGRNxNonvRdIY.png",
+    "src": "https://framerusercontent.com/images/9P9aaPqU1aTfi4OGRNxNonvRdIY.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     1016,
+     911.7,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 973,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-Wg4aNDkF6lt9fWnhHlPSN2XK8.png",
+    "src": "https://framerusercontent.com/images/Wg4aNDkF6lt9fWnhHlPSN2XK8.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     376,
+     1062.6,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1553,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-dUDFRyv8Wv72QozfdtlEY1a5P4.png",
+    "src": "https://framerusercontent.com/images/dUDFRyv8Wv72QozfdtlEY1a5P4.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     504,
+     1062.6,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1801,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-4Jz0kaXEPAwqbmCNgMWTIN7mrc.png",
+    "src": "https://framerusercontent.com/images/4Jz0kaXEPAwqbmCNgMWTIN7mrc.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     632,
+     1062.6,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1692,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-rthwZBv3iVrHuD1eSMFLqVRk.png",
+    "src": "https://framerusercontent.com/images/rthwZBv3iVrHuD1eSMFLqVRk.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     760,
+     1062.6,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 673,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-pQaX8T8KA4ZpE1nvKlpaf01Lc.png",
+    "src": "https://framerusercontent.com/images/pQaX8T8KA4ZpE1nvKlpaf01Lc.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     888,
+     1062.6,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 499,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/image-VQfSqF0f64mmKKqo2q1EcUziU.png",
+    "src": "https://framerusercontent.com/images/VQfSqF0f64mmKKqo2q1EcUziU.png",
+    "framerName": "Content-wrapper > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     1016,
+     1062.6,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 907,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/group-2085662431-Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "src": "https://framerusercontent.com/images/Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+    "framerName": "Desktop > Stack > Right Dotted Pattern > Group 2085662431",
+    "alt": "",
+    "rendered": [
+     64,
+     64
+    ],
+    "at1440": [
+     144,
+     1304,
+     64,
+     64
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 2276,
+    "format": "png",
+    "intrinsic": [
+     128,
+     128
+    ]
+   },
+   {
+    "file": "/assets/pages/lightdash-security/content-d25f2ef6.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1217,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/lightdash-security/content-2f8faa6f.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1214,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/lightdash-security/content-783abede.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1351,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/lightdash-security/content-c6cc0617.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1368,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/lightdash-security/content-ce111248.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "CTA > Desktop > Stack > Content",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "1440"
+    ],
+    "bytes": 1424,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/lightdash-security/stack-d81f0272.svg",
+    "src": "inline data-URI background-image",
+    "framerName": "Content-wrapper > CTA > Mobile > Stack",
+    "rendered": [
+     29,
+     29
+    ],
+    "widths": [
+     "390"
+    ],
+    "bytes": 1355,
+    "format": "svg"
+   }
+  ],
+  "jp": [
+   {
+    "file": "/assets/pages/jp/image-u7dNRCA7eBT5ijuB3LwSSfJMPw.png",
+    "src": "https://framerusercontent.com/images/u7dNRCA7eBT5ijuB3LwSSfJMPw.png",
+    "framerName": "Hero > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     80,
+     106,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1674,
+    "format": "png",
+    "intrinsic": [
+     64,
+     64
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-1mJCqq22wlHJTEtL6wg98s8lIc8.png",
+    "src": "https://framerusercontent.com/images/1mJCqq22wlHJTEtL6wg98s8lIc8.png",
+    "framerName": "Hero > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     112,
+     138,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1510,
+    "format": "png",
+    "intrinsic": [
+     64,
+     64
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-1kZ2cjGoFa40wKm8T64QebKfrR8.png",
+    "src": "https://framerusercontent.com/images/1kZ2cjGoFa40wKm8T64QebKfrR8.png",
+    "framerName": "Hero > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     80,
+     170,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 964,
+    "format": "png",
+    "intrinsic": [
+     64,
+     64
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-1dXtMtg8ao6Uylqs5vsrxyDAmvM.png",
+    "src": "https://framerusercontent.com/images/1dXtMtg8ao6Uylqs5vsrxyDAmvM.png",
+    "framerName": "Hero > Spacer > Pixel > Image",
+    "alt": "",
+    "rendered": [
+     32,
+     32
+    ],
+    "at1440": [
+     144,
+     106,
+     32,
+     32
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 1193,
+    "format": "png",
+    "intrinsic": [
+     64,
+     65
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/gridwrapper-sziZa7Zd6CtOQPFaPS2FWqAvQc.png",
+    "src": "https://framerusercontent.com/images/sziZa7Zd6CtOQPFaPS2FWqAvQc.png",
+    "framerName": "Content-wrapper > Features > GridWrapper",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     388.8,
+     630.8,
+     48,
+     48
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 125,
+    "format": "png",
+    "intrinsic": [
+     96,
+     96
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-TMnzqQgs9aJkbQ5u7jX0eUZBSE.png",
+    "src": "https://framerusercontent.com/images/TMnzqQgs9aJkbQ5u7jX0eUZBSE.png",
+    "framerName": "Content-wrapper > Features > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     388.8,
+     630.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 5748,
+    "format": "png",
+    "intrinsic": [
+     857,
+     857
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-U003NExcM6ba5ZJcVmYMHQTPA.png",
+    "src": "https://framerusercontent.com/images/U003NExcM6ba5ZJcVmYMHQTPA.png",
+    "framerName": "Content-wrapper > Features > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     542.4,
+     630.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 5081,
+    "format": "png",
+    "intrinsic": [
+     544,
+     544
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-e1qhDioLmaoYgCp2H8hT1dKCYmw.png",
+    "src": "https://framerusercontent.com/images/e1qhDioLmaoYgCp2H8hT1dKCYmw.png",
+    "framerName": "Content-wrapper > Features > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     696,
+     630.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 4042,
+    "format": "png",
+    "intrinsic": [
+     240,
+     240
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-khwv9DgdsjwqFvZ4Wnjh5m3KCA.png",
+    "src": "https://framerusercontent.com/images/khwv9DgdsjwqFvZ4Wnjh5m3KCA.png",
+    "framerName": "Content-wrapper > Features > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     849.6,
+     630.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 12549,
+    "format": "png",
+    "intrinsic": [
+     1200,
+     1200
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-a8xBLUGJyKoHvgK851nyQPMjVWI.jpg",
+    "src": "https://framerusercontent.com/images/a8xBLUGJyKoHvgK851nyQPMjVWI.jpg",
+    "framerName": "Content-wrapper > Features > GridWrapper > Image",
+    "alt": "",
+    "rendered": [
+     48,
+     48
+    ],
+    "at1440": [
+     1003.2,
+     630.8,
+     48,
+     48
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 17099,
+    "format": "jpg",
+    "intrinsic": [
+     900,
+     900
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-8ygid96rygSZCL3zZn2yhLTU6Bc.png",
+    "src": "https://framerusercontent.com/images/8ygid96rygSZCL3zZn2yhLTU6Bc.png",
+    "framerName": "Content-wrapper > Grid > Image",
+    "alt": "",
+    "rendered": [
+     570,
+     312.3
+    ],
+    "at1440": [
+     142.3,
+     1413.8,
+     570,
+     312.3
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 23265,
+    "format": "png",
+    "intrinsic": [
+     1752,
+     960
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-VCXo1sy1MVooHh99igE4Sf3wtVM.png",
+    "src": "https://framerusercontent.com/images/VCXo1sy1MVooHh99igE4Sf3wtVM.png",
+    "framerName": "Content-wrapper > Grid > Image",
+    "alt": "",
+    "rendered": [
+     570,
+     312.3
+    ],
+    "at1440": [
+     727.8,
+     1413.8,
+     570,
+     312.3
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 164889,
+    "format": "png",
+    "intrinsic": [
+     1752,
+     960
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/image-YiMPHv5nMrPaVzjOHm6ZG4ZM88.png",
+    "src": "https://framerusercontent.com/images/YiMPHv5nMrPaVzjOHm6ZG4ZM88.png",
+    "framerName": "Content-wrapper > Testimonial > Image",
+    "alt": "",
+    "rendered": [
+     124,
+     124
+    ],
+    "at1440": [
+     272,
+     2145.2,
+     124,
+     124
+    ],
+    "fit": "cover",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 14207,
+    "format": "png",
+    "intrinsic": [
+     248,
+     248
+    ]
+   },
+   {
+    "file": "/assets/pages/jp/frame-2147233108-J57DPcsPrsFyYiH3o9gxp5prSdE.png",
+    "src": "https://framerusercontent.com/images/J57DPcsPrsFyYiH3o9gxp5prSdE.png",
+    "framerName": "Content-wrapper > Testimonial > Image > Frame 2147233108",
+    "alt": "",
+    "rendered": [
+     124,
+     124
+    ],
+    "at1440": [
+     272,
+     2145.2,
+     124,
+     124
+    ],
+    "fit": "contain",
+    "widths": [
+     "1440",
+     "390",
+     "810"
+    ],
+    "bytes": 20005,
+    "format": "png",
+    "intrinsic": [
+     352,
+     352
+    ]
+   }
+  ],
+  "_cta": [
+   {
+    "file": "/assets/pages/_cta/snake-game.framer-source.js",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 19250,
+    "format": "js"
+   },
+   {
+    "file": "/assets/pages/_cta/snake-tiles/tile-1.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 1351,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/_cta/snake-tiles/tile-2.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 1425,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/_cta/snake-tiles/tile-3.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 1214,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/_cta/snake-tiles/tile-4.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 1424,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/_cta/snake-tiles/tile-5.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 1368,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/_cta/snake-tiles/tile-6.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 1217,
+    "format": "svg"
+   },
+   {
+    "file": "/assets/pages/_cta/snake-tiles/tile-7.svg",
+    "src": "extracted from Framer source / inline SVG (see spec)",
+    "bytes": 1355,
+    "format": "svg"
+   }
+  ]
+ }
+}

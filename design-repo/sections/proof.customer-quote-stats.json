@@ -1,0 +1,139 @@
+{
+  "id": "proof.customer-quote-stats",
+  "category": "PROOF",
+  "purpose": "Customer quote (40px, or 32px on /context-layer) with logo, attribution row, case-study button and a 3-cell statistics row; /context-layer adds a 96x24 strip and the 8 converging hairline rows.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/CustomerQuote.jsx (stats + cta)",
+  "content": {
+    "fields": {
+      "logo": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "logo.customer-partner"
+        ],
+        "altMaxWords": 3
+      },
+      "quote": {
+        "type": "text",
+        "required": true,
+        "maxWords": 37,
+        "observedMaxWords": 29,
+        "wcRef": "proof.customer-quote-stats.quote"
+      },
+      "personName": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "proof.customer-quote-stats.personName"
+      },
+      "personRole": {
+        "type": "text",
+        "required": true,
+        "maxWords": 9,
+        "observedMaxWords": 7,
+        "wcRef": "proof.customer-quote-stats.personRole"
+      },
+      "photo": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "photo.person-avatar"
+        ],
+        "altMaxWords": 3
+      },
+      "quoteSize": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "40",
+          "32"
+        ]
+      },
+      "stats": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "value": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "observedMaxWords": 1,
+            "wcRef": "proof.customer-quote-stats.stats[].value"
+          },
+          "label": {
+            "type": "text",
+            "required": true,
+            "maxWords": 7,
+            "observedMaxWords": 5,
+            "wcRef": "proof.customer-quote-stats.stats[].label"
+          }
+        },
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "caseStudy": {
+        "type": "link",
+        "required": true,
+        "actions": [
+          "navigate-route",
+          "open-external"
+        ]
+      },
+      "linesFooter": {
+        "type": "boolean",
+        "required": false
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "quote block padding 72/64 -> 56/28 and the attribution row stacks, stats go one per row",
+      "cssCite": "src/components/shared/CustomerQuote.jsx:56"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "/conversational-analytics: the quote is re-ordered after the CTA band (flex order)",
+      "cssCite": "src/pages/ConversationalAnalytics.jsx:38"
+    },
+    {
+      "query": "(max-width: 1199.98px)",
+      "change": "/context-layer: the quote is re-ordered after the FAQ (flex order, order-3)",
+      "cssCite": "src/pages/ContextLayer.jsx:51"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/CustomerQuote.jsx:4",
+    "src/components/shared/CustomerQuote.jsx:70",
+    "src/pages/ContextLayer.jsx:48"
+  ],
+  "notes": [
+    "The case-study button label is the component default \"Read case study\" (CustomerQuote.jsx), so PageSpec carries only the target link.",
+    "Stat values and labels are real customer outcomes (e.g. JustWatch 86%): must not be fabricated for a new page."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-interactive-dashboards"
+  ]
+}

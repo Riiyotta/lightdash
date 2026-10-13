@@ -1,0 +1,80 @@
+{
+  "id": "listing.blog-card-grid",
+  "category": "LISTING",
+  "purpose": "Post card grid (3 / 2 / 1 columns; 9 initial + a \"Load More\" button adding 9): each 472-tall cell holds a 217px thumbnail, category . date, a 3-line H6 title and author avatar + name. Empty categories render no grid and no message.",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Card metadata (title, category, date, author) is measured for all 62 posts; article bodies are not.",
+  "implementedBy": "src/components/cms/BlogListing.jsx + src/components/cms/PostCard.jsx",
+  "content": {
+    "fields": {
+      "cardCount": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "0",
+          "2",
+          "7",
+          "9",
+          "13",
+          "31",
+          "62"
+        ]
+      },
+      "loadMore": {
+        "type": "boolean",
+        "required": false
+      },
+      "loadMoreLabel": {
+        "type": "text",
+        "required": false,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "listing.blog-card-grid.loadMoreLabel"
+      },
+      "cardMode": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "from-cms"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "1 column below 810, 2 columns at 810-1099, 3 columns at >=1100",
+      "cssCite": "src/components/cms/BlogListing.jsx:82"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/cms/BlogListing.jsx:80",
+    "src/components/cms/PostCard.jsx:4",
+    "src/pages/BlogCategory.jsx:7"
+  ],
+  "notes": [
+    "cardCount enumerates the real per-route counts: /blog 62 (9 shown), product 31, ecommerce 13, feature-fridays 9, company 7, events 2, empty 0 (specs/cms/blog-categories.json)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "blog-category",
+    "blog-index"
+  ]
+}

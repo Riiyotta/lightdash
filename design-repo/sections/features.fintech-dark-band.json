@@ -1,0 +1,79 @@
+{
+  "id": "features.fintech-dark-band",
+  "category": "FEATURES",
+  "purpose": "Full-bleed #1A1B25 band (inner 1280) with \"Built for every fintech role\": an auto-advancing (4.4s) 4-item role accordion with face icons and a purple progress line.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Fintech.jsx (inline) + src/components/pages/fintech/RoleAccordion.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "features.fintech-dark-band.heading"
+      },
+      "roles": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 7,
+          "observedMaxWords": 5,
+          "wcRef": "features.fintech-dark-band.roles[]"
+        },
+        "minItems": 4,
+        "maxItems": 4
+      },
+      "sharedBullets": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 8,
+          "observedMaxWords": 6,
+          "wcRef": "features.fintech-dark-band.sharedBullets[]"
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "autoplay-carousel",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "autoplay-carousel": "no-autoplay",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "autoplay-carousel": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/components/pages/fintech/RoleAccordion.jsx:3",
+    "src/components/pages/fintech/RoleAccordion.jsx:10",
+    "src/pages/Fintech.jsx:224"
+  ],
+  "notes": [
+    "The BULLETS array is shared by every role (the same three bullets render inside each open role; RoleAccordion.jsx maps BULLETS inside every ROLES item), so the contract has one sharedBullets list, not per-role bullets.",
+    "Reduced motion: only CSS transitions are disabled (RoleAccordion.jsx style block); the 4.4s auto-advance timer is NOT gated, so the contract fallback no-autoplay is a recommendation, not implemented behaviour."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "fintech"
+  ]
+}

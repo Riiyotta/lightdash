@@ -1,0 +1,17 @@
+{
+  "id": "icon-benefit-cell",
+  "kind": "component",
+  "purpose": "84x84 icon cell (#F3F4F6, dashed) beside a title row and body, in a 2-column dashed grid.",
+  "props": [
+    "icon",
+    "title",
+    "body"
+  ],
+  "usedBySections": [
+    "features.icon-benefits-grid"
+  ],
+  "measuredFrom": [
+    "src/components/shared/IconBenefits.jsx:23-42"
+  ],
+  "schemaVersion": "1.0.0"
+}

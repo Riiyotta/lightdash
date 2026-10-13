@@ -1,0 +1,118 @@
+{
+  "id": "hero.event-ondemand",
+  "category": "HERO",
+  "purpose": "Left-aligned on-demand event hero on /beyond-copilots: uppercase eyebrow, co-host logo row with x separators, display-72 headline with purple accent, subtitle, button pair and a recorded-date meta line.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/beyond-copilots/EventHero.jsx",
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "hero.event-ondemand.eyebrow"
+      },
+      "cohostLogos": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "media",
+          "required": true,
+          "assetRoles": [
+            "logo.customer-partner"
+          ],
+          "altMaxWords": 3
+        },
+        "minItems": 2,
+        "maxItems": 4
+      },
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "observedMaxWords": 6,
+        "wcRef": "hero.event-ondemand.heading"
+      },
+      "accent": {
+        "type": "text",
+        "required": false,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "hero.event-ondemand.accent"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 32,
+        "observedMaxWords": 25,
+        "wcRef": "hero.event-ondemand.subtitle"
+      },
+      "buttons": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "cta",
+          "required": true,
+          "actions": [
+            "navigate-route",
+            "open-external",
+            "open-talk-modal"
+          ],
+          "labelMaxWords": 6,
+          "observedLabelMaxWords": 4,
+          "labelRef": "hero.event-ondemand.buttons[]Label"
+        },
+        "minItems": 0,
+        "maxItems": 2
+      },
+      "meta": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "observedMaxWords": 6,
+        "wcRef": "hero.event-ondemand.meta"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-fade-spring",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "hero-fade-spring": "visible-no-transition",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "hero-fade-spring": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "padding 72/72 becomes 48/24 and the H1 scales down",
+      "cssCite": "src/components/pages/beyond-copilots/EventHero.jsx:11"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/beyond-copilots/EventHero.jsx:3",
+    "src/pages/data/beyond-copilots.js:10-25"
+  ],
+  "notes": [
+    "The \"Watch the build\" button targets a live YouTube URL (youtube.com/live/...): a PageSpec must not reproduce it (assets/asset-roles.json embed.youtube pinned).",
+    "Co-host logos (Lightdash, MotherDuck, dltHub) are real third-party trademarks."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "beyond-copilots"
+  ]
+}

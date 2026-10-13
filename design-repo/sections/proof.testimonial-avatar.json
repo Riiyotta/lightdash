@@ -1,0 +1,79 @@
+{
+  "id": "proof.testimonial-avatar",
+  "category": "PROOF",
+  "purpose": "Photo-left testimonial (424 tall): 124x124 avatar, Britti Medium 32/40.96 quote with an accent phrase, attribution \"name . role\", and 61x48 pixel corners. Shared by /embedding, /startups (inline copy) and /jp (inline copy, Japanese).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/embedding/Testimonial.jsx; /startups and /jp render inline copies in src/pages/Startups.jsx and src/pages/Jp.jsx",
+  "content": {
+    "fields": {
+      "avatar": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "photo.person-avatar"
+        ],
+        "altMaxWords": 3
+      },
+      "quote": {
+        "type": "text",
+        "required": true,
+        "maxWords": 54,
+        "observedMaxWords": 43,
+        "wcRef": "proof.testimonial-avatar.quote"
+      },
+      "personName": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "proof.testimonial-avatar.personName"
+      },
+      "personRole": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "proof.testimonial-avatar.personRole"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "row stacks (avatar above quote), min-height 424 removed",
+      "cssCite": "src/components/pages/embedding/Testimonial.jsx:9"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/embedding/Testimonial.jsx:3",
+    "src/pages/Startups.jsx:259",
+    "src/pages/Jp.jsx:128"
+  ],
+  "notes": [
+    "/jp renders the same layout with Japanese copy (quote + attribution) and a 2-layer duotone avatar; it is a Japanese-language instance of this section.",
+    "Real named customers (Joeri De Turck / Qargo, Erik Webb / Clair, Yu Ishikawa / Ubie): must-not-fabricate."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "jp",
+    "product-embedding",
+    "startups"
+  ]
+}

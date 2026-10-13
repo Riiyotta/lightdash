@@ -1,0 +1,91 @@
+{
+  "id": "proof.speakers-grid",
+  "category": "PROOF",
+  "purpose": "\"Built live by\" speakers grid on /beyond-copilots: 3 cards (124px grayscale photo on a strip, company logo, name, role) with dashed borders.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/beyond-copilots/Speakers.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "proof.speakers-grid.heading"
+      },
+      "speakers": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "name": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "proof.speakers-grid.speakers[].name"
+          },
+          "role": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "observedMaxWords": 3,
+            "wcRef": "proof.speakers-grid.speakers[].role"
+          },
+          "photo": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "photo.person-avatar"
+            ],
+            "altMaxWords": 3
+          },
+          "companyLogo": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "logo.customer-partner"
+            ],
+            "altMaxWords": 2
+          }
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "grid 3 columns -> 1 column; padding 72 -> 24",
+      "cssCite": "src/components/pages/beyond-copilots/Speakers.jsx:13"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/beyond-copilots/Speakers.jsx:3",
+    "src/pages/data/beyond-copilots.js:78"
+  ],
+  "notes": [
+    "Deviation recorded in source: the spec soft-light blue tint over the photos is not rendered (SP comment DEVIATION), photos are plain grayscale. Real named speakers: must-not-fabricate."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "beyond-copilots"
+  ]
+}

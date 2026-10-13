@@ -1,0 +1,618 @@
+{
+ "_note": "Index lists 11 stories (ubie-jp is unlisted, Japanese translation of ubie). Card shows logo + title + \"Read full story\". Stats/quote/body NOT copied; statCount = number of stat cells shown (values are page content, use placeholders). Card logos are object-fit:contain, object-position:0% 0% in a 520x22 box. related = the 2 cards in \"Related stories\" (first two listed stories that are not the current one).",
+ "count": 12,
+ "listedCount": 11,
+ "stories": [
+  {
+   "slug": "ollie",
+   "url": "/customer-story/ollie",
+   "listed": true,
+   "indexOrder": 1,
+   "title": "How Ollie cleared 400+ stale charts and dashboards in four months",
+   "pageTitle": "How Ollie cleared 400+ stale charts and dashboards in four months | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Ben Pannell",
+    "role": "Tech Lead, Data Engineering",
+    "avatar": "/assets/cms/customer-stories/people/ollie-avatar.jpeg"
+   },
+   "company": {
+    "industry": "Pet Food",
+    "location": "New York, USA",
+    "employees": "201-500",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/ollie.png",
+     "source": "https://framerusercontent.com/images/5eYAwj6303pASiO6AJiZ4pWD4.png",
+     "width": 472,
+     "height": 228,
+     "format": "PNG",
+     "bytes": 2701
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/ollie.png",
+    "source": "https://framerusercontent.com/images/5eYAwj6303pASiO6AJiZ4pWD4.png",
+    "width": 472,
+    "height": 228,
+    "format": "PNG",
+    "bytes": 2701
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-a.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-nsB2IpOc.png",
+    "source": "https://framerusercontent.com/images/nsB2IpOcuUIw1QbdIUKX9R720.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 300151
+   },
+   "statCount": 4,
+   "related": [
+    "fal",
+    "gen-h"
+   ]
+  },
+  {
+   "slug": "fal",
+   "url": "/customer-story/fal",
+   "listed": true,
+   "indexOrder": 2,
+   "title": "How fal uses Agentic BI to run data for 80 people with a team of one",
+   "pageTitle": "How fal uses Agentic BI to run data for 80 people with a team of one | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Kevin Otte",
+    "role": "Data Scientist",
+    "avatar": "/assets/cms/customer-stories/people/fal-avatar.jpeg"
+   },
+   "company": {
+    "industry": "Media",
+    "location": "San Francisco, USA",
+    "employees": "51-200",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/fal.png",
+     "source": "https://framerusercontent.com/images/znIYSRsjbVO04vtz6tub2NAiw.png",
+     "width": 136,
+     "height": 55,
+     "format": "PNG",
+     "bytes": 1367
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/fal.png",
+    "source": "https://framerusercontent.com/images/znIYSRsjbVO04vtz6tub2NAiw.png",
+    "width": 136,
+    "height": 55,
+    "format": "PNG",
+    "bytes": 1367
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-b.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-fomfHUN6.png",
+    "source": "https://framerusercontent.com/images/fomfHUN6jW6V6PxATrynhIEWLCc.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 375808
+   },
+   "statCount": 3,
+   "related": [
+    "ollie",
+    "gen-h"
+   ]
+  },
+  {
+   "slug": "gen-h",
+   "url": "/customer-story/gen-h",
+   "listed": true,
+   "indexOrder": 3,
+   "title": "How Gen H’s CCO shipped production metrics in two days using Agentic BI",
+   "pageTitle": "How Gen H’s CCO shipped production metrics in two days using Agentic BI | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Hal Sarjant",
+    "role": "Chief Customer Officer",
+    "avatar": "/assets/cms/customer-stories/people/gen-h-avatar.png"
+   },
+   "company": {
+    "industry": "Fintech",
+    "location": "London, UK",
+    "employees": "51-200",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/gen-h.png",
+     "source": "https://framerusercontent.com/images/fGt9NknCtmNjA48SE5R6EoVyg4.png",
+     "width": 1600,
+     "height": 1465,
+     "format": "PNG",
+     "originalWidth": 2160,
+     "originalHeight": 1978,
+     "bytes": 143978
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/gen-h.png",
+    "source": "https://framerusercontent.com/images/fGt9NknCtmNjA48SE5R6EoVyg4.png",
+    "width": 1600,
+    "height": 1465,
+    "format": "PNG",
+    "originalWidth": 2160,
+    "originalHeight": 1978,
+    "bytes": 143978
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-a.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-vOw6Q3mY.png",
+    "source": "https://framerusercontent.com/images/vOw6Q3mYGTCzk1rGXbbhC4NL5A.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 335116
+   },
+   "statCount": 4,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "justwatch",
+   "url": "/customer-story/justwatch",
+   "listed": true,
+   "indexOrder": 4,
+   "title": "How JustWatch built an AI-powered data culture with Lightdash",
+   "pageTitle": "How JustWatch built an AI-powered data culture with Lightdash | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Aleksandr Zolotukhin",
+    "role": "VP of Data & Analytics",
+    "avatar": "/assets/cms/customer-stories/people/justwatch-avatar.png"
+   },
+   "company": {
+    "industry": "Marketing Services",
+    "location": "Berlin, Germany",
+    "employees": "201-500",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/justwatch.png",
+     "source": "https://framerusercontent.com/images/yytQIBVoQIhCQQOhat6GTDFEfKU.png",
+     "width": 1153,
+     "height": 239,
+     "format": "PNG",
+     "bytes": 9630
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/justwatch.png",
+    "source": "https://framerusercontent.com/images/yytQIBVoQIhCQQOhat6GTDFEfKU.png",
+    "width": 1153,
+    "height": 239,
+    "format": "PNG",
+    "bytes": 9630
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-b.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-nsB2IpOc.png",
+    "source": "https://framerusercontent.com/images/nsB2IpOcuUIw1QbdIUKX9R720.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 300151
+   },
+   "statCount": 4,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "qargo",
+   "url": "/customer-story/qargo",
+   "listed": true,
+   "indexOrder": 5,
+   "title": "How Qargo embedded analytics into their transport management platform using Lightdash",
+   "pageTitle": "How Qargo embedded analytics into their transport management platform using Lightdash | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Joeri De Turck",
+    "role": "Co-founder & CTO",
+    "avatar": "/assets/cms/customer-stories/people/qargo-avatar.jpg"
+   },
+   "company": {
+    "industry": "Transport Management",
+    "location": "London, England",
+    "employees": "51-200",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/qargo.png",
+     "source": "https://framerusercontent.com/images/rgFJpUaysCMzhqQEWNr59AQGxXY.png",
+     "width": 1600,
+     "height": 626,
+     "format": "PNG",
+     "originalWidth": 3076,
+     "originalHeight": 1203,
+     "bytes": 107539
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/qargo.png",
+    "source": "https://framerusercontent.com/images/rgFJpUaysCMzhqQEWNr59AQGxXY.png",
+    "width": 1600,
+    "height": 626,
+    "format": "PNG",
+    "originalWidth": 3076,
+    "originalHeight": 1203,
+    "bytes": 107539
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-a.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-fomfHUN6.png",
+    "source": "https://framerusercontent.com/images/fomfHUN6jW6V6PxATrynhIEWLCc.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 375808
+   },
+   "statCount": 2,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "collectors",
+   "url": "/customer-story/collectors",
+   "listed": true,
+   "indexOrder": 6,
+   "title": "How Collectors cut dashboard duplication by 36% and slashed BI costs by 80%",
+   "pageTitle": "How Collectors cut dashboard duplication by 36% and slashed BI costs by 80% | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Rohan Thakur",
+    "role": "Director of Analytics",
+    "avatar": "/assets/cms/customer-stories/people/collectors-avatar.png"
+   },
+   "company": {
+    "industry": "Consumer Services",
+    "location": "California, USA",
+    "employees": "1000-5000",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/collectors.png",
+     "source": "https://framerusercontent.com/images/ti0zpfNfEFd2aRkXm4zyrqwpQ.png",
+     "width": 1600,
+     "height": 290,
+     "format": "PNG",
+     "originalWidth": 1831,
+     "originalHeight": 332,
+     "bytes": 80108
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/collectors.png",
+    "source": "https://framerusercontent.com/images/ti0zpfNfEFd2aRkXm4zyrqwpQ.png",
+    "width": 1600,
+    "height": 290,
+    "format": "PNG",
+    "originalWidth": 1831,
+    "originalHeight": 332,
+    "bytes": 80108
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-b.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-vOw6Q3mY.png",
+    "source": "https://framerusercontent.com/images/vOw6Q3mYGTCzk1rGXbbhC4NL5A.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 335116
+   },
+   "statCount": 4,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "tatango",
+   "url": "/customer-story/tatango",
+   "listed": true,
+   "indexOrder": 7,
+   "title": "How Tatango built a single source of truth with Lightdash in just four weeks",
+   "pageTitle": "How Tatango built a single source of truth with Lightdash in just four weeks | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Matthew Powers",
+    "role": "Chief Technology & Product Officer",
+    "avatar": "/assets/cms/customer-stories/people/tatango-avatar.jpeg"
+   },
+   "company": {
+    "industry": "Fundraising",
+    "location": "North Carolina, USA",
+    "employees": "51-200",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/tatango.svg",
+     "source": "https://framerusercontent.com/images/VeJQg8hAXgmIzu45Gyk7vlzTl7I.svg",
+     "format": "SVG",
+     "bytes": 3092
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/tatango.svg",
+    "source": "https://framerusercontent.com/images/VeJQg8hAXgmIzu45Gyk7vlzTl7I.svg",
+    "format": "SVG",
+    "bytes": 3092
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-a.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-nsB2IpOc.png",
+    "source": "https://framerusercontent.com/images/nsB2IpOcuUIw1QbdIUKX9R720.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 300151
+   },
+   "statCount": 3,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "stake",
+   "url": "/customer-story/stake",
+   "listed": true,
+   "indexOrder": 8,
+   "title": "How Stake built a successful self-serve data culture using Lightdash",
+   "pageTitle": "How Stake built a successful self-serve data culture using Lightdash | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Abdelmounim Boufous",
+    "role": "Senior Data Analyst",
+    "avatar": "/assets/cms/customer-stories/people/stake-avatar.jpg"
+   },
+   "company": {
+    "industry": "Financial Services",
+    "location": "Dubai, UAE",
+    "employees": "51-200",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/stake.png",
+     "source": "https://framerusercontent.com/images/mFvxD2NRi6ZZimgXBKpk2uuSu5k.png",
+     "width": 120,
+     "height": 40,
+     "format": "PNG",
+     "bytes": 977
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/stake.png",
+    "source": "https://framerusercontent.com/images/mFvxD2NRi6ZZimgXBKpk2uuSu5k.png",
+    "width": 120,
+    "height": 40,
+    "format": "PNG",
+    "bytes": 977
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-b.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-fomfHUN6.png",
+    "source": "https://framerusercontent.com/images/fomfHUN6jW6V6PxATrynhIEWLCc.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 375808
+   },
+   "statCount": 3,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "ubie",
+   "url": "/customer-story/ubie",
+   "listed": true,
+   "indexOrder": 9,
+   "title": "Building trust at scale: Why Ubie chose Lightdash over traditional BI",
+   "pageTitle": "Building trust at scale: Why Ubie chose Lightdash over traditional BI | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Yu Ishikawa",
+    "role": "Principal Data Architect",
+    "avatar": "/assets/cms/customer-stories/people/ubie-avatar.jpg"
+   },
+   "company": {
+    "industry": "Healthtech",
+    "location": "Tokyo",
+    "employees": "201-500",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/ubie.svg",
+     "source": "https://framerusercontent.com/images/YfLBVD3E06dl2vjIEKBqhRy3Vts.svg",
+     "format": "SVG",
+     "bytes": 2077
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/ubie.svg",
+    "source": "https://framerusercontent.com/images/YfLBVD3E06dl2vjIEKBqhRy3Vts.svg",
+    "format": "SVG",
+    "bytes": 2077
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-a.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-vOw6Q3mY.png",
+    "source": "https://framerusercontent.com/images/vOw6Q3mYGTCzk1rGXbbhC4NL5A.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 335116
+   },
+   "statCount": 2,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "neo-financial",
+   "url": "/customer-story/neo-financial",
+   "listed": true,
+   "indexOrder": 10,
+   "title": "How Neo Financial's data team became a business enabler",
+   "pageTitle": "How Neo Financial's data team became a business enabler | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Brandon Rochon",
+    "role": "Head of Business Intelligence & Data Analytics",
+    "avatar": "/assets/cms/customer-stories/people/neo-financial-avatar.jpg"
+   },
+   "company": {
+    "industry": "Financial Services",
+    "location": "Calgary, Alberta",
+    "employees": "501-1000",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/neo-financial.svg",
+     "source": "https://framerusercontent.com/images/0O27FxcmCokUFVCUlLKiFIyzaJI.svg",
+     "format": "SVG",
+     "bytes": 1021
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/neo-financial.svg",
+    "source": "https://framerusercontent.com/images/0O27FxcmCokUFVCUlLKiFIyzaJI.svg",
+    "format": "SVG",
+    "bytes": 1021
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-b.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-nsB2IpOc.png",
+    "source": "https://framerusercontent.com/images/nsB2IpOcuUIw1QbdIUKX9R720.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 300151
+   },
+   "statCount": 3,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "hypebeast",
+   "url": "/customer-story/hypebeast",
+   "listed": true,
+   "indexOrder": 11,
+   "title": "How Hypebeast unified its global data stack with Lightdash",
+   "pageTitle": "How Hypebeast unified its global data stack with Lightdash | Lightdash",
+   "lang": "en",
+   "breadcrumbName": null,
+   "person": {
+    "name": "Sami Rahman",
+    "role": "Director of Data",
+    "avatar": "/assets/cms/customer-stories/people/hypebeast-avatar.jpeg"
+   },
+   "company": {
+    "industry": "Media",
+    "location": "London, UK",
+    "employees": "201-500 Employees",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/hypebeast.svg",
+     "source": "https://framerusercontent.com/images/0WpFu1I0gBoQ4J7E10NCGxmOM.svg",
+     "format": "SVG",
+     "bytes": 2800
+    }
+   },
+   "cardLogo": {
+    "path": "/assets/cms/customer-stories/logos/hypebeast.svg",
+    "source": "https://framerusercontent.com/images/0WpFu1I0gBoQ4J7E10NCGxmOM.svg",
+    "format": "SVG",
+    "bytes": 2800
+   },
+   "cardDecor": "/assets/cms/customer-stories/decor/card-corner-a.png",
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-nsB2IpOc.png",
+    "source": "https://framerusercontent.com/images/nsB2IpOcuUIw1QbdIUKX9R720.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 300151
+   },
+   "statCount": 4,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  },
+  {
+   "slug": "ubie-jp",
+   "url": "/customer-story/ubie-jp",
+   "listed": false,
+   "indexOrder": null,
+   "title": "全社で利用できるセルフサービスBIシステムを構築：Ubieが実現した大規模なデータ信頼性",
+   "pageTitle": "全社で利用できるセルフサービスBIシステムを構築：Ubieが実現した大規模なデータ信頼性 | Lightdash",
+   "lang": "ja",
+   "breadcrumbName": null,
+   "person": {
+    "name": "石川 有",
+    "role": "Principal Data Architect",
+    "avatar": "/assets/cms/customer-stories/people/ubie-jp-avatar.png"
+   },
+   "company": {
+    "industry": "医療業界",
+    "location": "東京",
+    "employees": "201-500",
+    "logo": {
+     "path": "/assets/cms/customer-stories/logos/ubie.svg",
+     "source": "https://framerusercontent.com/images/YfLBVD3E06dl2vjIEKBqhRy3Vts.svg",
+     "format": "SVG",
+     "bytes": 2077
+    }
+   },
+   "cardLogo": null,
+   "cardDecor": null,
+   "banner": {
+    "path": "/assets/cms/customer-stories/banners/banner-vOw6Q3mY.png",
+    "source": "https://framerusercontent.com/images/vOw6Q3mYGTCzk1rGXbbhC4NL5A.png",
+    "width": 1600,
+    "height": 222,
+    "format": "PNG",
+    "originalWidth": 2304,
+    "originalHeight": 320,
+    "bytes": 335116
+   },
+   "statCount": 2,
+   "related": [
+    "ollie",
+    "fal"
+   ]
+  }
+ ]
+}

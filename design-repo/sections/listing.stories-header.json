@@ -1,0 +1,58 @@
+{
+  "id": "listing.stories-header",
+  "category": "LISTING",
+  "purpose": "Customer stories index header: 100 spacer, a 57-tall H1 \"Customer stories\" and a 514-max lead, then an 88 spacer.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/CustomerStories.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "listing.stories-header.heading"
+      },
+      "lead": {
+        "type": "text",
+        "required": true,
+        "maxWords": 25,
+        "observedMaxWords": 20,
+        "wcRef": "listing.stories-header.lead"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "H1 40/44 instead of 56/56; row paddings 24 instead of 64",
+      "cssCite": "src/pages/CustomerStories.jsx:14"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/CustomerStories.jsx:7",
+    "src/pages/CustomerStories.jsx:20"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "customer-stories"
+  ]
+}

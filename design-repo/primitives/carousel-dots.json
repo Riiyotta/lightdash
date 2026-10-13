@@ -1,0 +1,23 @@
+{
+  "id": "carousel-dots",
+  "kind": "primitive",
+  "purpose": "Swipe-dot row (24 tall): 20x20 buttons holding 8x8 round dots, active #5E4CFF / inactive #D1D5DB, aria-label \"Go to slide n\".",
+  "props": [
+    "count",
+    "active",
+    "onGo"
+  ],
+  "tokensUsed": [
+    "color.brand-purple"
+  ],
+  "usedBySections": [
+    "features.cards-1x3",
+    "features.cards-2x2-text",
+    "features.cards-3x2",
+    "features.cards-3x2-image"
+  ],
+  "measuredFrom": [
+    "src/components/shared/MobileCarousel.jsx:37-45"
+  ],
+  "schemaVersion": "1.0.0"
+}

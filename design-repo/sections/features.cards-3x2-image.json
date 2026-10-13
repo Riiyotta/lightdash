@@ -1,0 +1,94 @@
+{
+  "id": "features.cards-3x2-image",
+  "category": "FEATURES",
+  "purpose": "Heading and six bordered cards each with a 228px product screenshot above the text block (365x371): \"Explore the story behind every number.\" on /interactive-dashboards.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/FeatureCards.jsx (layout 3x2-images, mobileCarousel → src/components/shared/MobileCarousel.jsx)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "observedMaxWords": 6,
+        "wcRef": "features.cards-3x2-image.heading"
+      },
+      "cards": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "observedMaxWords": 3,
+            "wcRef": "features.cards-3x2-image.cards[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": false,
+            "maxWords": 17,
+            "observedMaxWords": 13,
+            "wcRef": "features.cards-3x2-image.cards[].body"
+          },
+          "image": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "screenshot.product-ui"
+            ]
+          }
+        },
+        "minItems": 6,
+        "maxItems": 6
+      },
+      "sectionLines": {
+        "type": "enum",
+        "required": false,
+        "values": [
+          "none",
+          "rl"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "swipe-carousel",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "swipe-carousel": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "swipe-carousel": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "grid becomes a swipe carousel: cards 280x400 with a solid 1px border, scroll-snap x mandatory, dots below",
+      "cssCite": "src/components/shared/FeatureCards.jsx:25"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/FeatureCards.jsx:4",
+    "src/components/shared/FeatureCards.jsx:14",
+    "src/components/shared/MobileCarousel.jsx:4"
+  ],
+  "notes": [
+    "mobileCarousel is on for this layout (src/pages/InteractiveDashboards.jsx)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-interactive-dashboards"
+  ]
+}

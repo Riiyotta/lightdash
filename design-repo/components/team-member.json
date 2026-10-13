@@ -1,0 +1,17 @@
+{
+  "id": "team-member",
+  "kind": "component",
+  "purpose": "Team avatar (72px) that cross-fades to a hover image, name 14px and role 12px.",
+  "props": [
+    "name",
+    "role",
+    "photo"
+  ],
+  "usedBySections": [
+    "content.team-grid"
+  ],
+  "measuredFrom": [
+    "src/pages/About.jsx:11"
+  ],
+  "schemaVersion": "1.0.0"
+}

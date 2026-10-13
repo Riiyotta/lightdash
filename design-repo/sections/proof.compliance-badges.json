@@ -1,0 +1,55 @@
+{
+  "id": "proof.compliance-badges",
+  "category": "PROOF",
+  "purpose": "Two 104x104 compliance badges (AICPA SOC2, GDPR) centred in a 208-tall dashed row on /lightdash-security.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/LightdashSecurity.jsx (inline)",
+  "content": {
+    "fields": {
+      "badges": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "media",
+          "required": true,
+          "assetRoles": [
+            "badge.compliance"
+          ],
+          "altMaxWords": 3
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/pages/LightdashSecurity.jsx:60",
+    "src/pages/LightdashSecurity.jsx:62"
+  ],
+  "notes": [
+    "Compliance marks are real certifications of a real company: must-not-fabricate (never imply certification a new page does not hold). No responsive change is specified in source for this row."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "lightdash-security"
+  ]
+}

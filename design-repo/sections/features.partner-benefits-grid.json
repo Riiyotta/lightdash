@@ -1,0 +1,70 @@
+{
+  "id": "features.partner-benefits-grid",
+  "category": "FEATURES",
+  "purpose": "\"Why become a Lightdash partner?\" benefit cards on /partnerships (Template B boxed section).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Partnerships.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "features.partner-benefits-grid.heading"
+      },
+      "benefits": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 6,
+            "observedMaxWords": 4,
+            "wcRef": "features.partner-benefits-grid.benefits[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 29,
+            "observedMaxWords": 23,
+            "wcRef": "features.partner-benefits-grid.benefits[].body"
+          }
+        },
+        "minItems": 6,
+        "maxItems": 6
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/pages/Partnerships.jsx:245",
+    "src/pages/Partnerships.jsx:46"
+  ],
+  "notes": [
+    "No responsive change is separately specified in source for this block."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "partnerships"
+  ]
+}

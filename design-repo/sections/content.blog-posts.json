@@ -1,0 +1,108 @@
+{
+  "id": "content.blog-posts",
+  "category": "CONTENT",
+  "purpose": "\"From the blog\" strip: eyebrow, heading and exactly 3 dashed article cards (160px thumbnail, title, author avatar + name).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/BlogCards.jsx",
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "required": false,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.blog-posts.eyebrow"
+      },
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "content.blog-posts.heading"
+      },
+      "posts": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 18,
+            "observedMaxWords": 14,
+            "wcRef": "content.blog-posts.posts[].title"
+          },
+          "target": {
+            "type": "link",
+            "required": [
+              "navigate-route"
+            ],
+            "actions": [
+              "navigate-route",
+              "open-external"
+            ]
+          },
+          "thumbnail": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "image.cms-cover"
+            ]
+          },
+          "authorName": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "content.blog-posts.posts[].authorName"
+          },
+          "authorAvatar": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "photo.person-avatar"
+            ]
+          }
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "three cards stack in one column",
+      "cssCite": "src/components/shared/BlogCards.jsx:19"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/BlogCards.jsx:4",
+    "src/pages/data/data-apps.jsx:153"
+  ],
+  "notes": [
+    "Posts reference real blog posts of the company (titles, authors): real content."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-bi-as-code",
+    "product-data-apps",
+    "product-self-improving-analytics"
+  ]
+}

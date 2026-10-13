@@ -1,0 +1,17 @@
+{
+  "id": "blog-card",
+  "kind": "component",
+  "purpose": "Dashed 360-tall article card (160px thumbnail, 22px title, 20px avatar + author) for the \"From the blog\" strip.",
+  "props": [
+    "title",
+    "thumbnail",
+    "author"
+  ],
+  "usedBySections": [
+    "content.blog-posts"
+  ],
+  "measuredFrom": [
+    "src/components/shared/BlogCards.jsx:20-33"
+  ],
+  "schemaVersion": "1.0.0"
+}

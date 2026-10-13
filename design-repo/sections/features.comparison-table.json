@@ -1,0 +1,91 @@
+{
+  "id": "features.comparison-table",
+  "category": "FEATURES",
+  "purpose": "Four-column comparison (label | Lightdash | Legacy BI | Raw LLM): column 2 highlighted purple-tint, 96x48 pixel decoration in the first header cell; rows stack as blocks below 810. /context-layer has 7 rows, /self-improving-analytics 3 rows in a 250-tall heading block.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/ComparisonTable.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 14,
+        "observedMaxWords": 11,
+        "wcRef": "features.comparison-table.heading"
+      },
+      "columns": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 8,
+          "observedMaxWords": 6,
+          "wcRef": "features.comparison-table.columns[]"
+        },
+        "minItems": 4,
+        "maxItems": 4
+      },
+      "rows": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "list",
+          "required": true,
+          "item": {
+            "type": "text",
+            "required": true,
+            "maxWords": 10,
+            "observedMaxWords": 8,
+            "wcRef": "features.comparison-table.rows[][]"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "minItems": 3,
+        "maxItems": 7
+      },
+      "headingBlock": {
+        "type": "boolean",
+        "required": false
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "the 4-column role=table is hidden and each row stacks as a block",
+      "cssCite": "src/components/shared/ComparisonTable.jsx:31"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/ComparisonTable.jsx:3",
+    "src/pages/data/context-layer.jsx:73",
+    "src/pages/data/self-improving-analytics.jsx:86"
+  ],
+  "notes": [
+    "Cells are plain strings in the source data (some pages pass nodes); the PageSpec carries strings only. Each row has exactly 4 cells; the first column header is empty (holds the pixel decoration)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-context-layer",
+    "product-self-improving-analytics"
+  ]
+}

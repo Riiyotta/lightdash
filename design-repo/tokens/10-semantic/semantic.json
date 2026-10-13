@@ -1,0 +1,148 @@
+{
+  "$description": "Intent-level aliases. Values are {foundation.path} references or {theme} (resolved by tokens/themes/*).",
+  "semantic": {
+    "color.text.display": {
+      "$value": "{color.ld-display}",
+      "$type": "color"
+    },
+    "color.text.heading": {
+      "$value": "{color.ld-ink-700}",
+      "$type": "color"
+    },
+    "color.text.primary": {
+      "$value": "{color.ld-ink}",
+      "$type": "color"
+    },
+    "color.text.strong": {
+      "$value": "{color.ld-ink-strong}",
+      "$type": "color"
+    },
+    "color.text.body": {
+      "$value": "{color.ld-body}",
+      "$type": "color"
+    },
+    "color.text.muted": {
+      "$value": "{color.ld-muted}",
+      "$type": "color"
+    },
+    "color.text.sub": {
+      "$value": "{color.ld-sub}",
+      "$type": "color"
+    },
+    "color.text.inverse": {
+      "$value": "{color.text-white}",
+      "$type": "color"
+    },
+    "color.text.accent": {
+      "$value": "{color.brand-purple}",
+      "$type": "color"
+    },
+    "color.text.black": {
+      "$value": "{color.black}",
+      "$type": "color"
+    },
+    "color.surface.page": {
+      "$value": "{color.page-bg}",
+      "$type": "color"
+    },
+    "color.surface.dark": {
+      "$value": "{color.ld-dark}",
+      "$type": "color"
+    },
+    "color.surface.well": {
+      "$value": "{color.ld-well}",
+      "$type": "color"
+    },
+    "color.surface.well-tab": {
+      "$value": "{color.ld-well-tab}",
+      "$type": "color"
+    },
+    "color.surface.subtle": {
+      "$value": "{color.ld-surface}",
+      "$type": "color"
+    },
+    "color.surface.icon-cell": {
+      "$value": "{color.ld-icon-cell}",
+      "$type": "color"
+    },
+    "color.surface.highlight": {
+      "$value": "{color.ld-purple-10}",
+      "$type": "color"
+    },
+    "color.border.hairline": {
+      "$value": "{color.ld-line}",
+      "$type": "color"
+    },
+    "color.border.dark-hairline": {
+      "$value": "{color.ld-ink-700}",
+      "$type": "color"
+    },
+    "color.action.primary.bg": {
+      "$value": "{color.brand-purple}",
+      "$type": "color"
+    },
+    "color.action.primary.border": {
+      "$value": "{color.brand-purple-border}",
+      "$type": "color"
+    },
+    "color.action.light.bg": {
+      "$value": "{color.btn-light-bg}",
+      "$type": "color"
+    },
+    "color.action.light.bg-hover": {
+      "$value": "{color.btn-light-bg-hover}",
+      "$type": "color"
+    },
+    "color.action.light.border": {
+      "$value": "{color.btn-light-border}",
+      "$type": "color"
+    },
+    "color.action.light.text": {
+      "$value": "{color.btn-light-text}",
+      "$type": "color"
+    },
+    "color.action.dark.bg": {
+      "$value": "{color.ld-dark}",
+      "$type": "color"
+    },
+    "color.chrome.nav.bg": {
+      "$value": "{theme}",
+      "$type": "color",
+      "note": "resolved per theme: dark-home #080808, light #FFFFFF (SHARED §2)"
+    },
+    "color.chrome.nav.border": {
+      "$value": "{theme}",
+      "$type": "color"
+    },
+    "color.chrome.menu.panel": {
+      "$value": "{theme}",
+      "$type": "color"
+    },
+    "color.chrome.menu.overlay": {
+      "$value": "{color.menu-overlay}",
+      "$type": "color"
+    },
+    "color.chrome.modal.overlay": {
+      "$value": "{color.modal-overlay}",
+      "$type": "color"
+    },
+    "color.chrome.footer.bg": {
+      "$value": "{color.ld-dark}",
+      "$type": "color"
+    },
+    "color.chrome.footer.link": {
+      "$value": "{color.ld-footer-link}",
+      "$type": "color"
+    },
+    "color.chrome.footer.link-hover": {
+      "$value": "{color.ld-footer-link-hover}",
+      "$type": "color"
+    }
+  },
+  "evidence": [
+    {
+      "ref": "specs/SHARED.md:122",
+      "quote": "`#FFFFFF` page · `#E5E7EB` hairlines · `#1A1B25` dark"
+    }
+  ]
+}

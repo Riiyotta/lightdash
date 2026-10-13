@@ -1,0 +1,744 @@
+{
+  "$description": "Every colour in the clone's Tailwind theme (tailwind.config.js) plus #000000 from src/index.css. Nothing here is sampled fresh; each entry cites its source line. The nine local-* entries were ADDED by the design-repo build: recurring raw hex values in src/ that the Tailwind theme does not name (remaining one-off hexes are illustration-local and deliberately untokenised).",
+  "color": {
+    "nav-bg": {
+      "$value": "#080808",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:14",
+          "quote": "#080808"
+        }
+      ]
+    },
+    "nav-border": {
+      "$value": "rgba(229,231,235,0.10)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:15",
+          "quote": "rgba(229,231,235,0.10)"
+        }
+      ]
+    },
+    "nav-border-mobile": {
+      "$value": "rgba(255,255,255,0.10)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:16",
+          "quote": "rgba(255,255,255,0.10)"
+        }
+      ]
+    },
+    "menu-panel": {
+      "$value": "#0C0C0C",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:17",
+          "quote": "#0C0C0C"
+        }
+      ]
+    },
+    "menu-overlay": {
+      "$value": "rgba(0,0,0,0.65)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:18",
+          "quote": "rgba(0,0,0,0.65)"
+        }
+      ]
+    },
+    "menu-card-well": {
+      "$value": "#141416",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:19",
+          "quote": "#141416"
+        }
+      ]
+    },
+    "menu-card": {
+      "$value": "#272835",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:20",
+          "quote": "#272835"
+        }
+      ]
+    },
+    "dashed-line": {
+      "$value": "rgba(255,255,255,0.10)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:21",
+          "quote": "rgba(255,255,255,0.10)"
+        }
+      ]
+    },
+    "text-white": {
+      "$value": "#FFFFFF",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:22",
+          "quote": "#FFFFFF"
+        }
+      ]
+    },
+    "text-item": {
+      "$value": "#EDEDED",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:23",
+          "quote": "#EDEDED"
+        }
+      ]
+    },
+    "text-item-sub": {
+      "$value": "#969696",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:24",
+          "quote": "#969696"
+        }
+      ]
+    },
+    "text-card-sub": {
+      "$value": "#C1C7D0",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:25",
+          "quote": "#C1C7D0"
+        }
+      ]
+    },
+    "text-login-mobile": {
+      "$value": "#666D80",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:26",
+          "quote": "#666D80"
+        }
+      ]
+    },
+    "link-hover": {
+      "$value": "rgba(255,255,255,0.7)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:27",
+          "quote": "rgba(255,255,255,0.7)"
+        }
+      ]
+    },
+    "brand-purple": {
+      "$value": "#5E4CFF",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:28",
+          "quote": "#5E4CFF"
+        }
+      ]
+    },
+    "brand-purple-border": {
+      "$value": "#4835F2",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:29",
+          "quote": "#4835F2"
+        }
+      ]
+    },
+    "btn-light-bg": {
+      "$value": "#F8FAFB",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:30",
+          "quote": "#F8FAFB"
+        }
+      ]
+    },
+    "btn-light-bg-hover": {
+      "$value": "#ECEFF3",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:31",
+          "quote": "#ECEFF3"
+        }
+      ]
+    },
+    "btn-light-bg-dimmed": {
+      "$value": "#C3C5C9",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:33",
+          "quote": "#C3C5C9"
+        }
+      ]
+    },
+    "btn-light-border": {
+      "$value": "#DFE1E7",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:34",
+          "quote": "#DFE1E7"
+        }
+      ]
+    },
+    "btn-light-text": {
+      "$value": "#272835",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:35",
+          "quote": "#272835"
+        }
+      ]
+    },
+    "btn-dark-mobile": {
+      "$value": "#1A1B25",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:36",
+          "quote": "#1A1B25"
+        }
+      ]
+    },
+    "hamburger-bar": {
+      "$value": "#F0F0F0",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:37",
+          "quote": "#F0F0F0"
+        }
+      ]
+    },
+    "mobile-chevron": {
+      "$value": "#999999",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:38",
+          "quote": "#999999"
+        }
+      ]
+    },
+    "icon-stroke": {
+      "$value": "#818898",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:39",
+          "quote": "#818898"
+        }
+      ]
+    },
+    "pill-label": {
+      "$value": "rgba(255,255,255,0.55)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:40",
+          "quote": "rgba(255,255,255,0.55)"
+        }
+      ]
+    },
+    "pill-border": {
+      "$value": "#3D3D3D",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:42",
+          "quote": "#3D3D3D"
+        }
+      ]
+    },
+    "modal-overlay": {
+      "$value": "rgba(0,0,0,0.60)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:43",
+          "quote": "rgba(0,0,0,0.60)"
+        }
+      ]
+    },
+    "modal-card": {
+      "$value": "#FFFFFF",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:44",
+          "quote": "#FFFFFF"
+        }
+      ]
+    },
+    "iframe-bg": {
+      "$value": "#07060F",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:45",
+          "quote": "#07060F"
+        }
+      ]
+    },
+    "page-bg": {
+      "$value": "#FFFFFF",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:46",
+          "quote": "#FFFFFF"
+        }
+      ]
+    },
+    "ld-line": {
+      "$value": "#E5E7EB",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:49",
+          "quote": "#E5E7EB"
+        }
+      ],
+      "note": "hairlines (solid frames + dashed grid lines)"
+    },
+    "ld-dark": {
+      "$value": "#1A1B25",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:50",
+          "quote": "#1A1B25"
+        }
+      ],
+      "note": "banner, CTA card, \"Third\" button, footer, quote text"
+    },
+    "ld-ink": {
+      "$value": "#272835",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:51",
+          "quote": "#272835"
+        }
+      ],
+      "note": "headings / card titles / light button text"
+    },
+    "ld-ink-700": {
+      "$value": "#36394A",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:52",
+          "quote": "#36394A"
+        }
+      ],
+      "note": "section titles, FAQ, dark hairline"
+    },
+    "ld-display": {
+      "$value": "#1C0000",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:53",
+          "quote": "#1C0000"
+        }
+      ],
+      "note": "display-72 hero H1"
+    },
+    "ld-ink-strong": {
+      "$value": "#0D0D12",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:54",
+          "quote": "#0D0D12"
+        }
+      ],
+      "note": "comparison table Lightdash column"
+    },
+    "ld-body": {
+      "$value": "#666D80",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:55",
+          "quote": "#666D80"
+        }
+      ],
+      "note": "lead / body grey"
+    },
+    "ld-muted": {
+      "$value": "#818898",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:56",
+          "quote": "#818898"
+        }
+      ],
+      "note": "card body, meta"
+    },
+    "ld-sub": {
+      "$value": "#6B7280",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:57",
+          "quote": "#6B7280"
+        }
+      ],
+      "note": "sub-16, blog meta"
+    },
+    "ld-well": {
+      "$value": "#F6F8FA",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:58",
+          "quote": "#F6F8FA"
+        }
+      ],
+      "note": "hero-image wells, CTA grid, pill-active"
+    },
+    "ld-well-tab": {
+      "$value": "#F7F8FA",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:59",
+          "quote": "#F7F8FA"
+        }
+      ],
+      "note": "accordion tab image well"
+    },
+    "ld-icon-cell": {
+      "$value": "#F3F4F6",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:60",
+          "quote": "#F3F4F6"
+        }
+      ],
+      "note": "icon benefits cell"
+    },
+    "ld-surface": {
+      "$value": "#F8FAFB",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:61",
+          "quote": "#F8FAFB"
+        }
+      ],
+      "note": "table header, light button, story card"
+    },
+    "ld-cta-grid": {
+      "$value": "#CDD2D9",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:62",
+          "quote": "#CDD2D9"
+        }
+      ],
+      "note": "CTA band 8px grid lines"
+    },
+    "ld-logo": {
+      "$value": "#333742",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:63",
+          "quote": "#333742"
+        }
+      ],
+      "note": "customer logos row colour"
+    },
+    "ld-footer-link": {
+      "$value": "#A4ABB8",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:64",
+          "quote": "#A4ABB8"
+        }
+      ]
+    },
+    "ld-footer-link-hover": {
+      "$value": "#ECEFF3",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:65",
+          "quote": "#ECEFF3"
+        }
+      ]
+    },
+    "ld-footer-head": {
+      "$value": "#F8F9FB",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:66",
+          "quote": "#F8F9FB"
+        }
+      ]
+    },
+    "ld-footer-line": {
+      "$value": "#272835",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:67",
+          "quote": "#272835"
+        }
+      ],
+      "note": "footer dashed lines"
+    },
+    "ld-footer-frame": {
+      "$value": "#36394A",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:68",
+          "quote": "#36394A"
+        }
+      ],
+      "note": "footer solid frame + CTA dashed guides + email input bg"
+    },
+    "ld-seventh-text": {
+      "$value": "#B4ACFF",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:69",
+          "quote": "#B4ACFF"
+        }
+      ]
+    },
+    "ld-seventh-text-hover": {
+      "$value": "#DDD9FA",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:70",
+          "quote": "#DDD9FA"
+        }
+      ]
+    },
+    "ld-purple-10": {
+      "$value": "rgba(94,76,255,0.1)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:71",
+          "quote": "rgba(94,76,255,0.1)"
+        }
+      ]
+    },
+    "ld-purple-20": {
+      "$value": "rgba(94,76,255,0.2)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:72",
+          "quote": "rgba(94,76,255,0.2)"
+        }
+      ]
+    },
+    "ld-purple-60": {
+      "$value": "rgba(94,76,255,0.6)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:73",
+          "quote": "rgba(94,76,255,0.6)"
+        }
+      ]
+    },
+    "ld-purple-70": {
+      "$value": "rgba(94,76,255,0.7)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:74",
+          "quote": "rgba(94,76,255,0.7)"
+        }
+      ]
+    },
+    "ld-purple-77-70": {
+      "$value": "rgba(94,77,255,0.7)",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:75",
+          "quote": "rgba(94,77,255,0.7)"
+        }
+      ],
+      "note": "\"Fifth\" hover (source value)"
+    },
+    "ld-pill-border": {
+      "$value": "#5E5B5B",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:76",
+          "quote": "#5E5B5B"
+        }
+      ],
+      "note": "accordion Subtitle Pill border"
+    },
+    "ld-quote-well": {
+      "$value": "#F8FAFB",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:77",
+          "quote": "#F8FAFB"
+        }
+      ],
+      "note": "customer quote gradient end"
+    },
+    "black": {
+      "$value": "#000000",
+      "$type": "color",
+      "evidence": [
+        {
+          "ref": "src/index.css:270",
+          "quote": "color: #000000;"
+        }
+      ],
+      "note": "ld-card-title-24 default colour"
+    },
+    "local-separator-grey": {
+      "$value": "#A4ACB9",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/components/cms/BlogListing.jsx:32",
+          "quote": "text-[#A4ACB9]"
+        }
+      ],
+      "note": "middle-dot / chevron / muted word in headings (14 uses across 9 files). Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    },
+    "local-heading-near-black": {
+      "$value": "#1F1F1F",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/pages/Partnerships.jsx:139",
+          "quote": "text-[#1F1F1F]"
+        }
+      ],
+      "note": "Template B / story-card headings (5 uses). Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    },
+    "local-form-accent": {
+      "$value": "#5C44FF",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/pages/PadelApply.jsx:17",
+          "quote": "focus border #5C44FF"
+        }
+      ],
+      "note": "Padel form focus + submit + eyebrow (4 uses); a different purple from brand-purple #5E4CFF. Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    },
+    "local-mobile-divider-dark": {
+      "$value": "#212121",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/components/MobileNav.jsx:106",
+          "quote": "'before:border-[#212121]'"
+        }
+      ],
+      "note": "dark mobile-nav cell dividers (4 uses). Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    },
+    "local-search-ink": {
+      "$value": "#333",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/components/cms/SearchModal.jsx:69",
+          "quote": "text-[#333]"
+        }
+      ],
+      "note": "search modal text + inline code colour (4 uses). Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    },
+    "local-hamburger-light": {
+      "$value": "#1D293D",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/components/MobileNav.jsx:31",
+          "quote": "hamburger bars #1D293D"
+        }
+      ],
+      "note": "light mobile-nav hamburger bars (3 uses). Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    },
+    "local-code-block-bg": {
+      "$value": "#161820",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/components/cms/richtext.css:168",
+          "quote": "background: #161820;"
+        }
+      ],
+      "note": "rich-text code block and video embed placeholder (3 uses). Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    },
+    "local-padel-ink": {
+      "$value": "#1C1E28",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/pages/PadelApply.jsx:16",
+          "quote": "text-[#1C1E28]"
+        }
+      ],
+      "note": "padel form label / heading ink (3 uses). Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    },
+    "local-dashed-divider": {
+      "$value": "#E7E9EA",
+      "$type": "color",
+      "scope": "page-local",
+      "evidence": [
+        {
+          "ref": "src/pages/CustomerStory.jsx:31",
+          "quote": "border-[#E7E9EA]"
+        }
+      ],
+      "note": "story company card / event details dashed rules (3 uses). Not in tailwind.config.js: found by grepping src/ for raw hex values used 3+ times."
+    }
+  }
+}

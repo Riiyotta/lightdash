@@ -1,0 +1,60 @@
+{
+  "id": "content.jp-intro",
+  "category": "CONTENT",
+  "purpose": "Japanese \"What is Lightdash?\" block on /jp: 32px heading and a long centred paragraph (min-height 577 on desktop).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Jp.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 3,
+        "observedMaxWords": 1,
+        "wcRef": "content.jp-intro.heading"
+      },
+      "body": {
+        "type": "text",
+        "required": true,
+        "maxWords": 13,
+        "observedMaxWords": 10,
+        "wcRef": "content.jp-intro.body"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "paragraph 14/24.5 instead of 18/31.86 below 810; min-height only at desk",
+      "cssCite": "src/pages/Jp.jsx:103"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Jp.jsx:102",
+    "src/pages/Jp.jsx:33"
+  ],
+  "notes": [
+    "Japanese copy (no spaces): word counts are not a meaningful budget."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "jp"
+  ]
+}

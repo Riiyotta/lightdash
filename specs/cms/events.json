@@ -1,0 +1,172 @@
+{
+ "_note": "No events index page exists on the live site (only the 4 detail pages). Header subtitle and body are not copied - use placeholders.",
+ "count": 4,
+ "events": [
+  {
+   "slug": "padel",
+   "url": "/events/padel",
+   "title": "Lightdash & Friends Padel Tournament",
+   "pageTitle": "Lightdash & Friends Padel Tournament | Lightdash",
+   "tag": "Lightdash Leagues",
+   "cta": {
+    "label": "Apply to play",
+    "href": "../padel-apply"
+   },
+   "details": [
+    {
+     "icon": "/assets/cms/events/icons/event-format.png",
+     "label": "In person",
+     "field": "format"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-location.png",
+     "label": "Venue to be announced",
+     "field": "location"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-date.png",
+     "label": "Mid-October",
+     "field": "date"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-extra.png",
+     "label": "London",
+     "field": "extra"
+    }
+   ],
+   "ogImage": {
+    "path": "/assets/cms/events/og/padel.svg",
+    "source": "https://framerusercontent.com/images/vXwWOrdqWEBS65cNzQ2RZksMs.svg",
+    "format": "SVG",
+    "bytes": 2714
+   }
+  },
+  {
+   "slug": "from-prompt-to-dashboard-in-minutes-a-live-agentic-bi-demo",
+   "url": "/events/from-prompt-to-dashboard-in-minutes-a-live-agentic-bi-demo",
+   "title": "From Prompt to Dashboard in Minutes: A Live Agentic BI Demo",
+   "pageTitle": "From Prompt to Dashboard in Minutes: A Live Agentic BI Demo | Lightdash",
+   "tag": "Lightdash Leagues",
+   "cta": {
+    "label": "Register",
+    "href": "https://luma.com/55shs5eb?utm_source=eventpage"
+   },
+   "details": [
+    {
+     "icon": "/assets/cms/events/icons/event-format.png",
+     "label": "Online",
+     "field": "format"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-location.png",
+     "label": "Youtube",
+     "field": "location"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-date.png",
+     "label": "March 4",
+     "field": "date"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-extra.png",
+     "label": "4pm GMT",
+     "field": "extra"
+    }
+   ],
+   "ogImage": {
+    "path": "/assets/cms/events/og/from-prompt-to-dashboard-in-minutes-a-live-agentic-bi-demo.png",
+    "source": "https://framerusercontent.com/images/TbFs8YV7izvCNT1cQdhpPp7AoLY.png",
+    "width": 1000,
+    "height": 1000,
+    "format": "PNG",
+    "bytes": 107264
+   }
+  },
+  {
+   "slug": "lightdash-at-coalesce-2025",
+   "url": "/events/lightdash-at-coalesce-2025",
+   "title": "Lightdash is heading to Coalesce 2025 🌶️",
+   "pageTitle": "Lightdash is heading to Coalesce 2025 🌶️ | Lightdash",
+   "tag": "Lightdash Leagues",
+   "cta": {
+    "label": "Meet the team at Coalesce",
+    "href": "https://luma.com/coalesce2025?utm_source=lightdasheventpage&utm_medium=lightdashwebsite"
+   },
+   "details": [
+    {
+     "icon": "/assets/cms/events/icons/event-format.png",
+     "label": "In person",
+     "field": "format"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-location.png",
+     "label": "Las Vegas",
+     "field": "location"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-date.png",
+     "label": "October 13-16",
+     "field": "date"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-extra.png",
+     "label": "Booth 321",
+     "field": "extra"
+    }
+   ],
+   "ogImage": {
+    "path": "/assets/cms/events/og/lightdash-at-coalesce-2025.png",
+    "source": "https://framerusercontent.com/images/SD92y6yQZILM0iuIjuohSpvKdA.png",
+    "width": 1200,
+    "height": 1200,
+    "format": "PNG",
+    "originalWidth": 1264,
+    "originalHeight": 1264,
+    "bytes": 268317
+   }
+  },
+  {
+   "slug": "big-data-ldn-2025",
+   "url": "/events/big-data-ldn-2025",
+   "title": "⚡️ Meet Lightdash at Big Data LDN",
+   "pageTitle": "⚡️ Meet Lightdash at Big Data LDN | Lightdash",
+   "tag": "Lightdash Leagues",
+   "cta": {
+    "label": "Book a demo",
+    "href": "https://calendly.com/lightdash-cloud/big-data-ldn-2025?month=2025-09"
+   },
+   "details": [
+    {
+     "icon": "/assets/cms/events/icons/event-format.png",
+     "label": "In person",
+     "field": "format"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-location.png",
+     "label": "Olympia, London",
+     "field": "location"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-date.png",
+     "label": "September 24-25",
+     "field": "date"
+    },
+    {
+     "icon": "/assets/cms/events/icons/event-extra.png",
+     "label": "Booth K41",
+     "field": "extra"
+    }
+   ],
+   "ogImage": {
+    "path": "/assets/cms/events/og/big-data-ldn-2025.png",
+    "source": "https://framerusercontent.com/images/9aHPx8VyUGuWR9JlWZ8wJ0DUME.png",
+    "width": 1200,
+    "height": 1200,
+    "format": "PNG",
+    "originalWidth": 1264,
+    "originalHeight": 1264,
+    "bytes": 542297
+   }
+  }
+ ]
+}

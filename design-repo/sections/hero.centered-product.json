@@ -1,0 +1,126 @@
+{
+  "id": "hero.centered-product",
+  "category": "HERO",
+  "purpose": "Centred product hero on the 7 T1 product pages: pixel-tile clusters, display-72 (or display-56) headline with a purple accent, short subtitle and the Talk / Start-for-free button pair. Always followed by hero.product-visual.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/SectionHero.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 14,
+        "observedMaxWords": 11,
+        "wcRef": "hero.centered-product.heading"
+      },
+      "accent": {
+        "type": "text",
+        "required": false,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "hero.centered-product.accent"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 30,
+        "observedMaxWords": 24,
+        "wcRef": "hero.centered-product.subtitle"
+      },
+      "titleSize": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "72",
+          "56"
+        ]
+      },
+      "pixelSet": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "purple",
+          "lavender"
+        ]
+      },
+      "buttons": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "cta",
+          "required": true,
+          "actions": [
+            "navigate-route",
+            "open-external",
+            "open-talk-modal"
+          ],
+          "labelMaxWords": 6,
+          "observedLabelMaxWords": 4,
+          "labelRef": "hero.centered-product.buttons[]Label"
+        },
+        "minItems": 0,
+        "maxItems": 2
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-fade-spring",
+      "pixel-drop",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "hero-fade-spring": "visible-no-transition",
+      "pixel-drop": "static-final-state",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "hero-fade-spring": "source-implemented",
+      "pixel-drop": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "top spacer shrinks 100 -> 60",
+      "cssCite": "src/components/shared/SectionHero.jsx:106"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "only the y=0 left-cluster pixel tiles remain",
+      "cssCite": "src/components/shared/SectionHero.jsx:51"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "headline padding 24 and subtitle padding 24 replace the 0 desktop inset",
+      "cssCite": "src/components/shared/SectionHero.jsx:113"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/SectionHero.jsx:4",
+    "src/components/shared/SectionHero.jsx:44-46",
+    "src/motion/useRouteMotion.js:20-31"
+  ],
+  "notes": [
+    "Per-route load motion is NOT uniform (src/motion/useRouteMotion.js PAGES): hero \"wide\" fade + pixel drop on conversational-analytics, context-layer, data-apps and interactive-dashboards; hero \"text\" fade + pixel drop on embedding and self-improving-analytics; pixel drop only on metrics-catalog. The per-route values are recorded in templates/templates.json route evidence (loadMotion).",
+    "titleSize 56 adds a dashed top line (metrics-catalog, embedding). Accent words use the brand purple span; context-layer inverts it (first sentence #1C0000)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-data-apps",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-metrics-catalog",
+    "product-self-improving-analytics"
+  ]
+}

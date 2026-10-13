@@ -1,0 +1,346 @@
+{
+  "$description": "Closed motion-pattern vocabulary for PageSpec nodes. Every pattern cites real source (src/motion, src/index.css, components). reducedMotionBasis says how the fallback is known: source-implemented = the source honours prefers-reduced-motion for it; source-partial = only part of it does; recommended-not-implemented = the source does NOT gate it, the fallback is this repo's recommendation.",
+  "reducedMotionFallbacks": [
+    "not-applicable",
+    "visible-no-transition",
+    "static-final-state",
+    "instant-swap",
+    "no-autoplay",
+    "manual-only"
+  ],
+  "reducedMotionBases": [
+    "source-implemented",
+    "source-partial",
+    "recommended-not-implemented"
+  ],
+  "triggers": [
+    "none",
+    "on-load",
+    "on-hover",
+    "on-click",
+    "on-scroll",
+    "on-scroll-into-view",
+    "on-drag",
+    "autoplay"
+  ],
+  "patterns": {
+    "none": {
+      "description": "No motion.",
+      "trigger": "none",
+      "reducedMotionFallback": "not-applicable",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [],
+      "observedOn": []
+    },
+    "hero-fade-spring": {
+      "description": "Hero (and, on \"wide\" routes, the next sibling logos block) fades opacity .001 -> 1 on load; Framer spring bounce .2 / .4s sampled into 41 keyframes. Replayed on every client-side navigation.",
+      "trigger": "on-load",
+      "durationMs": 400,
+      "easingToken": "spring.b02-d04",
+      "reducedMotionFallback": "visible-no-transition",
+      "reducedMotionBasis": "source-implemented",
+      "evidence": [
+        "src/motion/curves.js:5",
+        "src/motion/useRouteMotion.js:87",
+        "src/motion/useRouteMotion.js:75"
+      ],
+      "observedOn": [
+        "/conversational-analytics",
+        "/context-layer",
+        "/data-apps",
+        "/interactive-dashboards",
+        "/embedding",
+        "/self-improving-analytics"
+      ]
+    },
+    "pixel-drop": {
+      "description": "[data-hero-pixel][data-pixel-drop] tiles translateY(-32px, integrations -30/+30) -> 0, spring bounce 0 / .6s, delay 1s, all together, opacity stays 1.",
+      "trigger": "on-load",
+      "durationMs": 600,
+      "delayMs": 1000,
+      "easingToken": "spring.b0-d06",
+      "reducedMotionFallback": "static-final-state",
+      "reducedMotionBasis": "source-implemented",
+      "evidence": [
+        "src/motion/curves.js:12",
+        "src/motion/useRouteMotion.js:94",
+        "src/motion/useRouteMotion.js:75"
+      ],
+      "observedOn": [
+        "/conversational-analytics",
+        "/context-layer",
+        "/data-apps",
+        "/interactive-dashboards",
+        "/embedding",
+        "/self-improving-analytics",
+        "/metrics-catalog",
+        "/integrations",
+        "/startups",
+        "/jp"
+      ]
+    },
+    "roadmap-pixel-slide": {
+      "description": "[data-roadmap-pixel] 16px tiles slide translateX(-16px) -> 0, spring bounce 0 / .4s, per-tile delay 1.0s (left strips) / 1.3s (right strips) + 100ms per tile.",
+      "trigger": "on-load",
+      "durationMs": 400,
+      "delayMs": 1000,
+      "staggerMs": 100,
+      "easingToken": "spring.b0-d04",
+      "reducedMotionFallback": "static-final-state",
+      "reducedMotionBasis": "source-implemented",
+      "evidence": [
+        "src/motion/useRouteMotion.js:18",
+        "src/motion/useRouteMotion.js:51-63",
+        "src/motion/useRouteMotion.js:75"
+      ],
+      "observedOn": [
+        "/roadmap"
+      ]
+    },
+    "scroll-linked-offset": {
+      "description": "Announcement bar and navbar translate up by min(scrollY, 40) px, scroll-linked with no tween.",
+      "trigger": "on-scroll",
+      "reducedMotionFallback": "static-final-state",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/layouts/InnerLayout.jsx:32",
+        "src/layouts/InnerLayout.jsx:35"
+      ],
+      "observedOn": [
+        "all banner routes"
+      ]
+    },
+    "nav-spring": {
+      "description": "Navbar mega-menu panels fade opacity .001 -> 1 (spring b2d4, 400ms); phone nav height 64 <-> 100vh and accordion rows use spring b0d3 (300ms); hamburger bars tween 300ms cubic-bezier(.44,0,.56,1).",
+      "trigger": "on-click",
+      "durationMs": 300,
+      "easingToken": "spring.b0-d03",
+      "reducedMotionFallback": "instant-swap",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/index.css:196",
+        "src/index.css:202",
+        "src/index.css:208"
+      ],
+      "observedOn": [
+        "chrome"
+      ]
+    },
+    "modal-fade": {
+      "description": "Talk modal: backdrop instant; frame opacity tween .15s and white card .2s, cubic-bezier(.44,0,.56,1), no scale; close is instant.",
+      "trigger": "on-click",
+      "durationMs": 200,
+      "easingToken": "easing.framer",
+      "reducedMotionFallback": "instant-swap",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/index.css:246",
+        "src/index.css:249",
+        "src/components/TalkModal.jsx:15"
+      ],
+      "observedOn": [
+        "chrome"
+      ]
+    },
+    "accordion-progress": {
+      "description": "Closed tab opens (spring ~170ms), the open one closes, the image swaps instantly and a 1px #5E4CFF progress line restarts (scaleY 0 -> 1, 8.8s linear). No auto-advance.",
+      "trigger": "on-click",
+      "durationMs": 170,
+      "easingToken": "spring.b0-d03",
+      "reducedMotionFallback": "instant-swap",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/index.css:328",
+        "src/index.css:324",
+        "src/components/shared/AccordionTabs.jsx:7"
+      ],
+      "observedOn": [
+        "/conversational-analytics",
+        "/embedding",
+        "/interactive-dashboards",
+        "/self-improving-analytics",
+        "/context-layer"
+      ]
+    },
+    "tab-swap-instant": {
+      "description": "Pill tab click swaps the active pill, copy and image instantly; the pill colour animates with the button spring.",
+      "trigger": "on-click",
+      "durationMs": 400,
+      "easingToken": "spring.b02-d04",
+      "reducedMotionFallback": "instant-swap",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/components/shared/PillTabs.jsx:4",
+        "src/components/shared/PillTabs.jsx:32"
+      ],
+      "observedOn": [
+        "/data-apps",
+        "/metrics-catalog"
+      ]
+    },
+    "faq-accordion": {
+      "description": "FAQ item height opens with a ~150ms spring and the plus icon rotates 0 -> 45 degrees; items toggle independently.",
+      "trigger": "on-click",
+      "durationMs": 150,
+      "easingToken": "spring.b0-d03",
+      "reducedMotionFallback": "instant-swap",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/index.css:335",
+        "src/index.css:347",
+        "src/components/shared/Faq.jsx:6"
+      ],
+      "observedOn": [
+        "10 routes"
+      ]
+    },
+    "scroll-reveal-fade": {
+      "description": "Timeline year rows and content rows fade opacity 0 -> 1 once when any pixel enters the viewport (IntersectionObserver threshold 0), 0.55s cubic-bezier(.2,.8,.2,1).",
+      "trigger": "on-scroll-into-view",
+      "durationMs": 550,
+      "easingToken": "easing.timeline-reveal",
+      "reducedMotionFallback": "visible-no-transition",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/components/pages/about/Timeline.jsx:7",
+        "src/components/pages/about/Timeline.jsx:38"
+      ],
+      "observedOn": [
+        "/about"
+      ]
+    },
+    "autoplay-carousel": {
+      "description": "Auto-advancing panels: /partnerships testimonial rotates every 4000ms with a 4s purple progress line; /fintech role accordion advances every 4400ms (progress line 4s after 0.4s). A click jumps and restarts the cycle.",
+      "trigger": "autoplay",
+      "durationMs": 4000,
+      "easingToken": "easing.framer",
+      "reducedMotionFallback": "no-autoplay",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/components/pages/partnerships/TestimonialCarousel.jsx:11",
+        "src/components/pages/fintech/RoleAccordion.jsx:10",
+        "src/components/pages/fintech/RoleAccordion.jsx:87"
+      ],
+      "observedOn": [
+        "/partnerships",
+        "/fintech"
+      ]
+    },
+    "swipe-carousel": {
+      "description": "Phone (<810) feature cards become a scroll-snap swipe carousel (x mandatory); dot buttons scrollTo smooth.",
+      "trigger": "on-scroll",
+      "reducedMotionFallback": "instant-swap",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/components/shared/mobile-carousel.css:1",
+        "src/components/shared/MobileCarousel.jsx:32"
+      ],
+      "observedOn": [
+        "/conversational-analytics",
+        "/embedding",
+        "/interactive-dashboards"
+      ]
+    },
+    "drag-stickers": {
+      "description": "About stickers are draggable inside the 968x307 layer; hover scale 1.05, drag scale 1.1 + rotate 5deg, 0.2s transform tween.",
+      "trigger": "on-drag",
+      "durationMs": 200,
+      "easingToken": "easing.framer",
+      "reducedMotionFallback": "static-final-state",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/components/pages/about/Stickers.jsx:5",
+        "src/components/pages/about/Stickers.jsx:67"
+      ],
+      "observedOn": [
+        "/about"
+      ]
+    },
+    "hover-crossfade": {
+      "description": "Team member avatar cross-fades static -> hover image on hover, 400ms cubic-bezier(.34,1.2,.64,1).",
+      "trigger": "on-hover",
+      "durationMs": 400,
+      "reducedMotionFallback": "instant-swap",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/pages/About.jsx:20"
+      ],
+      "observedOn": [
+        "/about"
+      ]
+    },
+    "snake-game": {
+      "description": "Canvas Snake game in the CTA band: demo plays at 190ms ticks, interactive play at 135ms ticks after 1450ms; overlay messages pop in (260ms). Only the pop animation honours prefers-reduced-motion; the tick loop does not.",
+      "trigger": "autoplay",
+      "durationMs": 260,
+      "reducedMotionFallback": "no-autoplay",
+      "reducedMotionBasis": "source-partial",
+      "evidence": [
+        "src/components/shared/SnakeGame.jsx:10",
+        "src/components/shared/SnakeGame.jsx:11",
+        "src/index.css:382",
+        "src/index.css:388"
+      ],
+      "observedOn": [
+        "37 routes with a CTA band"
+      ]
+    },
+    "glitch-loop": {
+      "description": "404 art: 7 stacked layers, 1.5s hard-cut burst loop (frames at 54.5-72.7% of each cycle).",
+      "trigger": "autoplay",
+      "durationMs": 1500,
+      "reducedMotionFallback": "static-final-state",
+      "reducedMotionBasis": "source-implemented",
+      "evidence": [
+        "src/components/legal/legal.css:236",
+        "src/components/legal/legal.css:240-242"
+      ],
+      "observedOn": [
+        "/404"
+      ]
+    },
+    "rive-canvas": {
+      "description": "Rive state-machine canvas (wordmark, embedding hero, startups dashboard) autoplays; pointer events are handled inside the .riv file.",
+      "trigger": "autoplay",
+      "reducedMotionFallback": "static-final-state",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/components/pages/embedding/RiveHero.jsx:19",
+        "src/components/pages/startups/RiveDashboard.jsx:24",
+        "src/components/Navbar.jsx:117"
+      ],
+      "observedOn": [
+        "/embedding",
+        "/startups",
+        "chrome"
+      ]
+    },
+    "iframe-app": {
+      "description": "Opaque Three.js Game Boy app inside an iframe: all motion is internal and not inspected.",
+      "trigger": "autoplay",
+      "reducedMotionFallback": "not-applicable",
+      "reducedMotionBasis": "recommended-not-implemented",
+      "evidence": [
+        "src/components/Hero.jsx:62",
+        "CLONE_SPEC.md:284"
+      ],
+      "observedOn": [
+        "/"
+      ]
+    },
+    "manual-only": {
+      "description": "User-initiated only: video controls / click-to-play poster (autoplay=0 until click); no autoplay, no scripted motion.",
+      "trigger": "on-click",
+      "reducedMotionFallback": "manual-only",
+      "reducedMotionBasis": "source-implemented",
+      "evidence": [
+        "src/components/pages/bi-as-code/VideoSection.jsx:5",
+        "src/components/pages/beyond-copilots/Replay.jsx:34"
+      ],
+      "observedOn": [
+        "/bi-as-code",
+        "/beyond-copilots"
+      ]
+    }
+  }
+}

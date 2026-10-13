@@ -1,0 +1,78 @@
+{
+  "id": "features.fintech-benefit-cards",
+  "category": "FEATURES",
+  "purpose": "Benefit section: heading and four 568x465 illustration cards in a 2x2 grid (gap 16) on /fintech.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Fintech.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "features.fintech-benefit-cards.heading"
+      },
+      "cards": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 12,
+            "observedMaxWords": 9,
+            "wcRef": "features.fintech-benefit-cards.cards[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 44,
+            "observedMaxWords": 35,
+            "wcRef": "features.fintech-benefit-cards.cards[].body"
+          },
+          "image": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "illustration.hero-diagram",
+              "screenshot.product-ui"
+            ]
+          }
+        },
+        "minItems": 4,
+        "maxItems": 4
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/pages/Fintech.jsx:138",
+    "src/pages/data/fintech.jsx:20"
+  ],
+  "notes": [
+    "No responsive change is separately specified in source for this block. The h2 text is taken from the first h2 in the section markup; verify when editing."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "fintech"
+  ]
+}

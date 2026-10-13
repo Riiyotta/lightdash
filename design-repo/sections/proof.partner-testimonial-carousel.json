@@ -1,0 +1,94 @@
+{
+  "id": "proof.partner-testimonial-carousel",
+  "category": "PROOF",
+  "purpose": "Auto-rotating (4s) partner testimonial: quote (Inter 28/48) over a row of 3 portraits with a purple progress line on the active person; click jumps. Phone shows a stacked list.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+  "content": {
+    "fields": {
+      "items": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "quote": {
+            "type": "text",
+            "required": true,
+            "maxWords": 47,
+            "observedMaxWords": 37,
+            "wcRef": "proof.partner-testimonial-carousel.items[].quote"
+          },
+          "name": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "proof.partner-testimonial-carousel.items[].name"
+          },
+          "company": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "proof.partner-testimonial-carousel.items[].company"
+          },
+          "role": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "observedMaxWords": 1,
+            "wcRef": "proof.partner-testimonial-carousel.items[].role"
+          },
+          "portrait": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "photo.person-avatar"
+            ],
+            "altMaxWords": 3
+          }
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "autoplay-carousel",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "autoplay-carousel": "no-autoplay",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "autoplay-carousel": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "\"Phone Testimonial\": quote block then a column of people (photo left, info right)",
+      "cssCite": "src/components/pages/partnerships/TestimonialCarousel.jsx:9"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/partnerships/TestimonialCarousel.jsx:4",
+    "src/components/pages/partnerships/TestimonialCarousel.jsx:11",
+    "src/components/pages/partnerships/TestimonialCarousel.jsx:13"
+  ],
+  "notes": [
+    "Three real named partner people and quotes (Colin Lee / Nayuta, David Olodort / Snowpack, Chloe Anderson): real PII-adjacent content, must-not-fabricate."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "partnerships"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "mega-menu-panel",
+  "kind": "component",
+  "purpose": "Desktop dropdown panel (Product 422 / Customers 414 / Resources 521 tall): auto-fill grid of icon + title + description items, feature cards, customer-logo cells.",
+  "props": [
+    "items"
+  ],
+  "usedBySections": [
+    "chrome.navbar-light",
+    "chrome.navbar-dark"
+  ],
+  "measuredFrom": [
+    "src/navData.js:23-85",
+    "src/components/Navbar.jsx:245"
+  ],
+  "schemaVersion": "1.0.0"
+}

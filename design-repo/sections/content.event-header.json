@@ -1,0 +1,70 @@
+{
+  "id": "content.event-header",
+  "category": "CONTENT",
+  "purpose": "Event header (left 832 / 370 at 810 / full on phone): purple tag pill, H1, placeholder summary and a primary button. No breadcrumb, no events index.",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Tag, title and CTA label are measured (specs/cms/events.json, 4 events); the summary paragraph is placeholder (EV: \"Placeholder event summary\").",
+  "implementedBy": "src/pages/Event.jsx (inline)",
+  "content": {
+    "fields": {
+      "tag": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "content.event-header.tag"
+      },
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 14,
+        "observedMaxWords": 11,
+        "wcRef": "content.event-header.title"
+      },
+      "cta": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route",
+          "open-external"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "content.event-header.ctaLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "header column width 832 -> 370 (810) -> full (phone)",
+      "cssCite": "src/pages/Event.jsx:47"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Event.jsx:46",
+    "specs/cms/events.json:4"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "event"
+  ]
+}

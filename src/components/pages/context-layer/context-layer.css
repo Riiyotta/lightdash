@@ -1,0 +1,51 @@
+/* Page-local overrides for /context-layer (specs/product-pages.md §2.6, reference/pages/context-layer-*.png). */
+
+/* <1200 only accordion rows (reference/pages/context-layer-390.png): dark #272835 pill (heading colour via
+   AccordionTabs headingClassName, phone sizes from the shared component), hatched grey placeholder well instead of an image (sampled: #E7E7E7 with ~1.5px #FEFEFE lines). */
+.cl-mtabs span.bg-brand-purple {
+  background-color: #272835;
+  box-shadow: none;
+}
+.cl-mtabs .bg-ld-well-tab {
+  background: repeating-linear-gradient(135deg, #e7e7e7 0 14px, #fefefe 14px 15.5px);
+}
+
+/* Live-site quirks below 810 (reference/pages/context-layer-390.png): the split row and the 1x3 cards
+   keep their desktop layout, so the copy is squeezed into very narrow columns. Replicated on purpose. */
+@media (max-width: 809.98px) {
+  .cl-split {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 65px;
+    padding-right: 65px;
+    gap: 48px;
+  }
+  .cl-split > div {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .cl-split h2,
+  .cl-split p {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  .cl-split > img {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    height: 320px;
+    aspect-ratio: auto;
+  }
+  .cl-cards > div {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+  .cl-cards .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .cl-cards .grid h3,
+  .cl-cards .grid p {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "hero.bi-as-code",
+  "category": "HERO",
+  "purpose": "Boxed 604-tall hero on /bi-as-code (\"Main\" wrapper): display-72 headline, subtitle, button pair, dashed column guides and 24/27px pixel-tile grids in two corners.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/bi-as-code/BiHero.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "hero.bi-as-code.heading"
+      },
+      "accent": {
+        "type": "text",
+        "required": false,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "hero.bi-as-code.accent"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 39,
+        "observedMaxWords": 31,
+        "wcRef": "hero.bi-as-code.subtitle"
+      },
+      "buttons": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "cta",
+          "required": true,
+          "actions": [
+            "navigate-route",
+            "open-external",
+            "open-talk-modal"
+          ],
+          "labelMaxWords": 6,
+          "observedLabelMaxWords": 4,
+          "labelRef": "hero.bi-as-code.buttons[]Label"
+        },
+        "minItems": 0,
+        "maxItems": 2
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-fade-spring",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "hero-fade-spring": "visible-no-transition",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "hero-fade-spring": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "min-height 604 drops away and vertical padding becomes 96; dashed guides hidden",
+      "cssCite": "src/components/pages/bi-as-code/BiHero.jsx:12"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/bi-as-code/BiHero.jsx:5",
+    "src/pages/data/bi-as-code.jsx:30"
+  ],
+  "notes": [
+    "useRouteMotion.js has no entry for /bi-as-code: no load motion (ia.json: \"Load motion: none\")."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-bi-as-code"
+  ]
+}

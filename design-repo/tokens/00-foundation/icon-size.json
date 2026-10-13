@@ -1,0 +1,104 @@
+{
+  "$description": "Icon / glyph box sizes measured in src. Square boxes in px.",
+  "iconSize": {
+    "chevron": {
+      "$value": "16px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/components/shared/AnnouncementBar.jsx:22",
+          "quote": "16×16 \"chevron-right-small\""
+        }
+      ],
+      "note": "banner chevron box"
+    },
+    "event-detail": {
+      "$value": "20px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/pages/Event.jsx:24",
+          "quote": "width={20} height={20}"
+        }
+      ],
+      "note": "event details card row icon"
+    },
+    "roadmap-column": {
+      "$value": "24px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/pages/Roadmap.jsx:53",
+          "quote": "width={24} height={24} className=\"mt-[-1px]"
+        }
+      ],
+      "note": "roadmap column header icon"
+    },
+    "blog-pixel": {
+      "$value": "24px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/pages/BlogPost.jsx:44",
+          "quote": "width={24}"
+        }
+      ],
+      "note": "decorative post pixel squares"
+    },
+    "hero-pixel-small": {
+      "$value": "30px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/components/pages/integrations/IntegrationsHero.jsx:24",
+          "quote": "width={30}"
+        }
+      ],
+      "note": "/integrations pixel clusters"
+    },
+    "hero-pixel": {
+      "$value": "32px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/components/shared/SectionHero.jsx:54",
+          "quote": "size = 32"
+        }
+      ],
+      "note": "product hero pixel tiles"
+    },
+    "face": {
+      "$value": "32px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/components/pages/fintech/RoleAccordion.jsx:5",
+          "quote": "32px face icon"
+        }
+      ],
+      "note": "fintech role accordion face icon"
+    },
+    "logo-tile": {
+      "$value": "48px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/components/pages/lightdash-security/LogoTile.jsx:7",
+          "quote": "h-[48px] w-[48px]"
+        }
+      ],
+      "note": "security / jp logo tile box"
+    },
+    "benefit": {
+      "$value": "84px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/components/shared/IconBenefits.jsx:27",
+          "quote": "w-[84px] shrink-0 flex-col"
+        }
+      ],
+      "note": "icon-benefits icon cell (84x84)"
+    }
+  }
+}

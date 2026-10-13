@@ -1,0 +1,113 @@
+{
+  "id": "cta.snake-band",
+  "category": "CTA",
+  "purpose": "Pre-footer band on 8px grid lines (fixed 473 tall, padding 64): a 1152x326 dark card with a two-line cta-56 title, two buttons (primary / secondary) and a playable canvas Snake game on the right; 64px pixel corner. Phone labels differ (\"Start for free\" / \"Try live demo\").",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/CtaBand.jsx + src/components/shared/SnakeGame.jsx",
+  "content": {
+    "fields": {
+      "title": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 6,
+          "observedMaxWords": 4,
+          "wcRef": "cta.snake-band.title[]"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "primary": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route",
+          "open-talk-modal"
+        ],
+        "labelMaxWords": 6,
+        "observedLabelMaxWords": 4,
+        "labelRef": "cta.snake-band.primaryLabel"
+      },
+      "secondary": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "open-external",
+          "navigate-route"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "cta.snake-band.secondaryLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "snake-game",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "snake-game": "no-autoplay",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "snake-game": "source-partial",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "band is 358x492, padding 24/16, plain white background; primary/secondary labels switch to \"Start for free\" / \"Try live demo\"",
+      "cssCite": "src/components/shared/CtaBand.jsx:42"
+    },
+    {
+      "query": "(min-width: 810px) and (max-width: 999.98px)",
+      "change": "primary label becomes \"Sign up\" and the game is hidden at 810-999",
+      "cssCite": "src/components/shared/CtaBand.jsx:12"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/CtaBand.jsx:5",
+    "src/components/shared/CtaBand.jsx:10",
+    "src/components/shared/SnakeGame.jsx:96"
+  ],
+  "notes": [
+    "Default links: primary -> /start, secondary -> https://app.lightdash.cloud/register; phone secondary -> the real demo project on demo.lightdash.com (a live product endpoint, chrome data not PageSpec content).",
+    "The 4 phone/tablet label strings (tabletLabel, mobilePrimary, mobileSecondary) are fixed component defaults, not PageSpec fields.",
+    "On /bi-as-code and /fintech the card max width is 1280 inside a 1408 band (cardMaxWidth prop); /interactive-dashboards limits the band to 1169."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "about",
+    "beyond-copilots",
+    "blog-category",
+    "customer-stories",
+    "event",
+    "fintech",
+    "integrations",
+    "legal",
+    "lightdash-security",
+    "playground",
+    "pricing",
+    "product-bi-as-code",
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-data-apps",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-metrics-catalog",
+    "product-self-improving-analytics",
+    "roadmap",
+    "startups"
+  ]
+}

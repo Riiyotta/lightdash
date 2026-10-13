@@ -1,0 +1,17 @@
+{
+  "id": "faq-item",
+  "kind": "component",
+  "purpose": "Question row with plus icon that rotates 45 degrees, independent height spring, answer rich text (links purple, strong 700).",
+  "props": [
+    "q",
+    "a",
+    "defaultOpen"
+  ],
+  "usedBySections": [
+    "content.faq"
+  ],
+  "measuredFrom": [
+    "src/components/shared/Faq.jsx:16-36"
+  ],
+  "schemaVersion": "1.0.0"
+}

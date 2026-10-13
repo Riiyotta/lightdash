@@ -1,0 +1,83 @@
+{
+  "id": "proof.logos-row",
+  "category": "PROOF",
+  "purpose": "Customer-logo caption plus a static 6-column logo row (6 at >=1200, 3 at 810, 2 on phone) under the product hero. No marquee, no hover.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/LogosRow.jsx",
+  "content": {
+    "fields": {
+      "caption": {
+        "type": "text",
+        "required": true,
+        "maxWords": 14,
+        "observedMaxWords": 11,
+        "wcRef": "proof.logos-row.caption"
+      },
+      "logos": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "media",
+          "required": true,
+          "assetRoles": [
+            "logo.customer-partner"
+          ],
+          "altMaxWords": 3
+        },
+        "minItems": 6,
+        "maxItems": 6
+      },
+      "fixedColumns": {
+        "type": "boolean",
+        "required": false
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-fade-spring",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "hero-fade-spring": "visible-no-transition",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "hero-fade-spring": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1199.98px)",
+      "change": "6 columns become 3 (>=810) and 2 on phone, unless fixedColumns (self-improving-analytics keeps 6)",
+      "cssCite": "src/components/shared/LogosRow.jsx:41"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/LogosRow.jsx:3",
+    "src/components/shared/LogosRow.jsx:6-13",
+    "src/pages/SelfImprovingAnalytics.jsx:34"
+  ],
+  "notes": [
+    "The six default logos (Kraken, octopus energy, workday, JustWatch, Adobe, fal) are real third-party trademarks; a generated page must supply human-licensed logos or neutral placeholders (assets/asset-roles.json).",
+    "On the hero \"wide\" routes the logos row fades in with the hero (useRouteMotion heroTargets adds hero.nextElementSibling)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-bi-as-code",
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-data-apps",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-metrics-catalog",
+    "product-self-improving-analytics"
+  ]
+}

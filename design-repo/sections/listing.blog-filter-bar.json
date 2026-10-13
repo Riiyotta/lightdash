@@ -1,0 +1,81 @@
+{
+  "id": "listing.blog-filter-bar",
+  "category": "LISTING",
+  "purpose": "56px filter bar: \"All posts\" plus the 5 categories that have posts (Building Lightdash, Events, Feature Friday, News, Product, ordered by filterOrder) as pills, and a Search button that opens the site-search modal (client-side over local titles).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/cms/BlogListing.jsx + src/components/cms/SearchModal.jsx",
+  "content": {
+    "fields": {
+      "pills": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 5,
+          "observedMaxWords": 3,
+          "wcRef": "listing.blog-filter-bar.pills[]"
+        },
+        "minItems": 5,
+        "maxItems": 6
+      },
+      "activeSlug": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "all",
+          "ecommerce",
+          "events",
+          "feature-fridays",
+          "company",
+          "product",
+          "none"
+        ]
+      },
+      "searchLabel": {
+        "type": "text",
+        "required": true,
+        "maxWords": 3,
+        "observedMaxWords": 1,
+        "wcRef": "listing.blog-filter-bar.searchLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "pills scroll horizontally (scrollbar hidden) beside a fixed Search button with a fade mask",
+      "cssCite": "src/components/cms/BlogListing.jsx:47"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/cms/BlogListing.jsx:45",
+    "src/pages/data/cms.js:20",
+    "src/components/cms/SearchModal.jsx:6"
+  ],
+  "notes": [
+    "\"Building Lightdash\" lives at slug ecommerce and \"News\" at slug company (sic, live URLs; specs/cms/blog-categories.json). Six empty categories (marketplace, data-observability, transformation, alerts-sharing, version-control, warehouse) have pages but no filter pill."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "blog-category",
+    "blog-index"
+  ]
+}

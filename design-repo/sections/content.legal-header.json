@@ -1,0 +1,60 @@
+{
+  "id": "content.legal-header",
+  "category": "CONTENT",
+  "purpose": "Legal page header rows: 66px hero row with 4 pixel tiles, a 20px meta row (\"Last Updated: ...\" with a calendar icon), a 24px spacer and the title row (display legal H1, max 780).",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Titles and dates are real (legal-pages spec); the page bodies are placeholder text written for the clone.",
+  "implementedBy": "src/components/legal/LegalPage.jsx",
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.legal-header.title"
+      },
+      "updated": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "content.legal-header.updated"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "row padding 64 -> 20",
+      "cssCite": "src/components/legal/LegalPage.jsx:73"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/legal/LegalPage.jsx:56",
+    "src/pages/PrivacyPolicy.jsx:40",
+    "src/pages/TermsOfService.jsx:98"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "legal"
+  ]
+}

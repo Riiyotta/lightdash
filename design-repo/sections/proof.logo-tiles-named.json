@@ -1,0 +1,82 @@
+{
+  "id": "proof.logo-tiles-named",
+  "category": "PROOF",
+  "purpose": "Caption plus a grid of 48x48 bordered logo tiles with the company name beneath: 18 tiles (6 x 64px columns) on /lightdash-security; 5-per-row Japanese-caption variant on /jp.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/lightdash-security/LogoTile.jsx",
+  "content": {
+    "fields": {
+      "caption": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "proof.logo-tiles-named.caption"
+      },
+      "tiles": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "logo": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "logo.customer-partner"
+            ]
+          },
+          "name": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "proof.logo-tiles-named.tiles[].name"
+          }
+        },
+        "minItems": 5,
+        "maxItems": 18
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "grid 6 x 64 columns becomes 2 x 115",
+      "cssCite": "src/pages/LightdashSecurity.jsx:69"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "/jp: 5 x 89.6 columns become 3 x 84.66",
+      "cssCite": "src/pages/Jp.jsx:94"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/lightdash-security/LogoTile.jsx:3",
+    "src/pages/LightdashSecurity.jsx:10",
+    "src/pages/Jp.jsx:91"
+  ],
+  "notes": [
+    "18 real customer names + logos on /lightdash-security: licensing guidance applies (assets/asset-roles.json logo.customer-partner)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "jp",
+    "lightdash-security"
+  ]
+}

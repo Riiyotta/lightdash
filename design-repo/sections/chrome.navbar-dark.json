@@ -1,0 +1,54 @@
+{
+  "id": "chrome.navbar-dark",
+  "category": "CHROME",
+  "purpose": "Fixed top navigation (dark variant, the homepage only): Rive wordmark, Product / Customers / Resources mega-menus, Pricing, Login and two buttons. Fixed content from src/navData.js; not composable per page.",
+  "status": "measured",
+  "composable": true,
+  "fixedContent": true,
+  "implementedBy": "src/components/Navbar.jsx",
+  "content": {
+    "fields": {},
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "chromeAxis": [
+      "dark-home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "nav-spring",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "nav-spring": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "nav-spring": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "the 106px desktop bar is replaced by the 64px phone bar (MobileNav) with a hamburger",
+      "cssCite": "src/layouts/InnerLayout.jsx:11"
+    }
+  ],
+  "measuredFrom": [
+    "src/navData.js:23-71",
+    "src/components/Navbar.jsx:117",
+    "CLONE_SPEC.md:104"
+  ],
+  "notes": [
+    "Menu copy, icons and hrefs are fixed data in src/navData.js (PRODUCT_ITEMS, PLATFORM_ITEMS, CUSTOMER_GROUPS, RESOURCE_*). A PageSpec cannot override them.",
+    "The wordmark is a Rive state machine (@rive-app/canvas) on the live site; the static SVG shows until it loads."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "home"
+  ]
+}

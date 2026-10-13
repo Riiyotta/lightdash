@@ -1,0 +1,16 @@
+{
+  "id": "pill-tab",
+  "kind": "component",
+  "purpose": "Single-row pill tab (36.8px, 6px radius): active purple fill, inactive white with inset #E5E7EB ring.",
+  "props": [
+    "label",
+    "active"
+  ],
+  "usedBySections": [
+    "features.pill-tabs-visual"
+  ],
+  "measuredFrom": [
+    "src/components/shared/PillTabs.jsx:29-33"
+  ],
+  "schemaVersion": "1.0.0"
+}

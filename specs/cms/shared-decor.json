@@ -1,0 +1,135 @@
+{
+ "blog-header-pixels": {
+  "path": "/assets/cms/shared/blog-header-pixels.png",
+  "source": "https://framerusercontent.com/images/EG9WrFgyNP1nRsfYbWnMnHFiY.png",
+  "width": 1524,
+  "height": 336,
+  "format": "PNG",
+  "bytes": 21955
+ },
+ "blog-title-pixels": {
+  "path": "/assets/cms/shared/blog-title-pixels.png",
+  "source": "https://framerusercontent.com/images/ikhpN463AcKmeXemos75foKgWzw.png",
+  "width": 386,
+  "height": 100,
+  "format": "PNG",
+  "bytes": 1464
+ },
+ "cta-corner-pixels": {
+  "path": "/assets/cms/shared/cta-corner-pixels.png",
+  "source": "https://framerusercontent.com/images/Bsqpl1IRmGZ0SIiYnL7q3tzTD0.png",
+  "width": 128,
+  "height": 128,
+  "format": "PNG",
+  "bytes": 2276
+ },
+ "inline-cta-pixels": {
+  "path": "/assets/cms/shared/inline-cta-pixels.png",
+  "source": "https://framerusercontent.com/images/IHWgUiuZxNYKVlgyGgorCRDYA0.png",
+  "width": 218,
+  "height": 304,
+  "format": "PNG",
+  "bytes": 14347
+ },
+ "post-pixel-1": {
+  "path": "/assets/cms/shared/post-pixel-1.png",
+  "source": "https://framerusercontent.com/images/w3GZQSkYQMlrW2MkqAHdYyw6I.png",
+  "width": 48,
+  "height": 48,
+  "format": "PNG",
+  "bytes": 310
+ },
+ "post-pixel-2": {
+  "path": "/assets/cms/shared/post-pixel-2.png",
+  "source": "https://framerusercontent.com/images/JQXhyKopxD9t9ztM8h0J9aWWDs.png",
+  "width": 48,
+  "height": 48,
+  "format": "PNG",
+  "bytes": 557
+ },
+ "post-pixel-3": {
+  "path": "/assets/cms/shared/post-pixel-3.png",
+  "source": "https://framerusercontent.com/images/TfNdlhOipnqI76ybpoR4jbTQak.png",
+  "width": 48,
+  "height": 48,
+  "format": "PNG",
+  "bytes": 440
+ },
+ "post-pixel-4": {
+  "path": "/assets/cms/shared/post-pixel-4.png",
+  "source": "https://framerusercontent.com/images/hhY6K66B6lZk35grbKw0noU.png",
+  "width": 48,
+  "height": 48,
+  "format": "PNG",
+  "bytes": 353
+ },
+ "post-pixel-5": {
+  "path": "/assets/cms/shared/post-pixel-5.png",
+  "source": "https://framerusercontent.com/images/6iQ6o98LEnR6JF9vCgUWgK3Vhc.png",
+  "width": 48,
+  "height": 48,
+  "format": "PNG",
+  "bytes": 587
+ },
+ "post-pixel-6": {
+  "path": "/assets/cms/shared/post-pixel-6.png",
+  "source": "https://framerusercontent.com/images/wsWOGCDdKEhN3F9a1vMQ6YFLGw.png",
+  "width": 48,
+  "height": 48,
+  "format": "PNG",
+  "bytes": 934
+ },
+ "post-pixel-7": {
+  "path": "/assets/cms/shared/post-pixel-7.png",
+  "source": "https://framerusercontent.com/images/CpvsgbkaALfNtOZlqsXILtGIsw.png",
+  "width": 48,
+  "height": 48,
+  "format": "PNG",
+  "bytes": 983
+ },
+ "chevron-right-small": {
+  "path": "/assets/cms/shared/chevron-right-small.svg",
+  "format": "SVG",
+  "source": "inline data URI"
+ },
+ "snake-cell-4": {
+  "path": "/assets/cms/shared/snake-cell-4.svg",
+  "format": "SVG",
+  "source": "inline data URI"
+ },
+ "snake-cell-2": {
+  "path": "/assets/cms/shared/snake-cell-2.svg",
+  "format": "SVG",
+  "source": "inline data URI"
+ },
+ "snake-cell-5": {
+  "path": "/assets/cms/shared/snake-cell-5.svg",
+  "format": "SVG",
+  "source": "inline data URI"
+ },
+ "snake-cell-1": {
+  "path": "/assets/cms/shared/snake-cell-1.svg",
+  "format": "SVG",
+  "source": "inline data URI"
+ },
+ "snake-cell-6": {
+  "path": "/assets/cms/shared/snake-cell-6.svg",
+  "format": "SVG",
+  "source": "inline data URI"
+ },
+ "snake-cell-0": {
+  "path": "/assets/cms/shared/snake-cell-0.svg",
+  "format": "SVG",
+  "source": "inline data URI"
+ },
+ "snake-cell-3": {
+  "path": "/assets/cms/shared/snake-cell-3.svg",
+  "format": "SVG",
+  "source": "inline data URI"
+ },
+ "search-magnifier": {
+  "path": "/assets/cms/shared/search-magnifier.svg",
+  "format": "SVG",
+  "source": "inline symbol"
+ }
+}

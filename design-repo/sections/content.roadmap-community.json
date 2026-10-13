@@ -1,0 +1,84 @@
+{
+  "id": "content.roadmap-community",
+  "category": "CONTENT",
+  "purpose": "Two 640 cards (\"Request a feature\" with a GitHub issue button, \"Join our community\" with a Slack community button) with 48x48 icon tiles.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Roadmap.jsx > FooterCard",
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "observedMaxWords": 3,
+            "wcRef": "content.roadmap-community.cards[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 18,
+            "observedMaxWords": 14,
+            "wcRef": "content.roadmap-community.cards[].body"
+          },
+          "icon": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "icon.pixel-art"
+            ]
+          },
+          "button": {
+            "type": "cta",
+            "required": true,
+            "actions": [
+              "open-external"
+            ],
+            "labelMaxWords": 4,
+            "observedLabelMaxWords": 2,
+            "labelRef": "content.roadmap-community.cards[].buttonLabel"
+          }
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "two columns stack; the divider moves from right to bottom",
+      "cssCite": "src/pages/Roadmap.jsx:149"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Roadmap.jsx:136"
+  ],
+  "notes": [
+    "Buttons target the real github.com/lightdash/lightdash issue form and go.lightdash.com/community."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "roadmap"
+  ]
+}

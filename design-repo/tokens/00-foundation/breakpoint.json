@@ -1,0 +1,80 @@
+{
+  "breakpoint": {
+    "tab": {
+      "$value": "810px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:9",
+          "quote": "tab: '810px'"
+        }
+      ],
+      "note": "phone is <810 (max 809.98)"
+    },
+    "desk": {
+      "$value": "1100px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:10",
+          "quote": "desk: '1100px'"
+        }
+      ],
+      "note": "nav switches to the 106-tall desktop bar"
+    },
+    "content-desktop": {
+      "$value": "1200px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:26",
+          "quote": "desktop ≥1200 for the content"
+        }
+      ],
+      "note": "section layouts switch at 1200"
+    },
+    "wide": {
+      "$value": "1280px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:11",
+          "quote": "wide: '1280px'"
+        }
+      ]
+    },
+    "about-desktop": {
+      "$value": "1000px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "ia/ia.json:1061",
+          "quote": "Desktop breakpoint is 1000 here."
+        }
+      ],
+      "note": "/about only"
+    },
+    "jp-desktop": {
+      "$value": "1440px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "ia/ia.json:1124",
+          "quote": "Desktop layout starts at 1440 here"
+        }
+      ],
+      "note": "/jp only"
+    },
+    "gameboy-app-mobile": {
+      "$value": "700px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:41",
+          "quote": "matchMedia('(max-width: 700px), (orientation: portrait)')"
+        }
+      ],
+      "note": "inside the opaque iframe app; not a page breakpoint"
+    }
+  }
+}

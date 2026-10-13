@@ -1,0 +1,66 @@
+{
+  "id": "features.startups-cards-2x2",
+  "category": "FEATURES",
+  "purpose": "Two-column grid of four cards (2 x 565, gap 19) under the second two-tone heading on /startups.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Startups.jsx (inline)",
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 9,
+            "observedMaxWords": 7,
+            "wcRef": "features.startups-cards-2x2.cards[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 34,
+            "observedMaxWords": 27,
+            "wcRef": "features.startups-cards-2x2.cards[].body"
+          }
+        },
+        "minItems": 4,
+        "maxItems": 4
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "single column below 810 (2 columns at >=810); side padding 16 (65 at >=1100)",
+      "cssCite": "src/pages/Startups.jsx:229"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Startups.jsx:228",
+    "src/pages/Startups.jsx:31"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "startups"
+  ]
+}

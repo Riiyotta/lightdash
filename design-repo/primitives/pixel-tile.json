@@ -1,0 +1,30 @@
+{
+  "id": "pixel-tile",
+  "kind": "primitive",
+  "purpose": "Decorative 24/30/32px pixel-art square (hero clusters, post corners, quote corners, plan-card corners); the only motion-bearing decor (pixel-drop).",
+  "props": [
+    "src",
+    "x",
+    "y",
+    "size",
+    "drop"
+  ],
+  "tokensUsed": [
+    "iconSize.hero-pixel"
+  ],
+  "usedBySections": [
+    "hero.centered-product",
+    "hero.company-centered",
+    "hero.integrations",
+    "hero.bi-as-code",
+    "content.post-header",
+    "conversion.plan-cards",
+    "content.legal-header",
+    "proof.testimonial-avatar"
+  ],
+  "measuredFrom": [
+    "src/components/shared/SectionHero.jsx:54-65",
+    "src/components/pages/startups/PixelTiles.jsx:25"
+  ],
+  "schemaVersion": "1.0.0"
+}

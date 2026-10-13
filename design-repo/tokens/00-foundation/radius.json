@@ -1,0 +1,73 @@
+{
+  "radius": {
+    "none": {
+      "$value": "0px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:233",
+          "quote": "`box-shadow: rgba(0,0,0,0.25) 0 1px 2px 0`, radius 0"
+        }
+      ],
+      "note": "cards, CTA card, modal card, author avatars on blog posts"
+    },
+    "pill-sm": {
+      "$value": "4px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:206",
+          "quote": "bg #0C0C0C, radius 4px"
+        }
+      ],
+      "note": "nav 'Read case study' pill"
+    },
+    "control": {
+      "$value": "6px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:126",
+          "quote": "radius **6px**"
+        },
+        {
+          "ref": "src/components/shared/Button.jsx:6",
+          "quote": "rounded-[6px]"
+        }
+      ],
+      "note": "every button"
+    },
+    "table": {
+      "$value": "8px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/cms-templates.md:220",
+          "quote": "**radius 8px**"
+        }
+      ],
+      "note": "rich-text tables"
+    },
+    "code-block": {
+      "$value": "15px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/cms-templates.md:218",
+          "quote": "wrapper radius **15px**"
+        }
+      ]
+    },
+    "round": {
+      "$value": "100%",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:256",
+          "quote": "20×20 avatar (radius 100%)"
+        }
+      ],
+      "note": "blog-posts section author avatar"
+    }
+  }
+}

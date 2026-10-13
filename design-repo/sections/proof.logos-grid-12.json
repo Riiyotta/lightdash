@@ -1,0 +1,67 @@
+{
+  "id": "proof.logos-grid-12",
+  "category": "PROOF",
+  "purpose": "Bordered 12-logo grid (6 x 2 at >=810, 2 columns on phone, 64px rows): /pricing renders an inline copy under the plan cards, /playground a linked version.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/playground/PlaygroundBlocks.jsx > LogoGrid; /pricing renders its own inline copy in src/pages/Pricing.jsx",
+  "content": {
+    "fields": {
+      "logos": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "media",
+          "required": true,
+          "assetRoles": [
+            "logo.customer-partner"
+          ],
+          "altMaxWords": 3
+        },
+        "minItems": 12,
+        "maxItems": 12
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "/pricing: 6 columns become 2 on phone",
+      "cssCite": "src/pages/Pricing.jsx:51"
+    },
+    {
+      "query": "(max-width: 1199.98px)",
+      "change": "/playground: 6 columns become 3 (>=810) and 2 on phone",
+      "cssCite": "src/components/pages/playground/PlaygroundBlocks.jsx:34"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Pricing.jsx:50",
+    "src/pages/data/playground.js:17",
+    "src/pages/data/pricing.jsx:85"
+  ],
+  "notes": [
+    "File names are NOT reliable identifiers of a logo: src/pages/data/pricing.jsx maps the \"octopus energy\" alt to alma-d392c0ab.svg and \"Adobe\" to hyperbound-3f4bc42b.svg (both rendered and viewed: the alt text is correct, only the file names are wrong). Identify logos by alt text, never by file name."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "playground",
+    "pricing"
+  ]
+}

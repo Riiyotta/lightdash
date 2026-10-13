@@ -1,0 +1,3242 @@
+{
+  "$description": "One entry per distinct page shape with an explicit node sequence (structured nodes). routes maps every real route to exactly one template (1:1; verified by verify_all.py against ia/ia.json and src/App.jsx when the sibling source tree is present). Chrome frames are derived from each template chrome axis value; content order follows the real JSX where it differs from ia.json (see differsFromIa).",
+  "templatesVersion": "1.0.0",
+  "excludedRoutes": {
+    "urls": [
+      "/old-home",
+      "/xdrafts/lightdash-vs-looker-v2",
+      "/xdrafts/lightdash-vs-looker"
+    ],
+    "reason": "unpublished on the live site (ia.json meta.excludedRoutes); must NOT be recreated. Unknown URLs render template not-found (route \"*\" in src/App.jsx) and are not counted as routes."
+  },
+  "devOnlyRoutes": {
+    "urls": [
+      "/__shared"
+    ],
+    "cite": "src/App.jsx:94",
+    "reason": "dev QA demo of the shared component library (src/pages/SharedDemo.jsx, documented in src/components/shared/README.md); mounted under the banner InnerLayout but not a real site route and not in the sitemap."
+  },
+  "differsFromIa": [
+    {
+      "template": "product-conversational-analytics",
+      "reason": "ia.json lists features.accordion-tabs once (\"appears as 2 rows\"); src/pages/ConversationalAnalytics.jsx renders two AccordionTabs (tabsRow1 image right, tabsRow2 image left).",
+      "iaSections": [
+        "hero.centered-product",
+        "hero.product-visual",
+        "proof.logos-row",
+        "features.accordion-tabs",
+        "features.cards-2x2-text",
+        "features.icon-benefits-grid",
+        "proof.customer-quote-stats",
+        "content.faq",
+        "cta.snake-band"
+      ],
+      "designRepoSections": [
+        "hero.centered-product",
+        "hero.product-visual",
+        "proof.logos-row",
+        "features.accordion-tabs",
+        "features.accordion-tabs",
+        "features.cards-2x2-text",
+        "features.icon-benefits-grid",
+        "proof.customer-quote-stats",
+        "content.faq",
+        "cta.snake-band"
+      ]
+    },
+    {
+      "template": "product-data-apps",
+      "reason": "ia.json lists features.cards-1x3 once (\"appears twice\"); src/pages/DataApps.jsx renders FeatureCards 1x3 twice (trust before the pill tabs, asCode after).",
+      "iaSections": [
+        "hero.centered-product",
+        "hero.product-visual",
+        "proof.logos-row",
+        "features.cards-1x3",
+        "features.pill-tabs-visual",
+        "proof.customer-quote",
+        "content.faq",
+        "content.blog-posts",
+        "cta.snake-band"
+      ],
+      "designRepoSections": [
+        "hero.centered-product",
+        "hero.product-visual",
+        "proof.logos-row",
+        "features.cards-1x3",
+        "features.pill-tabs-visual",
+        "features.cards-1x3",
+        "proof.customer-quote",
+        "content.faq",
+        "content.blog-posts",
+        "cta.snake-band"
+      ]
+    },
+    {
+      "template": "product-embedding",
+      "reason": "ia.json lists decor.hatched-band once (\"appears 3x\"); src/pages/Embedding.jsx renders HatchedSpacer after IntegrationPaths, after the Testimonial and after the FAQ.",
+      "iaSections": [
+        "hero.centered-product",
+        "hero.product-visual",
+        "proof.logos-row",
+        "features.accordion-tabs",
+        "features.cards-3x2",
+        "features.integration-paths",
+        "decor.hatched-band",
+        "proof.testimonial-avatar",
+        "content.faq",
+        "cta.snake-band"
+      ],
+      "designRepoSections": [
+        "hero.centered-product",
+        "hero.product-visual",
+        "proof.logos-row",
+        "features.accordion-tabs",
+        "features.cards-3x2",
+        "features.integration-paths",
+        "decor.hatched-band",
+        "proof.testimonial-avatar",
+        "decor.hatched-band",
+        "content.faq",
+        "decor.hatched-band",
+        "cta.snake-band"
+      ]
+    },
+    {
+      "template": "product-self-improving-analytics",
+      "reason": "ia.json lists features.accordion-tabs once (\"appears as 2 rows\"); src/pages/SelfImprovingAnalytics.jsx renders two AccordionTabs (image right, image left).",
+      "iaSections": [
+        "hero.centered-product",
+        "hero.product-visual",
+        "proof.logos-row",
+        "content.statement-heading",
+        "features.accordion-tabs",
+        "features.comparison-table",
+        "content.faq",
+        "content.blog-posts",
+        "cta.snake-band"
+      ],
+      "designRepoSections": [
+        "hero.centered-product",
+        "hero.product-visual",
+        "proof.logos-row",
+        "content.statement-heading",
+        "features.accordion-tabs",
+        "features.accordion-tabs",
+        "features.comparison-table",
+        "content.faq",
+        "content.blog-posts",
+        "cta.snake-band"
+      ]
+    },
+    {
+      "template": "playground",
+      "reason": "ia.json folds the empty card band into one content.playground-empty-blocks node placed after the logos; src/pages/Playground.jsx order is Hero, EmptyCardBand, LogoGrid, EmptyBlocks, so the section appears twice (blockMode card-band, then blocks).",
+      "iaSections": [
+        "hero.playground",
+        "proof.logos-grid-12",
+        "content.playground-empty-blocks",
+        "cta.snake-band"
+      ],
+      "designRepoSections": [
+        "hero.playground",
+        "content.playground-empty-blocks",
+        "proof.logos-grid-12",
+        "content.playground-empty-blocks",
+        "cta.snake-band"
+      ]
+    },
+    {
+      "template": "startups",
+      "reason": "ia.json lists content.two-tone-heading and decor.hatched-band once each (notes say twice); src/pages/Startups.jsx numbers 10 blocks: heading(3), grid(4), hatched(5), heading(6), cards(7), hatched(8), testimonial(9), CTA(10).",
+      "iaSections": [
+        "hero.company-centered",
+        "hero.startups-visual",
+        "content.two-tone-heading",
+        "features.startups-benefits-grid",
+        "decor.hatched-band",
+        "features.startups-cards-2x2",
+        "proof.testimonial-avatar",
+        "cta.snake-band"
+      ],
+      "designRepoSections": [
+        "hero.company-centered",
+        "hero.startups-visual",
+        "content.two-tone-heading",
+        "features.startups-benefits-grid",
+        "decor.hatched-band",
+        "content.two-tone-heading",
+        "features.startups-cards-2x2",
+        "decor.hatched-band",
+        "proof.testimonial-avatar",
+        "cta.snake-band"
+      ]
+    }
+  ],
+  "templates": {
+    "home": {
+      "iaTemplateId": "template.home",
+      "name": "Homepage (Game Boy app)",
+      "group": "home",
+      "chrome": "dark-home",
+      "theme": "dark-home",
+      "routes": [
+        "/"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-dark",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-dark",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.gameboy-app",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "One viewport, no scroll, no footer, no CTA band. The app views are iframe states reached via the planet menu, not routes. The sixth planet, \"Book a demo\", opens /start in a new tab instead of a view.",
+        "Only the iframe placement is composable DOM; app.* sections are iframe states (not routes, not nodes)."
+      ],
+      "iframeStates": [
+        "app.view-customers",
+        "app.view-product",
+        "app.view-pricing",
+        "app.view-governance",
+        "app.view-migration"
+      ]
+    },
+    "product-conversational-analytics": {
+      "iaTemplateId": "template.product-conversational-analytics",
+      "name": "Product: Conversational analytics",
+      "group": "T1 product",
+      "chrome": "light-banner-cta",
+      "theme": "light",
+      "routes": [
+        "/conversational-analytics"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centered-product",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.accordion-tabs",
+          "variant": "right",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.accordion-tabs",
+          "variant": "left",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.cards-2x2-text",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.icon-benefits-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.customer-quote-stats",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Accordion tabs appear as 2 rows. At 390 the customer quote moves after the CTA band. Load motion: whole hero + \"Trusted by\" logos fade in (opacity .001 → 1, spring bounce .2 / .4s); hero pixels drop after 1s (spring 0 / .6s).",
+        "Differs from ia.json: ia.json lists features.accordion-tabs once (\"appears as 2 rows\"); src/pages/ConversationalAnalytics.jsx renders two AccordionTabs (tabsRow1 image right, tabsRow2 image left)."
+      ],
+      "responsiveReorder": [
+        {
+          "query": "(max-width: 809.98px)",
+          "change": "the proof.customer-quote-stats block is re-ordered after the CTA band (flex order)",
+          "cite": "src/pages/ConversationalAnalytics.jsx:17"
+        }
+      ]
+    },
+    "product-data-apps": {
+      "iaTemplateId": "template.product-data-apps",
+      "name": "Product: Data apps",
+      "group": "T1 product",
+      "chrome": "light-banner-cta",
+      "theme": "light",
+      "routes": [
+        "/data-apps"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centered-product",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.cards-1x3",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.pill-tabs-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.cards-1x3",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.customer-quote",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-posts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "1x3 cards appear twice (before and after the pill tabs). Extra sections exist only below 1200px (product-pages Appendix B) and are not modelled. At 390 the quote moves after the CTA. Load motion: whole hero + logos fade in (spring .2 / .4s); hero pixels drop after 1s.",
+        "Differs from ia.json: ia.json lists features.cards-1x3 once (\"appears twice\"); src/pages/DataApps.jsx renders FeatureCards 1x3 twice (trust before the pill tabs, asCode after)."
+      ],
+      "responsiveReorder": [
+        {
+          "query": "(max-width: 1199.98px)",
+          "change": "order becomes Hero, Logos, Use cases, Sprint accordion, Pill tabs, \"as code\" cards, \"Trust every app\" cards, Why It's Different, FAQ, Blog, Quote, CTA",
+          "cite": "src/pages/DataApps.jsx:21-23"
+        }
+      ],
+      "unmodelledResponsiveSections": [
+        {
+          "section": "UseCases / sprint AccordionTabs / WhyDifferent",
+          "visibleBelow": "1200px",
+          "cite": "src/pages/DataApps.jsx:23",
+          "reason": "only rendered below 1200 (min-[1200px]:hidden); ia.json also leaves them out"
+        }
+      ]
+    },
+    "product-metrics-catalog": {
+      "iaTemplateId": "template.product-metrics-catalog",
+      "name": "Product: Metrics catalog",
+      "group": "T1 product",
+      "chrome": "light-banner-cta",
+      "theme": "light",
+      "routes": [
+        "/metrics-catalog"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centered-product",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.pill-tabs-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.cards-1x3",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Load motion: no hero fade; hero pixels drop after 1s (spring 0 / .6s)."
+      ]
+    },
+    "product-embedding": {
+      "iaTemplateId": "template.product-embedding",
+      "name": "Product: Embedded analytics",
+      "group": "T1 product",
+      "chrome": "light-banner-cta",
+      "theme": "light",
+      "routes": [
+        "/embedding"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centered-product",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.accordion-tabs",
+          "variant": "right",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.cards-3x2",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.integration-paths",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "decor.hatched-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.testimonial-avatar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "decor.hatched-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "decor.hatched-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Hatched band appears 3× (before and after the testimonial, and before the CTA). The logos caption sits below the hero image. Load motion: hero text only fades in (the HeroImage does not); hero pixels drop after 1s.",
+        "Differs from ia.json: ia.json lists decor.hatched-band once (\"appears 3x\"); src/pages/Embedding.jsx renders HatchedSpacer after IntegrationPaths, after the Testimonial and after the FAQ."
+      ]
+    },
+    "product-interactive-dashboards": {
+      "iaTemplateId": "template.product-interactive-dashboards",
+      "name": "Product: Interactive dashboards",
+      "group": "T1 product",
+      "chrome": "light-banner-cta",
+      "theme": "light",
+      "routes": [
+        "/interactive-dashboards"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centered-product",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.accordion-tabs",
+          "variant": "right",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.cards-3x2-image",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.cards-1x3",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.customer-quote-stats",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "CTA wrapper is 1169 wide here. At 390 the quote stays before the FAQ (reference/pages/interactive-dashboards-390.png; product-pages §4 says otherwise). Load motion: whole hero + logos fade in (spring .2 / .4s); hero pixels drop after 1s."
+      ],
+      "responsiveReorder": [
+        {
+          "query": "(max-width: 809.98px)",
+          "change": "NO reorder: product-pages.md section 4 says the quote moves after the CTA, but reference/pages/interactive-dashboards-390.png shows it before the FAQ; the clone keeps the order",
+          "cite": "src/pages/InteractiveDashboards.jsx:6"
+        }
+      ]
+    },
+    "product-context-layer": {
+      "iaTemplateId": "template.product-context-layer",
+      "name": "Product: Context layer",
+      "group": "T1 product",
+      "chrome": "light-banner-cta",
+      "theme": "light",
+      "routes": [
+        "/context-layer"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centered-product",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.split-content",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.cards-1x3",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.icon-benefits-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.comparison-table",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.customer-quote-stats",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "At 390 the quote moves after the CTA. Load motion: whole hero + logos fade in (spring .2 / .4s); hero pixels drop after 1s."
+      ],
+      "responsiveReorder": [
+        {
+          "query": "(max-width: 1199.98px)",
+          "change": "order becomes Hero, Logos, Split, 2 accordion rows, Icon grid, Comparison, FAQ, Quote, 1x3 cards, CTA",
+          "cite": "src/pages/ContextLayer.jsx:21-22"
+        }
+      ],
+      "unmodelledResponsiveSections": [
+        {
+          "section": "two mobile AccordionTabs rows (self-improving context layer, Autopilot)",
+          "visibleBelow": "1200px",
+          "cite": "src/pages/ContextLayer.jsx:39",
+          "reason": "only rendered below 1200"
+        }
+      ]
+    },
+    "product-self-improving-analytics": {
+      "iaTemplateId": "template.product-self-improving-analytics",
+      "name": "Product: Self-improving analytics",
+      "group": "T1 product",
+      "chrome": "light-banner-cta",
+      "theme": "light",
+      "routes": [
+        "/self-improving-analytics"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.centered-product",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.product-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.statement-heading",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.accordion-tabs",
+          "variant": "right",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.accordion-tabs",
+          "variant": "left",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.comparison-table",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-posts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Accordion tabs appear as 2 rows, both with subtitle pills. Load motion: hero text only fades in (the HeroImage does not); hero pixels drop after 1s.",
+        "Differs from ia.json: ia.json lists features.accordion-tabs once (\"appears as 2 rows\"); src/pages/SelfImprovingAnalytics.jsx renders two AccordionTabs (image right, image left)."
+      ]
+    },
+    "product-bi-as-code": {
+      "iaTemplateId": "template.product-bi-as-code",
+      "name": "Product: BI as code (T1b \"Main\")",
+      "group": "T1b product",
+      "chrome": "light-banner-cta",
+      "theme": "light",
+      "routes": [
+        "/bi-as-code"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.announcement-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.bi-as-code",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.video-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.alternating-rows",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.icon-benefits-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.dark-testimonial-stats",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-posts",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "\"Main\" wrapper (padding 0 16) instead of the Content-wrapper: logos rows and the CTA band span 1408. Load motion: none."
+      ]
+    },
+    "integrations": {
+      "iaTemplateId": "template.integrations",
+      "name": "Integrations directory (T2)",
+      "group": "T2 directory",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/integrations"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.integrations",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.integrations-directory",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Load motion: no hero fade; hero pixel cluster drops after 1s."
+      ]
+    },
+    "beyond-copilots": {
+      "iaTemplateId": "template.beyond-copilots",
+      "name": "On-demand event (T3)",
+      "group": "T3 event landing",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/beyond-copilots"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.event-ondemand",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.youtube-replay",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.split-content",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.numbered-guide-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "decor.hatched-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.speakers-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": []
+    },
+    "playground": {
+      "iaTemplateId": "template.playground",
+      "name": "Playground (T4, WIP)",
+      "group": "T4 draft",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/playground"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.playground",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.playground-empty-blocks",
+          "variant": "card-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-grid-12",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.playground-empty-blocks",
+          "variant": "blocks",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Unfinished old-homepage duplicate; most blocks render empty on the live site. The order is hero → empty card band → logos → empty blocks; the empty card band is folded into content.playground-empty-blocks. Load motion: none — the live page has no word-reveal on the hero heading. Known gap: live shows a phone-only chat mockup below 810 that the clone does not build yet.",
+        "Differs from ia.json: ia.json folds the empty card band into one content.playground-empty-blocks node placed after the logos; src/pages/Playground.jsx order is Hero, EmptyCardBand, LogoGrid, EmptyBlocks, so the section appears twice (blockMode card-band, then blocks)."
+      ]
+    },
+    "pricing": {
+      "iaTemplateId": "template.pricing",
+      "name": "Pricing",
+      "group": "company A",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/pricing"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.pricing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.plan-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-grid-12",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.plan-comparison",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": []
+    },
+    "start": {
+      "iaTemplateId": "template.start",
+      "name": "Start / book a call",
+      "group": "company A",
+      "chrome": "light-no-cta",
+      "theme": "light",
+      "routes": [
+        "/start"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.booking-split",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": []
+    },
+    "startups": {
+      "iaTemplateId": "template.startups",
+      "name": "Lightdash for Startups",
+      "group": "company A",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/startups"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.company-centered",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.startups-visual",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.two-tone-heading",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.startups-benefits-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "decor.hatched-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.two-tone-heading",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.startups-cards-2x2",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "decor.hatched-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.testimonial-avatar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "content.two-tone-heading appears twice (\"Why you should apply…\" before the benefits grid, \"What makes Lightdash…\" after the first hatched band). The hatched band appears twice (after the benefits grid and before the testimonial). Load motion: no hero fade; corner pixel tiles drop after 1s.",
+        "Differs from ia.json: ia.json lists content.two-tone-heading and decor.hatched-band once each (notes say twice); src/pages/Startups.jsx numbers 10 blocks: heading(3), grid(4), hatched(5), heading(6), cards(7), hatched(8), testimonial(9), CTA(10)."
+      ]
+    },
+    "fintech": {
+      "iaTemplateId": "template.fintech",
+      "name": "Fintech landing",
+      "group": "company B",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/fintech"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.fintech-split",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logos-strip-5",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.fintech-reasons",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.fintech-benefit-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.dark-testimonial-stats",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.fintech-dark-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "decor.pixel-border-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "The FAQ answers are mismatched with their questions on the live site. The CTA outer is 1408 wide here. Load motion: none apart from the hero illustration. Known gap: on live the hero illustration is a scripted chat animation; the clone shows a static image of its final state.",
+        "src/pages/Fintech.jsx block 7 \"Graphic Border\" (full-bleed 1440x60 pixel band) is modelled as decor.pixel-border-band, now also in ia.json."
+      ]
+    },
+    "partnerships": {
+      "iaTemplateId": "template.partnerships",
+      "name": "Partnerships",
+      "group": "company B",
+      "chrome": "light-no-cta",
+      "theme": "light",
+      "routes": [
+        "/partnerships"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.partnerships",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.partner-logos",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.why-lightdash-split",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.partner-testimonial-carousel",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.partner-benefits-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.partner-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Template B (section-boxed). The partner form takes the place of the snake CTA band."
+      ]
+    },
+    "about": {
+      "iaTemplateId": "template.about",
+      "name": "About",
+      "group": "company A",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/about"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.about-stickers",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.team-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.story-timeline",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.hiring-callout",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Desktop breakpoint is 1000 here."
+      ]
+    },
+    "roadmap": {
+      "iaTemplateId": "template.roadmap",
+      "name": "Public roadmap",
+      "group": "company A",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/roadmap"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.company-centered",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.roadmap-board",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.roadmap-community",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Load motion: the 16px pixel strips slide in from x −16 (spring 0 / .4s), staggered 100ms per tile from 1.0s (left strips) / 1.3s (right strips)."
+      ]
+    },
+    "lightdash-security": {
+      "iaTemplateId": "template.lightdash-security",
+      "name": "Security",
+      "group": "company A",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/lightdash-security"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.company-centered",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.compliance-badges",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-tiles-named",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": []
+    },
+    "jp": {
+      "iaTemplateId": "template.jp",
+      "name": "Japan landing",
+      "group": "company A",
+      "chrome": "light-no-cta",
+      "theme": "light",
+      "routes": [
+        "/jp"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.company-centered",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.logo-tiles-named",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.jp-intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.jp-link-cards",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.testimonial-avatar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Desktop layout starts at 1440 here (810–1439 is the tablet layout). The testimonial uses a smaller 21px Semibold quote. Load motion: no hero fade; corner pixel tiles drop after 1s."
+      ]
+    },
+    "blog-index": {
+      "iaTemplateId": "template.blog-index",
+      "name": "Blog index",
+      "group": "cms",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/blog"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.blog-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.blog-filter-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.blog-card-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band-narrow",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Lists 62 posts, 9 per page, with Load More. The site-search modal opens from the filter bar."
+      ]
+    },
+    "blog-category": {
+      "iaTemplateId": "template.blog-category",
+      "name": "Blog category",
+      "group": "cms",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/blog-categories/marketplace",
+        "/blog-categories/data-observability",
+        "/blog-categories/transformation",
+        "/blog-categories/alerts-sharing",
+        "/blog-categories/version-control",
+        "/blog-categories/warehouse",
+        "/blog-categories/ecommerce",
+        "/blog-categories/events",
+        "/blog-categories/feature-fridays",
+        "/blog-categories/company",
+        "/blog-categories/product"
+      ],
+      "newRoutePattern": "/blog-categories/:slug",
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.blog-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.blog-filter-bar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.blog-card-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "5 categories have posts (product 31, ecommerce 13, feature-fridays 9, company 7, events 2). 6 are empty and render no grid. Data: specs/cms/blog-categories.json."
+      ]
+    },
+    "blog-post": {
+      "iaTemplateId": "template.blog-post",
+      "name": "Blog post",
+      "group": "cms",
+      "chrome": "light-no-cta",
+      "theme": "light",
+      "routes": [
+        "/blogpost/build-unlimited-chart-types-with-chart-studio",
+        "/blogpost/what-happens-when-you-build-your-homepage-onto-a-gameboy",
+        "/blogpost/it%E2%80%99s-time-to-build-on-your-data",
+        "/blogpost/lightdash-integrates-with-motherduck",
+        "/blogpost/introducing-data-apps",
+        "/blogpost/what-to-look-for-in-a-bi-cli",
+        "/blogpost/how-data-teams-are-using-the-lightdash-cli-to-ship-analytics-with-ai",
+        "/blogpost/why-your-data-team-is-still-a-bottleneck",
+        "/blogpost/what-makes-bi-agentic",
+        "/blogpost/lightdash-now-powers-executive-reporting-with-rollstack-integration",
+        "/blogpost/ai-native-bi-how-i-build-dashboards-in-cursor-with-lightdash",
+        "/blogpost/how-we-got-soc-2-type-2-compliant",
+        "/blogpost/zapped-2025",
+        "/blogpost/your-semantic-layer-can-now-fix-itself",
+        "/blogpost/demo-week-1",
+        "/blogpost/all-about-filters",
+        "/blogpost/the-art-of-making-charts-in-lightdash",
+        "/blogpost/happy-developers-happy-users",
+        "/blogpost/how-we-do-product-planning-at-lightdash",
+        "/blogpost/lightdash-dbt-metrics",
+        "/blogpost/the-lightdash-way",
+        "/blogpost/using-user-journey-mapping-to-build-a-better-developer-workflow",
+        "/blogpost/feature-day",
+        "/blogpost/feature-friday-vol-1",
+        "/blogpost/feature-friday-vol-2",
+        "/blogpost/feature-friday-vol-3",
+        "/blogpost/feature-friday-vol-4",
+        "/blogpost/lightdash-raises-seed-round",
+        "/blogpost/kicking-off-demo-week",
+        "/blogpost/less-doubt-more-data-how-to-set-up-a-lightning-fast-data-development-cycle",
+        "/blogpost/encourage-people-to-click",
+        "/blogpost/demo-week-feature-recap",
+        "/blogpost/bi-for-the-semantic-layer",
+        "/blogpost/feature-friday-vol-5",
+        "/blogpost/feature-friday-6-the-one-that-kicks-off-2023",
+        "/blogpost/feature-friday-7-is-lightdash-the-one-for-you-on-valentines-day",
+        "/blogpost/demo-week-is-here",
+        "/blogpost/curate-your-way-to-clarity-how-to-curate-your-lightdash-instance-for-better-faster-insights",
+        "/blogpost/get-on-board-with-bi-onboarding-your-team-to-the-power-of-lightdash",
+        "/blogpost/how-to-build-interactive-dashboards-with-lightdash",
+        "/blogpost/demo-week-feature-day-2023-04-14",
+        "/blogpost/is-github-a-worthy-alternative-to-jira",
+        "/blogpost/big-changes-with-big-value-comparisons",
+        "/blogpost/deliver-ease-with-lightdashs-new-scheduled-deliveries-dashboard",
+        "/blogpost/feature-friday-8-where-does-a-miner-get-their-data-from",
+        "/blogpost/embedding",
+        "/blogpost/what-is-semantic-bi",
+        "/blogpost/the-ideal-workflow-for-governed-bi-with-dbt",
+        "/blogpost/lightdash-raises-series-a",
+        "/blogpost/introducing-spotlight-metrics-first-bi",
+        "/blogpost/introducing-dashboards-as-code",
+        "/blogpost/metric-trees-how-top-data-teams-impact-growth",
+        "/blogpost/lightdash-templates",
+        "/blogpost/snowflake-summit-2025",
+        "/blogpost/databricks-2025-recap",
+        "/blogpost/customer-service-in-the-ai-revolution",
+        "/blogpost/why-were-building-an-open-semantic-layer",
+        "/blogpost/why-enterprise-teams-are-choosing-lightdash-over-traditional-bi",
+        "/blogpost/building-a-fast-path-for-lightdash-agents-with-jev",
+        "/blogpost/custom-chart-types-belong-in-your-codebase",
+        "/blogpost/lightdash-autopilot-automate-project-maintenance",
+        "/blogpost/how-to-use-claude-dashboards"
+      ],
+      "newRoutePattern": "/blogpost/:slug",
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.post-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.inline-post",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.post-toc",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.related-articles",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Data: specs/cms/blog.json. Bodies are placeholders. One slug contains a typographic apostrophe (it%E2%80%99s-…), kept percent-encoded as in the sitemap.",
+        "Differs from ia.json: ia.json order is rich-text, post-toc, inline-post; src/pages/BlogPost.jsx DOM order is body column (rich text then InlineCta) followed by the TOC aside, then the related block."
+      ]
+    },
+    "customer-stories": {
+      "iaTemplateId": "template.customer-stories",
+      "name": "Customer stories index",
+      "group": "cms",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/customer-stories"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.stories-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.story-card-grid",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Lists 11 stories; ubie-jp is unlisted."
+      ]
+    },
+    "customer-story": {
+      "iaTemplateId": "template.customer-story",
+      "name": "Customer story",
+      "group": "cms",
+      "chrome": "light-no-cta",
+      "theme": "light",
+      "routes": [
+        "/customer-story/ollie",
+        "/customer-story/fal",
+        "/customer-story/gen-h",
+        "/customer-story/justwatch",
+        "/customer-story/qargo",
+        "/customer-story/collectors",
+        "/customer-story/ubie-jp",
+        "/customer-story/hypebeast",
+        "/customer-story/neo-financial",
+        "/customer-story/ubie",
+        "/customer-story/stake",
+        "/customer-story/tatango"
+      ],
+      "newRoutePattern": "/customer-story/:slug",
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.story-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.story-stats-row",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.inline-post",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.story-sidebar",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "listing.related-stories",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Data: specs/cms/customer-stories.json. ubie-jp is live but unlisted.",
+        "Differs from ia.json: ia.json order is stats, rich-text, sidebar, inline-post; src/pages/CustomerStory.jsx DOM order is stats, PlaceholderBody, InlineCta, the in-flow CompanyCard copy, then the desktop aside CompanyCard."
+      ]
+    },
+    "event": {
+      "iaTemplateId": "template.event",
+      "name": "Event",
+      "group": "cms",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/events/padel",
+        "/events/from-prompt-to-dashboard-in-minutes-a-live-agentic-bi-demo",
+        "/events/lightdash-at-coalesce-2025",
+        "/events/big-data-ldn-2025"
+      ],
+      "newRoutePattern": "/events/:slug",
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.event-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.rich-text",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.event-details-card",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "There is no /events index. The padel event CTA links to /padel-apply. Data: specs/cms/events.json."
+      ]
+    },
+    "legal": {
+      "iaTemplateId": "template.legal",
+      "name": "Legal page",
+      "group": "legal",
+      "chrome": "light-cta",
+      "theme": "light",
+      "routes": [
+        "/terms-of-service",
+        "/privacy-policy",
+        "/sub-processors",
+        "/google-apis-disclosure"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.legal-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.legal-body",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.snake-band",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": []
+    },
+    "not-found": {
+      "iaTemplateId": "template.not-found",
+      "name": "Not found (404)",
+      "group": "utility",
+      "chrome": "light-no-cta",
+      "theme": "light",
+      "routes": [
+        "/404"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.not-found",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Also rendered (HTTP 404) for every unknown URL (catch-all *), but counted once."
+      ]
+    },
+    "padel-apply": {
+      "iaTemplateId": "template.padel-apply",
+      "name": "Padel application",
+      "group": "utility",
+      "chrome": "light-no-cta",
+      "theme": "light",
+      "routes": [
+        "/padel-apply"
+      ],
+      "newRoutePattern": null,
+      "nodes": [
+        {
+          "section": "chrome.navbar-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.mobile-nav-light",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.padel-apply",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "conversion.padel-form",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.footer",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "chrome.talk-modal",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "notes": [
+        "Recon'd from the live page (reference/pages/padel-apply-{1440,390}.png). No banner, no frame hairlines, no CTA band; a single 760-wide centred column (712 content at 1440, 342 at 390), footer follows directly. No load motion; the submit button tweens opacity .55 → 1 (≈0.3s) once every field is filled."
+      ]
+    }
+  },
+  "routes": {
+    "/": {
+      "template": "home",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/original-1440.png"
+      }
+    },
+    "/conversational-analytics": {
+      "template": "product-conversational-analytics",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/conversational-analytics-1440.png"
+      },
+      "loadMotion": "hero:wide + pixel-drop"
+    },
+    "/data-apps": {
+      "template": "product-data-apps",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/data-apps-1440.png"
+      },
+      "loadMotion": "hero:wide + pixel-drop"
+    },
+    "/metrics-catalog": {
+      "template": "product-metrics-catalog",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/metrics-catalog-1440.png"
+      },
+      "loadMotion": "pixel-drop"
+    },
+    "/embedding": {
+      "template": "product-embedding",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/embedding-1440.png"
+      },
+      "loadMotion": "hero:text + pixel-drop"
+    },
+    "/interactive-dashboards": {
+      "template": "product-interactive-dashboards",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/interactive-dashboards-1440.png"
+      },
+      "loadMotion": "hero:wide + pixel-drop"
+    },
+    "/context-layer": {
+      "template": "product-context-layer",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/context-layer-1440.png"
+      },
+      "loadMotion": "hero:wide + pixel-drop"
+    },
+    "/self-improving-analytics": {
+      "template": "product-self-improving-analytics",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/self-improving-analytics-1440.png"
+      },
+      "loadMotion": "hero:text + pixel-drop"
+    },
+    "/bi-as-code": {
+      "template": "product-bi-as-code",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/bi-as-code-1440.png"
+      }
+    },
+    "/integrations": {
+      "template": "integrations",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/integrations-1440.png"
+      },
+      "loadMotion": "pixel-drop"
+    },
+    "/beyond-copilots": {
+      "template": "beyond-copilots",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/beyond-copilots-1440.png"
+      }
+    },
+    "/playground": {
+      "template": "playground",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/playground-1440.png"
+      }
+    },
+    "/pricing": {
+      "template": "pricing",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/pricing-1440.png"
+      }
+    },
+    "/start": {
+      "template": "start",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/start-1440.png"
+      }
+    },
+    "/startups": {
+      "template": "startups",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/startups-1440.png"
+      },
+      "loadMotion": "pixel-drop"
+    },
+    "/fintech": {
+      "template": "fintech",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/fintech-1440.png"
+      }
+    },
+    "/partnerships": {
+      "template": "partnerships",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/partnerships-1440.png"
+      }
+    },
+    "/about": {
+      "template": "about",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/about-1440.png"
+      }
+    },
+    "/roadmap": {
+      "template": "roadmap",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/roadmap-1440.png"
+      },
+      "loadMotion": "roadmap-pixel-slide"
+    },
+    "/lightdash-security": {
+      "template": "lightdash-security",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/lightdash-security-1440.png"
+      }
+    },
+    "/jp": {
+      "template": "jp",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/jp-1440.png"
+      },
+      "loadMotion": "pixel-drop"
+    },
+    "/blog": {
+      "template": "blog-index",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/blog-index-1440.png"
+      }
+    },
+    "/blog-categories/marketplace": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/data-observability": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/transformation": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/alerts-sharing": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/version-control": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/warehouse": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/ecommerce": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/events": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/feature-fridays": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/company": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blog-categories/product": {
+      "template": "blog-category",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blog-category-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/build-unlimited-chart-types-with-chart-studio": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/what-happens-when-you-build-your-homepage-onto-a-gameboy": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/it%E2%80%99s-time-to-build-on-your-data": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/lightdash-integrates-with-motherduck": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/introducing-data-apps": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/what-to-look-for-in-a-bi-cli": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/how-data-teams-are-using-the-lightdash-cli-to-ship-analytics-with-ai": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/why-your-data-team-is-still-a-bottleneck": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/what-makes-bi-agentic": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/lightdash-now-powers-executive-reporting-with-rollstack-integration": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/ai-native-bi-how-i-build-dashboards-in-cursor-with-lightdash": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/how-we-got-soc-2-type-2-compliant": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/zapped-2025": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/your-semantic-layer-can-now-fix-itself": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/demo-week-1": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/all-about-filters": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/the-art-of-making-charts-in-lightdash": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/happy-developers-happy-users": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/how-we-do-product-planning-at-lightdash": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/lightdash-dbt-metrics": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/the-lightdash-way": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/using-user-journey-mapping-to-build-a-better-developer-workflow": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-day": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-friday-vol-1": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-friday-vol-2": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-friday-vol-3": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-friday-vol-4": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/lightdash-raises-seed-round": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/kicking-off-demo-week": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/less-doubt-more-data-how-to-set-up-a-lightning-fast-data-development-cycle": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/encourage-people-to-click": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/demo-week-feature-recap": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/bi-for-the-semantic-layer": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-friday-vol-5": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-friday-6-the-one-that-kicks-off-2023": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-friday-7-is-lightdash-the-one-for-you-on-valentines-day": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/demo-week-is-here": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/curate-your-way-to-clarity-how-to-curate-your-lightdash-instance-for-better-faster-insights": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/get-on-board-with-bi-onboarding-your-team-to-the-power-of-lightdash": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/how-to-build-interactive-dashboards-with-lightdash": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/demo-week-feature-day-2023-04-14": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/is-github-a-worthy-alternative-to-jira": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/big-changes-with-big-value-comparisons": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/deliver-ease-with-lightdashs-new-scheduled-deliveries-dashboard": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/feature-friday-8-where-does-a-miner-get-their-data-from": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/embedding": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/what-is-semantic-bi": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/the-ideal-workflow-for-governed-bi-with-dbt": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/lightdash-raises-series-a": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/introducing-spotlight-metrics-first-bi": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/introducing-dashboards-as-code": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "measured-sample",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "documented sample member of its CMS template (cms-templates.md line 12); metadata from specs/cms; body is placeholder"
+      }
+    },
+    "/blogpost/metric-trees-how-top-data-teams-impact-growth": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/lightdash-templates": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/snowflake-summit-2025": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/databricks-2025-recap": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/customer-service-in-the-ai-revolution": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/why-were-building-an-open-semantic-layer": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/why-enterprise-teams-are-choosing-lightdash-over-traditional-bi": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/building-a-fast-path-for-lightdash-agents-with-jev": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/custom-chart-types-belong-in-your-codebase": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/lightdash-autopilot-automate-project-maintenance": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/blogpost/how-to-use-claude-dashboards": {
+      "template": "blog-post",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/blogpost-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-stories": {
+      "template": "customer-stories",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/customer-stories-index-1440.png"
+      }
+    },
+    "/customer-story/ollie": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "measured-sample",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "documented sample member of its CMS template (cms-templates.md line 12); metadata from specs/cms; body is placeholder"
+      }
+    },
+    "/customer-story/fal": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/gen-h": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/justwatch": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/qargo": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/collectors": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/ubie-jp": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/hypebeast": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/neo-financial": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/ubie": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/stake": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/customer-story/tatango": {
+      "template": "customer-story",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/customer-story-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/events/padel": {
+      "template": "event",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/event-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/events/from-prompt-to-dashboard-in-minutes-a-live-agentic-bi-demo": {
+      "template": "event",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/event-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/events/lightdash-at-coalesce-2025": {
+      "template": "event",
+      "evidence": {
+        "level": "measured-sample",
+        "ref": "reference/pages/event-1440.png",
+        "note": "documented sample member of its CMS template (cms-templates.md line 12); metadata from specs/cms; body is placeholder"
+      }
+    },
+    "/events/big-data-ldn-2025": {
+      "template": "event",
+      "evidence": {
+        "level": "template-derived",
+        "ref": "reference/pages/event-1440.png",
+        "note": "this member route was not screenshotted; layout is inherited from the sampled member of the same template, metadata (title/date/author/counts) is measured in specs/cms/*.json, body is placeholder"
+      }
+    },
+    "/terms-of-service": {
+      "template": "legal",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/terms-of-service-1440.png"
+      }
+    },
+    "/privacy-policy": {
+      "template": "legal",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/privacy-policy-1440.png"
+      }
+    },
+    "/sub-processors": {
+      "template": "legal",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/sub-processors-1440.png"
+      }
+    },
+    "/google-apis-disclosure": {
+      "template": "legal",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/google-apis-disclosure-1440.png"
+      }
+    },
+    "/404": {
+      "template": "not-found",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/404-1440.png"
+      }
+    },
+    "/padel-apply": {
+      "template": "padel-apply",
+      "evidence": {
+        "level": "measured",
+        "ref": "reference/pages/padel-apply-1440.png"
+      }
+    }
+  }
+}

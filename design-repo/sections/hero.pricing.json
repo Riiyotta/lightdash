@@ -1,0 +1,59 @@
+{
+  "id": "hero.pricing",
+  "category": "HERO",
+  "purpose": "Short 209-tall (180 below 1100) bottom-aligned two-line display headline on /pricing, dashed bottom rule; a hero image exists but is opacity 0 on live.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Pricing.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 13,
+        "observedMaxWords": 10,
+        "wcRef": "hero.pricing.heading"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "height 180 instead of 209",
+      "cssCite": "src/pages/Pricing.jsx:18"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "phone: the 56px headline wraps inside a 282px box (2 words per line) and overflows upward behind the nav (live bug, reproduced)",
+      "cssCite": "src/pages/Pricing.jsx:16"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Pricing.jsx:15",
+    "src/pages/Pricing.jsx:27"
+  ],
+  "notes": [
+    "The hero image (src/pages/data/pricing.jsx heroImage) is kept for parity but is opacity 0 at every breakpoint (src/pages/Pricing.jsx), so it is not a PageSpec field."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "pricing"
+  ]
+}

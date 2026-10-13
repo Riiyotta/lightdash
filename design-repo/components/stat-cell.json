@@ -1,0 +1,19 @@
+{
+  "id": "stat-cell",
+  "kind": "component",
+  "purpose": "Statistic cell: 48px purple value and an 18px label (customer quote stats), or 40px ink value + 14px label in a white rounded card (dark testimonial).",
+  "props": [
+    "value",
+    "label"
+  ],
+  "usedBySections": [
+    "proof.customer-quote-stats",
+    "proof.dark-testimonial-stats",
+    "content.story-stats-row"
+  ],
+  "measuredFrom": [
+    "src/components/shared/CustomerQuote.jsx:109",
+    "src/components/pages/bi-as-code/DarkTestimonial.jsx:15"
+  ],
+  "schemaVersion": "1.0.0"
+}

@@ -1,0 +1,101 @@
+{
+  "id": "content.story-timeline",
+  "category": "CONTENT",
+  "purpose": "\"Our story so far\" milestone timeline: year rows (44, dashed bottom) and 2 x 427 content rows alternating month/lines text and 357x236 photos around a dashed centre line; milestones get a 10x10 purple square. Rows fade in once on scroll.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/about/Timeline.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "content.story-timeline.heading"
+      },
+      "years": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "year": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "observedMaxWords": 1,
+            "wcRef": "content.story-timeline.years[].year"
+          },
+          "entries": {
+            "type": "list",
+            "required": true,
+            "item": {
+              "month": {
+                "type": "text",
+                "required": true,
+                "maxWords": 3,
+                "observedMaxWords": 1,
+                "wcRef": "content.story-timeline.years[].entries[].month"
+              },
+              "text": {
+                "type": "text",
+                "required": true,
+                "maxWords": 15,
+                "observedMaxWords": 12,
+                "wcRef": "content.story-timeline.years[].entries[].text"
+              },
+              "photo": {
+                "type": "media",
+                "required": false,
+                "assetRoles": [
+                  "image.cms-cover"
+                ]
+              }
+            },
+            "minItems": 1,
+            "maxItems": 6
+          }
+        },
+        "minItems": 3,
+        "maxItems": 8
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-reveal-fade",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "scroll-reveal-fade": "visible-no-transition",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "scroll-reveal-fade": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "one column (padding 0 24), text before photo, no centre line or squares",
+      "cssCite": "src/components/pages/about/Timeline.jsx:9"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/about/Timeline.jsx:4",
+    "src/pages/data/about.jsx:55",
+    "src/components/pages/about/Timeline.jsx:11"
+  ],
+  "notes": [
+    "Real company history and real photographs: proprietary; not reproducible."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "about"
+  ]
+}

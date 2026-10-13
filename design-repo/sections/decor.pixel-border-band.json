@@ -1,0 +1,52 @@
+{
+  "id": "decor.pixel-border-band",
+  "category": "DECOR",
+  "purpose": "Full-bleed 1440x60 pixel-art graphic border band (background image, cover) between the dark band and the FAQ on /fintech. Purely decorative, aria-hidden.",
+  "status": "measured",
+  "composable": true,
+  "evidenceNote": "Found while verifying the /fintech template order against src/pages/Fintech.jsx (\"7 · Graphic Border\"); added to ia.json in the 2026-10-13 IA update pass.",
+  "implementedBy": "src/pages/Fintech.jsx (inline, section 7 Graphic Border)",
+  "content": {
+    "fields": {
+      "band": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "decor.pixel-tile"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "routeOnly": [
+      "/fintech"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/pages/Fintech.jsx:270",
+    "src/pages/Fintech.jsx:274"
+  ],
+  "notes": [
+    "No breakpoint-specific behaviour is specified for this band in source (it is h-[60px] w-full at every width)."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "fintech"
+  ]
+}

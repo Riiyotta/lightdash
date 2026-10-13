@@ -1,0 +1,17 @@
+{
+  "id": "roadmap-item",
+  "kind": "component",
+  "purpose": "Roadmap list item: emoji, title, optional date and linked arrow; hover bg #F8F5FF when linked.",
+  "props": [
+    "emoji",
+    "title",
+    "href"
+  ],
+  "usedBySections": [
+    "content.roadmap-board"
+  ],
+  "measuredFrom": [
+    "src/pages/Roadmap.jsx:10"
+  ],
+  "schemaVersion": "1.0.0"
+}

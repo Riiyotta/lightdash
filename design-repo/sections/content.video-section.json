@@ -1,0 +1,57 @@
+{
+  "id": "content.video-section",
+  "category": "CONTENT",
+  "purpose": "Boxed 821-tall video block: a 1080x741 native <video> (controls, loop, NOT autoplay, NOT muted, preload=metadata) over a dotted pattern with a top-down gradient. /bi-as-code only.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/bi-as-code/VideoSection.jsx",
+  "content": {
+    "fields": {
+      "video": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "video.self-hosted"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "manual-only",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "manual-only": "manual-only",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "manual-only": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "padding 40 -> 16",
+      "cssCite": "src/components/pages/bi-as-code/VideoSection.jsx:10"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/bi-as-code/VideoSection.jsx:3",
+    "src/components/pages/bi-as-code/VideoSection.jsx:5",
+    "src/pages/data/bi-as-code.jsx:56"
+  ],
+  "notes": [
+    "The video file is brand-owned and self-hosted under public/assets; the PageSpec carries a slot reference only."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-bi-as-code"
+  ]
+}

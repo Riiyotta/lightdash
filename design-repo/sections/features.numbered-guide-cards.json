@@ -1,0 +1,97 @@
+{
+  "id": "features.numbered-guide-cards",
+  "category": "FEATURES",
+  "purpose": "\"Build it yourself\": 2x2 grid of 568x220 numbered link cards (72px number cell, 20px title bar, body lines and a purple link line), all opening a third-party guide in a new tab.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/beyond-copilots/BuildSteps.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "features.numbered-guide-cards.heading"
+      },
+      "steps": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "number": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "observedMaxWords": 1,
+            "wcRef": "features.numbered-guide-cards.steps[].number"
+          },
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 7,
+            "observedMaxWords": 5,
+            "wcRef": "features.numbered-guide-cards.steps[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 18,
+            "observedMaxWords": 14,
+            "wcRef": "features.numbered-guide-cards.steps[].body"
+          },
+          "linkLabel": {
+            "type": "text",
+            "required": false,
+            "maxWords": 7,
+            "observedMaxWords": 5,
+            "wcRef": "features.numbered-guide-cards.steps[].linkLabel"
+          },
+          "target": {
+            "type": "link",
+            "required": true,
+            "actions": [
+              "navigate-route",
+              "open-external"
+            ]
+          }
+        },
+        "minItems": 4,
+        "maxItems": 4
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "grid-cols-2 collapses to one column with 24px side padding",
+      "cssCite": "src/components/pages/beyond-copilots/BuildSteps.jsx:17"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/beyond-copilots/BuildSteps.jsx:3",
+    "src/pages/data/beyond-copilots.js:44"
+  ],
+  "notes": [
+    "Live quirk reproduced: card 01 body line is duplicated (data/beyond-copilots.js comment). Card hrefs point at real third-party docs (dlthub.com, motherduck.com) and github.com/lightdash/lightdash."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "beyond-copilots"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "decor.hatched-band",
+  "category": "DECOR",
+  "purpose": "Purely decorative 80px (39 on phone) diagonal-hatch band with 1px #E5E7EB top and bottom lines, opacity .8 (.6 on /beyond-copilots).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/HatchedSpacer.jsx",
+  "content": {
+    "fields": {
+      "opacity": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "0.8",
+          "0.6"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 3
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "height 39 instead of 80",
+      "cssCite": "src/components/shared/HatchedSpacer.jsx:11"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/HatchedSpacer.jsx:3",
+    "src/pages/BeyondCopilots.jsx:17",
+    "src/pages/Embedding.jsx:40"
+  ],
+  "notes": [
+    "Appears 3 times on /embedding (before and after the testimonial, before the CTA), twice on /startups, once on /beyond-copilots."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "beyond-copilots",
+    "product-embedding",
+    "startups"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "conversion.padel-form",
+  "category": "CONVERSION",
+  "purpose": "Padel application form (#F8FAFB, 1px #E5E7EB, radius 16, padding 32, gap 20): Name, Work email, Company, a skill-level select with 4 options, and a submit whose opacity is .55 until every required field is filled. UI only.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/PadelApply.jsx (inline <form>)",
+  "content": {
+    "fields": {
+      "fields": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 4,
+          "observedMaxWords": 2,
+          "wcRef": "conversion.padel-form.fields[]"
+        },
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "skillLabel": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "conversion.padel-form.skillLabel"
+      },
+      "skillOptions": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 7,
+          "observedMaxWords": 5,
+          "wcRef": "conversion.padel-form.skillOptions[]"
+        },
+        "minItems": 4,
+        "maxItems": 4
+      },
+      "submitLabel": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "conversion.padel-form.submitLabel"
+      },
+      "submission": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "form.submission-endpoint"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/pages/PadelApply.jsx:9",
+    "src/pages/PadelApply.jsx:14",
+    "src/pages/PadelApply.jsx:31"
+  ],
+  "notes": [
+    "Form is UI only; the live form posts to the Framer form backend (PadelApply.jsx header comment). No responsive change beyond column width is specified in source."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "padel-apply"
+  ]
+}

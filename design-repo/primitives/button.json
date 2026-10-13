@@ -1,0 +1,51 @@
+{
+  "id": "button",
+  "kind": "primitive",
+  "purpose": "Pill-less 6px-radius button, 9 variants (primary, secondary, third, fourth, fifth, sixth, seventh, v1-purple, v1-light); renders Link / a / button by href.",
+  "props": [
+    "variant",
+    "href",
+    "newTab",
+    "onClick",
+    "icon"
+  ],
+  "tokensUsed": [
+    "color.ld-dark",
+    "color.brand-purple",
+    "color.btn-light-bg",
+    "color.btn-light-border",
+    "color.btn-light-text",
+    "radius.control",
+    "typography.btn-15"
+  ],
+  "usedBySections": [
+    "chrome.footer",
+    "chrome.navbar-dark",
+    "chrome.navbar-light",
+    "content.event-header",
+    "content.faq",
+    "content.hiring-callout",
+    "content.not-found",
+    "content.youtube-replay",
+    "conversion.booking-split",
+    "cta.inline-post",
+    "cta.snake-band",
+    "cta.snake-band-narrow",
+    "hero.bi-as-code",
+    "hero.centered-product",
+    "hero.company-centered",
+    "hero.event-ondemand",
+    "hero.fintech-split",
+    "hero.partnerships",
+    "hero.playground",
+    "listing.related-articles",
+    "listing.related-stories",
+    "proof.customer-quote-stats",
+    "proof.dark-testimonial-stats"
+  ],
+  "measuredFrom": [
+    "src/components/shared/Button.jsx:6-31",
+    "src/components/shared/Button.jsx:35"
+  ],
+  "schemaVersion": "1.0.0"
+}

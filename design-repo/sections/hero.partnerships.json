@@ -1,0 +1,71 @@
+{
+  "id": "hero.partnerships",
+  "category": "HERO",
+  "purpose": "Boxed 604-tall centred hero on /partnerships (Template B): display-72 headline, lead and a purple \"Apply now\" button that smooth-scrolls to the partner form.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Partnerships.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "hero.partnerships.heading"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 19,
+        "observedMaxWords": 15,
+        "wcRef": "hero.partnerships.subtitle"
+      },
+      "cta": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "scroll-anchor"
+        ],
+        "labelMaxWords": 4,
+        "observedLabelMaxWords": 2,
+        "labelRef": "hero.partnerships.ctaLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "H1 is 42px (72 at >=810)",
+      "cssCite": "src/pages/Partnerships.jsx:139"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Partnerships.jsx:104",
+    "src/pages/Partnerships.jsx:145"
+  ],
+  "notes": [
+    "/partnerships has no CTA band: the partner form replaces it (ia.json template.partnerships)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "partnerships"
+  ]
+}

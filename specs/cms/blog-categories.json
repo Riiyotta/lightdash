@@ -1,0 +1,182 @@
+{
+ "_note": "Filter bar order: All posts (/blog), then filterOrder 1..5. Categories with showInFilterBar=false are live pages with 0 posts (empty state). The \"Building Lightdash\" category lives at slug ecommerce and \"News\" at slug company (sic, live URLs).",
+ "categories": [
+  {
+   "slug": "transformation",
+   "url": "/blog-categories/transformation",
+   "name": "Transformation",
+   "pageTitle": "Transformation - Lightdash",
+   "showInFilterBar": false,
+   "filterOrder": null,
+   "postCount": 0,
+   "postSlugs": []
+  },
+  {
+   "slug": "alerts-sharing",
+   "url": "/blog-categories/alerts-sharing",
+   "name": "Alerts & sharing",
+   "pageTitle": "Alerts & sharing - Lightdash",
+   "showInFilterBar": false,
+   "filterOrder": null,
+   "postCount": 0,
+   "postSlugs": []
+  },
+  {
+   "slug": "data-observability",
+   "url": "/blog-categories/data-observability",
+   "name": "Data observability",
+   "pageTitle": "Data observability - Lightdash",
+   "showInFilterBar": false,
+   "filterOrder": null,
+   "postCount": 0,
+   "postSlugs": []
+  },
+  {
+   "slug": "marketplace",
+   "url": "/blog-categories/marketplace",
+   "name": "Marketplace",
+   "pageTitle": "Marketplace - Lightdash",
+   "showInFilterBar": false,
+   "filterOrder": null,
+   "postCount": 0,
+   "postSlugs": []
+  },
+  {
+   "slug": "version-control",
+   "url": "/blog-categories/version-control",
+   "name": "Version Control",
+   "pageTitle": "Version Control - Lightdash",
+   "showInFilterBar": false,
+   "filterOrder": null,
+   "postCount": 0,
+   "postSlugs": []
+  },
+  {
+   "slug": "events",
+   "url": "/blog-categories/events",
+   "name": "Events",
+   "pageTitle": "Events - Lightdash",
+   "showInFilterBar": true,
+   "filterOrder": 2,
+   "postCount": 2,
+   "postSlugs": [
+    "databricks-2025-recap",
+    "snowflake-summit-2025"
+   ]
+  },
+  {
+   "slug": "warehouse",
+   "url": "/blog-categories/warehouse",
+   "name": "Warehouse",
+   "pageTitle": "Warehouse - Lightdash",
+   "showInFilterBar": false,
+   "filterOrder": null,
+   "postCount": 0,
+   "postSlugs": []
+  },
+  {
+   "slug": "feature-fridays",
+   "url": "/blog-categories/feature-fridays",
+   "name": "Feature Friday",
+   "pageTitle": "Feature Friday - Lightdash",
+   "showInFilterBar": true,
+   "filterOrder": 3,
+   "postCount": 9,
+   "postSlugs": [
+    "feature-friday-8-where-does-a-miner-get-their-data-from",
+    "demo-week-feature-day-2023-04-14",
+    "feature-friday-7-is-lightdash-the-one-for-you-on-valentines-day",
+    "feature-friday-6-the-one-that-kicks-off-2023",
+    "feature-friday-vol-5",
+    "feature-friday-vol-4",
+    "feature-friday-vol-3",
+    "feature-friday-vol-2",
+    "feature-friday-vol-1"
+   ]
+  },
+  {
+   "slug": "ecommerce",
+   "url": "/blog-categories/ecommerce",
+   "name": "Building Lightdash",
+   "pageTitle": "Building Lightdash - Lightdash",
+   "showInFilterBar": true,
+   "filterOrder": 1,
+   "postCount": 13,
+   "postSlugs": [
+    "what-happens-when-you-build-your-homepage-onto-a-gameboy",
+    "why-your-data-team-is-still-a-bottleneck",
+    "how-we-got-soc-2-type-2-compliant",
+    "zapped-2025",
+    "why-enterprise-teams-are-choosing-lightdash-over-traditional-bi",
+    "customer-service-in-the-ai-revolution",
+    "lightdash-raises-series-a",
+    "is-github-a-worthy-alternative-to-jira",
+    "demo-week-is-here",
+    "using-user-journey-mapping-to-build-a-better-developer-workflow",
+    "the-lightdash-way",
+    "how-we-do-product-planning-at-lightdash",
+    "lightdash-dbt-metrics"
+   ]
+  },
+  {
+   "slug": "company",
+   "url": "/blog-categories/company",
+   "name": "News",
+   "pageTitle": "News - Lightdash",
+   "showInFilterBar": true,
+   "filterOrder": 4,
+   "postCount": 7,
+   "postSlugs": [
+    "lightdash-now-powers-executive-reporting-with-rollstack-integration",
+    "bi-for-the-semantic-layer",
+    "kicking-off-demo-week",
+    "less-doubt-more-data-how-to-set-up-a-lightning-fast-data-development-cycle",
+    "encourage-people-to-click",
+    "lightdash-raises-seed-round",
+    "demo-week-1"
+   ]
+  },
+  {
+   "slug": "product",
+   "url": "/blog-categories/product",
+   "name": "Product",
+   "pageTitle": "Product - Lightdash",
+   "showInFilterBar": true,
+   "filterOrder": 5,
+   "postCount": 31,
+   "postSlugs": [
+    "how-to-use-claude-dashboards",
+    "lightdash-autopilot-automate-project-maintenance",
+    "custom-chart-types-belong-in-your-codebase",
+    "building-a-fast-path-for-lightdash-agents-with-jev",
+    "build-unlimited-chart-types-with-chart-studio",
+    "it’s-time-to-build-on-your-data",
+    "lightdash-integrates-with-motherduck",
+    "introducing-data-apps",
+    "what-to-look-for-in-a-bi-cli",
+    "how-data-teams-are-using-the-lightdash-cli-to-ship-analytics-with-ai",
+    "what-makes-bi-agentic",
+    "ai-native-bi-how-i-build-dashboards-in-cursor-with-lightdash",
+    "your-semantic-layer-can-now-fix-itself",
+    "why-were-building-an-open-semantic-layer",
+    "lightdash-templates",
+    "metric-trees-how-top-data-teams-impact-growth",
+    "introducing-dashboards-as-code",
+    "introducing-spotlight-metrics-first-bi",
+    "the-ideal-workflow-for-governed-bi-with-dbt",
+    "what-is-semantic-bi",
+    "embedding",
+    "the-art-of-making-charts-in-lightdash",
+    "deliver-ease-with-lightdashs-new-scheduled-deliveries-dashboard",
+    "big-changes-with-big-value-comparisons",
+    "how-to-build-interactive-dashboards-with-lightdash",
+    "curate-your-way-to-clarity-how-to-curate-your-lightdash-instance-for-better-faster-insights",
+    "get-on-board-with-bi-onboarding-your-team-to-the-power-of-lightdash",
+    "demo-week-feature-recap",
+    "feature-day",
+    "all-about-filters",
+    "happy-developers-happy-users"
+   ]
+  }
+ ]
+}

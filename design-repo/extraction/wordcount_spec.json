@@ -1,0 +1,5793 @@
+{
+  "$description": "Observed copy per text field, derived from real source strings (key extraction, literal copy or JSX fragments) by extraction/derive_wordcounts.py --check. maxWords in every section contract = max(observed + 2, ceil(observed * 1.25)). Samples keep the 3 longest real strings (file:line + text) so the number is auditable.",
+  "budgetRule": "maxWords = max(observedMax + 2, ceil(observedMax * 1.25)); a PageSpec must stay within maxWords. Word = whitespace-separated token after normalising JSX entities and curly quotes (Japanese copy has no spaces, so its counts are not meaningful budgets).",
+  "entries": {
+    "chrome.announcement-bar.linkLabel": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/AnnouncementBar.jsx",
+          "line": 9,
+          "text": "Learn how",
+          "kind": "key",
+          "key": "linkLabel",
+          "words": 2
+        }
+      ]
+    },
+    "chrome.announcement-bar.mobileText": {
+      "observedMax": 7,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/AnnouncementBar.jsx",
+          "line": 8,
+          "text": "⚡️ Build custom chart types in Lightdash",
+          "kind": "key",
+          "key": "mobileText",
+          "words": 7
+        }
+      ]
+    },
+    "chrome.announcement-bar.text": {
+      "observedMax": 8,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/AnnouncementBar.jsx",
+          "line": 7,
+          "text": "⚡️ Build unlimited chart types with Chart Studio",
+          "kind": "key",
+          "key": "text",
+          "words": 8
+        }
+      ]
+    },
+    "content.blog-posts.eyebrow": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/BlogCards.jsx",
+          "line": 11,
+          "text": "From the blog",
+          "kind": "regex",
+          "pattern": "eyebrow = '([^']+)'",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "content.blog-posts.heading": {
+      "observedMax": 5,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 154,
+          "text": "Keep building with Data Apps",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "heading",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 136,
+          "text": "Keep building with self-improving analytics",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "heading",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 186,
+          "text": "Keep building with BI-as-code",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "heading",
+          "words": 4
+        }
+      ]
+    },
+    "content.blog-posts.posts[].authorName": {
+      "observedMax": 2,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 160,
+          "text": "Hamzah Chaudhary",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "name",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 166,
+          "text": "Shanzé Munir",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "name",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 172,
+          "text": "Oliver Laslett",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "name",
+          "words": 2
+        }
+      ]
+    },
+    "content.blog-posts.posts[].title": {
+      "observedMax": 14,
+      "sampleCount": 7,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 169,
+          "text": "Why your data team is still a bottleneck (and it's not a headcount problem)",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "title",
+          "words": 14
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 201,
+          "text": "How data teams are using the Lightdash CLI to ship analytics with AI",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "title",
+          "words": 13
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 163,
+          "text": "Introducing Data Apps: Build custom apps on top your governed data",
+          "kind": "block-key",
+          "block": "blog",
+          "key": "title",
+          "words": 11
+        }
+      ]
+    },
+    "content.event-details-card.rows[].label": {
+      "observedMax": 4,
+      "sampleCount": 14,
+      "samples": [
+        {
+          "file": "specs/cms/events.json",
+          "line": 23,
+          "text": "Venue to be announced",
+          "kind": "regex",
+          "pattern": "\"label\": \"([^\"]+)\",\\s*\"field\"",
+          "group": 1,
+          "words": 4
+        },
+        {
+          "file": "specs/cms/events.json",
+          "line": 18,
+          "text": "In person",
+          "kind": "regex",
+          "pattern": "\"label\": \"([^\"]+)\",\\s*\"field\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/events.json",
+          "line": 67,
+          "text": "March 4",
+          "kind": "regex",
+          "pattern": "\"label\": \"([^\"]+)\",\\s*\"field\"",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "content.event-header.ctaLabel": {
+      "observedMax": 3,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "specs/cms/events.json",
+          "line": 12,
+          "text": "Apply to play",
+          "kind": "regex",
+          "pattern": "\"label\": \"((?:Apply|Register|Watch|Sign|Join)[^\"]*)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "specs/cms/events.json",
+          "line": 51,
+          "text": "Register",
+          "kind": "regex",
+          "pattern": "\"label\": \"((?:Apply|Register|Watch|Sign|Join)[^\"]*)\"",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "content.event-header.tag": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "specs/cms/events.json",
+          "line": 10,
+          "text": "Lightdash Leagues",
+          "kind": "regex",
+          "pattern": "\"tag\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "content.event-header.title": {
+      "observedMax": 11,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "specs/cms/events.json",
+          "line": 47,
+          "text": "From Prompt to Dashboard in Minutes: A Live Agentic BI Demo",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 11
+        },
+        {
+          "file": "specs/cms/events.json",
+          "line": 88,
+          "text": "Lightdash is heading to Coalesce 2025 🌶️",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 7
+        },
+        {
+          "file": "specs/cms/events.json",
+          "line": 131,
+          "text": "⚡️ Meet Lightdash at Big Data LDN",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 7
+        }
+      ]
+    },
+    "content.faq.heading": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/Faq.jsx",
+          "line": 57,
+          "text": "Your questions, answered",
+          "kind": "regex",
+          "pattern": "heading = '([^']+)'",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "content.faq.items[].answer": {
+      "observedMax": 108,
+      "sampleCount": 60,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 214,
+          "text": "We are committed to security and focused on keeping you and your data safe. As outlined in our terms of service , Lightdash does not store sensitive customer information and follows industry-leading standards. Lightdash does not cache or store the results of queries against your data. Lightdash is hosted in Google Cloud with servers in Europe and North America. Cloud Pro users can select a European or North American deployment, Enterprise customers can request deployments in their region of choice. We can also undertake security questionnaires and have comprehensive compliance and security documents we can share on request. For more information, reach out to us at security@lightdash.com .",
+          "kind": "faq",
+          "block": "PRICING_FAQ",
+          "part": "a",
+          "words": 108
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 232,
+          "text": "Yes. Lightdash was built on the idea that you shouldn't limit access to users having access to data. Being data practitioners and former buyers of BI tools, we know how frustrating it can be to have to deal with seat-based pricing limitations. Therefore, we're taking a different approach by giving teams the freedom to have as many users as they want and set their permissions accordingly.",
+          "kind": "faq",
+          "block": "PRICING_FAQ",
+          "part": "a",
+          "words": 66
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 134,
+          "text": "Tools like Claude Code and Lovable build on raw data. Data Apps are different because the foundation is your semantic layer, meaning every app you build gets row-level security, role-based access, caching, and your metric definitions automatically, without configuring any of it yourself. It's the only way to build data apps where the governance is already done.",
+          "kind": "faq",
+          "block": "faq",
+          "part": "a",
+          "words": 57
+        }
+      ]
+    },
+    "content.faq.items[].question": {
+      "observedMax": 13,
+      "sampleCount": 52,
+      "samples": [
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 77,
+          "text": "What's the difference between the Metrics Catalog, the Metrics Explorer and Metric Trees?",
+          "kind": "faq",
+          "block": "faq",
+          "part": "q",
+          "words": 13
+        },
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 109,
+          "text": "Will letting AI edit my context layer or delete dashboards break things?",
+          "kind": "faq",
+          "block": "faq",
+          "part": "q",
+          "words": 12
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 254,
+          "text": "Is it hard to move from my existing BI tool to Lightdash?",
+          "kind": "faq",
+          "block": "PRICING_FAQ",
+          "part": "q",
+          "words": 12
+        }
+      ]
+    },
+    "content.hiring-callout.ctaLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/About.jsx",
+          "line": 106,
+          "text": "See open roles",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "content.hiring-callout.heading": {
+      "observedMax": 6,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/About.jsx",
+          "line": 96,
+          "text": "Join us - we are hiring!",
+          "kind": "literal",
+          "words": 6
+        }
+      ]
+    },
+    "content.hiring-callout.lead": {
+      "observedMax": 13,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/About.jsx",
+          "line": 101,
+          "text": "Good data tools are rare. Good data teams are rarer. We're building both.",
+          "kind": "literal",
+          "words": 13
+        }
+      ]
+    },
+    "content.jp-intro.body": {
+      "observedMax": 10,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Jp.jsx",
+          "line": 33,
+          "text": "Lightdashは、データチームがdbtプロジェクトを完全にインタラクティブな分析プラットフォームに変換できるようにします。 - ダッシュボードを数分で作成し、探索できます。 - dbtモデルを唯一の真実のソースとして使用することで、ビジネス定義の一貫性を維持できます。 - 明確でアクセスしやすく、常に最新のデータで、社内のあらゆる部門と協業できます。 急成長中のスタートアップでもグローバル企業でも、Lightdashはチームと共にスケールします — データをプロプライエタリなシステムにロックインすることなく。",
+          "kind": "regex",
+          "pattern": "const ABOUT_COPY = `([^`]+)`",
+          "group": 1,
+          "words": 10
+        }
+      ]
+    },
+    "content.jp-intro.heading": {
+      "observedMax": 1,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Jp.jsx",
+          "line": 102,
+          "text": "Lightdashとは何ですか？",
+          "kind": "literal",
+          "words": 1
+        }
+      ]
+    },
+    "content.legal-header.title": {
+      "observedMax": 3,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/TermsOfService.jsx",
+          "line": 95,
+          "text": "Terms of Service",
+          "kind": "regex",
+          "pattern": "title=\"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/GoogleApisDisclosure.jsx",
+          "line": 7,
+          "text": "Google APIs Disclosure",
+          "kind": "regex",
+          "pattern": "title=\"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/PrivacyPolicy.jsx",
+          "line": 41,
+          "text": "Privacy Policy",
+          "kind": "regex",
+          "pattern": "title=\"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "content.legal-header.updated": {
+      "observedMax": 4,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/PrivacyPolicy.jsx",
+          "line": 44,
+          "text": "Last Updated: Jan 2026",
+          "kind": "regex",
+          "pattern": "updated=\"([^\"]+)\"",
+          "group": 1,
+          "words": 4
+        },
+        {
+          "file": "src/pages/TermsOfService.jsx",
+          "line": 98,
+          "text": "Last Updated: Feb 2023",
+          "kind": "regex",
+          "pattern": "updated=\"([^\"]+)\"",
+          "group": 1,
+          "words": 4
+        },
+        {
+          "file": "src/pages/SubProcessors.jsx",
+          "line": 26,
+          "text": "Last Updated: Nov 2025",
+          "kind": "regex",
+          "pattern": "updated=\"([^\"]+)\"",
+          "group": 1,
+          "words": 4
+        }
+      ]
+    },
+    "content.not-found.body": {
+      "observedMax": 14,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/NotFound.jsx",
+          "line": 43,
+          "text": "The page you're looking for has been struck by lightning and no longer exists...",
+          "kind": "literal",
+          "words": 14
+        }
+      ]
+    },
+    "content.not-found.ctaLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/NotFound.jsx",
+          "line": 46,
+          "text": "Go back home",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "content.not-found.title": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/NotFound.jsx",
+          "line": 41,
+          "text": "Oh zap!",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "content.padel-apply.eyebrow": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 46,
+          "text": "LIGHTDASH LEAGUES: Padel",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "content.padel-apply.heading": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 47,
+          "text": "Apply to play",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "content.padel-apply.note": {
+      "observedMax": 20,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 49,
+          "text": "Please note that places are limited, and applying doesn't guarantee a spot. We'll email you if you're offered a place.",
+          "kind": "literal",
+          "words": 20
+        }
+      ]
+    },
+    "content.post-header.authorName": {
+      "observedMax": 2,
+      "sampleCount": 15,
+      "samples": [
+        {
+          "file": "specs/cms/blog.json",
+          "line": 15,
+          "text": "Oliver Laslett",
+          "kind": "regex",
+          "pattern": "\"name\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/blog.json",
+          "line": 39,
+          "text": "Shanzé Munir",
+          "kind": "regex",
+          "pattern": "\"name\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/blog.json",
+          "line": 87,
+          "text": "João Viana",
+          "kind": "regex",
+          "pattern": "\"name\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "content.post-header.category": {
+      "observedMax": 2,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "specs/cms/blog.json",
+          "line": 126,
+          "text": "Building Lightdash",
+          "kind": "regex",
+          "pattern": "\"category\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/blog.json",
+          "line": 724,
+          "text": "Feature Friday",
+          "kind": "regex",
+          "pattern": "\"category\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/blog.json",
+          "line": 10,
+          "text": "Product",
+          "kind": "regex",
+          "pattern": "\"category\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "content.post-header.date": {
+      "observedMax": 3,
+      "sampleCount": 53,
+      "samples": [
+        {
+          "file": "specs/cms/blog.json",
+          "line": 12,
+          "text": "October 9, 2026",
+          "kind": "regex",
+          "pattern": "\"date\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "specs/cms/blog.json",
+          "line": 36,
+          "text": "October 6, 2026",
+          "kind": "regex",
+          "pattern": "\"date\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "specs/cms/blog.json",
+          "line": 60,
+          "text": "October 1, 2026",
+          "kind": "regex",
+          "pattern": "\"date\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "content.post-header.title": {
+      "observedMax": 16,
+      "sampleCount": 62,
+      "samples": [
+        {
+          "file": "specs/cms/blog.json",
+          "line": 929,
+          "text": "Get on board with BI: how to successfully onboard your team to the power of Lightdash",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 16
+        },
+        {
+          "file": "specs/cms/blog.json",
+          "line": 907,
+          "text": "Curate your way to clarity: How to curate your Lightdash instance for better, faster insights",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 15
+        },
+        {
+          "file": "specs/cms/blog.json",
+          "line": 219,
+          "text": "What to look for in a BI CLI (and how to evaluate one properly)",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 14
+        }
+      ]
+    },
+    "content.roadmap-board.columns[].items[].emoji": {
+      "observedMax": 1,
+      "sampleCount": 81,
+      "samples": [
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 15,
+          "text": "🧪",
+          "kind": "regex",
+          "pattern": "emoji:\\s*\"([^\"]+)\"",
+          "group": 1,
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 16,
+          "text": "⌨️",
+          "kind": "regex",
+          "pattern": "emoji:\\s*\"([^\"]+)\"",
+          "group": 1,
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 17,
+          "text": "🏠",
+          "kind": "regex",
+          "pattern": "emoji:\\s*\"([^\"]+)\"",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "content.roadmap-board.columns[].items[].title": {
+      "observedMax": 14,
+      "sampleCount": 111,
+      "samples": [
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 91,
+          "text": "Users with the same email domain should be able to join an organization automatically",
+          "kind": "regex",
+          "pattern": "title:\\s*\"([^\"]+)\"",
+          "group": 1,
+          "words": 14
+        },
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 114,
+          "text": "Add more options for row totals + column totals in table viz",
+          "kind": "regex",
+          "pattern": "title:\\s*\"([^\"]+)\"",
+          "group": 1,
+          "words": 12
+        },
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 69,
+          "text": "Formatting of dimensions and metrics in the results table",
+          "kind": "regex",
+          "pattern": "title:\\s*\"([^\"]+)\"",
+          "group": 1,
+          "words": 9
+        }
+      ]
+    },
+    "content.roadmap-board.columns[].subtitle": {
+      "observedMax": 5,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 7,
+          "text": "To build w/in 3 months",
+          "kind": "block-key",
+          "block": "COLUMNS",
+          "key": "sub",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 9,
+          "text": "Features in early access",
+          "kind": "block-key",
+          "block": "COLUMNS",
+          "key": "sub",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 8,
+          "text": "Actively working on",
+          "kind": "block-key",
+          "block": "COLUMNS",
+          "key": "sub",
+          "words": 3
+        }
+      ]
+    },
+    "content.roadmap-board.columns[].title": {
+      "observedMax": 1,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 7,
+          "text": "Backlog",
+          "kind": "block-key",
+          "block": "COLUMNS",
+          "key": "title",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 8,
+          "text": "Building",
+          "kind": "block-key",
+          "block": "COLUMNS",
+          "key": "title",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/roadmap.js",
+          "line": 9,
+          "text": "Beta",
+          "kind": "block-key",
+          "block": "COLUMNS",
+          "key": "title",
+          "words": 1
+        }
+      ]
+    },
+    "content.roadmap-community.cards[].body": {
+      "observedMax": 14,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Roadmap.jsx",
+          "line": 142,
+          "text": "Let's build Lightdash. Have an idea for something we should build, let us know",
+          "kind": "regex",
+          "pattern": "body=\"([^\"]+)\"",
+          "group": 1,
+          "words": 14
+        },
+        {
+          "file": "src/pages/Roadmap.jsx",
+          "line": 155,
+          "text": "Want to contribute to Lightdash or learn more - join our Slack community",
+          "kind": "regex",
+          "pattern": "body=\"([^\"]+)\"",
+          "group": 1,
+          "words": 13
+        }
+      ]
+    },
+    "content.roadmap-community.cards[].buttonLabel": {
+      "observedMax": 2,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Roadmap.jsx",
+          "line": 158,
+          "text": "Join now",
+          "kind": "regex",
+          "pattern": ">\\s*(Request|Join now)\\s*</Button>",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/Roadmap.jsx",
+          "line": 145,
+          "text": "Request",
+          "kind": "regex",
+          "pattern": ">\\s*(Request|Join now)\\s*</Button>",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "content.roadmap-community.cards[].title": {
+      "observedMax": 3,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Roadmap.jsx",
+          "line": 141,
+          "text": "Request a feature",
+          "kind": "regex",
+          "pattern": "title=\"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/Roadmap.jsx",
+          "line": 154,
+          "text": "Join our community",
+          "kind": "regex",
+          "pattern": "title=\"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "content.statement-heading.accent": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 36,
+          "text": "cleans itself up",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "content.statement-heading.heading": {
+      "observedMax": 20,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 35,
+          "parts": [
+            "Every analytics tool gets messy the moment real people use it. Lightdash is the only one that",
+            "cleans itself up"
+          ],
+          "text": "Every analytics tool gets messy the moment real people use it. Lightdash is the only one that cleans itself up",
+          "kind": "parts",
+          "words": 20
+        }
+      ]
+    },
+    "content.story-header.companyName": {
+      "observedMax": 2,
+      "sampleCount": 11,
+      "samples": [
+        {
+          "file": "src/pages/data/cms.js",
+          "line": 45,
+          "text": "Gen H",
+          "kind": "regex",
+          "pattern": "\\b(?:ollie|fal|tatango|stake|ubie|hypebeast|collectors|qargo|justwatch|neo-financial|gen-h|ubie-jp)'?: '([^']+)'",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/cms.js",
+          "line": 46,
+          "text": "Neo Financial",
+          "kind": "regex",
+          "pattern": "\\b(?:ollie|fal|tatango|stake|ubie|hypebeast|collectors|qargo|justwatch|neo-financial|gen-h|ubie-jp)'?: '([^']+)'",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/cms.js",
+          "line": 45,
+          "text": "Ollie",
+          "kind": "regex",
+          "pattern": "\\b(?:ollie|fal|tatango|stake|ubie|hypebeast|collectors|qargo|justwatch|neo-financial|gen-h|ubie-jp)'?: '([^']+)'",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "content.story-header.personName": {
+      "observedMax": 3,
+      "sampleCount": 11,
+      "samples": [
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 228,
+          "text": "Joeri De Turck",
+          "kind": "regex",
+          "pattern": "\"name\": \"([A-Z][^\"]+)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 16,
+          "text": "Ben Pannell",
+          "kind": "regex",
+          "pattern": "\"name\": \"([A-Z][^\"]+)\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 68,
+          "text": "Kevin Otte",
+          "kind": "regex",
+          "pattern": "\"name\": \"([A-Z][^\"]+)\"",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "content.story-header.personRole": {
+      "observedMax": 7,
+      "sampleCount": 11,
+      "samples": [
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 489,
+          "text": "Head of Business Intelligence & Data Analytics",
+          "kind": "regex",
+          "pattern": "\"role\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 7
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 177,
+          "text": "VP of Data & Analytics",
+          "kind": "regex",
+          "pattern": "\"role\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 5
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 341,
+          "text": "Chief Technology & Product Officer",
+          "kind": "regex",
+          "pattern": "\"role\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 5
+        }
+      ]
+    },
+    "content.story-header.title": {
+      "observedMax": 16,
+      "sampleCount": 12,
+      "samples": [
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 63,
+          "text": "How fal uses Agentic BI to run data for 80 people with a team of one",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 16
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 335,
+          "text": "How Tatango built a single source of truth with Lightdash in just four weeks",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 14
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 115,
+          "text": "How Gen H's CCO shipped production metrics in two days using Agentic BI",
+          "kind": "regex",
+          "pattern": "\"title\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 13
+        }
+      ]
+    },
+    "content.story-sidebar.employees": {
+      "observedMax": 2,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 543,
+          "text": "201-500 Employees",
+          "kind": "regex",
+          "pattern": "\"employees\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 23,
+          "text": "201-500",
+          "kind": "regex",
+          "pattern": "\"employees\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 1
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 75,
+          "text": "51-200",
+          "kind": "regex",
+          "pattern": "\"employees\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "content.story-sidebar.industry": {
+      "observedMax": 2,
+      "sampleCount": 10,
+      "samples": [
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 21,
+          "text": "Pet Food",
+          "kind": "regex",
+          "pattern": "\"industry\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 181,
+          "text": "Marketing Services",
+          "kind": "regex",
+          "pattern": "\"industry\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 233,
+          "text": "Transport Management",
+          "kind": "regex",
+          "pattern": "\"industry\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "content.story-sidebar.location": {
+      "observedMax": 3,
+      "sampleCount": 11,
+      "samples": [
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 22,
+          "text": "New York, USA",
+          "kind": "regex",
+          "pattern": "\"location\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 74,
+          "text": "San Francisco, USA",
+          "kind": "regex",
+          "pattern": "\"location\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "specs/cms/customer-stories.json",
+          "line": 346,
+          "text": "North Carolina, USA",
+          "kind": "regex",
+          "pattern": "\"location\": \"([^\"]+)\"",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "content.story-stats-row.cells[].label": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/CustomerStory.jsx",
+          "line": 92,
+          "text": "Placeholder metric label",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "content.story-stats-row.cells[].value": {
+      "observedMax": 1,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/CustomerStory.jsx",
+          "line": 91,
+          "text": "00+",
+          "kind": "literal",
+          "words": 1
+        }
+      ]
+    },
+    "content.story-timeline.heading": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/About.jsx",
+          "line": 85,
+          "text": "Our story so far",
+          "kind": "literal",
+          "words": 4
+        }
+      ]
+    },
+    "content.story-timeline.years[].entries[].month": {
+      "observedMax": 1,
+      "sampleCount": 10,
+      "samples": [
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 63,
+          "text": "April",
+          "kind": "block-key",
+          "block": "TIMELINE",
+          "key": "month",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 64,
+          "text": "June",
+          "kind": "block-key",
+          "block": "TIMELINE",
+          "key": "month",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 69,
+          "text": "December",
+          "kind": "block-key",
+          "block": "TIMELINE",
+          "key": "month",
+          "words": 1
+        }
+      ]
+    },
+    "content.story-timeline.years[].entries[].text": {
+      "observedMax": 12,
+      "sampleCount": 21,
+      "samples": [
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 114,
+          "text": "We celebrated an epic year with Lightdash Zapped - check it out",
+          "kind": "regex",
+          "pattern": "lines:\\s*\\['([^']+)'",
+          "group": 1,
+          "words": 12
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 69,
+          "text": "Lightdash is the first BI tool to natively support dbt metrics",
+          "kind": "regex",
+          "pattern": "lines:\\s*\\['([^']+)'",
+          "group": 1,
+          "words": 11
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 99,
+          "text": "We raise $8.4M to build the BI tool we always wanted",
+          "kind": "regex",
+          "pattern": "lines:\\s*\\['([^']+)'",
+          "group": 1,
+          "words": 11
+        }
+      ]
+    },
+    "content.story-timeline.years[].year": {
+      "observedMax": 1,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 57,
+          "text": "2021",
+          "kind": "block-key",
+          "block": "TIMELINE",
+          "key": "year",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 75,
+          "text": "2022",
+          "kind": "block-key",
+          "block": "TIMELINE",
+          "key": "year",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 107,
+          "text": "2023",
+          "kind": "block-key",
+          "block": "TIMELINE",
+          "key": "year",
+          "words": 1
+        }
+      ]
+    },
+    "content.team-grid.heading": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/About.jsx",
+          "line": 63,
+          "parts": [
+            "Meet the",
+            "Lightdash",
+            "ians"
+          ],
+          "text": "Meet the Lightdashians",
+          "kind": "parts",
+          "sep": "",
+          "words": 3
+        }
+      ]
+    },
+    "content.team-grid.members[].name": {
+      "observedMax": 2,
+      "sampleCount": 28,
+      "samples": [
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 23,
+          "text": "Hamzah Chaudhary",
+          "kind": "regex",
+          "pattern": "T\\('([^']+)', '[^']+', '[^']+'\\)",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 24,
+          "text": "Oliver Laslett",
+          "kind": "regex",
+          "pattern": "T\\('([^']+)', '[^']+', '[^']+'\\)",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 25,
+          "text": "Jose Rego",
+          "kind": "regex",
+          "pattern": "T\\('([^']+)', '[^']+', '[^']+'\\)",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "content.team-grid.members[].role": {
+      "observedMax": 3,
+      "sampleCount": 15,
+      "samples": [
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 28,
+          "text": "Partnerships & Growth",
+          "kind": "regex",
+          "pattern": "T\\('[^']+', '([^']+)', '[^']+'\\)",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 33,
+          "text": "Analytics Eng. Advocate",
+          "kind": "regex",
+          "pattern": "T\\('[^']+', '([^']+)', '[^']+'\\)",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/about.jsx",
+          "line": 38,
+          "text": "Finance & Ops",
+          "kind": "regex",
+          "pattern": "T\\('[^']+', '([^']+)', '[^']+'\\)",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "content.two-tone-heading.accent": {
+      "observedMax": 5,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 218,
+          "text": "best BI tool for startups",
+          "kind": "regex",
+          "pattern": "<span className=\"text-[^\"]*\">([^<]+)</span>\\s*</h2>",
+          "group": 1,
+          "words": 5
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 154,
+          "text": "Lightdash for Startups",
+          "kind": "regex",
+          "pattern": "<span className=\"text-[^\"]*\">([^<]+)</span>\\s*</h2>",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "content.two-tone-heading.heading": {
+      "observedMax": 5,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 154,
+          "text": "Why you should apply to",
+          "kind": "regex",
+          "pattern": "<h2[^>]*>\\s*([^<]+?)\\s*(?:<span|</h2>)",
+          "group": 1,
+          "words": 5
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 218,
+          "text": "What makes Lightdash the",
+          "kind": "regex",
+          "pattern": "<h2[^>]*>\\s*([^<]+?)\\s*(?:<span|</h2>)",
+          "group": 1,
+          "words": 4
+        }
+      ]
+    },
+    "content.two-tone-heading.subtitle": {
+      "observedMax": 21,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 104,
+          "text": "50% off Lightdash Cloud for a year, plus hands-on expert support to help build your data stack right from the beginning.",
+          "kind": "regex",
+          "pattern": "<p className=\"ld-lead-18[^>]*>\\s*([^<]+?)\\s*</p>",
+          "group": 1,
+          "words": 21
+        }
+      ]
+    },
+    "content.youtube-replay.bookingCtaLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 35,
+          "text": "Start for free",
+          "kind": "regex",
+          "pattern": "bookingCta:\\s*\\{\\s*label:\\s*'([^']+)'",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "content.youtube-replay.bookingText": {
+      "observedMax": 11,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 34,
+          "text": "Want to see what this could look like on your data?",
+          "kind": "block-key",
+          "block": "replay",
+          "key": "booking",
+          "words": 11
+        }
+      ]
+    },
+    "content.youtube-replay.caption": {
+      "observedMax": 15,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 30,
+          "text": "See the stack come together from the first API request to the final governed answer.",
+          "kind": "block-key",
+          "block": "replay",
+          "key": "caption",
+          "words": 15
+        }
+      ]
+    },
+    "content.youtube-replay.heading": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 29,
+          "text": "Watch the full build",
+          "kind": "block-key",
+          "block": "replay",
+          "key": "heading",
+          "words": 4
+        }
+      ]
+    },
+    "conversion.booking-split.bullets[]": {
+      "observedMax": 8,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/Start.jsx",
+          "line": 13,
+          "text": "Get tailored advice to move your team faster",
+          "kind": "regex",
+          "pattern": "desk:\\s*'([^']+)'",
+          "group": 1,
+          "words": 8
+        },
+        {
+          "file": "src/pages/Start.jsx",
+          "line": 11,
+          "text": "See how Lightdash fits your data stack",
+          "kind": "regex",
+          "pattern": "desk:\\s*'([^']+)'",
+          "group": 1,
+          "words": 7
+        },
+        {
+          "file": "src/pages/Start.jsx",
+          "line": 12,
+          "text": "Walkthrough the Lightdash platform",
+          "kind": "regex",
+          "pattern": "desk:\\s*'([^']+)'",
+          "group": 1,
+          "words": 4
+        }
+      ]
+    },
+    "conversion.booking-split.heading": {
+      "observedMax": 6,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Start.jsx",
+          "line": 34,
+          "text": "Ready to start your free trial?",
+          "kind": "literal",
+          "words": 6
+        }
+      ]
+    },
+    "conversion.booking-split.intro": {
+      "observedMax": 7,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Start.jsx",
+          "line": 37,
+          "text": "Book a call with our team to",
+          "kind": "literal",
+          "words": 7
+        }
+      ]
+    },
+    "conversion.booking-split.skipBody": {
+      "observedMax": 17,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Start.jsx",
+          "line": 51,
+          "text": "Start your free trial in minutes. No need to talk to a human. Unless you want to.",
+          "kind": "literal",
+          "words": 17
+        }
+      ]
+    },
+    "conversion.booking-split.skipCtaLabel": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Start.jsx",
+          "line": 54,
+          "text": "Sign Up",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "conversion.booking-split.skipHeading": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Start.jsx",
+          "line": 49,
+          "text": "Want to skip the intro?",
+          "kind": "literal",
+          "words": 5
+        }
+      ]
+    },
+    "conversion.padel-form.fields[]": {
+      "observedMax": 2,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 11,
+          "text": "Work email",
+          "kind": "regex",
+          "pattern": "label:\\s*'([^']+)', type",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 10,
+          "text": "Name",
+          "kind": "regex",
+          "pattern": "label:\\s*'([^']+)', type",
+          "group": 1,
+          "words": 1
+        },
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 12,
+          "text": "Company",
+          "kind": "regex",
+          "pattern": "label:\\s*'([^']+)', type",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "conversion.padel-form.skillLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 68,
+          "text": "Padel skill level",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "conversion.padel-form.skillOptions[]": {
+      "observedMax": 5,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 14,
+          "text": "Beginner — new to padel",
+          "kind": "regex",
+          "pattern": "'((?:Beginner|Social|Intermediate|Competitive)[^']*)'",
+          "group": 1,
+          "words": 5
+        },
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 14,
+          "text": "Social — I play occasionally",
+          "kind": "regex",
+          "pattern": "'((?:Beginner|Social|Intermediate|Competitive)[^']*)'",
+          "group": 1,
+          "words": 5
+        },
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 14,
+          "text": "Intermediate — I play regularly",
+          "kind": "regex",
+          "pattern": "'((?:Beginner|Social|Intermediate|Competitive)[^']*)'",
+          "group": 1,
+          "words": 5
+        }
+      ]
+    },
+    "conversion.padel-form.submitLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/PadelApply.jsx",
+          "line": 47,
+          "text": "Apply to play",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "conversion.partner-form.consent": {
+      "observedMax": 17,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/pages/partnerships/PartnerForm.jsx",
+          "line": 61,
+          "text": "By clicking submit you confirm you are happy to be contacted via email about Lightdash Partnership Program",
+          "kind": "literal",
+          "words": 17
+        }
+      ]
+    },
+    "conversion.partner-form.fields[]": {
+      "observedMax": 7,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/components/pages/partnerships/PartnerForm.jsx",
+          "line": 15,
+          "text": "What BI tools are you familiar with?",
+          "kind": "regex",
+          "pattern": "name:\\s*'([^']+)', placeholder",
+          "group": 1,
+          "words": 7
+        },
+        {
+          "file": "src/components/pages/partnerships/PartnerForm.jsx",
+          "line": 14,
+          "text": "LinkedIn profile",
+          "kind": "regex",
+          "pattern": "name:\\s*'([^']+)', placeholder",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/components/pages/partnerships/PartnerForm.jsx",
+          "line": 10,
+          "text": "Name",
+          "kind": "regex",
+          "pattern": "name:\\s*'([^']+)', placeholder",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "conversion.partner-form.heading": {
+      "observedMax": 6,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 300,
+          "parts": [
+            "Ready to become",
+            "a Lightdash partner?"
+          ],
+          "text": "Ready to become a Lightdash partner?",
+          "kind": "parts",
+          "words": 6
+        }
+      ]
+    },
+    "conversion.partner-form.submitLabel": {
+      "observedMax": 1,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/pages/partnerships/PartnerForm.jsx",
+          "line": 8,
+          "text": "Submit",
+          "kind": "literal",
+          "words": 1
+        }
+      ]
+    },
+    "conversion.plan-cards.plans[].buttonLabel": {
+      "observedMax": 3,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 21,
+          "text": "Go to repo",
+          "kind": "regex",
+          "pattern": "button:\\s*\\{\\s*label:\\s*'([^']+)'",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 43,
+          "text": "Start free trial",
+          "kind": "regex",
+          "pattern": "button:\\s*\\{\\s*label:\\s*'([^']+)'",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 67,
+          "text": "Get in touch",
+          "kind": "regex",
+          "pattern": "button:\\s*\\{\\s*label:\\s*'([^']+)'",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "conversion.plan-cards.plans[].description": {
+      "observedMax": 12,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 40,
+          "parts": [
+            "No per-seat pricing.",
+            "Deliver trusted analytics in a powerful AI-native BI platform"
+          ],
+          "text": "No per-seat pricing. Deliver trusted analytics in a powerful AI-native BI platform",
+          "kind": "parts",
+          "words": 12
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 20,
+          "text": "Core BI features for teams happy to self-host",
+          "kind": "block-key",
+          "block": "PLANS",
+          "key": "desc",
+          "words": 8
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 66,
+          "text": "Advanced security, support and customization for enterprise-grade organizations",
+          "kind": "block-key",
+          "block": "PLANS",
+          "key": "desc",
+          "words": 8
+        }
+      ]
+    },
+    "conversion.plan-cards.plans[].eyebrow": {
+      "observedMax": 4,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 68,
+          "text": "Everything in Pro, plus",
+          "kind": "block-key",
+          "block": "PLANS",
+          "key": "eyebrow",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 22,
+          "text": "Hosted by you",
+          "kind": "block-key",
+          "block": "PLANS",
+          "key": "eyebrow",
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 44,
+          "text": "Hosted by Lightdash",
+          "kind": "block-key",
+          "block": "PLANS",
+          "key": "eyebrow",
+          "words": 3
+        }
+      ]
+    },
+    "conversion.plan-cards.plans[].features[]": {
+      "observedMax": 12,
+      "sampleCount": 23,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 79,
+          "text": "Early access to new features and the ability to shape new products",
+          "kind": "regex",
+          "pattern": "(?m)^\\s{6}'([^']+)',?$",
+          "group": 1,
+          "words": 12
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 50,
+          "text": "Native dbt integration + open semantic layer for consistent metrics",
+          "kind": "regex",
+          "pattern": "(?m)^\\s{6}'([^']+)',?$",
+          "group": 1,
+          "words": 10
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 73,
+          "text": "Advanced security with SSO + SAML + SCIM 2.0",
+          "kind": "regex",
+          "pattern": "(?m)^\\s{6}'([^']+)',?$",
+          "group": 1,
+          "words": 9
+        }
+      ]
+    },
+    "conversion.plan-cards.plans[].label": {
+      "observedMax": 2,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 17,
+          "text": "Open Source",
+          "kind": "regex",
+          "pattern": "(?m)^    label: '([^']+)'",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 35,
+          "text": "Cloud Pro",
+          "kind": "regex",
+          "pattern": "(?m)^    label: '([^']+)'",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 64,
+          "text": "Enterprise",
+          "kind": "regex",
+          "pattern": "(?m)^    label: '([^']+)'",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "conversion.plan-cards.plans[].price": {
+      "observedMax": 2,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 65,
+          "text": "Let’s talk",
+          "kind": "block-key",
+          "block": "PLANS",
+          "key": "price",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 18,
+          "text": "Self-hosted",
+          "kind": "block-key",
+          "block": "PLANS",
+          "key": "price",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 36,
+          "text": "$3000",
+          "kind": "block-key",
+          "block": "PLANS",
+          "key": "price",
+          "words": 1
+        }
+      ]
+    },
+    "conversion.plan-comparison.heading": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Pricing.jsx",
+          "line": 68,
+          "text": "Compare our plans",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "conversion.plan-comparison.tables[].rows[].label": {
+      "observedMax": 6,
+      "sampleCount": 42,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 120,
+          "text": "Data explorer and report builder UI",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "label",
+          "words": 6
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 130,
+          "text": "Usage analytics and insights",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "label",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 141,
+          "text": "Data Apps [Add on]",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "label",
+          "words": 4
+        }
+      ]
+    },
+    "conversion.plan-comparison.tables[].rows[].tooltip": {
+      "observedMax": 43,
+      "sampleCount": 18,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 144,
+          "text": "Based on embedded chart loads. An embedded chart load happens every time an embedded chart is loaded and viewed by the end user. Loading a dashboard with 4 embedded charts counts as 4 loads. Caching loads can be enabled for an extra cost.",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "tip",
+          "words": 43
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 193,
+          "text": "Go further than our default user Roles (Admin, Editor, Viewer etc.) and define your own custom Roles for fine-tuned access control.",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "tip",
+          "words": 21
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 131,
+          "text": "Get in-depth information on how your team is using Lightdash and what content is being used most and more",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "tip",
+          "words": 19
+        }
+      ]
+    },
+    "conversion.plan-comparison.tables[].rows[].values[]": {
+      "observedMax": 6,
+      "sampleCount": 15,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 163,
+          "text": "Private Slack channel and Premium support",
+          "kind": "regex",
+          "pattern": "values:\\s*\\['([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 3,
+          "words": 6
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 163,
+          "text": "Private Slack channel, Live chat",
+          "kind": "regex",
+          "pattern": "values:\\s*\\['([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 2,
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 163,
+          "text": "Community Slack Group",
+          "kind": "regex",
+          "pattern": "values:\\s*\\['([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "conversion.plan-comparison.tables[].title": {
+      "observedMax": 3,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 150,
+          "text": "Sources and integrations",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "title",
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 160,
+          "text": "Support & Implementation",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "title",
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/pricing.jsx",
+          "line": 184,
+          "text": "Security & Compliance",
+          "kind": "block-key",
+          "block": "TABLES",
+          "key": "title",
+          "words": 3
+        }
+      ]
+    },
+    "cta.inline-post.headline": {
+      "observedMax": 7,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/InlineCta.jsx",
+          "line": 12,
+          "text": "Ready to free up your data team?",
+          "kind": "literal",
+          "words": 7
+        }
+      ]
+    },
+    "cta.inline-post.primaryLabel": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/InlineCta.jsx",
+          "line": 18,
+          "text": "Talk to our team",
+          "kind": "literal",
+          "words": 4
+        }
+      ]
+    },
+    "cta.inline-post.secondaryLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/InlineCta.jsx",
+          "line": 21,
+          "text": "Start for free",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "cta.inline-post.support": {
+      "observedMax": 9,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/InlineCta.jsx",
+          "line": 14,
+          "text": "Try out our all in one open, developer-loved platform.",
+          "kind": "literal",
+          "words": 9
+        }
+      ]
+    },
+    "cta.snake-band-narrow.primaryLabel": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/CtaBand.jsx",
+          "line": 12,
+          "text": "Talk to our team",
+          "kind": "regex",
+          "pattern": "primary:\\s*\\{\\s*label:\\s*'([^']+)'",
+          "group": 1,
+          "words": 4
+        }
+      ]
+    },
+    "cta.snake-band-narrow.secondaryLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/CtaBand.jsx",
+          "line": 13,
+          "text": "Start for free",
+          "kind": "regex",
+          "pattern": "secondary:\\s*\\{\\s*label:\\s*'([^']+)'",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "cta.snake-band-narrow.title[]": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/components/shared/CtaBand.jsx",
+          "line": 11,
+          "text": "Ready to free up",
+          "kind": "regex",
+          "pattern": "title:\\s*\\['([^']+)', '([^']+)'\\]",
+          "group": 1,
+          "words": 4
+        },
+        {
+          "file": "src/components/shared/CtaBand.jsx",
+          "line": 11,
+          "text": "your data team?",
+          "kind": "regex",
+          "pattern": "title:\\s*\\['([^']+)', '([^']+)'\\]",
+          "group": 2,
+          "words": 3
+        }
+      ]
+    },
+    "cta.snake-band.primaryLabel": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/CtaBand.jsx",
+          "line": 12,
+          "text": "Talk to our team",
+          "kind": "regex",
+          "pattern": "primary:\\s*\\{\\s*label:\\s*'([^']+)'",
+          "group": 1,
+          "words": 4
+        }
+      ]
+    },
+    "cta.snake-band.secondaryLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/shared/CtaBand.jsx",
+          "line": 13,
+          "text": "Start for free",
+          "kind": "regex",
+          "pattern": "secondary:\\s*\\{\\s*label:\\s*'([^']+)'",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "cta.snake-band.title[]": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/components/shared/CtaBand.jsx",
+          "line": 11,
+          "text": "Ready to free up",
+          "kind": "regex",
+          "pattern": "title:\\s*\\['([^']+)', '([^']+)'\\]",
+          "group": 1,
+          "words": 4
+        },
+        {
+          "file": "src/components/shared/CtaBand.jsx",
+          "line": 11,
+          "text": "your data team?",
+          "kind": "regex",
+          "pattern": "title:\\s*\\['([^']+)', '([^']+)'\\]",
+          "group": 2,
+          "words": 3
+        }
+      ]
+    },
+    "features.accordion-tabs.heading": {
+      "observedMax": 13,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 35,
+          "text": "Your customers ask, build, and save. Your team stays out of the loop.",
+          "kind": "block-key",
+          "block": "tabs",
+          "key": "heading",
+          "words": 13
+        },
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 65,
+          "text": "Your project cleans itself up as you use it.",
+          "kind": "block-key",
+          "block": "tabsRow2",
+          "key": "heading",
+          "words": 9
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 58,
+          "text": "Built for the people who don't write SQL.",
+          "kind": "block-key",
+          "block": "tabsRow2",
+          "key": "heading",
+          "words": 8
+        }
+      ]
+    },
+    "features.accordion-tabs.lead": {
+      "observedMax": 27,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 66,
+          "text": "A scheduled agent that runs on a cadence you set. Each run, it reviews recent activity, fixes what it safely can, and flags the rest for review.",
+          "kind": "block-key",
+          "block": "tabsRow2",
+          "key": "lead",
+          "words": 27
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 36,
+          "text": "Every customer wants a slightly different report. Instead of your team building each one, give them the tools to answer themselves.",
+          "kind": "block-key",
+          "block": "tabs",
+          "key": "lead",
+          "words": 21
+        },
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 43,
+          "text": "As your team queries, Lightdash spots where your context layer is thin, out of date, or duplicated, and proposes the fix.",
+          "kind": "block-key",
+          "block": "tabsRow1",
+          "key": "lead",
+          "words": 21
+        }
+      ]
+    },
+    "features.accordion-tabs.pill": {
+      "observedMax": 3,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 145,
+          "text": "Self-improving context layer",
+          "kind": "block-key",
+          "block": "mobileTabs",
+          "key": "pill",
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 158,
+          "text": "Autopilot",
+          "kind": "block-key",
+          "block": "mobileTabs",
+          "key": "pill",
+          "words": 1
+        }
+      ]
+    },
+    "features.accordion-tabs.tabs[].body": {
+      "observedMax": 28,
+      "sampleCount": 19,
+      "samples": [
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 80,
+          "text": "When people keep asking about something with no saved chart, Autopilot drafts one for review. It also flags slow queries and surfaces popular content stuck out of sight.",
+          "kind": "block-key",
+          "block": "tabsRow2",
+          "key": "body",
+          "words": 28
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 51,
+          "text": "Drop a scoped agent into your own app with the React SDK, so your customers can ask their own data questions too.",
+          "kind": "block-key",
+          "block": "tabsRow1",
+          "key": "body",
+          "words": 22
+        },
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 70,
+          "text": "Soft-deletes dashboards with zero views, and flags the ones gathering dust. Run in read-only mode if you want it to flag only.",
+          "kind": "block-key",
+          "block": "tabsRow2",
+          "key": "body",
+          "words": 22
+        }
+      ]
+    },
+    "features.accordion-tabs.tabs[].title": {
+      "observedMax": 8,
+      "sampleCount": 19,
+      "samples": [
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 51,
+          "text": "It proposes the change as a pull request",
+          "kind": "block-key",
+          "block": "tabsRow1",
+          "key": "title",
+          "words": 8
+        },
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 79,
+          "text": "It tells you what to build next.",
+          "kind": "block-key",
+          "block": "tabsRow2",
+          "key": "title",
+          "words": 7
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 68,
+          "text": "Show me what I can ask",
+          "kind": "block-key",
+          "block": "tabsRow2",
+          "key": "title",
+          "words": 6
+        }
+      ]
+    },
+    "features.alternating-rows.heading": {
+      "observedMax": 10,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 64,
+          "text": "Coding agents don't have to click through a dashboard builder.",
+          "kind": "block-key",
+          "block": "rows",
+          "key": "heading",
+          "words": 10
+        }
+      ]
+    },
+    "features.alternating-rows.rows[].body": {
+      "observedMax": 33,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 75,
+          "text": "Every chart and dashboard is a file, so changes move through the workflow your team already trusts: open a PR, spin up a preview environment straight from the CLI, get a review, merge.",
+          "kind": "block-key",
+          "block": "rows",
+          "key": "body",
+          "words": 33
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 81,
+          "text": "Make maintenance work scriptable: validate your whole project in CI, fix what breaks in bulk, and migrate off your current tool with a script instead of a quarter of rebuilds.",
+          "kind": "block-key",
+          "block": "rows",
+          "key": "body",
+          "words": 30
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 69,
+          "text": "Use Lightdash skills to teach your coding agents how the platform works, and start building dashboards from prompts.",
+          "kind": "block-key",
+          "block": "rows",
+          "key": "body",
+          "words": 18
+        }
+      ]
+    },
+    "features.alternating-rows.rows[].title": {
+      "observedMax": 7,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 68,
+          "text": "Describe the dashboard. Your agent writes it.",
+          "kind": "block-key",
+          "block": "rows",
+          "key": "title",
+          "words": 7
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 74,
+          "text": "Review analytics like you review software.",
+          "kind": "block-key",
+          "block": "rows",
+          "key": "title",
+          "words": 6
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 80,
+          "text": "Run maintenance in one command.",
+          "kind": "block-key",
+          "block": "rows",
+          "key": "title",
+          "words": 5
+        }
+      ]
+    },
+    "features.cards-1x3.cards[].body": {
+      "observedMax": 23,
+      "sampleCount": 15,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 93,
+          "text": "Pull an app's source with the CLI, edit locally (your coding agent gets the full context), and upload to publish a new version.",
+          "kind": "block-key",
+          "block": "asCode",
+          "key": "body",
+          "words": 23
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 52,
+          "text": "The network inspector shows each query an app runs. Hover any number in the app to highlight the exact query behind it.",
+          "kind": "block-key",
+          "block": "trust",
+          "key": "body",
+          "words": 22
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 56,
+          "text": "Open any app query in an explore, view the underlying rows, or save it back to Lightdash as a governed chart.",
+          "kind": "block-key",
+          "block": "trust",
+          "key": "body",
+          "words": 21
+        }
+      ]
+    },
+    "features.cards-1x3.cards[].title": {
+      "observedMax": 5,
+      "sampleCount": 15,
+      "samples": [
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 66,
+          "text": "Agents retrieve the same metrics",
+          "kind": "block-key",
+          "block": "curate",
+          "key": "title",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 67,
+          "text": "Data apps inherit the definitions",
+          "kind": "block-key",
+          "block": "curate",
+          "key": "title",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 51,
+          "text": "Every query is visible",
+          "kind": "block-key",
+          "block": "trust",
+          "key": "title",
+          "words": 4
+        }
+      ]
+    },
+    "features.cards-1x3.heading": {
+      "observedMax": 9,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 63,
+          "text": "Curate once, and your AI agents get better too",
+          "kind": "block-key",
+          "block": "curate",
+          "key": "heading",
+          "words": 9
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 43,
+          "text": "Trust every app your team builds.",
+          "kind": "block-key",
+          "block": "trust",
+          "key": "heading",
+          "words": 6
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 88,
+          "text": "Data apps as code.",
+          "kind": "block-key",
+          "block": "asCode",
+          "key": "heading",
+          "words": 4
+        }
+      ]
+    },
+    "features.cards-1x3.sub": {
+      "observedMax": 22,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 64,
+          "text": "The categories, owners, descriptions and visibility rules you write for the catalog are the same context your agents and data apps read.",
+          "kind": "block-key",
+          "block": "curate",
+          "key": "sub",
+          "words": 22
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 89,
+          "text": "Get a vibe-coding experience for business users and a real dev workflow for your team on the same platform.",
+          "kind": "block-key",
+          "block": "asCode",
+          "key": "sub",
+          "words": 19
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 44,
+          "text": "Every Data App runs on your context layer, so the numbers trace to definitions your team already trusts.",
+          "kind": "block-key",
+          "block": "trust",
+          "key": "sub",
+          "words": 18
+        }
+      ]
+    },
+    "features.cards-2x2-text.cards[].body": {
+      "observedMax": 25,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 88,
+          "text": "The agent returns a governed query you can open in the normal explore view and check, so you can see exactly how it got there.",
+          "kind": "block-key",
+          "block": "governed",
+          "key": "body",
+          "words": 25
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 84,
+          "text": "Every answer is built from the metrics you defined once in code, so \"revenue\" means the same thing here as everywhere else.",
+          "kind": "block-key",
+          "block": "governed",
+          "key": "body",
+          "words": 22
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 92,
+          "text": "Turn on OAuth and each Slack question respects that user’s own data access. People only ever see what they’re allowed to.",
+          "kind": "block-key",
+          "block": "governed",
+          "key": "body",
+          "words": 21
+        }
+      ]
+    },
+    "features.cards-2x2-text.cards[].title": {
+      "observedMax": 6,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 87,
+          "text": "A semantic query, not raw SQL",
+          "kind": "block-key",
+          "block": "governed",
+          "key": "title",
+          "words": 6
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 83,
+          "text": "Runs on the semantic layer",
+          "kind": "block-key",
+          "block": "governed",
+          "key": "title",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 91,
+          "text": "Permissions follow the person",
+          "kind": "block-key",
+          "block": "governed",
+          "key": "title",
+          "words": 4
+        }
+      ]
+    },
+    "features.cards-2x2-text.heading": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 80,
+          "text": "Get governed answers each time.",
+          "kind": "block-key",
+          "block": "governed",
+          "key": "heading",
+          "words": 5
+        }
+      ]
+    },
+    "features.cards-3x2-image.cards[].body": {
+      "observedMax": 13,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 60,
+          "text": "Click any value to filter every other chart on the dashboard at once.",
+          "kind": "block-key",
+          "block": "explore",
+          "key": "body",
+          "words": 13
+        },
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 62,
+          "text": "Jump from a chart straight into a full query, without losing your place.",
+          "kind": "block-key",
+          "block": "explore",
+          "key": "body",
+          "words": 13
+        },
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 61,
+          "text": "Break a metric down by dimension, or open rows for a number.",
+          "kind": "block-key",
+          "block": "explore",
+          "key": "body",
+          "words": 12
+        }
+      ]
+    },
+    "features.cards-3x2-image.cards[].title": {
+      "observedMax": 3,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 62,
+          "text": "Explore from here",
+          "kind": "block-key",
+          "block": "explore",
+          "key": "title",
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 61,
+          "text": "Drill in",
+          "kind": "block-key",
+          "block": "explore",
+          "key": "title",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 63,
+          "text": "Date zoom",
+          "kind": "block-key",
+          "block": "explore",
+          "key": "title",
+          "words": 2
+        }
+      ]
+    },
+    "features.cards-3x2-image.heading": {
+      "observedMax": 6,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 58,
+          "text": "Explore the story behind every number.",
+          "kind": "block-key",
+          "block": "explore",
+          "key": "heading",
+          "words": 6
+        }
+      ]
+    },
+    "features.cards-3x2.cards[].body": {
+      "observedMax": 23,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 71,
+          "text": "User attributes from the JWT flow into your models, so the restriction lives in the query, and an end user can't touch it.",
+          "kind": "block-key",
+          "block": "safe",
+          "key": "body",
+          "words": 23
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 67,
+          "text": "A signed JWT scopes each viewer to what they should see. No accounts to provision, no per-customer setup.",
+          "kind": "block-key",
+          "block": "safe",
+          "key": "body",
+          "words": 18
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 75,
+          "text": "Embedded charts run through your semantic layer. The figure your customer sees matches the ones you see.",
+          "kind": "block-key",
+          "block": "safe",
+          "key": "body",
+          "words": 17
+        }
+      ]
+    },
+    "features.cards-3x2.cards[].title": {
+      "observedMax": 4,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 66,
+          "text": "One embed, every tenant",
+          "kind": "block-key",
+          "block": "safe",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 70,
+          "text": "Row-level security in SQL",
+          "kind": "block-key",
+          "block": "safe",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 77,
+          "text": "You control the surface",
+          "kind": "block-key",
+          "block": "safe",
+          "key": "title",
+          "words": 4
+        }
+      ]
+    },
+    "features.cards-3x2.heading": {
+      "observedMax": 7,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 62,
+          "text": "Safe to point at your own customers",
+          "kind": "block-key",
+          "block": "safe",
+          "key": "heading",
+          "words": 7
+        }
+      ]
+    },
+    "features.cards-3x2.sub": {
+      "observedMax": 20,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 63,
+          "text": "Opening analytics to external users is a trust decision before it's a feature decision. Here's how the trust part works.",
+          "kind": "block-key",
+          "block": "safe",
+          "key": "sub",
+          "words": 20
+        }
+      ]
+    },
+    "features.comparison-table.columns[]": {
+      "observedMax": 6,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 92,
+          "text": "Legacy BI (Looker, Tableau, Power BI)",
+          "kind": "regex",
+          "pattern": "columns:\\s*\\[\\s*'[^']*',\\s*'([^']+)',\\s*'([^']+)',\\s*'([^']+)'",
+          "group": 2,
+          "words": 6
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 75,
+          "text": "Raw LLM on your warehouse",
+          "kind": "regex",
+          "pattern": "columns:\\s*\\[\\s*'[^']*',\\s*'([^']+)',\\s*'([^']+)',\\s*'([^']+)'",
+          "group": 3,
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 75,
+          "text": "Lightdash Context Layer",
+          "kind": "regex",
+          "pattern": "columns:\\s*\\[\\s*'[^']*',\\s*'([^']+)',\\s*'([^']+)',\\s*'([^']+)'",
+          "group": 1,
+          "words": 3
+        }
+      ]
+    },
+    "features.comparison-table.heading": {
+      "observedMax": 11,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 89,
+          "parts": [
+            "Other tools make maintenance your problem.",
+            "Lightdash makes it the platform's."
+          ],
+          "text": "Other tools make maintenance your problem. Lightdash makes it the platform's.",
+          "kind": "parts",
+          "words": 11
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 74,
+          "parts": [
+            "Why use the Context Layer?"
+          ],
+          "text": "Why use the Context Layer?",
+          "kind": "parts",
+          "words": 5
+        }
+      ]
+    },
+    "features.comparison-table.rows[][]": {
+      "observedMax": 8,
+      "sampleCount": 31,
+      "samples": [
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 77,
+          "text": "Yes - one definition per metric in code",
+          "kind": "regex",
+          "pattern": "\\['([^']+)', '([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 2,
+          "words": 8
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 77,
+          "text": "Partial - trapped in the BI tool",
+          "kind": "regex",
+          "pattern": "\\['([^']+)', '([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 3,
+          "words": 7
+        },
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 94,
+          "text": "Proposes changes from real usage; you approve",
+          "kind": "regex",
+          "pattern": "\\['([^']+)', '([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 2,
+          "words": 7
+        }
+      ]
+    },
+    "features.fintech-benefit-cards.cards[].body": {
+      "observedMax": 35,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 33,
+          "text": "Fintechs like Wise use Lightdash to store every KPI in a central, certified metrics catalog. All changed are also version-controlled through dbt, giving data teams full governance without slowing down the rest of the business.",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 35
+        },
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 28,
+          "text": "Payments data and compliance checks involve heavy joins and calculations. Lightdash is built to handle this complexity. Get faster fraud monitoring and financial reporting cycles, and the ability to operate directly on granular data.",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 34
+        },
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 38,
+          "text": "With Lightdash, data teams get dbt-native metrics & models, preview environments for safe testing, automatic caching, ultra-fast queries, and more. This means faster iteration, fewer errors, and a dramatically happier analytics engineering team.",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 33
+        }
+      ]
+    },
+    "features.fintech-benefit-cards.cards[].title": {
+      "observedMax": 9,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 32,
+          "text": "A central metrics catalog your whole company can trust",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 9
+        },
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 37,
+          "text": "Developer experience your data team will actually love",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 8
+        },
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 22,
+          "text": "Agentic self-serve without the chaos",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 5
+        }
+      ]
+    },
+    "features.fintech-benefit-cards.heading": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 142,
+          "parts": [
+            "How Lightdash",
+            "is helping fintechs"
+          ],
+          "text": "How Lightdash is helping fintechs",
+          "kind": "parts",
+          "words": 5
+        }
+      ]
+    },
+    "features.fintech-dark-band.heading": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 245,
+          "text": "Built for every fintech role",
+          "kind": "literal",
+          "words": 5
+        }
+      ]
+    },
+    "features.fintech-dark-band.roles[]": {
+      "observedMax": 5,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/components/pages/fintech/RoleAccordion.jsx",
+          "line": 13,
+          "text": "For your Chief Risk Officer",
+          "kind": "block-key",
+          "block": "ROLES",
+          "key": "title",
+          "words": 5
+        },
+        {
+          "file": "src/components/pages/fintech/RoleAccordion.jsx",
+          "line": 15,
+          "text": "For your Head of Growth",
+          "kind": "block-key",
+          "block": "ROLES",
+          "key": "title",
+          "words": 5
+        },
+        {
+          "file": "src/components/pages/fintech/RoleAccordion.jsx",
+          "line": 16,
+          "text": "For your Head of Compliance",
+          "kind": "block-key",
+          "block": "ROLES",
+          "key": "title",
+          "words": 5
+        }
+      ]
+    },
+    "features.fintech-dark-band.sharedBullets[]": {
+      "observedMax": 6,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/components/pages/fintech/RoleAccordion.jsx",
+          "line": 18,
+          "text": "Credit decisioning metrics you can trust",
+          "kind": "regex",
+          "pattern": "const BULLETS = \\['([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 1,
+          "words": 6
+        },
+        {
+          "file": "src/components/pages/fintech/RoleAccordion.jsx",
+          "line": 18,
+          "text": "Repayment models and loan book performance",
+          "kind": "regex",
+          "pattern": "const BULLETS = \\['([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 3,
+          "words": 6
+        },
+        {
+          "file": "src/components/pages/fintech/RoleAccordion.jsx",
+          "line": 18,
+          "text": "Customer transaction classification",
+          "kind": "regex",
+          "pattern": "const BULLETS = \\['([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 2,
+          "words": 3
+        }
+      ]
+    },
+    "features.fintech-reasons.heading": {
+      "observedMax": 6,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 113,
+          "text": "Why does traditional BI fail fintechs?",
+          "kind": "literal",
+          "words": 6
+        }
+      ]
+    },
+    "features.fintech-reasons.reasons[].text": {
+      "observedMax": 11,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 16,
+          "text": "Compliance asks where the number came from but no one knows.",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "text",
+          "words": 11
+        },
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 15,
+          "text": "Dashboards multiply and trust disappears.",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "text",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 17,
+          "text": "Data teams become the bottleneck.",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "text",
+          "words": 5
+        }
+      ]
+    },
+    "features.icon-benefits-grid.heading": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 48,
+          "text": "Built for data security",
+          "kind": "block-key",
+          "block": "security",
+          "key": "heading",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 98,
+          "text": "What makes BI-as-code work",
+          "kind": "block-key",
+          "block": "tools",
+          "key": "heading",
+          "words": 4
+        }
+      ]
+    },
+    "features.icon-benefits-grid.items[].body": {
+      "observedMax": 23,
+      "sampleCount": 12,
+      "samples": [
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 53,
+          "text": "Permissions live inside the context layer, so the same rules apply whether someone opens a dashboard, builds an app, or asks an agent.",
+          "kind": "block-key",
+          "block": "security",
+          "key": "body",
+          "words": 23
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 118,
+          "text": "Mark a great answer as verified; the agent reuses it for similar questions and surfaces it as a suggested starting point.",
+          "kind": "block-key",
+          "block": "benefits",
+          "key": "body",
+          "words": 21
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 63,
+          "text": "SSO and access derived from your identity provider and groups, so a restricted metric stays restricted no matter how it's queried.",
+          "kind": "block-key",
+          "block": "security",
+          "key": "body",
+          "words": 21
+        }
+      ]
+    },
+    "features.icon-benefits-grid.items[].title": {
+      "observedMax": 4,
+      "sampleCount": 12,
+      "samples": [
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 57,
+          "text": "Row- and column-level security",
+          "kind": "block-key",
+          "block": "security",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 62,
+          "text": "Your identity, your rules",
+          "kind": "block-key",
+          "block": "security",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 67,
+          "text": "Deploy on your terms",
+          "kind": "block-key",
+          "block": "security",
+          "key": "title",
+          "words": 4
+        }
+      ]
+    },
+    "features.integration-paths.columns[].body": {
+      "observedMax": 10,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 89,
+          "text": "Build highly custom analytics experiences directly inside your React app.",
+          "kind": "regex",
+          "pattern": "body:\\s*'((?:Build highly custom|Drop dashboards)[^']+)'",
+          "group": 1,
+          "words": 10
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 94,
+          "text": "Drop dashboards into your app with a simple HTML snippet.",
+          "kind": "regex",
+          "pattern": "body:\\s*'((?:Build highly custom|Drop dashboards)[^']+)'",
+          "group": 1,
+          "words": 10
+        }
+      ]
+    },
+    "features.integration-paths.columns[].items[]": {
+      "observedMax": 5,
+      "sampleCount": 8,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 90,
+          "text": "Maximum control with minimal code",
+          "kind": "regex",
+          "pattern": "items: \\['([^']+)', '([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 4,
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 90,
+          "text": "Built to support localization",
+          "kind": "regex",
+          "pattern": "items: \\['([^']+)', '([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 2,
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 90,
+          "text": "Pre-org or per-user configuration",
+          "kind": "regex",
+          "pattern": "items: \\['([^']+)', '([^']+)', '([^']+)', '([^']+)'\\]",
+          "group": 3,
+          "words": 4
+        }
+      ]
+    },
+    "features.integration-paths.columns[].title": {
+      "observedMax": 2,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 88,
+          "text": "React SDK",
+          "kind": "regex",
+          "pattern": "title:\\s*'(React SDK|iFrame)'",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 93,
+          "text": "iFrame",
+          "kind": "regex",
+          "pattern": "title:\\s*'(React SDK|iFrame)'",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "features.integration-paths.heading": {
+      "observedMax": 4,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 84,
+          "text": "Choose your integration path",
+          "kind": "block-key",
+          "block": "paths",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 88,
+          "text": "React SDK",
+          "kind": "block-key",
+          "block": "paths",
+          "key": "title",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 93,
+          "text": "iFrame",
+          "kind": "block-key",
+          "block": "paths",
+          "key": "title",
+          "words": 1
+        }
+      ]
+    },
+    "features.integration-paths.subtitle": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 85,
+          "text": "Pick what fits your workflow",
+          "kind": "block-key",
+          "block": "paths",
+          "key": "subtitle",
+          "words": 5
+        }
+      ]
+    },
+    "features.jp-link-cards.cards[].body": {
+      "observedMax": 2,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Jp.jsx",
+          "line": 52,
+          "text": "チームと交流し、現地ユーザーの体験談から学びましょう。 オープンソースBIがアナリティクス環境をどう変革できるかを探ります。",
+          "kind": "regex",
+          "pattern": "body:\\s*'([^']+)'",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/Jp.jsx",
+          "line": 46,
+          "text": "UbieがLightdashで構築した最先端データガバナンス基盤と、その変革をあなたのチームで実現する方法を学びましょう。",
+          "kind": "regex",
+          "pattern": "body:\\s*'([^']+)'",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "features.jp-link-cards.cards[].title": {
+      "observedMax": 1,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Jp.jsx",
+          "line": 45,
+          "text": "Ubieとの成功事例をチェック",
+          "kind": "regex",
+          "pattern": "title:\\s*'([^']+)'",
+          "group": 1,
+          "words": 1
+        },
+        {
+          "file": "src/pages/Jp.jsx",
+          "line": 51,
+          "text": "2025年10月2日、東京で私たちとご一緒ください！",
+          "kind": "regex",
+          "pattern": "title:\\s*'([^']+)'",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "features.numbered-guide-cards.heading": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 45,
+          "text": "Build it yourself",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "heading",
+          "words": 3
+        }
+      ]
+    },
+    "features.numbered-guide-cards.steps[].body": {
+      "observedMax": 14,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 71,
+          "text": "Define metrics in code and connect your AI agents to a governed semantic layer.",
+          "kind": "regex",
+          "pattern": "body:\\s*\\[\\s*'([^']+)'",
+          "group": 1,
+          "words": 14
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 51,
+          "text": "See the pipeline, configuration and files used during the live build.",
+          "kind": "regex",
+          "pattern": "body:\\s*\\[\\s*'([^']+)'",
+          "group": 1,
+          "words": 11
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 64,
+          "text": "Load and query the data in a serverless DuckDB warehouse.",
+          "kind": "regex",
+          "pattern": "body:\\s*\\[\\s*'([^']+)'",
+          "group": 1,
+          "words": 10
+        }
+      ]
+    },
+    "features.numbered-guide-cards.steps[].linkLabel": {
+      "observedMax": 5,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 58,
+          "text": "Read the dltHub guide →",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "link",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 65,
+          "text": "Read the MotherDuck guide →",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "link",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 72,
+          "text": "Read the Lightdash guide →",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "link",
+          "words": 5
+        }
+      ]
+    },
+    "features.numbered-guide-cards.steps[].number": {
+      "observedMax": 1,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 48,
+          "text": "01",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "n",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 55,
+          "text": "02",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "n",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 62,
+          "text": "03",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "n",
+          "words": 1
+        }
+      ]
+    },
+    "features.numbered-guide-cards.steps[].title": {
+      "observedMax": 5,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 56,
+          "text": "Build the pipeline with dltHub",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "title",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 70,
+          "text": "Add governed analytics with Lightdash",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "title",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 49,
+          "text": "Get the source code",
+          "kind": "block-key",
+          "block": "steps",
+          "key": "title",
+          "words": 4
+        }
+      ]
+    },
+    "features.partner-benefits-grid.benefits[].body": {
+      "observedMax": 23,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 55,
+          "text": "Free certification covering dbt integration, AI analytics, and how to position against legacy BI. Become the expert clients trust to modernize their stack.",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 23
+        },
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 50,
+          "text": "Get full Lightdash Cloud Pro access. Build live demos with real client data and show clients how Agentic BI eliminates their backlog.",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 22
+        },
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 75,
+          "text": "Our partners are becoming the go-to experts in Agentic BI. Be first to market in your region before the competition catches up.",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 22
+        }
+      ]
+    },
+    "features.partner-benefits-grid.benefits[].title": {
+      "observedMax": 4,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 54,
+          "text": "Get trained and certified",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 59,
+          "text": "Earn as you grow",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 49,
+          "text": "Test for free",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 3
+        }
+      ]
+    },
+    "features.partner-benefits-grid.heading": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 245,
+          "text": "Why become a Lightdash partner?",
+          "kind": "literal",
+          "words": 5
+        }
+      ]
+    },
+    "features.pill-tabs-visual.heading": {
+      "observedMax": 10,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 62,
+          "text": "If you can describe it, your team can ship it.",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "heading",
+          "words": 10
+        }
+      ]
+    },
+    "features.pill-tabs-visual.tabs[].body": {
+      "observedMax": 40,
+      "sampleCount": 8,
+      "samples": [
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 51,
+          "text": "Curation lives in your YAML, reviewed in pull requests like everything else. Hide by default, assign categories, and pre-select filters so the first chart someone sees is the useful one. Access is still governed by roles, spaces and user attributes.",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "body",
+          "words": 40
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 71,
+          "text": "Attribution models are useless trapped in a notebook only one analyst can run. Give marketing an app to compare models, filter by channel, and drill into what drove pipeline on the same metric definitions your data team already owns.",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "body",
+          "words": 39
+        },
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 45,
+          "text": "Click a metric and it charts itself over time. Compare it to the same window last year, segment it by any dimension, filter to the slice you care about, then hand off to a full query if needed.",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "body",
+          "words": 38
+        }
+      ]
+    },
+    "features.pill-tabs-visual.tabs[].label": {
+      "observedMax": 2,
+      "sampleCount": 8,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 75,
+          "text": "Customer success",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "label",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 65,
+          "text": "Finance",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "label",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 70,
+          "text": "Marketing",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "label",
+          "words": 1
+        }
+      ]
+    },
+    "features.pill-tabs-visual.tabs[].title": {
+      "observedMax": 11,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 56,
+          "text": "See how the business works, in a picture that stays true",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "title",
+          "words": 11
+        },
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 44,
+          "text": "A question gets an answer, not a new dashboard",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "title",
+          "words": 9
+        },
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 38,
+          "text": "Everyone knows which number is the real one",
+          "kind": "block-key",
+          "block": "pillTabs",
+          "key": "title",
+          "words": 8
+        }
+      ]
+    },
+    "features.split-content.heading": {
+      "observedMax": 7,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 39,
+          "text": "The query was never the hard part.",
+          "kind": "block-key",
+          "block": "split",
+          "key": "heading",
+          "words": 7
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 36,
+          "text": "Governed context for your agents",
+          "kind": "block-key",
+          "block": "split",
+          "key": "heading",
+          "words": 5
+        }
+      ]
+    },
+    "features.split-content.lead": {
+      "observedMax": 48,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 40,
+          "text": "The hard part is everything around it: getting data into the warehouse, understanding the schema, defining metrics and giving an agent enough context to return an answer you can trust. This session showed what happens when agents can work across the whole stack instead of stopping at text-to-SQL.",
+          "kind": "block-key",
+          "block": "split",
+          "key": "lead",
+          "words": 48
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 37,
+          "text": "Lightdash agents always use your governed metrics and business context so you can actually trust what comes back.",
+          "kind": "block-key",
+          "block": "split",
+          "key": "lead",
+          "words": 18
+        }
+      ]
+    },
+    "features.startups-benefits-grid.items[].body": {
+      "observedMax": 14,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 26,
+          "text": "Expert support and direct access to our product team for feedback and beta features",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 14
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 20,
+          "text": "Extend your 50% off for another 6 months by referring other startups",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 12
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 15,
+          "text": "50% off Lightdash Cloud or Pro for 12 months",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "body",
+          "words": 9
+        }
+      ]
+    },
+    "features.startups-benefits-grid.items[].title": {
+      "observedMax": 4,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 15,
+          "text": "Half-Price Lightdash Cloud Plans",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 19,
+          "text": "Referral Bonus Extension",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 3
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 22,
+          "text": "Exclusive Lightdash Swag",
+          "kind": "block-key",
+          "block": "BENEFITS",
+          "key": "title",
+          "words": 3
+        }
+      ]
+    },
+    "features.startups-cards-2x2.cards[].body": {
+      "observedMax": 27,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 35,
+          "text": "Lightdash instantly turns your dbt project into a full stack BI platform. A powerful developer workflow lets analysts define key metrics, and enable self-serve for everyone else.",
+          "kind": "block-key",
+          "block": "CARDS",
+          "key": "body",
+          "words": 27
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 50,
+          "text": "Get to the right answers fast with pre-built metrics. Define your business logic once and make it available everywhere for your whole team to use.",
+          "kind": "block-key",
+          "block": "CARDS",
+          "key": "body",
+          "words": 25
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 42,
+          "text": "Join a community of data enthusiasts and experts who discuss and contribute to the Lightdash platform and best practice for the modern data stack.",
+          "kind": "block-key",
+          "block": "CARDS",
+          "key": "body",
+          "words": 24
+        }
+      ]
+    },
+    "features.startups-cards-2x2.cards[].title": {
+      "observedMax": 7,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 49,
+          "text": "Semantic layer to easily define key metrics",
+          "kind": "block-key",
+          "block": "CARDS",
+          "key": "title",
+          "words": 7
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 41,
+          "text": "Open-source, community built and loved",
+          "kind": "block-key",
+          "block": "CARDS",
+          "key": "title",
+          "words": 5
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 61,
+          "text": "Data developer friendly",
+          "kind": "block-key",
+          "block": "CARDS",
+          "key": "title",
+          "words": 3
+        }
+      ]
+    },
+    "features.why-lightdash-split.heading": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 189,
+          "text": "Why Lightdash?",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "features.why-lightdash-split.reasons[].body": {
+      "observedMax": 34,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 27,
+          "text": "Data teams already use Git, dbt, and CI/CD for their data pipelines. Lightdash brings that same workflow to BI with versioned metrics, code-based charts, and governance built in. Ship faster, break less, iterate confidently.",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "body",
+          "words": 34
+        },
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 32,
+          "text": "Most self-serve BI fails because users still need to understand the data model. Lightdash uses AI to let them ask questions in natural language and get governed, trustworthy answers.",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "body",
+          "words": 29
+        },
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 22,
+          "text": "Give business users direct access to insights through natural language and AI agents, while data teams maintain control through dbt governance. Help clients ship outcomes, not tickets.",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "body",
+          "words": 27
+        }
+      ]
+    },
+    "features.why-lightdash-split.reasons[].title": {
+      "observedMax": 6,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 26,
+          "text": "Ship BI like you ship code",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "title",
+          "words": 6
+        },
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 21,
+          "text": "Solve the backlog problem",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "title",
+          "words": 4
+        },
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 31,
+          "text": "Self-serve for business users",
+          "kind": "block-key",
+          "block": "REASONS",
+          "key": "title",
+          "words": 4
+        }
+      ]
+    },
+    "hero.about-stickers.heading": {
+      "observedMax": 7,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/About.jsx",
+          "line": 50,
+          "text": "Building the BI tool we always wanted",
+          "kind": "literal",
+          "words": 7
+        }
+      ]
+    },
+    "hero.about-stickers.subtitle": {
+      "observedMax": 38,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/About.jsx",
+          "line": 53,
+          "text": "We're building a BI tool that's configurable for the SQL experts & intuitive for the rest, so everyone can feel empowered, rather than overwhelmed. We're a diverse, nimble bunch with big plans - and we're just getting started!",
+          "kind": "literal",
+          "words": 38
+        }
+      ]
+    },
+    "hero.bi-as-code.accent": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 33,
+          "text": "as code",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "hero.bi-as-code.buttons[]Label": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/components/shared/SectionHero.jsx",
+          "line": 45,
+          "text": "Talk to our team",
+          "kind": "key",
+          "key": "label",
+          "words": 4
+        },
+        {
+          "file": "src/components/shared/SectionHero.jsx",
+          "line": 46,
+          "text": "Start for free",
+          "kind": "key",
+          "key": "label",
+          "words": 3
+        }
+      ]
+    },
+    "hero.bi-as-code.heading": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 33,
+          "parts": [
+            "Your entire BI",
+            "as code"
+          ],
+          "text": "Your entire BI as code",
+          "kind": "parts",
+          "words": 5
+        }
+      ]
+    },
+    "hero.bi-as-code.subtitle": {
+      "observedMax": 31,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 36,
+          "text": "Your metrics, charts, and dashboards live as code. Build them with coding agents, review them in pull requests, and update 50 charts in one command. All on your governed context layer.",
+          "kind": "key",
+          "key": "subtitle",
+          "words": 31
+        }
+      ]
+    },
+    "hero.centered-product.accent": {
+      "observedMax": 3,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 25,
+          "text": "Trust every answer",
+          "kind": "literal",
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 25,
+          "text": "in one place",
+          "kind": "literal",
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 32,
+          "text": "custom apps",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "hero.centered-product.buttons[]Label": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/components/shared/SectionHero.jsx",
+          "line": 45,
+          "text": "Talk to our team",
+          "kind": "key",
+          "key": "label",
+          "words": 4
+        },
+        {
+          "file": "src/components/shared/SectionHero.jsx",
+          "line": 46,
+          "text": "Start for free",
+          "kind": "key",
+          "key": "label",
+          "words": 3
+        }
+      ]
+    },
+    "hero.centered-product.heading": {
+      "observedMax": 11,
+      "sampleCount": 7,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 25,
+          "parts": [
+            "Ask your data a question.",
+            "Trust every answer",
+            "that comes back."
+          ],
+          "text": "Ask your data a question. Trust every answer that comes back.",
+          "kind": "parts",
+          "words": 11
+        },
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 32,
+          "parts": [
+            "Build",
+            "custom apps",
+            "on your data from a single prompt"
+          ],
+          "text": "Build custom apps on your data from a single prompt",
+          "kind": "parts",
+          "words": 10
+        },
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 24,
+          "parts": [
+            "Every metric your team agreed on,",
+            "in one place"
+          ],
+          "text": "Every metric your team agreed on, in one place",
+          "kind": "parts",
+          "words": 9
+        }
+      ]
+    },
+    "hero.centered-product.subtitle": {
+      "observedMax": 24,
+      "sampleCount": 8,
+      "samples": [
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 28,
+          "text": "Search the catalog, click any metric, and see it charted over time with its owner, its definition and last year's comparison already in place.",
+          "kind": "key",
+          "key": "subtitle",
+          "words": 24
+        },
+        {
+          "file": "src/pages/data/self-improving-analytics.jsx",
+          "line": 27,
+          "text": "A context layer that fixes its own gaps and an Autopilot that cleans dashboards, so your team can stop maintaining analytics by hand.",
+          "kind": "key",
+          "key": "subtitle",
+          "words": 23
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 30,
+          "text": "Give every agent your metrics, business logic, and permissions so the answers you get are accurate, governed, and the same every time.",
+          "kind": "key",
+          "key": "subtitle",
+          "words": 22
+        }
+      ]
+    },
+    "hero.company-centered.buttons[]Label": {
+      "observedMax": 4,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 109,
+          "text": "Talk to our team",
+          "kind": "literal",
+          "words": 4
+        },
+        {
+          "file": "src/pages/LightdashSecurity.jsx",
+          "line": 56,
+          "text": "Visit Security Centre",
+          "kind": "literal",
+          "words": 3
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 112,
+          "text": "Start for free",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "hero.company-centered.heading": {
+      "observedMax": 3,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/Roadmap.jsx",
+          "line": 113,
+          "text": "Lightdash Public Roadmap",
+          "kind": "literal",
+          "words": 3
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 89,
+          "text": "Lightdash for Startups",
+          "kind": "literal",
+          "words": 3
+        },
+        {
+          "file": "src/pages/LightdashSecurity.jsx",
+          "line": 42,
+          "text": "Lightdash Security",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "hero.company-centered.subtitle": {
+      "observedMax": 41,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/LightdashSecurity.jsx",
+          "line": 48,
+          "text": "We take security seriously. Our platform is built to keep your data safe, with strong safeguards to prevent unauthorized access and protect the integrity of your information. You can explore our security practices, policies, and reports in the Lightdash Security Centre.",
+          "kind": "literal",
+          "words": 41
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 15,
+          "text": "50% off Lightdash Cloud for a year, plus hands-on expert support to help build your data stack right from the beginning.",
+          "kind": "literal",
+          "words": 21
+        },
+        {
+          "file": "src/pages/Roadmap.jsx",
+          "line": 120,
+          "text": "We ship fast, like really fast. Here's what we're working on at and what we've already shipped!",
+          "kind": "literal",
+          "words": 17
+        }
+      ]
+    },
+    "hero.event-ondemand.accent": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 18,
+          "text": "Here's how it worked.",
+          "kind": "literal",
+          "words": 4
+        }
+      ]
+    },
+    "hero.event-ondemand.buttons[]Label": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 23,
+          "text": "Talk to our team",
+          "kind": "literal",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 22,
+          "text": "Watch the build",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "hero.event-ondemand.eyebrow": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 11,
+          "text": "BEYOND COPILOTS · ON-DEMAND",
+          "kind": "key",
+          "key": "eyebrow",
+          "words": 4
+        }
+      ]
+    },
+    "hero.event-ondemand.heading": {
+      "observedMax": 6,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 17,
+          "text": "We built the data stack live.",
+          "kind": "literal",
+          "words": 6
+        }
+      ]
+    },
+    "hero.event-ondemand.meta": {
+      "observedMax": 6,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 25,
+          "text": "Recorded live on 18 August 2026",
+          "kind": "key",
+          "key": "meta",
+          "words": 6
+        }
+      ]
+    },
+    "hero.event-ondemand.subtitle": {
+      "observedMax": 25,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 19,
+          "text": "Watch dltHub, MotherDuck and Lightdash take a live API from ingestion to a governed AI answer, using agents at every layer and one terminal throughout.",
+          "kind": "key",
+          "key": "subtitle",
+          "words": 25
+        }
+      ]
+    },
+    "hero.fintech-split.accent": {
+      "observedMax": 1,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 65,
+          "text": "scaling",
+          "kind": "literal",
+          "words": 1
+        }
+      ]
+    },
+    "hero.fintech-split.buttons[]Label": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 58,
+          "text": "Talk to our team",
+          "kind": "literal",
+          "words": 4
+        },
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 61,
+          "text": "Start for free",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "hero.fintech-split.heading": {
+      "observedMax": 8,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 65,
+          "parts": [
+            "Stop waiting for dashboards. Start",
+            "scaling",
+            "your fintech."
+          ],
+          "text": "Stop waiting for dashboards. Start scaling your fintech.",
+          "kind": "parts",
+          "words": 8
+        }
+      ]
+    },
+    "hero.fintech-split.subtitle": {
+      "observedMax": 30,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 68,
+          "text": "The AI-first BI platform built for modern fintech data teams. Powerful enough for analytics engineers, intuitive enough for every business user, and secure enough for even the most regulated environments.",
+          "kind": "literal",
+          "words": 30
+        }
+      ]
+    },
+    "hero.integrations.heading": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 55,
+          "parts": [
+            "Explore Lightdash",
+            "Integrations"
+          ],
+          "text": "Explore Lightdash Integrations",
+          "kind": "parts",
+          "words": 3
+        }
+      ]
+    },
+    "hero.integrations.subtitle": {
+      "observedMax": 12,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 56,
+          "text": "Lightdash integrates with the tools and services you already use and love.",
+          "kind": "key",
+          "key": "sub",
+          "words": 12
+        }
+      ]
+    },
+    "hero.partnerships.ctaLabel": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 154,
+          "text": "Apply now",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "hero.partnerships.heading": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 140,
+          "text": "Become a Lightdash partner",
+          "kind": "literal",
+          "words": 4
+        }
+      ]
+    },
+    "hero.partnerships.subtitle": {
+      "observedMax": 15,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 142,
+          "text": "Apply to become a partner. You get access to certified training, partner discounts and more!",
+          "kind": "literal",
+          "words": 15
+        }
+      ]
+    },
+    "hero.playground.buttons[]Label": {
+      "observedMax": 3,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/components/pages/playground/PlaygroundHero.jsx",
+          "line": 6,
+          "text": "Book a demo",
+          "kind": "literal",
+          "words": 3
+        },
+        {
+          "file": "src/components/pages/playground/PlaygroundHero.jsx",
+          "line": 7,
+          "text": "Start for free",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "hero.playground.line1": {
+      "observedMax": 4,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/playground.js",
+          "line": 9,
+          "parts": [
+            "Rethink",
+            "BI.",
+            "Build",
+            "intelligence"
+          ],
+          "text": "Rethink BI. Build intelligence",
+          "kind": "parts",
+          "words": 4
+        }
+      ]
+    },
+    "hero.playground.line2": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/playground.js",
+          "line": 10,
+          "parts": [
+            "...not",
+            "just",
+            "dashboards"
+          ],
+          "text": "...not just dashboards",
+          "kind": "parts",
+          "words": 3
+        }
+      ]
+    },
+    "hero.playground.sub": {
+      "observedMax": 14,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/playground.js",
+          "line": 11,
+          "text": "Ask questions. Get instant insights from your custom AI analysts. All-in-one open, developer-loved platform.",
+          "kind": "key",
+          "key": "sub",
+          "words": 14
+        }
+      ]
+    },
+    "hero.pricing.heading": {
+      "observedMax": 10,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Pricing.jsx",
+          "line": 21,
+          "parts": [
+            "Stop paying per seat",
+            "to look at your own data."
+          ],
+          "text": "Stop paying per seat to look at your own data.",
+          "kind": "parts",
+          "words": 10
+        }
+      ]
+    },
+    "hero.startups-visual.criteria[]": {
+      "observedMax": 6,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 10,
+          "parts": [
+            "Be less than",
+            "5",
+            "years old"
+          ],
+          "text": "Be less than 5 years old",
+          "kind": "parts",
+          "words": 6
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 11,
+          "parts": [
+            "Have less than",
+            "$7.5M",
+            "in funding"
+          ],
+          "text": "Have less than $7.5M in funding",
+          "kind": "parts",
+          "words": 6
+        }
+      ]
+    },
+    "hero.startups-visual.qualifyHeading": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 131,
+          "text": "To qualify, your company must:",
+          "kind": "literal",
+          "words": 5
+        }
+      ]
+    },
+    "listing.blog-card-grid.loadMoreLabel": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/BlogListing.jsx",
+          "line": 80,
+          "text": "Load More",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "listing.blog-filter-bar.pills[]": {
+      "observedMax": 3,
+      "sampleCount": 11,
+      "samples": [
+        {
+          "file": "specs/cms/blog-categories.json",
+          "line": 17,
+          "text": "Alerts & sharing",
+          "kind": "regex",
+          "pattern": "\"name\": \"([^\"]+)\",\\s*\"pageTitle\"",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "specs/cms/blog-categories.json",
+          "line": 27,
+          "text": "Data observability",
+          "kind": "regex",
+          "pattern": "\"name\": \"([^\"]+)\",\\s*\"pageTitle\"",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "specs/cms/blog-categories.json",
+          "line": 47,
+          "text": "Version Control",
+          "kind": "regex",
+          "pattern": "\"name\": \"([^\"]+)\",\\s*\"pageTitle\"",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "listing.blog-filter-bar.searchLabel": {
+      "observedMax": 1,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/BlogListing.jsx",
+          "line": 6,
+          "text": "Search",
+          "kind": "literal",
+          "words": 1
+        }
+      ]
+    },
+    "listing.blog-header.heading": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/BlogListing.jsx",
+          "line": 32,
+          "parts": [
+            "Lightning",
+            "posts"
+          ],
+          "text": "Lightning posts",
+          "kind": "parts",
+          "words": 2
+        }
+      ]
+    },
+    "listing.blog-header.headingMuted": {
+      "observedMax": 1,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/BlogListing.jsx",
+          "line": 10,
+          "text": "posts",
+          "kind": "literal",
+          "words": 1
+        }
+      ]
+    },
+    "listing.integrations-directory.categories[]": {
+      "observedMax": 3,
+      "sampleCount": 7,
+      "samples": [
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 12,
+          "text": "Alerts & sharing",
+          "kind": "block-key",
+          "block": "CATEGORIES",
+          "key": "label",
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 11,
+          "text": "Version Control",
+          "kind": "block-key",
+          "block": "CATEGORIES",
+          "key": "label",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 14,
+          "text": "Data observability",
+          "kind": "block-key",
+          "block": "CATEGORIES",
+          "key": "label",
+          "words": 2
+        }
+      ]
+    },
+    "listing.integrations-directory.integrations[].body": {
+      "observedMax": 18,
+      "sampleCount": 19,
+      "samples": [
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 18,
+          "text": "Pull your latest data models directly from git and get all the benefits of version control in Lightdash",
+          "kind": "regex",
+          "pattern": "const VC_BODY = '([^']+)'",
+          "group": 1,
+          "words": 18
+        },
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 35,
+          "text": "Purchase Lightdash through Google Cloud Marketplace to speed up deployment and apply your GCP committed spend.",
+          "kind": "regex",
+          "pattern": "body: '([^']+)'",
+          "group": 1,
+          "words": 16
+        },
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 48,
+          "text": "Use our Slack bot to send reports or share dashboards where your team already works",
+          "kind": "regex",
+          "pattern": "body: '([^']+)'",
+          "group": 1,
+          "words": 15
+        }
+      ]
+    },
+    "listing.integrations-directory.integrations[].category": {
+      "observedMax": 3,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 39,
+          "text": "Alerts & sharing",
+          "kind": "regex",
+          "pattern": "category: '([^']+)', logo",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 23,
+          "text": "Version Control",
+          "kind": "regex",
+          "pattern": "category: '([^']+)', logo",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 37,
+          "text": "Data observability",
+          "kind": "regex",
+          "pattern": "category: '([^']+)', logo",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "listing.integrations-directory.integrations[].name": {
+      "observedMax": 2,
+      "sampleCount": 19,
+      "samples": [
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 21,
+          "text": "Amazon Athena",
+          "kind": "regex",
+          "pattern": "\\{ name: '([^']+)', category",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 22,
+          "text": "Amazon RedShift",
+          "kind": "regex",
+          "pattern": "\\{ name: '([^']+)', category",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/integrations.js",
+          "line": 23,
+          "text": "Azure DevOps",
+          "kind": "regex",
+          "pattern": "\\{ name: '([^']+)', category",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "listing.related-articles.heading": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/BlogPost.jsx",
+          "line": 28,
+          "text": "Related articles",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "listing.related-articles.seeAllLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/RelatedHeader.jsx",
+          "line": 15,
+          "text": "See all posts",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "listing.related-stories.heading": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/CustomerStory.jsx",
+          "line": 111,
+          "text": "Related stories",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "listing.related-stories.seeAllLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/RelatedHeader.jsx",
+          "line": 15,
+          "text": "See all posts",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "listing.stories-header.heading": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/CustomerStories.jsx",
+          "line": 15,
+          "text": "Customer stories",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "listing.stories-header.lead": {
+      "observedMax": 20,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/CustomerStories.jsx",
+          "line": 20,
+          "text": "From migration to rollout, teams share how they use Lightdash to simplify their BI workflows and ship better analytics, faster.",
+          "kind": "literal",
+          "words": 20
+        }
+      ]
+    },
+    "listing.story-card-grid.readLabel": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/components/cms/StoryCard.jsx",
+          "line": 6,
+          "text": "Read full story",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "proof.customer-quote-stats.personName": {
+      "observedMax": 2,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 138,
+          "text": "Aleksandr Zolotukhin",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "name",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 82,
+          "text": "Abdelmounim Boufous",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "name",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 91,
+          "text": "Matthew Powers",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "name",
+          "words": 2
+        }
+      ]
+    },
+    "proof.customer-quote-stats.personRole": {
+      "observedMax": 7,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 139,
+          "text": "VP of Data & Analytics @ JustWatch",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "role",
+          "words": 7
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 91,
+          "text": "Chief Technology & Product Officer @ Tatango",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "role",
+          "words": 7
+        },
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 82,
+          "text": "Senior Data Analyst @ Stake",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "role",
+          "words": 5
+        }
+      ]
+    },
+    "proof.customer-quote-stats.quote": {
+      "observedMax": 29,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 135,
+          "text": "\"We create specialized agents with different instructions and data access for different departments. Each agent has personalised context specific to its team’s domain, allowing it to do nuanced jobs.\"",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "quote",
+          "words": 29
+        },
+        {
+          "file": "src/pages/data/interactive-dashboards.jsx",
+          "line": 80,
+          "text": "\"Lightdash helped us scale self-serve. It’s easy for business users to use and get answers by dragging dimensions, adding filters, and drilling into data.\"",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "quote",
+          "words": 24
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 89,
+          "text": "“If you’re tired of fragmented reporting, duplicated work, and inconsistent numbers, Lightdash is the fastest way to get to a single source of truth.\"",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "quote",
+          "words": 24
+        }
+      ]
+    },
+    "proof.customer-quote-stats.stats[].label": {
+      "observedMax": 5,
+      "sampleCount": 9,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 144,
+          "text": "reduction in BI tool spend",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "label",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 146,
+          "text": "increase in active BI users",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "label",
+          "words": 5
+        },
+        {
+          "file": "src/pages/data/context-layer.jsx",
+          "line": 94,
+          "text": "reduction in data team hours",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "label",
+          "words": 5
+        }
+      ]
+    },
+    "proof.customer-quote-stats.stats[].value": {
+      "observedMax": 1,
+      "sampleCount": 8,
+      "samples": [
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 144,
+          "text": "86%",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "value",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 145,
+          "text": "~4000",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "value",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 146,
+          "text": "45%",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "value",
+          "words": 1
+        }
+      ]
+    },
+    "proof.customer-quote.personName": {
+      "observedMax": 2,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 111,
+          "text": "David Strudwick",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "name",
+          "words": 2
+        }
+      ]
+    },
+    "proof.customer-quote.personRole": {
+      "observedMax": 6,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 112,
+          "text": "Senior BI Engineer @ OakNorth Bank",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "role",
+          "words": 6
+        }
+      ]
+    },
+    "proof.customer-quote.quote": {
+      "observedMax": 38,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/data-apps.jsx",
+          "line": 108,
+          "text": "\"As a regulated bank, the data has to come from our golden source. With data apps, people can build whatever they like, but we still control the data and the permissions. That's what lets us open it up.\"",
+          "kind": "block-key",
+          "block": "quote",
+          "key": "quote",
+          "words": 38
+        }
+      ]
+    },
+    "proof.dark-testimonial-stats.company": {
+      "observedMax": 2,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 191,
+          "text": "Neo Financial",
+          "kind": "literal",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 110,
+          "text": "fal.ai",
+          "kind": "key",
+          "key": "company",
+          "words": 1
+        }
+      ]
+    },
+    "proof.dark-testimonial-stats.ctaLabel": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 114,
+          "text": "Read the full case study",
+          "kind": "key",
+          "key": "label",
+          "words": 5
+        }
+      ]
+    },
+    "proof.dark-testimonial-stats.personName": {
+      "observedMax": 2,
+      "sampleCount": 4,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 109,
+          "text": "Kevin Otte",
+          "kind": "key",
+          "key": "name",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 192,
+          "text": "Ian Ahuja",
+          "kind": "key",
+          "key": "name",
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 198,
+          "text": "Shanzé Munir",
+          "kind": "key",
+          "key": "name",
+          "words": 2
+        }
+      ]
+    },
+    "proof.dark-testimonial-stats.personRole": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 192,
+          "text": "Head of Business Intelligence",
+          "kind": "literal",
+          "words": 4
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 111,
+          "text": "Data Scientist",
+          "kind": "regex",
+          "pattern": "role:\\s*'([^']+)'",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "proof.dark-testimonial-stats.quote": {
+      "observedMax": 32,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 112,
+          "text": "\"The shift to dashboards-as-code and agent-driven workflows has been huge for us. We can update, version, and replicate analytics the same way we ship software without spending hours clicking around the UI.\"",
+          "kind": "key",
+          "key": "quote",
+          "words": 32
+        },
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 197,
+          "text": "\"The Lightdash team has been a true partner. Their support is best-in-class, with direct access to their data and BI experts.\"",
+          "kind": "literal",
+          "words": 21
+        }
+      ]
+    },
+    "proof.dark-testimonial-stats.stats[].label": {
+      "observedMax": 7,
+      "sampleCount": 5,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 143,
+          "text": "of data requests answered in 24 hours",
+          "kind": "key",
+          "key": "label",
+          "words": 7
+        },
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 44,
+          "text": "less time spent on ad-hoc data requests",
+          "kind": "key",
+          "key": "label",
+          "words": 7
+        },
+        {
+          "file": "src/pages/data/fintech.jsx",
+          "line": 46,
+          "text": "faster for business users to get answers",
+          "kind": "key",
+          "key": "label",
+          "words": 7
+        }
+      ]
+    },
+    "proof.dark-testimonial-stats.stats[].value": {
+      "observedMax": 1,
+      "sampleCount": 6,
+      "samples": [
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 141,
+          "text": "90%",
+          "kind": "key",
+          "key": "value",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 142,
+          "text": "30",
+          "kind": "key",
+          "key": "value",
+          "words": 1
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 143,
+          "text": "85%",
+          "kind": "key",
+          "key": "value",
+          "words": 1
+        }
+      ]
+    },
+    "proof.logo-tiles-named.caption": {
+      "observedMax": 4,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/LightdashSecurity.jsx",
+          "line": 9,
+          "text": "Lightdash is trusted by:",
+          "kind": "literal",
+          "words": 4
+        },
+        {
+          "file": "src/pages/Jp.jsx",
+          "line": 93,
+          "text": "多くの企業からの信頼",
+          "kind": "literal",
+          "words": 1
+        }
+      ]
+    },
+    "proof.logo-tiles-named.tiles[].name": {
+      "observedMax": 2,
+      "sampleCount": 18,
+      "samples": [
+        {
+          "file": "src/pages/LightdashSecurity.jsx",
+          "line": 23,
+          "text": "Standard Metrics",
+          "kind": "regex",
+          "pattern": "\\['([^']+)', '[A-Za-z0-9_-]{15,}'\\]",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/LightdashSecurity.jsx",
+          "line": 25,
+          "text": "Octopus Energy",
+          "kind": "regex",
+          "pattern": "\\['([^']+)', '[A-Za-z0-9_-]{15,}'\\]",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/LightdashSecurity.jsx",
+          "line": 27,
+          "text": "Kroo Bank",
+          "kind": "regex",
+          "pattern": "\\['([^']+)', '[A-Za-z0-9_-]{15,}'\\]",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "proof.logos-row.caption": {
+      "observedMax": 11,
+      "sampleCount": 8,
+      "samples": [
+        {
+          "file": "src/pages/data/metrics-catalog.jsx",
+          "line": 33,
+          "text": "Trusted by data teams who define their metrics once, in code",
+          "kind": "regex",
+          "pattern": "logosCaption\\s*=\\s*['\\\"]([^'\\\"]+)['\\\"]",
+          "group": 1,
+          "words": 11
+        },
+        {
+          "file": "src/pages/data/conversational-analytics.jsx",
+          "line": 33,
+          "text": "The data teams that stopped being a ticket queue.",
+          "kind": "regex",
+          "pattern": "logosCaption\\s*=\\s*['\\\"]([^'\\\"]+)['\\\"]",
+          "group": 1,
+          "words": 9
+        },
+        {
+          "file": "src/pages/data/bi-as-code.jsx",
+          "line": 61,
+          "text": "The best data teams are shipping analytics as software",
+          "kind": "regex",
+          "pattern": "logosCaption\\s*=\\s*['\\\"]([^'\\\"]+)['\\\"]",
+          "group": 1,
+          "words": 9
+        }
+      ]
+    },
+    "proof.logos-strip-5.caption": {
+      "observedMax": 5,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Fintech.jsx",
+          "line": 93,
+          "text": "Loved by fintech data teams",
+          "kind": "literal",
+          "words": 5
+        }
+      ]
+    },
+    "proof.partner-logos.caption": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/Partnerships.jsx",
+          "line": 162,
+          "text": "Official Lightdash partners",
+          "kind": "literal",
+          "words": 3
+        }
+      ]
+    },
+    "proof.partner-testimonial-carousel.items[].company": {
+      "observedMax": 2,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 17,
+          "text": "Nayuta Analytics",
+          "kind": "key",
+          "key": "company",
+          "words": 2
+        },
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 26,
+          "text": "Snowpack Data",
+          "kind": "key",
+          "key": "company",
+          "words": 2
+        },
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 35,
+          "text": "Database Tycoon",
+          "kind": "key",
+          "key": "company",
+          "words": 2
+        }
+      ]
+    },
+    "proof.partner-testimonial-carousel.items[].name": {
+      "observedMax": 2,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 16,
+          "text": "Colin Lee",
+          "kind": "key",
+          "key": "name",
+          "words": 2
+        },
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 25,
+          "text": "David Olodort",
+          "kind": "key",
+          "key": "name",
+          "words": 2
+        },
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 34,
+          "text": "Chloé Anderson",
+          "kind": "key",
+          "key": "name",
+          "words": 2
+        }
+      ]
+    },
+    "proof.partner-testimonial-carousel.items[].quote": {
+      "observedMax": 37,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 38,
+          "text": "\"We don’t embed with clients to spend months fixing BI. We embed to drive outcomes. Lightdash’s tight dbt integration and real self-serve capabilities let us move fast and focus on building systems that move the business forward.\"",
+          "kind": "key",
+          "key": "quote",
+          "words": 37
+        },
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 29,
+          "text": "\"Lightdash’s fully programmatic, open-source philosophy makes it the extensible data node in your stack. Don’t let GUIs limit you - encode the future of your analytics with Lightdash.\"",
+          "kind": "key",
+          "key": "quote",
+          "words": 28
+        },
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 20,
+          "text": "“Lightdash lives up to its name: lightweight, lightning-fast, and constantly improving. For startup clients who need to move fast with agentic analytics, it’s our go-to recommendation.”",
+          "kind": "key",
+          "key": "quote",
+          "words": 26
+        }
+      ]
+    },
+    "proof.partner-testimonial-carousel.items[].role": {
+      "observedMax": 1,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 18,
+          "text": "Founder",
+          "kind": "regex",
+          "pattern": "role:\\s*'([^']+)'",
+          "group": 1,
+          "words": 1
+        },
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 27,
+          "text": "CRO",
+          "kind": "regex",
+          "pattern": "role:\\s*'([^']+)'",
+          "group": 1,
+          "words": 1
+        },
+        {
+          "file": "src/components/pages/partnerships/TestimonialCarousel.jsx",
+          "line": 36,
+          "text": "Manager",
+          "kind": "regex",
+          "pattern": "role:\\s*'([^']+)'",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "proof.speakers-grid.heading": {
+      "observedMax": 3,
+      "sampleCount": 1,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 79,
+          "text": "Built live by",
+          "kind": "key",
+          "key": "heading",
+          "words": 3
+        }
+      ]
+    },
+    "proof.speakers-grid.speakers[].name": {
+      "observedMax": 2,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 82,
+          "text": "Alena Astrakhantseva",
+          "kind": "regex",
+          "pattern": "name:\\s*'([^']+)',\\s*role",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 83,
+          "text": "Jacob Matson",
+          "kind": "regex",
+          "pattern": "name:\\s*'([^']+)',\\s*role",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 84,
+          "text": "Oliver Laslett",
+          "kind": "regex",
+          "pattern": "name:\\s*'([^']+)',\\s*role",
+          "group": 1,
+          "words": 2
+        }
+      ]
+    },
+    "proof.speakers-grid.speakers[].role": {
+      "observedMax": 3,
+      "sampleCount": 3,
+      "samples": [
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 82,
+          "text": "Senior Solutions Engineer",
+          "kind": "regex",
+          "pattern": "role:\\s*'([^']+)',\\s*photo",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 83,
+          "text": "Developer Relations",
+          "kind": "regex",
+          "pattern": "role:\\s*'([^']+)',\\s*photo",
+          "group": 1,
+          "words": 2
+        },
+        {
+          "file": "src/pages/data/beyond-copilots.js",
+          "line": 84,
+          "text": "Co-founder",
+          "kind": "regex",
+          "pattern": "role:\\s*'([^']+)',\\s*photo",
+          "group": 1,
+          "words": 1
+        }
+      ]
+    },
+    "proof.testimonial-avatar.personName": {
+      "observedMax": 3,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 109,
+          "text": "Joeri De Turck",
+          "kind": "regex",
+          "pattern": "name:\\s*'(Joeri[^']+)'",
+          "group": 1,
+          "words": 3
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 272,
+          "text": "Erik Webb",
+          "kind": "literal",
+          "words": 2
+        }
+      ]
+    },
+    "proof.testimonial-avatar.personRole": {
+      "observedMax": 5,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 110,
+          "text": "Co-founder & CTO @ Qargo",
+          "kind": "regex",
+          "pattern": "role:\\s*'(Co-founder[^']+)'",
+          "group": 1,
+          "words": 5
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 283,
+          "text": "Head of Data @ Clair",
+          "kind": "literal",
+          "words": 5
+        }
+      ]
+    },
+    "proof.testimonial-avatar.quote": {
+      "observedMax": 43,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/pages/data/embedding.jsx",
+          "line": 105,
+          "parts": [
+            "We evaluated several embedded BI solutions, but Lightdash was the only one that",
+            "ticked all our boxes",
+            "The",
+            "token-based auth means we don't have to manage thousands of users, and the React SDK lets us make it feel like part of our platform."
+          ],
+          "text": "We evaluated several embedded BI solutions, but Lightdash was the only one that ticked all our boxes The token-based auth means we don't have to manage thousands of users, and the React SDK lets us make it feel like part of our platform.",
+          "kind": "parts",
+          "words": 43
+        },
+        {
+          "file": "src/pages/Startups.jsx",
+          "line": 279,
+          "parts": [
+            "Lightdash powers self-service at Clair, allowing internal teams to",
+            "quickly get their hands on the data",
+            "they need to operate the business."
+          ],
+          "text": "Lightdash powers self-service at Clair, allowing internal teams to quickly get their hands on the data they need to operate the business.",
+          "kind": "parts",
+          "words": 22
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "conversion.plan-comparison",
+  "category": "CONVERSION",
+  "purpose": "\"Compare our plans\": heading then four stacked comparison tables (Product features, Sources and integrations, Support & Implementation, Security & Compliance) with a 60px header (Open Source / Cloud Pro / Enterprise) and rows with check/cross/text cells and dotted-underline tooltips.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/pricing/CompareTable.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "conversion.plan-comparison.heading"
+      },
+      "tables": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "observedMaxWords": 3,
+            "wcRef": "conversion.plan-comparison.tables[].title"
+          },
+          "rows": {
+            "type": "list",
+            "required": true,
+            "item": {
+              "label": {
+                "type": "text",
+                "required": true,
+                "maxWords": 8,
+                "observedMaxWords": 6,
+                "wcRef": "conversion.plan-comparison.tables[].rows[].label"
+              },
+              "tooltip": {
+                "type": "text",
+                "required": false,
+                "maxWords": 54,
+                "observedMaxWords": 43,
+                "wcRef": "conversion.plan-comparison.tables[].rows[].tooltip"
+              },
+              "values": {
+                "type": "list",
+                "required": true,
+                "item": {
+                  "type": "text",
+                  "required": true,
+                  "maxWords": 8,
+                  "observedMaxWords": 6,
+                  "wcRef": "conversion.plan-comparison.tables[].rows[].values[]"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              }
+            },
+            "minItems": 4,
+            "maxItems": 20
+          }
+        },
+        "minItems": 4,
+        "maxItems": 4
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "the tables scroll horizontally inside an overflow-x-auto wrapper; inner 768 wide",
+      "cssCite": "src/components/pages/pricing/CompareTable.jsx:11"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/pricing/CompareTable.jsx:5",
+    "src/pages/data/pricing.jsx:114",
+    "src/pages/Pricing.jsx:74"
+  ],
+  "notes": [
+    "Cell values can be boolean (check/cross) as well as text; PageSpec encodes booleans as the strings \"yes\"/\"no\" (the contract is text-only). Source marks some cells with special flags (EMBED_PRO, SSO_PRO)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "pricing"
+  ]
+}

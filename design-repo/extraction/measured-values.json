@@ -1,0 +1,3083 @@
+{
+  "$description": "Evidence ledger. Every citation in the design-repo (contracts, templates, asset roles, motion patterns, this file) is indexed in citationChecks with anchor text that must appear inside the cited lines; extraction/verify_all.py resolves them against the sibling source tree when present (WARN + skip when absent). Token evidence refs carry their own quotes in tokens/**.json. External evidence (source tree, specs, reference screenshots) is NEVER an entry point of the manifest.",
+  "sourceTree": {
+    "identity": "a parent folder containing src/ and package.json with name \"lightdash-clone\"",
+    "gitRepository": false
+  },
+  "frameworkSnapshot": {
+    "file": "package.json",
+    "declared": {
+      "@rive-app/canvas": "2.27.5",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1",
+      "react-router-dom": "6.28.0",
+      "@vitejs/plugin-react": "^4.3.1",
+      "autoprefixer": "^10.4.20",
+      "postcss": "^8.4.47",
+      "tailwindcss": "^3.4.14",
+      "vite": "^5.4.10"
+    },
+    "installedAtBuild": {
+      "@rive-app/canvas": "2.27.5",
+      "react": "18.3.1",
+      "react-dom": "18.3.1",
+      "react-router-dom": "6.28.0",
+      "@vitejs/plugin-react": "4.7.0",
+      "autoprefixer": "10.6.1",
+      "postcss": "8.5.30",
+      "tailwindcss": "3.4.19",
+      "vite": "5.4.21"
+    },
+    "stack": "React 18.3.1 + react-router-dom 6.28.0 (BrowserRouter) + Vite 5.4.21 + Tailwind 3.4.19 + @rive-app/canvas 2.27.5",
+    "evidence": [
+      "src/App.jsx:2",
+      "vite.config.js:2",
+      "tailwind.config.js:3"
+    ]
+  },
+  "projectFacts": {
+    "sitemapUrls": 121,
+    "routes": 118,
+    "excludedRoutes": 3,
+    "iaSections": 99,
+    "sections": 100,
+    "templates": 30,
+    "srcFiles": 138,
+    "cmsMembers": {
+      "blogPosts": 62,
+      "blogCategories": 11,
+      "customerStories": 12,
+      "events": 4
+    }
+  },
+  "routeEvidence": {
+    "measured": 29,
+    "measured-sample": 3,
+    "template-derived": 86,
+    "note": "measured = the route itself has a reference screenshot (reference/pages or reference/original-1440.png); measured-sample = the documented sample member of a CMS template (cms-templates.md line 12); template-derived = another member of a CMS family: layout inherited from the sample, metadata measured in specs/cms/*.json, body placeholder. The slugs behind the blog-category screenshots are not recorded in the source."
+  },
+  "loadMotionRoutes": {
+    "/conversational-analytics": "hero:wide + pixel-drop",
+    "/data-apps": "hero:wide + pixel-drop",
+    "/metrics-catalog": "pixel-drop",
+    "/embedding": "hero:text + pixel-drop",
+    "/interactive-dashboards": "hero:wide + pixel-drop",
+    "/context-layer": "hero:wide + pixel-drop",
+    "/self-improving-analytics": "hero:text + pixel-drop",
+    "/integrations": "pixel-drop",
+    "/startups": "pixel-drop",
+    "/roadmap": "roadmap-pixel-slide",
+    "/jp": "pixel-drop"
+  },
+  "groundworkAssessment": {
+    "ia": [
+      "ia/validate.mjs was run first and passes untouched (30 templates, 118 routes, 99 sections at build time; 100 after the 2026-10-13 IA update pass).",
+      "Routes: 118 routes / 30 templates verified against specs/sitemap.txt (121 URLs minus 3 unpublished), src/App.jsx route patterns and specs/cms/*.json member counts (62 posts, 11 categories, 12 stories, 4 events): the groundwork held.",
+      "Node lists: 9 of 30 templates differed from ia.json once re-read against the real JSX (product-conversational-analytics, product-data-apps, product-embedding, product-self-improving-analytics, playground, startups, fintech, blog-post, customer-story); see templates.json differsFromIa for each reason (repeated sections modelled as separate nodes, DOM order, an unmodelled Fintech band, the Playground card band).",
+      "Sections: 99 ia sections kept, 1 added (decor.pixel-border-band); app.* sections kept as non-composable iframe states.",
+      "ia.json meta.chromeAxis held: every template chrome value equals the value implied by its node list (verify_all.py routes check)."
+    ],
+    "tokens": [
+      "All 219 pre-existing evidence refs (ref + quote) resolved against the cited lines before any change; 0 bad.",
+      "60 Tailwind colours + #000000 matched tailwind.config.js exactly; 33 typography entries matched src/index.css (size, line-height, weight, letter-spacing, family, default colour); responsive overrides present.",
+      "FIXED / ADDED: 9 recurring raw hex values used by pages but absent from the Tailwind theme became color.local-* tokens (scope page-local); tokens/00-foundation/icon-size.json (9 icon boxes) and motion-patterns.json (20 patterns) were missing; tokens/llm/{token-catalog,token-policy,component-allowlist}.json were missing.",
+      "themes/dark-home.json differs from light.json in only 3 of 34 semantic keys (chrome nav bg / nav border / menu panel); the footer keys resolve identically but are unused on the homepage (no footer)."
+    ]
+  },
+  "structurallyUnusual": [
+    "The homepage is a full-viewport Three.js Game Boy app inside an iframe (public/gameboy/index.html): one viewport, no scroll, no footer. hero.* / app.* sections of the home template are iframe states; app.view-* are non-composable and live in templates.json iframeStates, never in nodes.",
+    "/__shared is a dev-only demo route (src/pages/SharedDemo.jsx): not a route of the design (templates.json devOnlyRoutes).",
+    "Three unpublished routes are excluded ON PURPOSE and must not be recreated: /old-home, /xdrafts/lightdash-vs-looker, /xdrafts/lightdash-vs-looker-v2 (templates.json excludedRoutes; verify_all.py fails if one appears).",
+    "Unknown URLs render the not-found template via the catch-all route \"*\" (HTTP 404 on live); it is not counted as a route.",
+    "Third-party scripts (Intercom, Clarity, RudderStack, Warmly, HubSpot) are not part of the design (thirdPartyScripts).",
+    "The source is a REAL live company: real customer logos, employees, quotes, compliance marks, roadmap, a Cal.com booking calendar, a YouTube video and forms. assets/asset-roles.json pins every role to a generation policy and forbids live endpoints in PageSpecs.",
+    "Article, story, event and legal bodies are placeholder text; their metadata is measured. Evidence is therefore per route: measured, measured-sample, template-derived (templates.json routes[].evidence).",
+    "/playground is an unfinished duplicate of the old homepage whose blocks render empty on the live site; /jp is Japanese copy; /about uses a 1000px desktop breakpoint and /jp 1440."
+  ],
+  "thirdPartyScripts": {
+    "notPartOfTheDesign": [
+      "Intercom chat widget",
+      "Framer editor bar",
+      "Clarity",
+      "RudderStack",
+      "Warmly",
+      "HubSpot / analytics"
+    ],
+    "evidence": [
+      "CLONE_SPEC.md:28",
+      "CLONE_SPEC.md:378",
+      "specs/SHARED.md:352"
+    ],
+    "cloneIndexHtml": "index.html:24",
+    "note": "index.html loads only /src/main.jsx; the saved original HTML (not cited: a large third-party dump) does contain Intercom, Clarity, RudderStack and Warmly references."
+  },
+  "anomalies": [
+    {
+      "id": "logo-file-names-do-not-match-logos",
+      "claim": "Several logo image file names disagree with the brand they contain: public/assets/pages/fintech/hypebeast-*.png renders the Wise logo and kraken-*.png renders Titanbay (both viewed while building); fintech alma-*.png renders Peach Payments; src/pages/data/pricing.jsx maps the alt \"octopus energy\" to alma-*.svg (renders octopus energy) and \"Adobe\" to hyperbound-*.svg (renders Adobe). All five were viewed on 2026-10-13: every alt text matches its rendered logo and only the file names are wrong, so the source needs no fix. File names are Framer layer names: identify logos by alt text.",
+      "cite": "src/pages/data/fintech.jsx:7",
+      "keyword": "hypebeast-X1Rd8CLxwvNU4Tf1KCa2OWalT0",
+      "grepFiles": [
+        "src/pages/data/fintech.jsx"
+      ]
+    },
+    {
+      "id": "shared-readme-motion-claim-stale",
+      "claim": "src/components/shared/README.md says load animations are left to the Animation agent, but src/motion/useRouteMotion.js implements hero fade, pixel drop and roadmap slides and InnerLayout mounts it.",
+      "cite": "src/components/shared/README.md:21",
+      "keyword": "left to the Animation agent",
+      "grepFiles": [
+        "src/components/shared/README.md"
+      ]
+    },
+    {
+      "id": "sectionhero-motion-comment-stale",
+      "claim": "SectionHero.jsx header comment says motion is \"not implemented here, Animation agent\"; it is implemented in src/motion/useRouteMotion.js via the data-hero / data-hero-pixel hooks.",
+      "cite": "src/components/shared/SectionHero.jsx:7",
+      "keyword": "MOTION (not implemented here, Animation agent)",
+      "grepFiles": [
+        "src/components/shared/SectionHero.jsx"
+      ]
+    },
+    {
+      "id": "playground-word-reveal-comment-stale",
+      "claim": "PlaygroundHero.jsx documents a word-reveal motion with [data-pg-word] hooks, but nothing in src queries that attribute and ia.json records that the live page has no word-reveal: no motion pattern is claimed for it.",
+      "cite": "src/components/pages/playground/PlaygroundHero.jsx:11",
+      "keyword": "data-pg-word",
+      "grepFiles": [
+        "src/components/pages/playground/PlaygroundHero.jsx"
+      ]
+    },
+    {
+      "id": "pagestub-is-dead-code",
+      "claim": "src/pages/_PageStub.jsx (\"Temporary placeholder used by route stubs\") is imported nowhere (grep -rl PageStub src lists only itself); it is not a route.",
+      "cite": "src/pages/_PageStub.jsx:4",
+      "keyword": "Temporary placeholder used by route stubs",
+      "grepFiles": [
+        "src/pages/_PageStub.jsx"
+      ]
+    },
+    {
+      "id": "jp-button-absolute-live-url",
+      "claim": "The /jp \"demo\" button points at the absolute live URL https://www.lightdash.com/start and the other at a real meetup.com event.",
+      "cite": "src/pages/Jp.jsx:82",
+      "keyword": "https://www.lightdash.com/start",
+      "grepFiles": [
+        "src/pages/Jp.jsx"
+      ]
+    },
+    {
+      "id": "startups-live-cal-booking",
+      "claim": "The /startups \"Talk to our team\" button opens a live Cal.com page (lightdash.cal.com/lightdash/startups), not the Talk modal.",
+      "cite": "src/pages/Startups.jsx:108",
+      "keyword": "https://lightdash.cal.com/lightdash/startups",
+      "grepFiles": [
+        "src/pages/Startups.jsx"
+      ]
+    },
+    {
+      "id": "fintech-faq-answers-mismatched-live-bug",
+      "claim": "The /fintech FAQ answers are mismatched with their questions; this is a reproduced live-site bug (source header comment).",
+      "cite": "src/pages/data/fintech.jsx:1",
+      "keyword": "mismatched FAQ",
+      "grepFiles": [
+        "src/pages/data/fintech.jsx"
+      ]
+    },
+    {
+      "id": "partnerships-live-href-bug-fixed-in-clone",
+      "claim": "The live /partnerships cell 4 href was \"https://https://northstaranalytics.co.uk/\"; the clone fixes it (source comment).",
+      "cite": "src/pages/Partnerships.jsx:9",
+      "keyword": "https://https://northstaranalytics.co.uk/",
+      "grepFiles": [
+        "src/pages/Partnerships.jsx"
+      ]
+    },
+    {
+      "id": "fintech-graphic-border-not-in-ia",
+      "claim": "The /fintech full-bleed 1440x60 \"Graphic Border\" band is not a section in ia.json; modelled here as decor.pixel-border-band.",
+      "cite": "src/pages/Fintech.jsx:270",
+      "keyword": "7 · Graphic Border",
+      "grepFiles": [
+        "src/pages/Fintech.jsx"
+      ]
+    },
+    {
+      "id": "cms-bodies-are-placeholders",
+      "claim": "Blog / story / event bodies were not copied; PlaceholderBody renders lorem text. Metadata (titles, dates, authors, counts) is measured in specs/cms/*.json.",
+      "cite": "specs/cms-templates.md:9",
+      "keyword": "Content rule.",
+      "grepFiles": [
+        "specs/cms-templates.md"
+      ]
+    },
+    {
+      "id": "legal-bodies-are-placeholders",
+      "claim": "Legal page bodies (privacy, terms, sub-processors \"Vendor A..M\", Google APIs disclosure) are placeholder text written for the clone.",
+      "cite": "src/components/legal/placeholder.js:1",
+      "keyword": "Neutral placeholder copy for the legal pages",
+      "grepFiles": [
+        "src/components/legal/placeholder.js"
+      ]
+    },
+    {
+      "id": "footer-newsletter-ui-only",
+      "claim": "The footer newsletter form submits nowhere (UI only); the live HubSpot/Framer endpoint was not inspected.",
+      "cite": "src/components/shared/Footer.jsx:66",
+      "keyword": "UI only: the live HubSpot",
+      "grepFiles": [
+        "src/components/shared/Footer.jsx"
+      ]
+    },
+    {
+      "id": "forms-are-ui-only",
+      "claim": "PartnerForm and PadelApply call preventDefault and send no request; their live forms post to real backends that were not inspected.",
+      "cite": "src/components/pages/partnerships/PartnerForm.jsx:25",
+      "keyword": "UI only — no network request",
+      "grepFiles": [
+        "src/components/pages/partnerships/PartnerForm.jsx"
+      ]
+    },
+    {
+      "id": "blog-slug-typographic-apostrophe",
+      "claim": "One blog slug contains a typographic apostrophe: percent-encoded in the sitemap and ia.json, raw in specs/cms/blog.json; react-router decodes the param.",
+      "cite": "specs/sitemap.txt:62",
+      "keyword": "it%E2%80%99s-time-to-build-on-your-data",
+      "grepFiles": [
+        "specs/sitemap.txt"
+      ]
+    },
+    {
+      "id": "data-apps-hero-live-iframe",
+      "claim": "The /data-apps hero image is an iframe to the third-party deployment forecast-slider.vercel.app.",
+      "cite": "src/pages/data/data-apps.jsx:37",
+      "keyword": "forecast-slider.vercel.app",
+      "grepFiles": [
+        "src/pages/data/data-apps.jsx"
+      ]
+    },
+    {
+      "id": "dev-only-shared-route",
+      "claim": "/__shared (src/pages/SharedDemo.jsx) is a dev QA route mounted in App.jsx but not a real site route.",
+      "cite": "src/App.jsx:94",
+      "keyword": "/__shared",
+      "grepFiles": [
+        "src/App.jsx"
+      ]
+    },
+    {
+      "id": "gameboy-loads-three-from-jsdelivr",
+      "claim": "Per CLONE_SPEC section 0 the Game Boy iframe still loads three.js, three-mesh-bvh and three-bvh-csg from jsDelivr: an external dependency of the original design.",
+      "cite": "CLONE_SPEC.md:26",
+      "keyword": "jsDelivr",
+      "grepFiles": [
+        "CLONE_SPEC.md"
+      ]
+    },
+    {
+      "id": "britti-sans-trial-fonts",
+      "claim": "The Britti Sans families in src/index.css are TRIAL-licence font files taken from the live site.",
+      "cite": "src/index.css:16",
+      "keyword": "Britti Sans Trial",
+      "grepFiles": [
+        "src/index.css"
+      ]
+    },
+    {
+      "id": "about-team-live-typos",
+      "claim": "About team data keeps live typos (\"lan Ahuja\", \"llonna Babakhanova\", lowercase L for capital I).",
+      "cite": "src/pages/data/about.jsx:1",
+      "keyword": "lowercase-L",
+      "grepFiles": [
+        "src/pages/data/about.jsx"
+      ]
+    }
+  ],
+  "tokenAudit": {
+    "preexistingEvidenceRefs": 219,
+    "badBefore": 0,
+    "typographyEntriesCompared": 26,
+    "tailwindColoursCompared": 60,
+    "recheckedBy": "extraction/verify_all.py tokens check (needs the source tree)"
+  },
+  "citationChecks": [
+    {
+      "ref": "CLONE_SPEC.md:104",
+      "contains": [
+        "### 2.1 Structure and box model"
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:240",
+      "contains": [
+        "## 5. Navbar: tablet (810–1099) and mobile (<810)",
+        "## 5. Navbar: tablet"
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:26",
+      "contains": [
+        "It still loads three.js"
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:277",
+      "contains": [
+        "## 6. Hero: Game Boy app"
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:28",
+      "contains": [
+        "Third-party scripts on the live page are **not part of the design**"
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:284",
+      "contains": [
+        "### 6.2 States and motion"
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:292",
+      "contains": [
+        "### 6.3 View: Customers"
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:300",
+      "contains": [
+        "### 6.4 Views: Product"
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:378",
+      "contains": [
+        "Intercom, Framer editor bar and analytics scripts are intentionally excluded."
+      ]
+    },
+    {
+      "ref": "CLONE_SPEC.md:41",
+      "contains": [
+        "matchMedia('(max-width: 700px)"
+      ]
+    },
+    {
+      "ref": "index.html:24",
+      "contains": [
+        "<script type=\"module\" src=\"/src/main.jsx\"></script>"
+      ]
+    },
+    {
+      "ref": "specs/SHARED.md:352",
+      "contains": [
+        "Intercom, Framer editor bar and analytics scripts are excluded."
+      ]
+    },
+    {
+      "ref": "specs/cms-templates.md:9",
+      "contains": [
+        "Content rule."
+      ]
+    },
+    {
+      "ref": "specs/cms/blog.json:5",
+      "contains": [
+        "\"posts\": ["
+      ]
+    },
+    {
+      "ref": "specs/cms/customer-stories.json:5",
+      "contains": [
+        "\"stories\": ["
+      ]
+    },
+    {
+      "ref": "specs/cms/customer-stories.json:52",
+      "contains": [
+        "\"statCount\""
+      ]
+    },
+    {
+      "ref": "specs/cms/events.json:15",
+      "contains": [
+        "\"details\": ["
+      ]
+    },
+    {
+      "ref": "specs/cms/events.json:4",
+      "contains": [
+        "\"events\": ["
+      ]
+    },
+    {
+      "ref": "specs/sitemap.txt:62",
+      "contains": [
+        "it%E2%80%99s-time-to-build-on-your-data"
+      ]
+    },
+    {
+      "ref": "src/App.jsx:2",
+      "contains": [
+        "import { BrowserRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom'"
+      ]
+    },
+    {
+      "ref": "src/App.jsx:84",
+      "contains": [
+        "pages with the announcement banner"
+      ]
+    },
+    {
+      "ref": "src/App.jsx:94",
+      "contains": [
+        "<Route path=\"/__shared\" element={<SharedDemo />} />"
+      ]
+    },
+    {
+      "ref": "src/components/Hero.jsx:20",
+      "contains": [
+        "function SeoContent"
+      ]
+    },
+    {
+      "ref": "src/components/Hero.jsx:3-7",
+      "contains": [
+        "iframe placement",
+        "const MOBILE_QUERY"
+      ]
+    },
+    {
+      "ref": "src/components/Hero.jsx:4",
+      "contains": [
+        "≥1100  top 104"
+      ]
+    },
+    {
+      "ref": "src/components/Hero.jsx:5",
+      "contains": [
+        "810–1099  top 64"
+      ]
+    },
+    {
+      "ref": "src/components/Hero.jsx:58",
+      "contains": [
+        "const src ="
+      ]
+    },
+    {
+      "ref": "src/components/Hero.jsx:6",
+      "contains": [
+        "<810   top 0"
+      ]
+    },
+    {
+      "ref": "src/components/Hero.jsx:62",
+      "contains": [
+        "<iframe"
+      ]
+    },
+    {
+      "ref": "src/components/Hero.jsx:62-69",
+      "contains": [
+        "<iframe",
+        "className=\"block h-full w-full"
+      ]
+    },
+    {
+      "ref": "src/components/MobileNav.jsx:254",
+      "contains": [
+        "nav-hamburger-bar"
+      ]
+    },
+    {
+      "ref": "src/components/Navbar.jsx:117",
+      "contains": [
+        "Rive logo"
+      ]
+    },
+    {
+      "ref": "src/components/Navbar.jsx:245",
+      "contains": [
+        "Framer auto-fill grid"
+      ]
+    },
+    {
+      "ref": "src/components/TalkModal.jsx:11-15",
+      "contains": [
+        "§4 \"Talk to our team\" modal",
+        "Motion (live)"
+      ]
+    },
+    {
+      "ref": "src/components/TalkModal.jsx:15",
+      "contains": [
+        "Motion (live)"
+      ]
+    },
+    {
+      "ref": "src/components/TalkModal.jsx:31",
+      "contains": [
+        "top-[64px]",
+        "desk:top-[104px]"
+      ]
+    },
+    {
+      "ref": "src/components/cms/BlogListing.jsx:102",
+      "contains": [
+        "narrowCta ? <CtaBand narrow lines=\"\" />"
+      ]
+    },
+    {
+      "ref": "src/components/cms/BlogListing.jsx:19",
+      "contains": [
+        "h-[72px] overflow-hidden tab:h-[120px] desk:h-[168px]"
+      ]
+    },
+    {
+      "ref": "src/components/cms/BlogListing.jsx:32",
+      "contains": [
+        "Lightning<span"
+      ]
+    },
+    {
+      "ref": "src/components/cms/BlogListing.jsx:45",
+      "contains": [
+        "§2.2 filter bar"
+      ]
+    },
+    {
+      "ref": "src/components/cms/BlogListing.jsx:47",
+      "contains": [
+        "overflow-x-auto [scrollbar-width:none]"
+      ]
+    },
+    {
+      "ref": "src/components/cms/BlogListing.jsx:80",
+      "contains": [
+        "§2.3 grid: 3 / 2 / 1 columns"
+      ]
+    },
+    {
+      "ref": "src/components/cms/BlogListing.jsx:82",
+      "contains": [
+        "grid-cols-1 tab:grid-cols-2 desk:grid-cols-3"
+      ]
+    },
+    {
+      "ref": "src/components/cms/BlogListing.jsx:9",
+      "contains": [
+        "cms-templates §2: /blog and /blog-categories/:slug share this template"
+      ]
+    },
+    {
+      "ref": "src/components/cms/Breadcrumb.jsx:5",
+      "contains": [
+        "export default function Breadcrumb"
+      ]
+    },
+    {
+      "ref": "src/components/cms/InlineCta.jsx:16",
+      "contains": [
+        "mt-[60px] flex gap-[10px] tab:mt-auto"
+      ]
+    },
+    {
+      "ref": "src/components/cms/InlineCta.jsx:30",
+      "contains": [
+        "mx-auto mt-[15px] block h-[152px] w-[109px]"
+      ]
+    },
+    {
+      "ref": "src/components/cms/InlineCta.jsx:5",
+      "contains": [
+        "cms-templates §1.7 inline post CTA"
+      ]
+    },
+    {
+      "ref": "src/components/cms/InlineCta.jsx:9",
+      "contains": [
+        "tab:h-[152px] tab:flex-row tab:pl-[40px] tab:pr-[57px]"
+      ]
+    },
+    {
+      "ref": "src/components/cms/PlaceholderBody.jsx:3",
+      "contains": [
+        "Neutral placeholder rich text"
+      ]
+    },
+    {
+      "ref": "src/components/cms/PostCard.jsx:12",
+      "contains": [
+        "post.thumbnail.path"
+      ]
+    },
+    {
+      "ref": "src/components/cms/PostCard.jsx:4",
+      "contains": [
+        "cms-templates §1.4 blog post card"
+      ]
+    },
+    {
+      "ref": "src/components/cms/PostCard.jsx:6",
+      "contains": [
+        "export default function PostCard"
+      ]
+    },
+    {
+      "ref": "src/components/cms/RelatedHeader.jsx:12",
+      "contains": [
+        "h-[96px] flex-col items-start justify-center gap-[16px]",
+        "tab:h-[40px] tab:flex-row tab:items-center tab:justify-between"
+      ]
+    },
+    {
+      "ref": "src/components/cms/RelatedHeader.jsx:4",
+      "contains": [
+        "cms-templates §3.3 / §6.2 \"Related articles\"",
+        "cms-templates §3.3 / §6.2"
+      ]
+    },
+    {
+      "ref": "src/components/cms/SearchModal.jsx:6",
+      "contains": [
+        "cms-templates §2.2 site-search modal"
+      ]
+    },
+    {
+      "ref": "src/components/cms/SearchModal.jsx:8",
+      "contains": [
+        "export default function SearchModal"
+      ]
+    },
+    {
+      "ref": "src/components/cms/StoryCard.jsx:4",
+      "contains": [
+        "cms-templates §1.5 customer story card"
+      ]
+    },
+    {
+      "ref": "src/components/cms/StoryCard.jsx:7",
+      "contains": [
+        "export default function StoryCard"
+      ]
+    },
+    {
+      "ref": "src/components/cms/StoryCard.jsx:8",
+      "contains": [
+        "tab:pl-[64px] tab:pr-[24px]"
+      ]
+    },
+    {
+      "ref": "src/components/cms/Toc.jsx:4",
+      "contains": [
+        "cms-templates §3.2 table of contents"
+      ]
+    },
+    {
+      "ref": "src/components/cms/richtext.css:151",
+      "contains": [
+        "inline code"
+      ]
+    },
+    {
+      "ref": "src/components/legal/LegalPage.jsx:100",
+      "contains": [
+        "<div className=\"flex min-w-0 max-w-[768px] flex-1 flex-col gap-[20px]\">"
+      ]
+    },
+    {
+      "ref": "src/components/legal/LegalPage.jsx:56",
+      "contains": [
+        "§2 LegalPage template"
+      ]
+    },
+    {
+      "ref": "src/components/legal/LegalPage.jsx:73",
+      "contains": [
+        "px-[20px] tab:px-[64px]"
+      ]
+    },
+    {
+      "ref": "src/components/legal/LegalPage.jsx:96",
+      "contains": [
+        "WrapperContent: padding-left 40"
+      ]
+    },
+    {
+      "ref": "src/components/legal/legal.css:201",
+      "contains": [
+        ".ld404-body { line-height: 32px; }"
+      ]
+    },
+    {
+      "ref": "src/components/legal/legal.css:205-208",
+      "contains": [
+        ".ld404-art {",
+        "height: 108px;"
+      ]
+    },
+    {
+      "ref": "src/components/legal/legal.css:236",
+      "contains": [
+        ".ld404-l4 { animation-name"
+      ]
+    },
+    {
+      "ref": "src/components/legal/legal.css:240",
+      "contains": [
+        "prefers-reduced-motion: reduce"
+      ]
+    },
+    {
+      "ref": "src/components/legal/legal.css:240-242",
+      "contains": [
+        "@media (prefers-reduced-motion: reduce)",
+        ".ld404-layer:not(.ld404-l0)"
+      ]
+    },
+    {
+      "ref": "src/components/legal/placeholder.js:1",
+      "contains": [
+        "Neutral placeholder copy for the legal pages"
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Stickers.jsx:3",
+      "contains": [
+        "draggable stickers"
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Stickers.jsx:5",
+      "contains": [
+        "whileHover scale 1.05"
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Stickers.jsx:67",
+      "contains": [
+        "transition: 'transform 0.2s ease'"
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Timeline.jsx:11",
+      "contains": [
+        "function Reveal"
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Timeline.jsx:38",
+      "contains": [
+        "transition: 'opacity 0.55s"
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Timeline.jsx:4",
+      "contains": [
+        "specs/company-pages.md §7.3 \"Our story so far\""
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Timeline.jsx:45",
+      "contains": [
+        "const PHOTO_SHADOW"
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Timeline.jsx:7",
+      "contains": [
+        "Scroll reveal (src)"
+      ]
+    },
+    {
+      "ref": "src/components/pages/about/Timeline.jsx:9",
+      "contains": [
+        "Phone: one column"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/BuildSteps.jsx:17",
+      "contains": [
+        "grid-cols-1 tab:grid-cols-2"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/BuildSteps.jsx:3",
+      "contains": [
+        "\"Build it yourself\""
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/EventHero.jsx:11",
+      "contains": [
+        "px-[24px] pb-[51px] pt-[48px] tab:px-[72px] tab:pt-[72px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/EventHero.jsx:3",
+      "contains": [
+        "Event Hero"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/Replay.jsx:14",
+      "contains": [
+        "px-[24px] py-[56px] tab:px-[65px] tab:py-[72px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/Replay.jsx:33",
+      "contains": [
+        "<iframe"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/Replay.jsx:34",
+      "contains": [
+        "autoplay=0"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/Replay.jsx:4",
+      "contains": [
+        "\"Replay\": 1100 wide"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/Speakers.jsx:13",
+      "contains": [
+        "grid-cols-1 gap-[20px] px-[24px] pt-[20px] tab:grid-cols-3"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/Speakers.jsx:14",
+      "contains": [
+        "items.map((s)"
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/Speakers.jsx:3",
+      "contains": [
+        "\"Built live by\""
+      ]
+    },
+    {
+      "ref": "src/components/pages/beyond-copilots/Speakers.jsx:5",
+      "contains": [
+        "filter brightness(1.2) grayscale(1)"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/AlternatingRows.jsx:22",
+      "contains": [
+        "tab:h-[408px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/AlternatingRows.jsx:4",
+      "contains": [
+        "\"Desktop / Cards\""
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/BiHero.jsx:12",
+      "contains": [
+        "tab:min-h-[604px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/BiHero.jsx:5",
+      "contains": [
+        "specs/product-pages.md §2.7 Hero"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/DarkTestimonial.jsx:15",
+      "contains": [
+        "const STAT_SHADOW"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/DarkTestimonial.jsx:17",
+      "contains": [
+        "Testimonials"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/DarkTestimonial.jsx:29",
+      "contains": [
+        "tab:min-h-[296px] tab:flex-row"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/VideoSection.jsx:10",
+      "contains": [
+        "p-[16px] tab:p-[40px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/VideoSection.jsx:3",
+      "contains": [
+        "\"Video Section\": 1280×821"
+      ]
+    },
+    {
+      "ref": "src/components/pages/bi-as-code/VideoSection.jsx:5",
+      "contains": [
+        "NOT autoplay",
+        "<video"
+      ]
+    },
+    {
+      "ref": "src/components/pages/context-layer/ContextDiagram.jsx:1",
+      "contains": [
+        "context-diagram.html"
+      ]
+    },
+    {
+      "ref": "src/components/pages/embedding/IntegrationPaths.jsx:16",
+      "contains": [
+        "grid w-full grid-cols-1 tab:grid-cols-2"
+      ]
+    },
+    {
+      "ref": "src/components/pages/embedding/IntegrationPaths.jsx:3",
+      "contains": [
+        "\"Integration paths\""
+      ]
+    },
+    {
+      "ref": "src/components/pages/embedding/RiveHero.jsx:19",
+      "contains": [
+        "new Rive({"
+      ]
+    },
+    {
+      "ref": "src/components/pages/embedding/Testimonial.jsx:3",
+      "contains": [
+        "Testimonial (photo left)"
+      ]
+    },
+    {
+      "ref": "src/components/pages/embedding/Testimonial.jsx:9",
+      "contains": [
+        "tab:min-h-[424px] tab:items-center tab:px-[64px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/fintech/RoleAccordion.jsx:10",
+      "contains": [
+        "const ADVANCE_MS = 4400"
+      ]
+    },
+    {
+      "ref": "src/components/pages/fintech/RoleAccordion.jsx:3",
+      "contains": [
+        "role accordion (\"Built for every fintech role\")"
+      ]
+    },
+    {
+      "ref": "src/components/pages/fintech/RoleAccordion.jsx:87",
+      "contains": [
+        "@media (prefers-reduced-motion: reduce)"
+      ]
+    },
+    {
+      "ref": "src/components/pages/integrations/IntegrationsDirectory.jsx:11",
+      "contains": [
+        "function Tag"
+      ]
+    },
+    {
+      "ref": "src/components/pages/integrations/IntegrationsDirectory.jsx:20",
+      "contains": [
+        "export default function IntegrationsDirectory"
+      ]
+    },
+    {
+      "ref": "src/components/pages/integrations/IntegrationsDirectory.jsx:4",
+      "contains": [
+        "specs/product-pages.md §2.9 \"All\" section"
+      ]
+    },
+    {
+      "ref": "src/components/pages/integrations/IntegrationsDirectory.jsx:9",
+      "contains": [
+        "Phone: the TOC becomes a horizontally scrolling row"
+      ]
+    },
+    {
+      "ref": "src/components/pages/integrations/IntegrationsHero.jsx:10",
+      "contains": [
+        "tab:min-h-[295px] tab:pl-[64px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/integrations/IntegrationsHero.jsx:3",
+      "contains": [
+        "Hero: 1280×295"
+      ]
+    },
+    {
+      "ref": "src/components/pages/lightdash-security/LogoTile.jsx:3",
+      "contains": [
+        "48×48 logo tile"
+      ]
+    },
+    {
+      "ref": "src/components/pages/lightdash-security/LogoTile.jsx:4",
+      "contains": [
+        "export default function LogoTile"
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/PartnerForm.jsx:18",
+      "contains": [
+        "const INPUT ="
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/PartnerForm.jsx:25",
+      "contains": [
+        "UI only — no network request"
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/PartnerForm.jsx:3",
+      "contains": [
+        "partner form (UI only)",
+        "UI only"
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/PartnerForm.jsx:31",
+      "contains": [
+        "grid-cols-1 gap-[16px] tab:grid-cols-2"
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/PartnerForm.jsx:9",
+      "contains": [
+        "const FIELDS = ["
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/TestimonialCarousel.jsx:11",
+      "contains": [
+        "const ROTATE_MS = 4000"
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/TestimonialCarousel.jsx:13",
+      "contains": [
+        "const PEOPLE = ["
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/TestimonialCarousel.jsx:4",
+      "contains": [
+        "§6.4 \"Partner/Testimonial\" carousel"
+      ]
+    },
+    {
+      "ref": "src/components/pages/partnerships/TestimonialCarousel.jsx:9",
+      "contains": [
+        "Phone (\"Phone Testimonial\")"
+      ]
+    },
+    {
+      "ref": "src/components/pages/playground/PlaygroundBlocks.jsx:11",
+      "contains": [
+        "export function EmptyCardBand"
+      ]
+    },
+    {
+      "ref": "src/components/pages/playground/PlaygroundBlocks.jsx:14",
+      "contains": [
+        "h-[300px] w-full max-w-[1152px] rounded-[12px] bg-white shadow-ld-cta-card tab:h-[549px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/playground/PlaygroundBlocks.jsx:3",
+      "contains": [
+        "specs/product-pages.md §2.11: the WIP blocks under the hero"
+      ]
+    },
+    {
+      "ref": "src/components/pages/playground/PlaygroundBlocks.jsx:34",
+      "contains": [
+        "grid-cols-2 tab:grid-cols-3 min-[1200px]:grid-cols-6"
+      ]
+    },
+    {
+      "ref": "src/components/pages/playground/PlaygroundBlocks.jsx:54",
+      "contains": [
+        "export function EmptyBlocks"
+      ]
+    },
+    {
+      "ref": "src/components/pages/playground/PlaygroundHero.jsx:11",
+      "contains": [
+        "Words carry [data-pg-word] hooks."
+      ]
+    },
+    {
+      "ref": "src/components/pages/playground/PlaygroundHero.jsx:4",
+      "contains": [
+        "Hero: 1280×407.8"
+      ]
+    },
+    {
+      "ref": "src/components/pages/playground/PlaygroundHero.jsx:43",
+      "contains": [
+        "tab:text-[76px] tab:leading-[68.4px]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/pricing/CompareTable.jsx:11",
+      "contains": [
+        "grid-cols-[249px_repeat(3,173px)]"
+      ]
+    },
+    {
+      "ref": "src/components/pages/pricing/CompareTable.jsx:5",
+      "contains": [
+        "\"Compare our plans\" table"
+      ]
+    },
+    {
+      "ref": "src/components/pages/pricing/PlanCard.jsx:16",
+      "contains": [
+        "plan.corner.src"
+      ]
+    },
+    {
+      "ref": "src/components/pages/pricing/PlanCard.jsx:4",
+      "contains": [
+        "specs/company-pages.md §2.2 Plan card"
+      ]
+    },
+    {
+      "ref": "src/components/pages/pricing/PlanCard.jsx:7",
+      "contains": [
+        "export default function PlanCard"
+      ]
+    },
+    {
+      "ref": "src/components/pages/startups/PixelTiles.jsx:25",
+      "contains": [
+        "export default function PixelTiles"
+      ]
+    },
+    {
+      "ref": "src/components/pages/startups/PixelTiles.jsx:6",
+      "contains": [
+        "Phone (reference"
+      ]
+    },
+    {
+      "ref": "src/components/pages/startups/RiveDashboard.jsx:11",
+      "contains": [
+        "const SRC ="
+      ]
+    },
+    {
+      "ref": "src/components/pages/startups/RiveDashboard.jsx:23",
+      "contains": [
+        "artboard: 'dashboard'"
+      ]
+    },
+    {
+      "ref": "src/components/pages/startups/RiveDashboard.jsx:24",
+      "contains": [
+        "stateMachines: 'main_interaction'"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AccordionTabs.jsx:105",
+      "contains": [
+        "current.image"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AccordionTabs.jsx:34",
+      "contains": [
+        "const open = (i)"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AccordionTabs.jsx:4",
+      "contains": [
+        "SHARED §7.3 accordion tabs"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AccordionTabs.jsx:48",
+      "contains": [
+        "rounded-[6px] bg-brand-purple px-[14px]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AccordionTabs.jsx:53",
+      "contains": [
+        "max-[809.98px]:text-[18px]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AccordionTabs.jsx:7",
+      "contains": [
+        "Behaviour: click a closed tab"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AccordionTabs.jsx:71-85",
+      "contains": [
+        "aria-expanded={isOpen}",
+        "ld-tab-progress"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AnnouncementBar.jsx:46-47",
+      "contains": [
+        "tab:inline",
+        "tab:hidden"
+      ]
+    },
+    {
+      "ref": "src/components/shared/AnnouncementBar.jsx:5-9",
+      "contains": [
+        "export const ANNOUNCEMENT",
+        "linkLabel"
+      ]
+    },
+    {
+      "ref": "src/components/shared/BlogCards.jsx:19",
+      "contains": [
+        "grid w-full grid-cols-1 gap-[16px] tab:grid-cols-3"
+      ]
+    },
+    {
+      "ref": "src/components/shared/BlogCards.jsx:20-33",
+      "contains": [
+        "posts.map((p)",
+        "ld-blog-meta-13"
+      ]
+    },
+    {
+      "ref": "src/components/shared/BlogCards.jsx:4",
+      "contains": [
+        "SHARED §7.9 \"Blog Posts Section\""
+      ]
+    },
+    {
+      "ref": "src/components/shared/Button.jsx:35",
+      "contains": [
+        "export const BUTTON_VARIANTS"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Button.jsx:6-31",
+      "contains": [
+        "const BASE =",
+        "'v1-light':"
+      ]
+    },
+    {
+      "ref": "src/components/shared/ComparisonTable.jsx:3",
+      "contains": [
+        "SHARED §7.7 \"Maintenance Comparison\""
+      ]
+    },
+    {
+      "ref": "src/components/shared/ComparisonTable.jsx:31",
+      "contains": [
+        "role=\"table\" className=\"relative hidden w-full tab:block\""
+      ]
+    },
+    {
+      "ref": "src/components/shared/CtaBand.jsx:10",
+      "contains": [
+        "export const CTA_DEFAULTS"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CtaBand.jsx:12",
+      "contains": [
+        "tabletLabel"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CtaBand.jsx:21",
+      "contains": [
+        "narrow: /blog index variant"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CtaBand.jsx:28",
+      "contains": [
+        "export default function CtaBand"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CtaBand.jsx:42",
+      "contains": [
+        "max-[809.98px]:!bg-white"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CtaBand.jsx:5",
+      "contains": [
+        "SHARED §9 \"Snake Game CTA\""
+      ]
+    },
+    {
+      "ref": "src/components/shared/CustomerQuote.jsx:109",
+      "contains": [
+        "{stats.map((s)"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CustomerQuote.jsx:4",
+      "contains": [
+        "SHARED §7.6 \"Customer Quote\""
+      ]
+    },
+    {
+      "ref": "src/components/shared/CustomerQuote.jsx:54-70",
+      "contains": [
+        "{/* Quote Block */}",
+        "</blockquote>"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CustomerQuote.jsx:56",
+      "contains": [
+        "px-[28px] py-[56px] tab:px-[64px] tab:py-[72px]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CustomerQuote.jsx:70",
+      "contains": [
+        "<blockquote"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Faq.jsx:16-36",
+      "contains": [
+        "function FaqItem",
+        "ld-faq-a-14"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Faq.jsx:44",
+      "contains": [
+        "export const FAQ_LEADS"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Faq.jsx:5",
+      "contains": [
+        "SHARED §7.8 FAQ"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Faq.jsx:55",
+      "contains": [
+        "export default function Faq("
+      ]
+    },
+    {
+      "ref": "src/components/shared/Faq.jsx:6",
+      "contains": [
+        "Items toggle independently"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Faq.jsx:64",
+      "contains": [
+        "tab:w-[42.94%] tab:shrink-0 tab:p-[64px]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/FeatureCards.jsx:10",
+      "contains": [
+        "'1x3':"
+      ]
+    },
+    {
+      "ref": "src/components/shared/FeatureCards.jsx:12",
+      "contains": [
+        "'3x2':"
+      ]
+    },
+    {
+      "ref": "src/components/shared/FeatureCards.jsx:14",
+      "contains": [
+        "'3x2-images':"
+      ]
+    },
+    {
+      "ref": "src/components/shared/FeatureCards.jsx:16",
+      "contains": [
+        "'2x2':"
+      ]
+    },
+    {
+      "ref": "src/components/shared/FeatureCards.jsx:25",
+      "contains": [
+        "mobileCarousel"
+      ]
+    },
+    {
+      "ref": "src/components/shared/FeatureCards.jsx:4",
+      "contains": [
+        "SHARED §7.4 feature card grids"
+      ]
+    },
+    {
+      "ref": "src/components/shared/FeatureCards.jsx:8-16",
+      "contains": [
+        "const LAYOUT = {",
+        "'2x2':"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Footer.jsx:3",
+      "contains": [
+        "SHARED §10"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Footer.jsx:36",
+      "contains": [
+        "export const G2_BADGES"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Footer.jsx:6-47",
+      "contains": [
+        "export const FOOTER_COLUMNS",
+        "export const SOCIALS"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Footer.jsx:65-70",
+      "contains": [
+        "function NewsletterForm",
+        "onSubmit"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Footer.jsx:66",
+      "contains": [
+        "UI only: the live HubSpot"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Frame.jsx:13-30",
+      "contains": [
+        "export function Lines",
+        "export function PageFrame"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Frame.jsx:30-47",
+      "contains": [
+        "export function PageFrame",
+        "export function Row"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Frame.jsx:47-57",
+      "contains": [
+        "export function Row",
+        "export function Spacer"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Frame.jsx:57-65",
+      "contains": [
+        "export function Spacer",
+        "export function Section"
+      ]
+    },
+    {
+      "ref": "src/components/shared/HatchedSpacer.jsx:11",
+      "contains": [
+        "h-[39px] w-full shrink-0 tab:h-[80px]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/HatchedSpacer.jsx:3",
+      "contains": [
+        "SHARED §7.10 hatched spacer band"
+      ]
+    },
+    {
+      "ref": "src/components/shared/IconBenefits.jsx:15",
+      "contains": [
+        "px-[20px] pb-[58px] tab:px-[65px]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/IconBenefits.jsx:23-42",
+      "contains": [
+        "items.map((it) =>",
+        "it.body"
+      ]
+    },
+    {
+      "ref": "src/components/shared/IconBenefits.jsx:29",
+      "contains": [
+        "it.icon"
+      ]
+    },
+    {
+      "ref": "src/components/shared/IconBenefits.jsx:3",
+      "contains": [
+        "SHARED §7.5 icon benefits grid"
+      ]
+    },
+    {
+      "ref": "src/components/shared/LogosRow.jsx:3",
+      "contains": [
+        "SHARED §7.1 \"Heading\""
+      ]
+    },
+    {
+      "ref": "src/components/shared/LogosRow.jsx:41",
+      "contains": [
+        "grid-cols-2 tab:grid-cols-3 min-[1200px]:grid-cols-6"
+      ]
+    },
+    {
+      "ref": "src/components/shared/LogosRow.jsx:6",
+      "contains": [
+        "export const DEFAULT_LOGOS"
+      ]
+    },
+    {
+      "ref": "src/components/shared/LogosRow.jsx:6-13",
+      "contains": [
+        "export const DEFAULT_LOGOS",
+        "alt: 'fal',"
+      ]
+    },
+    {
+      "ref": "src/components/shared/MobileCarousel.jsx:15",
+      "contains": [
+        "export function useMobileCarousel"
+      ]
+    },
+    {
+      "ref": "src/components/shared/MobileCarousel.jsx:32",
+      "contains": [
+        "behavior: 'smooth'"
+      ]
+    },
+    {
+      "ref": "src/components/shared/MobileCarousel.jsx:37-45",
+      "contains": [
+        "export function CarouselDots",
+        "Go to slide"
+      ]
+    },
+    {
+      "ref": "src/components/shared/MobileCarousel.jsx:4",
+      "contains": [
+        "Phone (<810) swipe carousel"
+      ]
+    },
+    {
+      "ref": "src/components/shared/PillTabs.jsx:22",
+      "contains": [
+        "flex w-full flex-row flex-nowrap gap-[8px] overflow-clip"
+      ]
+    },
+    {
+      "ref": "src/components/shared/PillTabs.jsx:29-33",
+      "contains": [
+        "role=\"tab\"",
+        "shadow-[inset_0_0_0_1px_#E5E7EB]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/PillTabs.jsx:3",
+      "contains": [
+        "product-pages §3.2 \"Tabbed Visual\""
+      ]
+    },
+    {
+      "ref": "src/components/shared/PillTabs.jsx:32",
+      "contains": [
+        "ld-btn-spring"
+      ]
+    },
+    {
+      "ref": "src/components/shared/PillTabs.jsx:4",
+      "contains": [
+        "Click swaps active pill"
+      ]
+    },
+    {
+      "ref": "src/components/shared/README.md:21",
+      "contains": [
+        "Load animations (hero fade and pixel drop) are left to the Ani"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:106",
+      "contains": [
+        "h-[60px] w-full shrink-0 tab:h-[100px]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:113",
+      "contains": [
+        "px-[24px] tab:px-0"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:33",
+      "contains": [
+        "export const HERO_PIXEL_SETS"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:4",
+      "contains": [
+        "SHARED §7.1 centred product Hero"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:44-46",
+      "contains": [
+        "export const HERO_BUTTONS",
+        "REGISTER_URL"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:51",
+      "contains": [
+        "On phones only the y=0"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:54-65",
+      "contains": [
+        "function HeroPixel",
+        "data-pixel-drop={drop}"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:7",
+      "contains": [
+        "MOTION (not implemented here, Animation agent)"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SectionHero.jsx:79",
+      "contains": [
+        "@param image        HeroImage contents"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SmartLink.jsx:4-16",
+      "contains": [
+        "export function toPath",
+        "export default function SmartLink"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SnakeGame.jsx:10",
+      "contains": [
+        "const DEMO_TICK = 190"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SnakeGame.jsx:11",
+      "contains": [
+        "const PLAY_TICK = 135"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SnakeGame.jsx:96",
+      "contains": [
+        "export default function SnakeGame"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SplitRow.jsx:13",
+      "contains": [
+        "px-[24px] py-[72px] tab:min-h-[464px]"
+      ]
+    },
+    {
+      "ref": "src/components/shared/SplitRow.jsx:3",
+      "contains": [
+        "SHARED §8 \"Split Content\""
+      ]
+    },
+    {
+      "ref": "src/components/shared/mobile-carousel.css:1",
+      "contains": [
+        "Phone swipe carousel"
+      ]
+    },
+    {
+      "ref": "src/components/shared/mobile-carousel.css:4",
+      "contains": [
+        ".ld-mcar.ld-mcar"
+      ]
+    },
+    {
+      "ref": "src/components/shared/useCalInline.js:8-9",
+      "contains": [
+        "CAL_EMBED_JS",
+        "CAL_ORIGIN"
+      ]
+    },
+    {
+      "ref": "src/components/shared/useCalInline.js:9",
+      "contains": [
+        "CAL_ORIGIN"
+      ]
+    },
+    {
+      "ref": "src/index.css:16",
+      "contains": [
+        "font-family: 'Britti Sans Trial Semibold'"
+      ]
+    },
+    {
+      "ref": "src/index.css:196",
+      "contains": [
+        ".nav-panel[data-active"
+      ]
+    },
+    {
+      "ref": "src/index.css:202",
+      "contains": [
+        ".nav-hamburger-bar {"
+      ]
+    },
+    {
+      "ref": "src/index.css:208",
+      "contains": [
+        ".nav-phone {"
+      ]
+    },
+    {
+      "ref": "src/index.css:246",
+      "contains": [
+        ".talk-frame {",
+        ".talk-frame"
+      ]
+    },
+    {
+      "ref": "src/index.css:249",
+      "contains": [
+        ".talk-card {"
+      ]
+    },
+    {
+      "ref": "src/index.css:324",
+      "contains": [
+        "@keyframes ld-tab-progress",
+        "ld-tab-progress"
+      ]
+    },
+    {
+      "ref": "src/index.css:328",
+      "contains": [
+        ".ld-tab-progress {"
+      ]
+    },
+    {
+      "ref": "src/index.css:335",
+      "contains": [
+        ".ld-faq-acc {"
+      ]
+    },
+    {
+      "ref": "src/index.css:347",
+      "contains": [
+        ".ld-faq-icon {"
+      ]
+    },
+    {
+      "ref": "src/index.css:382",
+      "contains": [
+        ".snk-pop { animation: snk-pop 260ms"
+      ]
+    },
+    {
+      "ref": "src/index.css:388",
+      "contains": [
+        ".snk-pop { animation: none; }"
+      ]
+    },
+    {
+      "ref": "src/layouts/InnerLayout.jsx:11",
+      "contains": [
+        "navbar (106; 64 below 1100)"
+      ]
+    },
+    {
+      "ref": "src/layouts/InnerLayout.jsx:29-32",
+      "contains": [
+        "bannerRef.current",
+        "translateY"
+      ]
+    },
+    {
+      "ref": "src/layouts/InnerLayout.jsx:32",
+      "contains": [
+        "translateY(${-Math.min"
+      ]
+    },
+    {
+      "ref": "src/layouts/InnerLayout.jsx:35",
+      "contains": [
+        "window.addEventListener('scroll', apply"
+      ]
+    },
+    {
+      "ref": "src/motion/curves.js:12",
+      "contains": [
+        "spring { bounce: 0, duration: 0.6 }"
+      ]
+    },
+    {
+      "ref": "src/motion/curves.js:5",
+      "contains": [
+        "spring { bounce: 0.2, duration: 0.4 }"
+      ]
+    },
+    {
+      "ref": "src/motion/useRouteMotion.js:18",
+      "contains": [
+        "roadmap     [data-roadmap-pixel]"
+      ]
+    },
+    {
+      "ref": "src/motion/useRouteMotion.js:20-31",
+      "contains": [
+        "const PAGES = {",
+        "'/roadmap'"
+      ]
+    },
+    {
+      "ref": "src/motion/useRouteMotion.js:31",
+      "contains": [
+        "'/roadmap'"
+      ]
+    },
+    {
+      "ref": "src/motion/useRouteMotion.js:51-63",
+      "contains": [
+        "function roadmapDelays",
+        "delays.set"
+      ]
+    },
+    {
+      "ref": "src/motion/useRouteMotion.js:75",
+      "contains": [
+        "prefers-reduced-motion: reduce"
+      ]
+    },
+    {
+      "ref": "src/motion/useRouteMotion.js:87",
+      "contains": [
+        "const kf = frames(SPRING_B02_D04"
+      ]
+    },
+    {
+      "ref": "src/motion/useRouteMotion.js:94",
+      "contains": [
+        "SPRING_B0_D06, (p) =>",
+        "delay: 1000"
+      ]
+    },
+    {
+      "ref": "src/navData.js:19",
+      "contains": [
+        "CAL_EMBED_URL"
+      ]
+    },
+    {
+      "ref": "src/navData.js:23-71",
+      "contains": [
+        "export const PRODUCT_ITEMS",
+        "export const RESOURCE_COL3"
+      ]
+    },
+    {
+      "ref": "src/navData.js:23-85",
+      "contains": [
+        "export const PRODUCT_ITEMS",
+        "export const CUSTOMER_GROUPS"
+      ]
+    },
+    {
+      "ref": "src/navData.js:39-48",
+      "contains": [
+        "MOBILE_PRODUCT_ITEMS",
+        "MOBILE_PLATFORM_ITEMS"
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:100",
+      "contains": [
+        "text-[32px] leading-[35.2px] tracking-[-0.96px] text-black tab:text-[48px]"
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:11",
+      "contains": [
+        "function TeamMember"
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:20",
+      "contains": [
+        "transition-opacity duration-[400ms]"
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:43",
+      "contains": [
+        "1 · Hero: spacer 100"
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:46",
+      "contains": [
+        "STICKERS_PHONE} className=\"top-[35px] tab:hidden\""
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:47",
+      "contains": [
+        "h-[56px] w-full tab:h-[100px]"
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:73",
+      "contains": [
+        "4 · Team grid: 5 × 173"
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:75",
+      "contains": [
+        "max-w-[326px] grid-cols-2 gap-y-[48px] tab:max-w-[865px] tab:grid-cols-5"
+      ]
+    },
+    {
+      "ref": "src/pages/About.jsx:96",
+      "contains": [
+        "6 · \"Join us - we are hiring!\""
+      ]
+    },
+    {
+      "ref": "src/pages/BeyondCopilots.jsx:17",
+      "contains": [
+        "HatchedSpacer opacity={0.6}"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogCategory.jsx:7",
+      "contains": [
+        "Empty categories render no cards"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:13",
+      "contains": [
+        "cms-templates §3.1: decorative 24×24 squares"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:23",
+      "contains": [
+        "deskOnly: p.x < 1100"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:26",
+      "contains": [
+        "const TOC_ITEMS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:53",
+      "contains": [
+        "<Breadcrumb"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:63",
+      "contains": [
+        "tab:text-[48px] tab:leading-[52.8px]"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:87",
+      "contains": [
+        "desk:w-[681px]"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:88",
+      "contains": [
+        "<InlineCta"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:92",
+      "contains": [
+        "<aside className=\"relative hidden w-[368px]"
+      ]
+    },
+    {
+      "ref": "src/pages/BlogPost.jsx:99",
+      "contains": [
+        "<RelatedHeader"
+      ]
+    },
+    {
+      "ref": "src/pages/ContextLayer.jsx:21-22",
+      "contains": [
+        "<1200 (reference/pages/context-layer-390.png)",
+        "Icon grid → Comparison → FAQ → Quote → 1x3 → CTA"
+      ]
+    },
+    {
+      "ref": "src/pages/ContextLayer.jsx:39",
+      "contains": [
+        "cl-mtabs min-[1200px]:hidden"
+      ]
+    },
+    {
+      "ref": "src/pages/ContextLayer.jsx:48",
+      "contains": [
+        "quoteSize=\"32\""
+      ]
+    },
+    {
+      "ref": "src/pages/ContextLayer.jsx:51",
+      "contains": [
+        "order-3 min-[1200px]:order-none"
+      ]
+    },
+    {
+      "ref": "src/pages/ConversationalAnalytics.jsx:17",
+      "contains": [
+        "Phone (<810): the Customer Quote is re-ordered after the CTA band"
+      ]
+    },
+    {
+      "ref": "src/pages/ConversationalAnalytics.jsx:38",
+      "contains": [
+        "order-1 tab:order-none"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStories.jsx:14",
+      "contains": [
+        "tab:text-[56px] tab:leading-[56px]"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStories.jsx:20",
+      "contains": [
+        "From migration to rollout"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStories.jsx:25",
+      "contains": [
+        "LISTED_STORIES.map"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStories.jsx:7",
+      "contains": [
+        "cms-templates §5: /customer-stories index"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:111",
+      "contains": [
+        "<RelatedHeader title=\"Related stories\""
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:12",
+      "contains": [
+        "const COMPANY_BLURB"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:15",
+      "contains": [
+        "// §6.1 sidebar company card"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:16",
+      "contains": [
+        "function CompanyCard"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:43",
+      "contains": [
+        "// cms-templates §6"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:70",
+      "contains": [
+        "hidden font-normal text-[#666D80] tab:block",
+        "A conversation with"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:87",
+      "contains": [
+        "stats: N equal cells (desktop)"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:90",
+      "contains": [
+        "grow basis-full flex-col"
+      ]
+    },
+    {
+      "ref": "src/pages/CustomerStory.jsx:99",
+      "contains": [
+        "className=\"desk:hidden\""
+      ]
+    },
+    {
+      "ref": "src/pages/DataApps.jsx:21-23",
+      "contains": [
+        "<1200 (Appendix B + reference/pages/data-apps-390.png)",
+        "Flex `order` reorders"
+      ]
+    },
+    {
+      "ref": "src/pages/DataApps.jsx:23",
+      "contains": [
+        "the three Appendix B sections are hidden at ≥1200"
+      ]
+    },
+    {
+      "ref": "src/pages/DataApps.jsx:38-42",
+      "contains": [
+        "<iframe",
+        "allow="
+      ]
+    },
+    {
+      "ref": "src/pages/Embedding.jsx:33",
+      "contains": [
+        "hidden tab:flex"
+      ]
+    },
+    {
+      "ref": "src/pages/Embedding.jsx:40",
+      "contains": [
+        "<HatchedSpacer />"
+      ]
+    },
+    {
+      "ref": "src/pages/Event.jsx:10",
+      "contains": [
+        "§7.2 event details card"
+      ]
+    },
+    {
+      "ref": "src/pages/Event.jsx:11",
+      "contains": [
+        "function DetailsCard"
+      ]
+    },
+    {
+      "ref": "src/pages/Event.jsx:46",
+      "contains": [
+        "§7.1 header rows span the left 832 px"
+      ]
+    },
+    {
+      "ref": "src/pages/Event.jsx:47",
+      "contains": [
+        "w-full tab:w-[370px] desk:w-[832px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Event.jsx:49",
+      "contains": [
+        "rounded-[4px] border border-solid border-[#D8D5F5]"
+      ]
+    },
+    {
+      "ref": "src/pages/Event.jsx:78",
+      "contains": [
+        "tab:w-[365px] tab:shrink-0 desk:w-[384px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:113",
+      "contains": [
+        "3 · \"Why does traditional BI fail fintechs?\""
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:138",
+      "contains": [
+        "4 · Benefit Section"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:166",
+      "contains": [
+        "5 · Testimonials: bg #F6F8FA"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:224",
+      "contains": [
+        "6 · Dark band"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:270",
+      "contains": [
+        "7 · Graphic Border: full-bleed 1440×60 pixel band"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:274",
+      "contains": [
+        "graphic-border-"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:32",
+      "contains": [
+        "1 · Hero: 1280 × 604"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:56",
+      "contains": [
+        "max-tab:order-1"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:72",
+      "contains": [
+        "Illustration 564 × 604"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:73",
+      "contains": [
+        "desk:ml-auto desk:w-[564px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:90",
+      "contains": [
+        "2 · Trusted by: heading 87"
+      ]
+    },
+    {
+      "ref": "src/pages/Fintech.jsx:97",
+      "contains": [
+        "tab:h-[122px]"
+      ]
+    },
+    {
+      "ref": "src/pages/InteractiveDashboards.jsx:6",
+      "contains": [
+        "Phone: §4 says the Quote moves after the CTA"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:102",
+      "contains": [
+        "3 · \"Lightdashとは何ですか？\""
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:103",
+      "contains": [
+        "desk:min-h-[577px] desk:pt-[100px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:110",
+      "contains": [
+        "4 · Grid: two linked cards 567×505"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:128",
+      "contains": [
+        "5 · Testimonial"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:33",
+      "contains": [
+        "const ABOUT_COPY"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:41",
+      "contains": [
+        "Both cards link to the Ubie story on live"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:6",
+      "contains": [
+        "desktop layout ≥1440"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:65",
+      "contains": [
+        "1 · Hero"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:82",
+      "contains": [
+        "https://www.lightdash.com/start"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:91",
+      "contains": [
+        "2 · Trusted by: grid 5"
+      ]
+    },
+    {
+      "ref": "src/pages/Jp.jsx:94",
+      "contains": [
+        "grid-cols-[repeat(3,84.66px)]"
+      ]
+    },
+    {
+      "ref": "src/pages/LightdashSecurity.jsx:10",
+      "contains": [
+        "const CUSTOMERS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/LightdashSecurity.jsx:38",
+      "contains": [
+        "1 · Spacer 100"
+      ]
+    },
+    {
+      "ref": "src/pages/LightdashSecurity.jsx:39",
+      "contains": [
+        "h-[56px] w-full tab:h-[100px]"
+      ]
+    },
+    {
+      "ref": "src/pages/LightdashSecurity.jsx:60",
+      "contains": [
+        "5 · Badges: two 104×104"
+      ]
+    },
+    {
+      "ref": "src/pages/LightdashSecurity.jsx:62",
+      "contains": [
+        "alt=\"AICPA SOC2\""
+      ]
+    },
+    {
+      "ref": "src/pages/LightdashSecurity.jsx:69",
+      "contains": [
+        "grid-cols-[repeat(2,115px)] gap-[64px] tab:grid-cols-[repeat(6,64px)]"
+      ]
+    },
+    {
+      "ref": "src/pages/NotFound.jsx:30",
+      "contains": [
+        "glitch stack"
+      ]
+    },
+    {
+      "ref": "src/pages/NotFound.jsx:5",
+      "contains": [
+        "/404 and the catch-all"
+      ]
+    },
+    {
+      "ref": "src/pages/PadelApply.jsx:14",
+      "contains": [
+        "const SKILLS ="
+      ]
+    },
+    {
+      "ref": "src/pages/PadelApply.jsx:18-20",
+      "contains": [
+        "const WRAP =",
+        "const CONTROL ="
+      ]
+    },
+    {
+      "ref": "src/pages/PadelApply.jsx:31",
+      "contains": [
+        "Button variant \"Incomplete\""
+      ]
+    },
+    {
+      "ref": "src/pages/PadelApply.jsx:43",
+      "contains": [
+        "max-w-[760px] flex-col gap-[32px] px-[24px]"
+      ]
+    },
+    {
+      "ref": "src/pages/PadelApply.jsx:44",
+      "contains": [
+        "Introduction: gap 16"
+      ]
+    },
+    {
+      "ref": "src/pages/PadelApply.jsx:46",
+      "contains": [
+        "LIGHTDASH LEAGUES: Padel"
+      ]
+    },
+    {
+      "ref": "src/pages/PadelApply.jsx:7",
+      "contains": [
+        "Form is UI only"
+      ]
+    },
+    {
+      "ref": "src/pages/PadelApply.jsx:9",
+      "contains": [
+        "const FIELDS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:10",
+      "contains": [
+        "const PARTNERS"
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:104",
+      "contains": [
+        "1 · Hero: border all sides"
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:139",
+      "contains": [
+        "text-[42px] leading-[39.9px] tracking-[-1.44px] text-[#1F1F1F] tab:text-[72px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:145",
+      "contains": [
+        "href=\"#partner-form\""
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:159",
+      "contains": [
+        "2 · Partner logos: heading"
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:179",
+      "contains": [
+        "max-tab:scale-[0.4]"
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:18",
+      "contains": [
+        "const REASONS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:189",
+      "contains": [
+        "3 · \"Why Lightdash?\": 2 columns × 640"
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:245",
+      "contains": [
+        "5 · \"Why become a Lightdash partner?\""
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:276",
+      "contains": [
+        "6 · Form Section (#partner-form)"
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:46",
+      "contains": [
+        "const BENEFITS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/Partnerships.jsx:9",
+      "contains": [
+        "https://https://northstaranalytics.co.uk/"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:15",
+      "contains": [
+        "1 · Hero: 209 tall"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:16",
+      "contains": [
+        "Phone: the 56px text wraps inside a 282px box"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:18",
+      "contains": [
+        "h-[180px] w-full shrink-0 flex-col justify-end"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:27",
+      "contains": [
+        "hero Image: opacity 0"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:41",
+      "contains": [
+        "3 · Pricings"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:43",
+      "contains": [
+        "tab:grid-cols-[repeat(2,367px)] tab:justify-center desk:grid-cols-[repeat(3,376px)]"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:50",
+      "contains": [
+        "4 · Logo grid: border 0 1 1 1"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:51",
+      "contains": [
+        "grid-cols-2 pb-[60px] pt-[24px] tab:grid-cols-6"
+      ]
+    },
+    {
+      "ref": "src/pages/Pricing.jsx:74",
+      "contains": [
+        "6 · TablesWrapper"
+      ]
+    },
+    {
+      "ref": "src/pages/PrivacyPolicy.jsx:40",
+      "contains": [
+        "<LegalPage"
+      ]
+    },
+    {
+      "ref": "src/pages/Roadmap.jsx:10",
+      "contains": [
+        "function Item"
+      ]
+    },
+    {
+      "ref": "src/pages/Roadmap.jsx:113",
+      "contains": [
+        "Lightdash Public Roadmap"
+      ]
+    },
+    {
+      "ref": "src/pages/Roadmap.jsx:136",
+      "contains": [
+        "6 · FooterGrid: 2 × 640 cards"
+      ]
+    },
+    {
+      "ref": "src/pages/Roadmap.jsx:149",
+      "contains": [
+        "Lines sides=\"b\" className=\"tab:hidden\""
+      ]
+    },
+    {
+      "ref": "src/pages/Roadmap.jsx:8",
+      "contains": [
+        "§8.1 item (\"Variant 1\")"
+      ]
+    },
+    {
+      "ref": "src/pages/Roadmap.jsx:90",
+      "contains": [
+        "hidden tab:block"
+      ]
+    },
+    {
+      "ref": "src/pages/SelfImprovingAnalytics.jsx:34",
+      "contains": [
+        "fixedColumns"
+      ]
+    },
+    {
+      "ref": "src/pages/SelfImprovingAnalytics.jsx:35",
+      "contains": [
+        "Statement heading: 326 tall"
+      ]
+    },
+    {
+      "ref": "src/pages/SelfImprovingAnalytics.jsx:36",
+      "contains": [
+        "tab:min-h-[326px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Start.jsx:10",
+      "contains": [
+        "const BULLETS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/Start.jsx:29",
+      "contains": [
+        "desk:h-[747px] desk:flex-row desk:items-center desk:gap-[32px] desk:p-[64px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Start.jsx:5",
+      "contains": [
+        "/start — specs/company-pages.md §3"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:108",
+      "contains": [
+        "https://lightdash.cal.com/lightdash/startups"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:120",
+      "contains": [
+        "2 · HeroImage: 883 tall"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:121",
+      "contains": [
+        "hidden w-full flex-col items-center gap-[48px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:14",
+      "contains": [
+        "const BENEFITS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:150",
+      "contains": [
+        "3 · \"Why you should apply…\""
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:168",
+      "contains": [
+        "4 · Features: 2 rows × 3 cols"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:169",
+      "contains": [
+        "grid w-full grid-cols-1 bg-white tab:grid-cols-3"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:215",
+      "contains": [
+        "6 · \"What makes Lightdash the best BI tool for startups\""
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:228",
+      "contains": [
+        "7 · Grid: padding 24/65/72, 2 × 565"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:229",
+      "contains": [
+        "gap-x-[20px] gap-y-[19px] px-[16px]"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:259",
+      "contains": [
+        "9 · Testimonial: padding 64"
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:31",
+      "contains": [
+        "const CARDS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:9",
+      "contains": [
+        "const QUALIFY = ["
+      ]
+    },
+    {
+      "ref": "src/pages/Startups.jsx:94",
+      "contains": [
+        "1 · Hero"
+      ]
+    },
+    {
+      "ref": "src/pages/TermsOfService.jsx:9",
+      "contains": [
+        "const SECTIONS = ["
+      ]
+    },
+    {
+      "ref": "src/pages/TermsOfService.jsx:98",
+      "contains": [
+        "updated=\"Last Updated"
+      ]
+    },
+    {
+      "ref": "src/pages/_PageStub.jsx:4",
+      "contains": [
+        "Temporary placeholder used by route stubs"
+      ]
+    },
+    {
+      "ref": "src/pages/data/about.jsx:1",
+      "contains": [
+        "lowercase-L"
+      ]
+    },
+    {
+      "ref": "src/pages/data/about.jsx:22",
+      "contains": [
+        "export const TEAM"
+      ]
+    },
+    {
+      "ref": "src/pages/data/about.jsx:55",
+      "contains": [
+        "export const TIMELINE"
+      ]
+    },
+    {
+      "ref": "src/pages/data/about.jsx:7",
+      "contains": [
+        "export const STICKERS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/beyond-copilots.js:10-25",
+      "contains": [
+        "export const hero",
+        "meta:"
+      ]
+    },
+    {
+      "ref": "src/pages/data/beyond-copilots.js:28",
+      "contains": [
+        "export const replay"
+      ]
+    },
+    {
+      "ref": "src/pages/data/beyond-copilots.js:33",
+      "contains": [
+        "youtube.com/embed/"
+      ]
+    },
+    {
+      "ref": "src/pages/data/beyond-copilots.js:38",
+      "contains": [
+        "export const split"
+      ]
+    },
+    {
+      "ref": "src/pages/data/beyond-copilots.js:44",
+      "contains": [
+        "export const steps"
+      ]
+    },
+    {
+      "ref": "src/pages/data/beyond-copilots.js:78",
+      "contains": [
+        "export const speakers"
+      ]
+    },
+    {
+      "ref": "src/pages/data/bi-as-code.jsx:107",
+      "contains": [
+        "export const testimonial"
+      ]
+    },
+    {
+      "ref": "src/pages/data/bi-as-code.jsx:140",
+      "contains": [
+        "export const stats"
+      ]
+    },
+    {
+      "ref": "src/pages/data/bi-as-code.jsx:30",
+      "contains": [
+        "export const hero"
+      ]
+    },
+    {
+      "ref": "src/pages/data/bi-as-code.jsx:56",
+      "contains": [
+        "export const video"
+      ]
+    },
+    {
+      "ref": "src/pages/data/bi-as-code.jsx:63",
+      "contains": [
+        "export const rows"
+      ]
+    },
+    {
+      "ref": "src/pages/data/bi-as-code.jsx:97",
+      "contains": [
+        "export const tools"
+      ]
+    },
+    {
+      "ref": "src/pages/data/cms.js:12",
+      "contains": [
+        "export const POSTS = blogJson.posts"
+      ]
+    },
+    {
+      "ref": "src/pages/data/cms.js:20",
+      "contains": [
+        "export const FILTER_PILLS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/cms.js:35",
+      "contains": [
+        "export const RELATED_POSTS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/cms.js:41",
+      "contains": [
+        "export const LISTED_STORIES"
+      ]
+    },
+    {
+      "ref": "src/pages/data/context-layer.jsx:73",
+      "contains": [
+        "export const comparison"
+      ]
+    },
+    {
+      "ref": "src/pages/data/conversational-analytics.jsx:101",
+      "contains": [
+        "export const benefits"
+      ]
+    },
+    {
+      "ref": "src/pages/data/conversational-analytics.jsx:140",
+      "contains": [
+        "photo:"
+      ]
+    },
+    {
+      "ref": "src/pages/data/conversational-analytics.jsx:30",
+      "contains": [
+        "inline-svg-1-heroimage"
+      ]
+    },
+    {
+      "ref": "src/pages/data/data-apps.jsx:153",
+      "contains": [
+        "export const blog"
+      ]
+    },
+    {
+      "ref": "src/pages/data/data-apps.jsx:37",
+      "contains": [
+        "forecast-slider.vercel.app"
+      ]
+    },
+    {
+      "ref": "src/pages/data/data-apps.jsx:61",
+      "contains": [
+        "export const pillTabs"
+      ]
+    },
+    {
+      "ref": "src/pages/data/embedding.jsx:83",
+      "contains": [
+        "export const paths"
+      ]
+    },
+    {
+      "ref": "src/pages/data/fintech.jsx:1",
+      "contains": [
+        "mismatched FAQ"
+      ]
+    },
+    {
+      "ref": "src/pages/data/fintech.jsx:14",
+      "contains": [
+        "export const REASONS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/fintech.jsx:20",
+      "contains": [
+        "export const BENEFITS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/fintech.jsx:24",
+      "contains": [
+        "benefit-01-illustration"
+      ]
+    },
+    {
+      "ref": "src/pages/data/fintech.jsx:6",
+      "contains": [
+        "export const FIN_LOGOS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/fintech.jsx:7",
+      "contains": [
+        "hypebeast-X1Rd8CLxwvNU4Tf1KCa2OWalT0"
+      ]
+    },
+    {
+      "ref": "src/pages/data/integrations.js:20",
+      "contains": [
+        "export const INTEGRATIONS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/integrations.js:54",
+      "contains": [
+        "export const hero"
+      ]
+    },
+    {
+      "ref": "src/pages/data/integrations.js:8",
+      "contains": [
+        "export const CATEGORIES"
+      ]
+    },
+    {
+      "ref": "src/pages/data/interactive-dashboards.jsx:57",
+      "contains": [
+        "export const explore"
+      ]
+    },
+    {
+      "ref": "src/pages/data/metrics-catalog.jsx:35",
+      "contains": [
+        "export const pillTabs"
+      ]
+    },
+    {
+      "ref": "src/pages/data/playground.js:17",
+      "contains": [
+        "export const logos"
+      ]
+    },
+    {
+      "ref": "src/pages/data/playground.js:7",
+      "contains": [
+        "export const hero"
+      ]
+    },
+    {
+      "ref": "src/pages/data/pricing.jsx:114",
+      "contains": [
+        "export const TABLES"
+      ]
+    },
+    {
+      "ref": "src/pages/data/pricing.jsx:13",
+      "contains": [
+        "export const PLANS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/pricing.jsx:85",
+      "contains": [
+        "export const PRICING_LOGOS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/roadmap.js:13",
+      "contains": [
+        "export const ITEMS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/roadmap.js:6",
+      "contains": [
+        "export const COLUMNS"
+      ]
+    },
+    {
+      "ref": "src/pages/data/self-improving-analytics.jsx:33",
+      "contains": [
+        "export const statement"
+      ]
+    },
+    {
+      "ref": "src/pages/data/self-improving-analytics.jsx:86",
+      "contains": [
+        "export const comparison"
+      ]
+    },
+    {
+      "ref": "tailwind.config.js:3",
+      "contains": [
+        "export default {"
+      ]
+    },
+    {
+      "ref": "vite.config.js:2",
+      "contains": [
+        "import react from '@vitejs/plugin-react'"
+      ]
+    }
+  ]
+}

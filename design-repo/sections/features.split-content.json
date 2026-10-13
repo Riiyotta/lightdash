@@ -1,0 +1,67 @@
+{
+  "id": "features.split-content",
+  "category": "FEATURES",
+  "purpose": "Split row (>=464 tall, padding 72/65): left h2-48 heading + lead (max 551), right 551x320 image. Used by /context-layer and /beyond-copilots.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/SplitRow.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 9,
+        "observedMaxWords": 7,
+        "wcRef": "features.split-content.heading"
+      },
+      "lead": {
+        "type": "text",
+        "required": true,
+        "maxWords": 60,
+        "observedMaxWords": 48,
+        "wcRef": "features.split-content.lead"
+      },
+      "image": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "screenshot.product-ui",
+          "illustration.hero-diagram"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "columns stack (flex-col) with 24px side padding; image becomes full width 551/320 aspect",
+      "cssCite": "src/components/shared/SplitRow.jsx:13"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/SplitRow.jsx:3",
+    "src/pages/data/beyond-copilots.js:38"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "beyond-copilots",
+    "product-context-layer"
+  ]
+}

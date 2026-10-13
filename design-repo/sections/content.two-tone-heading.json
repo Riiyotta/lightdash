@@ -1,0 +1,62 @@
+{
+  "id": "content.two-tone-heading",
+  "category": "CONTENT",
+  "purpose": "Centred 32px two-tone heading with subtitle (spacer 58 above): used twice on /startups (\"Why you should apply...\" and \"What makes Lightdash the best BI tool for startups\").",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Startups.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "content.two-tone-heading.heading"
+      },
+      "accent": {
+        "type": "text",
+        "required": false,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "content.two-tone-heading.accent"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": false,
+        "maxWords": 27,
+        "observedMaxWords": 21,
+        "wcRef": "content.two-tone-heading.subtitle"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/pages/Startups.jsx:150",
+    "src/pages/Startups.jsx:215"
+  ],
+  "notes": [
+    "No responsive change is separately specified in source for this block."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "startups"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "integration-card",
+  "kind": "component",
+  "purpose": "240-tall dashed integration card: logo, name, category tag, body.",
+  "props": [
+    "name",
+    "category",
+    "logo",
+    "body"
+  ],
+  "usedBySections": [
+    "listing.integrations-directory"
+  ],
+  "measuredFrom": [
+    "src/components/pages/integrations/IntegrationsDirectory.jsx:20"
+  ],
+  "schemaVersion": "1.0.0"
+}

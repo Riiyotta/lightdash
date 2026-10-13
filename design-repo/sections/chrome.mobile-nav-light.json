@@ -1,0 +1,83 @@
+{
+  "id": "chrome.mobile-nav-light",
+  "category": "CHROME",
+  "purpose": "Phone / tablet nav (light variant): 64px bar with hamburger and a full-height accordion panel. Fixed content from src/navData.js (MOBILE_* arrays, whose copy differs from desktop).",
+  "status": "measured",
+  "composable": true,
+  "fixedContent": true,
+  "implementedBy": "src/components/MobileNav.jsx (variant=\"light\")",
+  "content": {
+    "fields": {},
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "chromeAxis": [
+      "light-banner-cta",
+      "light-cta",
+      "light-no-cta"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "nav-spring",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "nav-spring": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "nav-spring": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(min-width: 1100px)",
+      "change": "not rendered; the desktop Navbar replaces it",
+      "cssCite": "CLONE_SPEC.md:240"
+    }
+  ],
+  "measuredFrom": [
+    "src/navData.js:39-48",
+    "src/components/MobileNav.jsx:254",
+    "CLONE_SPEC.md:240"
+  ],
+  "notes": [
+    "Mobile copy differs from desktop (e.g. \"Explore the story behind every number\"); see navData.js MOBILE_PRODUCT_ITEMS."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "about",
+    "beyond-copilots",
+    "blog-category",
+    "blog-index",
+    "blog-post",
+    "customer-stories",
+    "customer-story",
+    "event",
+    "fintech",
+    "integrations",
+    "jp",
+    "legal",
+    "lightdash-security",
+    "not-found",
+    "padel-apply",
+    "partnerships",
+    "playground",
+    "pricing",
+    "product-bi-as-code",
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-data-apps",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-metrics-catalog",
+    "product-self-improving-analytics",
+    "roadmap",
+    "start",
+    "startups"
+  ]
+}

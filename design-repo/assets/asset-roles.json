@@ -1,0 +1,361 @@
+{
+  "$description": "Closed asset-role vocabulary for every media field in the PageSpec schema. Derived by reading the real usage sites in src/ and the contracts in sections/. The source is a REAL, live company (Lightdash): real customer and partner trademarks, real named employees / speakers / authors, real compliance marks, a real Cal.com booking calendar, real forms, a real YouTube video and real blog / story content.",
+  "generationPolicies": {
+    "may-generate-new": "Abstract decoration with no real referent; new generation allowed within tokens.",
+    "must-reuse-exact": "Brand-owned library asset; reuse the exact approved file, never regenerate or alter.",
+    "must-not-fabricate": "Real third-party trademark or personal-identity / proprietary editorial asset; never generate, alter or reproduce from memory. Only a human-supplied licensed reference, else a neutral placeholder.",
+    "must-not-reuse-live-endpoint": "Never bind to a live third-party endpoint / id / host from the source site; leave an assetRef slot for a human to fill."
+  },
+  "pinnedPolicies": {
+    "animation.rive": "must-reuse-exact",
+    "badge.compliance": "must-not-fabricate",
+    "decor.pixel-tile": "may-generate-new",
+    "decor.sticker": "may-generate-new",
+    "embed.booking-cal": "must-not-reuse-live-endpoint",
+    "embed.live-demo": "must-not-reuse-live-endpoint",
+    "embed.youtube": "must-not-reuse-live-endpoint",
+    "form.submission-endpoint": "must-not-reuse-live-endpoint",
+    "icon.pixel-art": "may-generate-new",
+    "illustration.hero-diagram": "must-reuse-exact",
+    "illustration.html-diagram": "must-reuse-exact",
+    "image.cms-cover": "must-not-fabricate",
+    "logo.customer-partner": "must-not-fabricate",
+    "logo.integration": "must-not-fabricate",
+    "photo.person-avatar": "must-not-fabricate",
+    "photo.team-member": "must-not-fabricate",
+    "screenshot.product-ui": "must-reuse-exact",
+    "video.self-hosted": "must-reuse-exact",
+    "app.iframe-bundle": "must-reuse-exact"
+  },
+  "pinNote": "Every role is pinned to one specific policy, not merely to membership in the 4-value set: verify_all.py fails if any role is changed to a different valid value (proven by prove_drift.sh pinned_asset_role_changed).",
+  "forbiddenLiveHostPatterns": [
+    {
+      "pattern": "cal\\.com",
+      "why": "Cal.com booking (embed.booking-cal)"
+    },
+    {
+      "pattern": "youtube\\.com",
+      "why": "YouTube replay / channel (embed.youtube)"
+    },
+    {
+      "pattern": "youtu\\.be",
+      "why": "YouTube short links"
+    },
+    {
+      "pattern": "vercel\\.app",
+      "why": "third-party demo deployment (embed.live-demo)"
+    },
+    {
+      "pattern": "ashbyhq\\.com",
+      "why": "live job board (the careers button targets jobs.ashbyhq.com/lightdash)"
+    },
+    {
+      "pattern": "hsforms|hubspot|hs-scripts",
+      "why": "HubSpot forms / scripts (form.submission-endpoint)"
+    },
+    {
+      "pattern": "framerusercontent\\.com",
+      "why": "Framer-hosted original assets (specs/cms/*.json \"source\" fields)"
+    },
+    {
+      "pattern": "oneleet\\.com",
+      "why": "real security trust centre (trust.oneleet.com/lightdash)"
+    },
+    {
+      "pattern": "meetup\\.com",
+      "why": "real meetup event (the /jp button)"
+    }
+  ],
+  "forbiddenLiveHostNote": "semantic_validate.py rejects any PageSpec string value matching these case-insensitive patterns (rule NO_LIVE_ENDPOINT). Brand-owned product hosts (app.lightdash.cloud, demo.lightdash.com, docs.lightdash.com, changelog.lightdash.com, github.com/lightdash) are allowed as open-external targets.",
+  "licensing": {
+    "repoVisibility": "PRIVATE. Do NOT make this repository or design-repo.zip public. It cites a real company's real customers, employees, quotes, logos, compliance marks, roadmap and live endpoints.",
+    "fonts": "Britti Sans Trial (Regular/Medium/Semibold/Bold) are TRIAL-licence fonts downloaded from the live site (src/index.css font-face names \"Britti Sans Trial ...\"); Pixelify Sans, Fragment Mono, Geist and Inter are open fonts. A licence is required before redistributing or using Britti commercially.",
+    "cloneCopyNote": "Article, story, event and legal bodies in the clone are placeholder text (specs/cms-templates.md line 9, src/components/legal/placeholder.js): the real long-form copy is deliberately absent. Product-page, pricing and company-page copy IS real marketing copy and quotes of the real company.",
+    "thirdPartyScripts": "Intercom, Clarity, RudderStack, Warmly, HubSpot and the Framer editor bar are NOT part of the design (CLONE_SPEC.md line 28 in section 0, and section 9; specs/SHARED.md line 352). Intercom, Clarity, RudderStack and Warmly appear in the saved original HTML; none of them is in the clone (index.html loads only /src/main.jsx): never recreate them. HubSpot is referenced only in specs/comments (the footer newsletter and forms are UI-only)."
+  },
+  "roles": {
+    "animation.rive": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "usedByFields": [
+        "hero.product-visual.visual",
+        "hero.startups-visual.visual"
+      ],
+      "guidance": "Brand-owned Rive files (nav wordmark, embedding hero, startups dashboard). Reuse the exact .riv; do not author new state machines.",
+      "evidence": [
+        "src/components/pages/embedding/RiveHero.jsx:19",
+        "src/components/pages/startups/RiveDashboard.jsx:11"
+      ],
+      "usedInPageSpec": true
+    },
+    "badge.compliance": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "usedByFields": [
+        "features.startups-benefits-grid.items[].icon",
+        "proof.compliance-badges.badges[]"
+      ],
+      "guidance": "Real compliance / award marks of a real company (AICPA SOC2, GDPR, SOC2/HIPAA rings, 8 G2 badges in the footer). Never generate a badge or imply a certification the new site does not hold.",
+      "evidence": [
+        "src/pages/LightdashSecurity.jsx:62",
+        "src/components/shared/Footer.jsx:36"
+      ],
+      "usedInPageSpec": true
+    },
+    "decor.pixel-tile": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "conversion.plan-cards.plans[].corner",
+        "decor.pixel-border-band.band"
+      ],
+      "guidance": "Decorative pixel tiles, corners, bands (hero clusters, plan-card corners, post pixels, graphic border). Pure decoration without a real referent: new generation allowed within the palette.",
+      "evidence": [
+        "src/components/shared/SectionHero.jsx:33",
+        "src/components/pages/pricing/PlanCard.jsx:16"
+      ],
+      "usedInPageSpec": true
+    },
+    "decor.sticker": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "hero.about-stickers.stickers[]"
+      ],
+      "guidance": "The six About-page stickers (abstract brand doodles, draggable). New stickers may be generated; they carry no real person or trademark.",
+      "evidence": [
+        "src/pages/data/about.jsx:7"
+      ],
+      "usedInPageSpec": true
+    },
+    "embed.booking-cal": {
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "pinned": true,
+      "usedByFields": [
+        "chrome.talk-modal.booking",
+        "conversion.booking-split.booking"
+      ],
+      "guidance": "The Cal.com booking embed (lightdash.cal.com/lightdash/talk, namespace talk-modal / start-talk, embed.js from app.cal.com). A LIVE third-party endpoint: a generated PageSpec carries an assetRef slot only; never the host, handle or embed URL.",
+      "evidence": [
+        "src/components/shared/useCalInline.js:9",
+        "src/navData.js:19"
+      ],
+      "usedInPageSpec": true
+    },
+    "embed.live-demo": {
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "pinned": true,
+      "usedByFields": [
+        "hero.product-visual.visual"
+      ],
+      "guidance": "The /data-apps hero iframe pointing at forecast-slider.vercel.app (a third-party deployment). Never reuse the URL; leave an assetRef slot.",
+      "evidence": [
+        "src/pages/data/data-apps.jsx:37"
+      ],
+      "usedInPageSpec": true
+    },
+    "embed.youtube": {
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "pinned": true,
+      "usedByFields": [
+        "content.youtube-replay.video"
+      ],
+      "guidance": "The /beyond-copilots YouTube replay (video id S9NJrqRYRhs, real speakers) and its poster. Never reuse the video id, embed URL or live URL.",
+      "evidence": [
+        "src/pages/data/beyond-copilots.js:33"
+      ],
+      "usedInPageSpec": true
+    },
+    "form.submission-endpoint": {
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "pinned": true,
+      "usedByFields": [
+        "conversion.padel-form.submission",
+        "conversion.partner-form.submission"
+      ],
+      "guidance": "Where a form posts. The clone submits nothing (PartnerForm / PadelApply preventDefault; Footer newsletter UI-only) but the live forms post to real backends (HubSpot / Framer form backend) that were not inspected. Never bind a real form id/endpoint; leave a slot.",
+      "evidence": [
+        "src/components/pages/partnerships/PartnerForm.jsx:3",
+        "src/pages/PadelApply.jsx:7",
+        "src/components/shared/Footer.jsx:66"
+      ],
+      "usedInPageSpec": true
+    },
+    "icon.pixel-art": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "content.event-details-card.rows[].icon",
+        "content.roadmap-board.columns[].icon",
+        "content.roadmap-community.cards[].icon",
+        "features.fintech-reasons.reasons[].icon",
+        "features.icon-benefits-grid.items[].icon",
+        "features.startups-benefits-grid.items[].icon"
+      ],
+      "guidance": "Abstract 16-84px pixel-art icons with no real referent (benefit icons, roadmap column icons, face icons, event detail icons). New icons may be generated within the pixel style and token colours.",
+      "evidence": [
+        "src/components/shared/IconBenefits.jsx:29",
+        "src/pages/data/roadmap.js:6"
+      ],
+      "usedInPageSpec": true
+    },
+    "illustration.hero-diagram": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "usedByFields": [
+        "features.fintech-benefit-cards.cards[].image",
+        "features.split-content.image",
+        "hero.product-visual.visual"
+      ],
+      "guidance": "Brand-owned hero SVG / PNG diagrams (e.g. conversational-analytics heroimage SVG, fintech benefit illustrations, split-row images). Reuse the exact file.",
+      "evidence": [
+        "src/pages/data/conversational-analytics.jsx:30",
+        "src/pages/data/fintech.jsx:24"
+      ],
+      "usedInPageSpec": true
+    },
+    "illustration.html-diagram": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "usedByFields": [
+        "hero.product-visual.visual"
+      ],
+      "guidance": "The /context-layer HTML context diagram (src/components/pages/context-layer/context-diagram.html, 1200 lines, own prefers-reduced-motion rules). Brand-owned: reuse exactly.",
+      "evidence": [
+        "src/components/pages/context-layer/ContextDiagram.jsx:1"
+      ],
+      "usedInPageSpec": true
+    },
+    "image.cms-cover": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "usedByFields": [
+        "content.blog-posts.posts[].thumbnail",
+        "content.story-timeline.years[].entries[].photo",
+        "content.youtube-replay.poster",
+        "features.jp-link-cards.cards[].image"
+      ],
+      "guidance": "Real blog thumbnails, story banners/logos and YouTube poster images produced by the company (public/assets/cms, ~129 files). Proprietary editorial imagery: do not regenerate or imitate; supply licensed images or placeholders.",
+      "evidence": [
+        "src/pages/data/cms.js:12",
+        "src/components/cms/PostCard.jsx:12"
+      ],
+      "usedInPageSpec": true
+    },
+    "logo.customer-partner": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "usedByFields": [
+        "content.story-sidebar.logo",
+        "hero.event-ondemand.cohostLogos[]",
+        "proof.customer-quote-stats.logo",
+        "proof.customer-quote.logo",
+        "proof.logo-tiles-named.tiles[].logo",
+        "proof.logos-grid-12.logos[]",
+        "proof.logos-row.logos[]",
+        "proof.logos-strip-5.logos[]",
+        "proof.partner-logos.logos[]",
+        "proof.speakers-grid.speakers[].companyLogo"
+      ],
+      "guidance": "Real customer, partner and co-host trademarks (nav customer cells, 6-logo rows, pricing / playground grids, fintech strip, partner strip, security tiles, event co-hosts). Never generate, redraw, recolour, reorder to imply endorsement or reproduce from memory. Only a human-supplied licensed asset may fill the slot, otherwise a neutral placeholder. Identify logos by alt text: several source file names do not match the logo they contain (public/assets/pages/fintech/hypebeast-*.png renders Wise, kraken-*.png renders Titanbay; pricing.jsx maps the \"octopus energy\" alt to alma-*.svg).",
+      "evidence": [
+        "src/components/shared/LogosRow.jsx:6",
+        "src/pages/data/fintech.jsx:6",
+        "src/pages/data/pricing.jsx:85"
+      ],
+      "usedInPageSpec": true
+    },
+    "logo.integration": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "usedByFields": [
+        "listing.integrations-directory.integrations[].logo"
+      ],
+      "guidance": "Real third-party tool trademarks on the integrations directory (Amazon Athena, BigQuery, dbt, GitHub ...). Never redraw or invent integrations that Lightdash does not offer.",
+      "evidence": [
+        "src/pages/data/integrations.js:20"
+      ],
+      "usedInPageSpec": true
+    },
+    "photo.person-avatar": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "usedByFields": [
+        "content.blog-posts.posts[].authorAvatar",
+        "content.post-header.authorAvatar",
+        "content.story-header.personAvatar",
+        "proof.customer-quote-stats.photo",
+        "proof.customer-quote.photo",
+        "proof.dark-testimonial-stats.avatar",
+        "proof.partner-testimonial-carousel.items[].portrait",
+        "proof.speakers-grid.speakers[].photo",
+        "proof.testimonial-avatar.avatar"
+      ],
+      "guidance": "Photos of real named customers, partners, speakers and blog authors (quote avatars, partner carousel portraits, speaker photos, post author avatars). Never generate a face or reuse a real person's likeness; use a human-supplied licensed photo or a neutral silhouette placeholder.",
+      "evidence": [
+        "src/pages/data/conversational-analytics.jsx:140",
+        "src/components/pages/beyond-copilots/Speakers.jsx:5",
+        "src/components/pages/partnerships/TestimonialCarousel.jsx:13"
+      ],
+      "usedInPageSpec": true
+    },
+    "photo.team-member": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "usedByFields": [
+        "content.team-grid.members[].photo",
+        "content.team-grid.members[].photoHover"
+      ],
+      "guidance": "Portraits (static + hover variant) of real employees on /about. Never generate or reuse.",
+      "evidence": [
+        "src/pages/About.jsx:11",
+        "src/pages/data/about.jsx:22"
+      ],
+      "usedInPageSpec": true
+    },
+    "screenshot.product-ui": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "usedByFields": [
+        "features.accordion-tabs.tabs[].image",
+        "features.alternating-rows.rows[].image",
+        "features.cards-3x2-image.cards[].image",
+        "features.fintech-benefit-cards.cards[].image",
+        "features.jp-link-cards.cards[].image",
+        "features.pill-tabs-visual.tabs[].image",
+        "features.split-content.image",
+        "hero.fintech-split.illustration",
+        "hero.product-visual.visual"
+      ],
+      "guidance": "Real Lightdash product UI screenshots (accordion / tab / card images, hero visuals). Brand-owned: reuse the exact approved file; never fabricate a fake Lightdash screen or restyle one.",
+      "evidence": [
+        "src/components/shared/AccordionTabs.jsx:105",
+        "src/pages/data/interactive-dashboards.jsx:57"
+      ],
+      "usedInPageSpec": true
+    },
+    "video.self-hosted": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "usedByFields": [
+        "content.video-section.video"
+      ],
+      "guidance": "The brand-owned self-hosted /bi-as-code product video. Reuse the exact file; do not generate a stand-in video.",
+      "evidence": [
+        "src/components/pages/bi-as-code/VideoSection.jsx:5"
+      ],
+      "usedInPageSpec": true
+    },
+    "app.iframe-bundle": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "usedByFields": [],
+      "guidance": "The Three.js Game Boy app bundle under public/gameboy/ (3.4 MB: index.html, GLB model, textures, sounds, vendor scripts, people/logo images of real customers). Not referenced by any PageSpec field (the homepage is an opaque iframe); documented so it is never regenerated. Its internal customer logos / people images fall under logo.customer-partner / photo.person-avatar rules.",
+      "evidence": [
+        "src/components/Hero.jsx:58",
+        "CLONE_SPEC.md:277"
+      ],
+      "usedInPageSpec": false
+    }
+  }
+}

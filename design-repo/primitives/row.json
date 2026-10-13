@@ -1,0 +1,36 @@
+{
+  "id": "row",
+  "kind": "primitive",
+  "purpose": "Full-frame-width blueprint row with a hairline (default dashed bottom); used by CMS and legal templates.",
+  "props": [
+    "height",
+    "lines",
+    "dashed",
+    "color"
+  ],
+  "tokensUsed": [
+    "color.ld-line"
+  ],
+  "usedBySections": [
+    "content.event-details-card",
+    "content.event-header",
+    "content.legal-body",
+    "content.legal-header",
+    "content.not-found",
+    "content.padel-apply",
+    "content.post-header",
+    "content.post-toc",
+    "content.story-header",
+    "content.story-sidebar",
+    "content.story-stats-row",
+    "content.story-timeline",
+    "listing.blog-card-grid",
+    "listing.blog-filter-bar",
+    "listing.blog-header",
+    "listing.stories-header"
+  ],
+  "measuredFrom": [
+    "src/components/shared/Frame.jsx:47-57"
+  ],
+  "schemaVersion": "1.0.0"
+}

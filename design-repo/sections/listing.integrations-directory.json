@@ -1,0 +1,96 @@
+{
+  "id": "listing.integrations-directory",
+  "category": "LISTING",
+  "purpose": "Sticky 284px table of contents (category filter with counts) beside a 996-wide 3-column grid of 240-tall integration cards (logo, name, category tag, body). Clicking a category filters the grid; cards are not links.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/integrations/IntegrationsDirectory.jsx",
+  "content": {
+    "fields": {
+      "categories": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 5,
+          "observedMaxWords": 3,
+          "wcRef": "listing.integrations-directory.categories[]"
+        },
+        "minItems": 6,
+        "maxItems": 8
+      },
+      "integrations": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "name": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "listing.integrations-directory.integrations[].name"
+          },
+          "category": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "observedMaxWords": 3,
+            "wcRef": "listing.integrations-directory.integrations[].category"
+          },
+          "logo": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "logo.integration"
+            ]
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 23,
+            "observedMaxWords": 18,
+            "wcRef": "listing.integrations-directory.integrations[].body"
+          }
+        },
+        "minItems": 10,
+        "maxItems": 40
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "the TOC becomes a horizontally scrolling row above a single-column grid",
+      "cssCite": "src/components/pages/integrations/IntegrationsDirectory.jsx:9"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/integrations/IntegrationsDirectory.jsx:4",
+    "src/pages/data/integrations.js:20",
+    "src/pages/data/integrations.js:8"
+  ],
+  "notes": [
+    "21 integrations (Warehouse 10, Version Control 4, Alerts & sharing 3, Transformation 1, Data observability 2, Marketplace 1). Logos are real third-party trademarks. The 12px category icons in the TOC were never downloaded (gap recorded in source)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "integrations"
+  ]
+}

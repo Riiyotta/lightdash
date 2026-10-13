@@ -1,0 +1,25 @@
+{
+  "id": "form-field",
+  "kind": "primitive",
+  "purpose": "Text input / select with label, 8-12px radius, 1px #DFE1E7 / #D2D6DC border and a purple focus ring; UI only in the clone (no submission).",
+  "props": [
+    "label",
+    "type",
+    "placeholder",
+    "required"
+  ],
+  "tokensUsed": [
+    "color.local-form-accent",
+    "color.btn-light-border"
+  ],
+  "usedBySections": [
+    "conversion.partner-form",
+    "conversion.padel-form",
+    "chrome.footer"
+  ],
+  "measuredFrom": [
+    "src/components/pages/partnerships/PartnerForm.jsx:18",
+    "src/pages/PadelApply.jsx:18-20"
+  ],
+  "schemaVersion": "1.0.0"
+}

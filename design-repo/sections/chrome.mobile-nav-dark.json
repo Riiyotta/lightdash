@@ -1,0 +1,53 @@
+{
+  "id": "chrome.mobile-nav-dark",
+  "category": "CHROME",
+  "purpose": "Phone / tablet nav (dark variant): 64px bar with hamburger and a full-height accordion panel. Fixed content from src/navData.js (MOBILE_* arrays, whose copy differs from desktop).",
+  "status": "measured",
+  "composable": true,
+  "fixedContent": true,
+  "implementedBy": "src/components/MobileNav.jsx",
+  "content": {
+    "fields": {},
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "chromeAxis": [
+      "dark-home"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "nav-spring",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "nav-spring": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "nav-spring": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(min-width: 1100px)",
+      "change": "not rendered; the desktop Navbar replaces it",
+      "cssCite": "CLONE_SPEC.md:240"
+    }
+  ],
+  "measuredFrom": [
+    "src/navData.js:39-48",
+    "src/components/MobileNav.jsx:254",
+    "CLONE_SPEC.md:240"
+  ],
+  "notes": [
+    "Mobile copy differs from desktop (e.g. \"Explore the story behind every number\"); see navData.js MOBILE_PRODUCT_ITEMS."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "home"
+  ]
+}

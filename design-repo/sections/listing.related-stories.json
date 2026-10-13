@@ -1,0 +1,69 @@
+{
+  "id": "listing.related-stories",
+  "category": "LISTING",
+  "purpose": "\"Related stories\": same header block and a 2-column grid of the 2 first listed stories that are not the current one (specs/cms/customer-stories.json related).",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Related pairs are measured per story (specs/cms/customer-stories.json related); the \"See all posts\" label is reused from the blog header component even though it links to /customer-stories.",
+  "implementedBy": "src/components/cms/RelatedHeader.jsx + src/components/cms/StoryCard.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "listing.related-stories.heading"
+      },
+      "seeAll": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "listing.related-stories.seeAllLabel"
+      },
+      "cardMode": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "two-related"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "two columns stack; header row 96 tall",
+      "cssCite": "src/components/cms/RelatedHeader.jsx:12"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/CustomerStory.jsx:111",
+    "src/components/cms/RelatedHeader.jsx:4"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "customer-story"
+  ]
+}

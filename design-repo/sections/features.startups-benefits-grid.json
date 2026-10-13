@@ -1,0 +1,76 @@
+{
+  "id": "features.startups-benefits-grid",
+  "category": "FEATURES",
+  "purpose": "2x3 grid of dashed benefit cells (icon, title, body; 426.66x198) on /startups, including the SOC2/HIPAA badge cell.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Startups.jsx (inline)",
+  "content": {
+    "fields": {
+      "items": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "icon": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "icon.pixel-art",
+              "badge.compliance"
+            ]
+          },
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 6,
+            "observedMaxWords": 4,
+            "wcRef": "features.startups-benefits-grid.items[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": false,
+            "maxWords": 18,
+            "observedMaxWords": 14,
+            "wcRef": "features.startups-benefits-grid.items[].body"
+          }
+        },
+        "minItems": 6,
+        "maxItems": 6
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "single column below 810 (3 columns at >=810)",
+      "cssCite": "src/pages/Startups.jsx:169"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Startups.jsx:168",
+    "src/pages/Startups.jsx:14"
+  ],
+  "notes": [
+    "Cell 06 renders compliance badges (SOC2 / HIPAA rings) rather than copy; modelled as an icon/badge media."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "startups"
+  ]
+}

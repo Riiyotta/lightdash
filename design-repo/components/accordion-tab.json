@@ -1,0 +1,17 @@
+{
+  "id": "accordion-tab",
+  "kind": "component",
+  "purpose": "Tab button: title + collapsible body with a 1px purple progress line on the open tab (8.8s linear); only one open at a time.",
+  "props": [
+    "title",
+    "body",
+    "image"
+  ],
+  "usedBySections": [
+    "features.accordion-tabs"
+  ],
+  "measuredFrom": [
+    "src/components/shared/AccordionTabs.jsx:71-85"
+  ],
+  "schemaVersion": "1.0.0"
+}

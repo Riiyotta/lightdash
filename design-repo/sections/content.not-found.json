@@ -1,0 +1,83 @@
+{
+  "id": "content.not-found",
+  "category": "CONTENT",
+  "purpose": "404 page: two stripe blocks (rows converge toward the art), a 408x192 glitch pixel \"404\" art stack (7 hue-shifted layers, 1.5s hard-cut loop), \"Oh zap!\" title, one sentence and a \"Go back home\" button. Also rendered for every unknown URL.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/NotFound.jsx",
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "content.not-found.title"
+      },
+      "body": {
+        "type": "text",
+        "required": true,
+        "maxWords": 18,
+        "observedMaxWords": 14,
+        "wcRef": "content.not-found.body"
+      },
+      "cta": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "content.not-found.ctaLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "routeOnly": [
+      "/404"
+    ]
+  },
+  "motion": {
+    "allowedPatterns": [
+      "glitch-loop",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "glitch-loop": "static-final-state",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "glitch-loop": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "the glitch art is 230x108 on phone (408x192 at >=810)",
+      "cssCite": "src/components/legal/legal.css:205-208"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "body line-height is 24 on phone (32 at >=810)",
+      "cssCite": "src/components/legal/legal.css:201"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/NotFound.jsx:5",
+    "src/pages/NotFound.jsx:30",
+    "src/components/legal/legal.css:240"
+  ],
+  "notes": [
+    "Reduced motion is implemented in source: legal.css hides layers 1-6 and stops the animation (basis source-implemented).",
+    "The catch-all route \"*\" renders this same page in src/App.jsx; it is not counted as a route."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "not-found"
+  ]
+}

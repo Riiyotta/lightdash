@@ -1,0 +1,85 @@
+{
+  "id": "cta.snake-band-narrow",
+  "category": "CTA",
+  "purpose": "Narrow variant of the CTA band on the /blog index only: band 968 wide centred, panel 840, game about 310 wide.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/CtaBand.jsx (narrow) + src/components/shared/SnakeGame.jsx",
+  "content": {
+    "fields": {
+      "title": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 6,
+          "observedMaxWords": 4,
+          "wcRef": "cta.snake-band-narrow.title[]"
+        },
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "primary": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route",
+          "open-talk-modal"
+        ],
+        "labelMaxWords": 6,
+        "observedLabelMaxWords": 4,
+        "labelRef": "cta.snake-band-narrow.primaryLabel"
+      },
+      "secondary": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "open-external",
+          "navigate-route"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "cta.snake-band-narrow.secondaryLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "snake-game",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "snake-game": "no-autoplay",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "snake-game": "source-partial",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "same phone layout as the standard band",
+      "cssCite": "src/components/shared/CtaBand.jsx:21"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/CtaBand.jsx:21",
+    "src/components/cms/BlogListing.jsx:102"
+  ],
+  "notes": [
+    "Only /blog uses this variant; /blog-categories/:slug uses the standard band."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "blog-index"
+  ]
+}

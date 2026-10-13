@@ -1,0 +1,175 @@
+{
+  "$description": "Measured paddings/gaps (px) that recur in SHARED.md. Not a 4/8 scale: Framer values as measured.",
+  "spacing": {
+    "4": {
+      "$value": "4px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:126",
+          "quote": "gap 4 (8 on Variant 1)"
+        }
+      ]
+    },
+    "6": {
+      "$value": "6px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:34",
+          "quote": "flex row gap **6px**"
+        }
+      ]
+    },
+    "8": {
+      "$value": "8px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:225",
+          "quote": "padding 36/32, gap 8"
+        }
+      ]
+    },
+    "10": {
+      "$value": "10px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:165",
+          "quote": "flex column gap 10, centred"
+        }
+      ]
+    },
+    "16": {
+      "$value": "16px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:140",
+          "quote": "a flex row with gap **16**"
+        }
+      ]
+    },
+    "20": {
+      "$value": "20px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:192",
+          "quote": "padding **20/24**, dashed left, gap 8"
+        }
+      ]
+    },
+    "24": {
+      "$value": "24px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:174",
+          "quote": "padding 24/0, `grid-template-columns: repeat(6, 213.33px)`"
+        }
+      ]
+    },
+    "28": {
+      "$value": "28px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:203",
+          "quote": "padding 28, gap 10, and a **1px solid top line only**"
+        }
+      ]
+    },
+    "32": {
+      "$value": "32px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:170",
+          "quote": "padding 32/0, caption-18 centred"
+        }
+      ]
+    },
+    "40": {
+      "$value": "40px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:191",
+          "quote": "**3-Tab Spacer**: 40 tall"
+        }
+      ]
+    },
+    "48": {
+      "$value": "48px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:210",
+          "quote": "Headings padding `72 0 48`"
+        }
+      ]
+    },
+    "56": {
+      "$value": "56px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:168",
+          "quote": "**Spacer** 56 tall with a bottom dashed line"
+        }
+      ]
+    },
+    "64": {
+      "$value": "64px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:268",
+          "quote": "**Section** 1280×473, padding 64"
+        }
+      ]
+    },
+    "72": {
+      "$value": "72px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:200",
+          "quote": "Section bg #FFF, padding **72/0**"
+        }
+      ]
+    },
+    "80": {
+      "$value": "80px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:252",
+          "quote": "Section bg #FFF, padding **80/64**"
+        }
+      ]
+    },
+    "100": {
+      "$value": "100px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:164",
+          "quote": "Top **Spacer** 100 tall"
+        }
+      ]
+    },
+    "112": {
+      "$value": "112px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:217",
+          "quote": "padding **112/0/80**"
+        }
+      ]
+    }
+  }
+}

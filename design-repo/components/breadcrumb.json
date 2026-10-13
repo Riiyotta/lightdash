@@ -1,0 +1,17 @@
+{
+  "id": "breadcrumb",
+  "kind": "component",
+  "purpose": "Breadcrumb nav (Inter 14/20, #818898, \".\" separators for posts, \"/\" for stories).",
+  "props": [
+    "items",
+    "sep"
+  ],
+  "usedBySections": [
+    "content.post-header",
+    "content.story-header"
+  ],
+  "measuredFrom": [
+    "src/components/cms/Breadcrumb.jsx:5"
+  ],
+  "schemaVersion": "1.0.0"
+}

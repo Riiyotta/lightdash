@@ -1,0 +1,67 @@
+{
+  "id": "proof.partner-logos",
+  "category": "PROOF",
+  "purpose": "Boxed \"Official Lightdash partners\" strip on /partnerships: 5 linked 256x80 logo cells.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Partnerships.jsx (inline)",
+  "content": {
+    "fields": {
+      "caption": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "proof.partner-logos.caption"
+      },
+      "logos": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "media",
+          "required": true,
+          "assetRoles": [
+            "logo.customer-partner"
+          ],
+          "altMaxWords": 3
+        },
+        "minItems": 5,
+        "maxItems": 5
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "logos scale to .4 inside the same 5-column grid",
+      "cssCite": "src/pages/Partnerships.jsx:179"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Partnerships.jsx:159",
+    "src/pages/Partnerships.jsx:10"
+  ],
+  "notes": [
+    "Partner cells link to live partner sites (e.g. snowpack-data.com, nayuta.co.uk, driftwave.io); one live href is the bug \"https://https://northstaranalytics.co.uk/\" fixed in the clone (Partnerships.jsx comment). Links are not PageSpec content."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "partnerships"
+  ]
+}

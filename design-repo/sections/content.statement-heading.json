@@ -1,0 +1,58 @@
+{
+  "id": "content.statement-heading",
+  "category": "CONTENT",
+  "purpose": "Centred 326-tall statement heading (h2-48, max 624) with a purple accent phrase, dashed bottom: /self-improving-analytics only.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/SelfImprovingAnalytics.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 25,
+        "observedMaxWords": 20,
+        "wcRef": "content.statement-heading.heading"
+      },
+      "accent": {
+        "type": "text",
+        "required": false,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.statement-heading.accent"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "min-height 326 removed; padding 24",
+      "cssCite": "src/pages/SelfImprovingAnalytics.jsx:36"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/SelfImprovingAnalytics.jsx:35",
+    "src/pages/data/self-improving-analytics.jsx:33"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-self-improving-analytics"
+  ]
+}

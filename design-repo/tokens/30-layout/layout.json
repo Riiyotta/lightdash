@@ -1,0 +1,206 @@
+{
+  "layout": {
+    "content.max-width": {
+      "$value": "1280px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:19",
+          "quote": "Content-wrapper: width 1280 (max), centered"
+        }
+      ]
+    },
+    "content.gutter-desktop": {
+      "$value": "80px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:27",
+          "quote": "**Side gutter:** 80 px at 1440"
+        }
+      ]
+    },
+    "content.gutter-narrow": {
+      "$value": "16px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:27",
+          "quote": "Below 1312 the frame is `calc(100vw - 32px)`, i.e. 16 px gutters."
+        }
+      ]
+    },
+    "chrome.banner-height": {
+      "$value": "40px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:33",
+          "quote": "full width × **40** (39 at 390)"
+        }
+      ]
+    },
+    "chrome.nav-height-desktop": {
+      "$value": "106px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:17",
+          "quote": "light navbar (106)"
+        }
+      ]
+    },
+    "chrome.nav-height-phone": {
+      "$value": "64px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:66",
+          "quote": "the bar is 64 tall, bg #FFFFFF"
+        }
+      ]
+    },
+    "chrome.padding-top-banner-desktop": {
+      "$value": "146px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:18",
+          "quote": "padding-top = 146 (with banner) or 106 (no banner)"
+        }
+      ]
+    },
+    "chrome.padding-top-desktop": {
+      "$value": "106px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:18",
+          "quote": "padding-top = 146 (with banner) or 106 (no banner)"
+        }
+      ]
+    },
+    "chrome.padding-top-banner-phone": {
+      "$value": "104px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:66",
+          "quote": "so the total header is 104 and the page `padding-top` is 104"
+        }
+      ]
+    },
+    "chrome.padding-top-phone": {
+      "$value": "64px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "src/layouts/InnerLayout.jsx:52",
+          "quote": "'--pt-phone': `${top + 64}px`"
+        }
+      ]
+    },
+    "chrome.banner-scroll-offset-max": {
+      "$value": "40px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:40",
+          "quote": "`transform: translateY(-min(scrollY, 40)px)`"
+        }
+      ]
+    },
+    "cta-band.size": {
+      "$value": {
+        "width": 1280,
+        "height": 473
+      },
+      "$type": "size",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:268",
+          "quote": "**Section** 1280×473, padding 64"
+        }
+      ]
+    },
+    "cta-band.card": {
+      "$value": {
+        "width": 1152,
+        "height": 326
+      },
+      "$type": "size",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:270",
+          "quote": "**Card** (\"Stack\") 1152×326"
+        }
+      ]
+    },
+    "cta-band.narrow": {
+      "$value": {
+        "width": 968,
+        "panel": 840
+      },
+      "$type": "size",
+      "evidence": [
+        {
+          "ref": "specs/cms-templates.md:98",
+          "quote": "the wrapper is 968 wide centered (x=236), with the inner panel 840 wide"
+        }
+      ]
+    },
+    "footer.size": {
+      "$value": {
+        "width": "full-bleed",
+        "height": 600
+      },
+      "$type": "size",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:308",
+          "quote": "Full-bleed bg **#1A1B25**, 1440×600"
+        }
+      ]
+    },
+    "home.iframe-navh-desktop": {
+      "$value": 104,
+      "$type": "number",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:37",
+          "quote": "| Desktop | `min-width: 1100px` | \"Dark\" desktop nav, 106 px tall | `?navh=104`"
+        }
+      ]
+    },
+    "home.iframe-navh-phone": {
+      "$value": 64,
+      "$type": "number",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:26",
+          "quote": "Use `?navh=64` below 810 px."
+        }
+      ]
+    },
+    "hero.top-spacer": {
+      "$value": "100px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:164",
+          "quote": "Top **Spacer** 100 tall"
+        }
+      ]
+    },
+    "hero.pixel-size": {
+      "$value": "32px",
+      "$type": "dimension",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:164",
+          "quote": "32×32 images, `object-fit:cover`"
+        }
+      ]
+    }
+  }
+}

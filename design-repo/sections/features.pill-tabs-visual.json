@@ -1,0 +1,92 @@
+{
+  "id": "features.pill-tabs-visual",
+  "category": "FEATURES",
+  "purpose": "Tabbed visual card: a single row of pill tabs (36.8px, active purple) above optional title/lead and a product-visual well (aspect 1232/765 on /data-apps, 1132/580 on /metrics-catalog). Click swaps instantly; no autoplay.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/PillTabs.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": false,
+        "maxWords": 13,
+        "observedMaxWords": 10,
+        "wcRef": "features.pill-tabs-visual.heading"
+      },
+      "tabs": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "label": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "features.pill-tabs-visual.tabs[].label"
+          },
+          "title": {
+            "type": "text",
+            "required": false,
+            "maxWords": 14,
+            "observedMaxWords": 11,
+            "wcRef": "features.pill-tabs-visual.tabs[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 50,
+            "observedMaxWords": 40,
+            "wcRef": "features.pill-tabs-visual.tabs[].body"
+          },
+          "image": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "screenshot.product-ui"
+            ]
+          }
+        },
+        "minItems": 3,
+        "maxItems": 6
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "tab-swap-instant",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "tab-swap-instant": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "tab-swap-instant": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "the pill row stays single-line nowrap and clips the last pill (overflow-clip at every width)",
+      "cssCite": "src/components/shared/PillTabs.jsx:22"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/PillTabs.jsx:3",
+    "src/pages/data/data-apps.jsx:61",
+    "src/pages/data/metrics-catalog.jsx:35"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-data-apps",
+    "product-metrics-catalog"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "content.team-grid",
+  "category": "CONTENT",
+  "purpose": "\"Meet the Lightdashians\" strip and a 5-column grid (2 on phone) of team members: 72px avatar that cross-fades to a hover avatar (400ms), name and role. About only.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/About.jsx > TeamMember",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.team-grid.heading"
+      },
+      "members": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "name": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "content.team-grid.members[].name"
+          },
+          "role": {
+            "type": "text",
+            "required": true,
+            "maxWords": 5,
+            "observedMaxWords": 3,
+            "wcRef": "content.team-grid.members[].role"
+          },
+          "photo": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "photo.team-member"
+            ],
+            "altMaxWords": 3
+          },
+          "photoHover": {
+            "type": "media",
+            "required": false,
+            "assetRoles": [
+              "photo.team-member"
+            ]
+          }
+        },
+        "minItems": 10,
+        "maxItems": 30
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-crossfade",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "hover-crossfade": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "hover-crossfade": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "grid 5 x 173 (max 865) becomes 2 x 163",
+      "cssCite": "src/pages/About.jsx:75"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/About.jsx:73",
+    "src/pages/About.jsx:11",
+    "src/pages/data/about.jsx:22"
+  ],
+  "notes": [
+    "Real employees: real names, roles and portraits (src/pages/data/about.jsx TEAM; the source keeps live typos such as \"lan Ahuja\"). Must-not-fabricate and must not be reproduced."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "about"
+  ]
+}

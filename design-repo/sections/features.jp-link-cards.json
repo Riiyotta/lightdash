@@ -1,0 +1,84 @@
+{
+  "id": "features.jp-link-cards",
+  "category": "FEATURES",
+  "purpose": "Two linked 567x505 cards (gap 19, padding 72/64) on /jp; both link to the Ubie story on live (card 2 probably meant the meetup, kept as live).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Jp.jsx (inline)",
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 3,
+            "observedMaxWords": 1,
+            "wcRef": "features.jp-link-cards.cards[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "features.jp-link-cards.cards[].body"
+          },
+          "image": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "screenshot.product-ui",
+              "image.cms-cover"
+            ]
+          },
+          "target": {
+            "type": "link",
+            "required": true,
+            "actions": [
+              "navigate-route",
+              "open-external"
+            ]
+          }
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1439.98px)",
+      "change": "/jp desktop layout starts at 1440; 810-1439 is the tablet layout",
+      "cssCite": "src/pages/Jp.jsx:6"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Jp.jsx:110",
+    "src/pages/Jp.jsx:41"
+  ],
+  "notes": [
+    "Japanese copy: word counts are not a meaningful budget (no spaces)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "jp"
+  ]
+}

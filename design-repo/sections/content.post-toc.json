@@ -1,0 +1,52 @@
+{
+  "id": "content.post-toc",
+  "category": "CONTENT",
+  "purpose": "Sticky table of contents (>=1100 only, 368 wide, sticky top 78): the body H2/H3 headings plus a final \"Related articles\"; scroll-spy highlights the active item with a 1px black line.",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Structure and scroll-spy are measured; the items are derived from the (placeholder) body headings, not independently authored.",
+  "implementedBy": "src/components/cms/Toc.jsx",
+  "content": {
+    "fields": {
+      "bodyMode": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "derived-from-headings"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "the TOC aside is hidden below 1100 (hidden desk:block)",
+      "cssCite": "src/pages/BlogPost.jsx:92"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/cms/Toc.jsx:4",
+    "src/pages/BlogPost.jsx:26"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "blog-post"
+  ]
+}

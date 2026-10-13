@@ -1,0 +1,94 @@
+{
+  "id": "features.cards-3x2",
+  "category": "FEATURES",
+  "purpose": "Heading, sub line and six bordered text cards (3 x 2, min-height 169) on /embedding.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/FeatureCards.jsx (layout 3x2, mobileCarousel → src/components/shared/MobileCarousel.jsx)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 9,
+        "observedMaxWords": 7,
+        "wcRef": "features.cards-3x2.heading"
+      },
+      "sub": {
+        "type": "text",
+        "required": false,
+        "maxWords": 25,
+        "observedMaxWords": 20,
+        "wcRef": "features.cards-3x2.sub"
+      },
+      "cards": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 6,
+            "observedMaxWords": 4,
+            "wcRef": "features.cards-3x2.cards[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 29,
+            "observedMaxWords": 23,
+            "wcRef": "features.cards-3x2.cards[].body"
+          }
+        },
+        "minItems": 6,
+        "maxItems": 6
+      },
+      "sectionLines": {
+        "type": "enum",
+        "required": false,
+        "values": [
+          "none",
+          "rl"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "swipe-carousel",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "swipe-carousel": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "swipe-carousel": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "grid becomes a swipe carousel: cards 280x400 with a solid 1px border, scroll-snap x mandatory, dots below",
+      "cssCite": "src/components/shared/FeatureCards.jsx:25"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/FeatureCards.jsx:4",
+    "src/components/shared/FeatureCards.jsx:12",
+    "src/components/shared/MobileCarousel.jsx:4"
+  ],
+  "notes": [
+    "mobileCarousel is on for this layout (src/pages/Embedding.jsx)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-embedding"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "cta.inline-post",
+  "category": "CTA",
+  "purpose": "Dark #1A1B25 inline CTA at the end of the main column on blog posts and customer stories: headline, support line, a primary/secondary button pair and a 109x152 pixel art on the right.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/cms/InlineCta.jsx",
+  "content": {
+    "fields": {
+      "headline": {
+        "type": "text",
+        "required": true,
+        "maxWords": 9,
+        "observedMaxWords": 7,
+        "wcRef": "cta.inline-post.headline"
+      },
+      "support": {
+        "type": "text",
+        "required": true,
+        "maxWords": 12,
+        "observedMaxWords": 9,
+        "wcRef": "cta.inline-post.support"
+      },
+      "primary": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route",
+          "open-talk-modal"
+        ],
+        "labelMaxWords": 6,
+        "observedLabelMaxWords": 4,
+        "labelRef": "cta.inline-post.primaryLabel"
+      },
+      "secondary": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "open-external",
+          "navigate-route"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "cta.inline-post.secondaryLabel"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "row stacks (fixed 152 height and the 40/57 side padding only apply at >=810)",
+      "cssCite": "src/components/cms/InlineCta.jsx:9"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "buttons sit 60px under the copy (mt-auto only at >=810)",
+      "cssCite": "src/components/cms/InlineCta.jsx:16"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "the 109x152 pixel art is centred below the copy",
+      "cssCite": "src/components/cms/InlineCta.jsx:30"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/cms/InlineCta.jsx:5",
+    "src/pages/BlogPost.jsx:88"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "blog-post",
+    "customer-story"
+  ]
+}

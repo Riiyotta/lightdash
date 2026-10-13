@@ -1,0 +1,64 @@
+{
+  "id": "hero.integrations",
+  "category": "HERO",
+  "purpose": "Left-aligned 295-tall hero on /integrations: two-line display-56 title, short subtitle and two 30px pixel-tile clusters (top group drops in, bottom group rises).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/integrations/IntegrationsHero.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "hero.integrations.heading"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 15,
+        "observedMaxWords": 12,
+        "wcRef": "hero.integrations.subtitle"
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "pixel-drop",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "pixel-drop": "static-final-state",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "pixel-drop": "source-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "min-height 295 and the 64px left padding drop away; pixel clusters are hidden",
+      "cssCite": "src/components/pages/integrations/IntegrationsHero.jsx:10"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/integrations/IntegrationsHero.jsx:3",
+    "src/pages/data/integrations.js:54"
+  ],
+  "notes": [
+    "Pixel drop distance is -30 (top cluster) / +30 (bottom cluster); see tokens motion distance.pixel-drop."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "integrations"
+  ]
+}

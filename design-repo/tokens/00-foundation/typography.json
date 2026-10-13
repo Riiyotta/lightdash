@@ -1,0 +1,622 @@
+{
+  "$description": "The 26 ld-* type classes from src/index.css (SHARED.md §3) with responsive overrides, plus nav / rich-text / legal styles measured in the specs.",
+  "typography": {
+    "display-72": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 72.0,
+        "lineHeight": 68.4,
+        "fontWeight": 600,
+        "letterSpacing": "-1.44px",
+        "defaultColor": "#1C0000"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:260",
+          "quote": ".ld-display-72 {"
+        }
+      ],
+      "responsive": {
+        "phone": {
+          "fontSize": 42,
+          "lineHeight": 39.9,
+          "evidence": [
+            {
+              "ref": "src/index.css:294",
+              "quote": ".ld-display-72 { font-size: 42px;"
+            }
+          ]
+        }
+      }
+    },
+    "display-56": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 56.0,
+        "lineHeight": 50.4,
+        "fontWeight": 600,
+        "letterSpacing": "-0.27px",
+        "defaultColor": "#272835"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:261",
+          "quote": ".ld-display-56 {"
+        }
+      ]
+    },
+    "cta-56": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 56.0,
+        "lineHeight": 53.2,
+        "fontWeight": 600,
+        "letterSpacing": "-1.12px",
+        "defaultColor": "#FFFFFF"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:262",
+          "quote": ".ld-cta-56 {"
+        }
+      ],
+      "responsive": {
+        "phone": {
+          "fontSize": 32,
+          "lineHeight": 35.2,
+          "letterSpacing": "-0.64px",
+          "evidence": [
+            {
+              "ref": "src/index.css:297",
+              "quote": ".ld-cta-56 { font-size: 32px;"
+            }
+          ]
+        }
+      }
+    },
+    "h2-48": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 48.0,
+        "lineHeight": 48.0,
+        "fontWeight": 400,
+        "letterSpacing": "-0.96px",
+        "defaultColor": "#36394A"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:263",
+          "quote": ".ld-h2-48 {"
+        }
+      ],
+      "responsive": {
+        "tablet": {
+          "fontSize": 40,
+          "lineHeight": 40,
+          "letterSpacing": "-0.8px",
+          "evidence": [
+            {
+              "ref": "src/index.css:291",
+              "quote": ".ld-h2-48 { font-size: 40px;"
+            }
+          ]
+        },
+        "phone": {
+          "fontSize": 32,
+          "lineHeight": 35.2,
+          "letterSpacing": "-0.64px",
+          "evidence": [
+            {
+              "ref": "src/index.css:295",
+              "quote": ".ld-h2-48 { font-size: 32px;"
+            }
+          ]
+        }
+      }
+    },
+    "faq-h-48": {
+      "$value": {
+        "fontFamily": "Britti Sans Medium",
+        "fontSize": 48.0,
+        "lineHeight": 43.2,
+        "fontWeight": 500,
+        "letterSpacing": "-0.96px",
+        "defaultColor": "#36394A"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:264",
+          "quote": ".ld-faq-h-48 {"
+        }
+      ],
+      "responsive": {
+        "phone": {
+          "fontSize": 36,
+          "lineHeight": 32.4,
+          "evidence": [
+            {
+              "ref": "src/index.css:296",
+              "quote": ".ld-faq-h-48 { font-size: 36px;"
+            }
+          ]
+        }
+      }
+    },
+    "stat-48": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 48.0,
+        "lineHeight": 48.0,
+        "fontWeight": 600,
+        "letterSpacing": "-0.96px",
+        "defaultColor": "#5E4CFF"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:265",
+          "quote": ".ld-stat-48 {"
+        }
+      ]
+    },
+    "quote-40": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 40.0,
+        "lineHeight": 50.0,
+        "fontWeight": 600,
+        "letterSpacing": "-0.8px",
+        "defaultColor": "#1A1B25"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:266",
+          "quote": ".ld-quote-40 {"
+        }
+      ]
+    },
+    "quote-32": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 32.0,
+        "lineHeight": 40.0,
+        "fontWeight": 600,
+        "letterSpacing": "-0.64px",
+        "defaultColor": "#1A1B25"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:267",
+          "quote": ".ld-quote-32 {"
+        }
+      ]
+    },
+    "h3-38": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 38.0,
+        "lineHeight": 41.8,
+        "fontWeight": 600,
+        "letterSpacing": "-0.76px",
+        "defaultColor": "#272835"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:268",
+          "quote": ".ld-h3-38 {"
+        }
+      ]
+    },
+    "h3-32": {
+      "$value": {
+        "fontFamily": "Britti Sans Medium",
+        "fontSize": 32.0,
+        "lineHeight": 40.0,
+        "fontWeight": 400,
+        "letterSpacing": "-0.32px",
+        "defaultColor": "#36394A"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:269",
+          "quote": ".ld-h3-32 {"
+        }
+      ]
+    },
+    "card-title-24": {
+      "$value": {
+        "fontFamily": "Britti Sans Medium",
+        "fontSize": 24.0,
+        "lineHeight": 26.4,
+        "fontWeight": 500,
+        "letterSpacing": "normal",
+        "defaultColor": "#000000"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:270",
+          "quote": ".ld-card-title-24 {"
+        }
+      ]
+    },
+    "faq-q-20": {
+      "$value": {
+        "fontFamily": "Britti Sans Medium",
+        "fontSize": 20.0,
+        "lineHeight": 20.0,
+        "fontWeight": 400,
+        "letterSpacing": "-0.4px",
+        "defaultColor": "#36394A"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:271",
+          "quote": ".ld-faq-q-20 {"
+        }
+      ]
+    },
+    "tab-title-18": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 18.0,
+        "lineHeight": 28.0,
+        "fontWeight": 400,
+        "letterSpacing": "normal",
+        "defaultColor": "#36394A"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:272",
+          "quote": ".ld-tab-title-18 {"
+        }
+      ]
+    },
+    "tab-pill-14": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 14.0,
+        "lineHeight": 16.8,
+        "fontWeight": 600,
+        "letterSpacing": "normal"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:273",
+          "quote": ".ld-tab-pill-14 {"
+        }
+      ]
+    },
+    "lead-18": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 18.0,
+        "lineHeight": 32.0,
+        "fontWeight": 400,
+        "letterSpacing": "-0.18px",
+        "defaultColor": "#666D80"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:274",
+          "quote": ".ld-lead-18 {"
+        }
+      ]
+    },
+    "tab-body-18": {
+      "$value": {
+        "fontFamily": "Inter Variable",
+        "fontSize": 18.0,
+        "lineHeight": 30.6,
+        "fontWeight": 400,
+        "letterSpacing": "-0.18px",
+        "defaultColor": "#666D80"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:275",
+          "quote": ".ld-tab-body-18 {"
+        }
+      ]
+    },
+    "tabbed-lead-18": {
+      "$value": {
+        "fontFamily": "Inter Variable",
+        "fontSize": 18.0,
+        "lineHeight": 27.9,
+        "fontWeight": 400,
+        "letterSpacing": "-0.18px",
+        "defaultColor": "#818898"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:276",
+          "quote": ".ld-tabbed-lead-18 {"
+        }
+      ]
+    },
+    "caption-18": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 18.0,
+        "lineHeight": 23.4,
+        "fontWeight": 400,
+        "letterSpacing": "-0.36px",
+        "defaultColor": "#666D80"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:277",
+          "quote": ".ld-caption-18 {"
+        }
+      ]
+    },
+    "card-body-16": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 16.0,
+        "lineHeight": 25.6,
+        "fontWeight": 500,
+        "letterSpacing": "-0.16px",
+        "defaultColor": "#818898"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:278",
+          "quote": ".ld-card-body-16 {"
+        }
+      ]
+    },
+    "sub-16": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 16.0,
+        "lineHeight": 24.0,
+        "fontWeight": 400,
+        "letterSpacing": "normal",
+        "defaultColor": "#6B7280"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:279",
+          "quote": ".ld-sub-16 {"
+        }
+      ]
+    },
+    "name-20": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 20.0,
+        "lineHeight": 26.0,
+        "fontWeight": 700,
+        "letterSpacing": "-0.4px",
+        "defaultColor": "#36394A"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:280",
+          "quote": ".ld-name-20 {"
+        }
+      ]
+    },
+    "btn-15": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 15.0,
+        "lineHeight": 18.0,
+        "fontWeight": 500,
+        "letterSpacing": "normal"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:281",
+          "quote": ".ld-btn-15 {"
+        }
+      ]
+    },
+    "faq-a-14": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 14.0,
+        "lineHeight": 24.0,
+        "fontWeight": 400,
+        "letterSpacing": "-0.28px",
+        "defaultColor": "#36394A"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:282",
+          "quote": ".ld-faq-a-14 {"
+        }
+      ]
+    },
+    "blog-h2": {
+      "$value": {
+        "fontFamily": "Inter Variable",
+        "fontSize": 40.0,
+        "lineHeight": 47.2,
+        "fontWeight": 400,
+        "letterSpacing": "-1.2px",
+        "defaultColor": "#1A1B25"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:285",
+          "quote": ".ld-blog-h2 {"
+        }
+      ]
+    },
+    "blog-card-22": {
+      "$value": {
+        "fontFamily": "Inter Variable",
+        "fontSize": 22.0,
+        "lineHeight": 27.5,
+        "fontWeight": 400,
+        "letterSpacing": "-0.44px",
+        "defaultColor": "#1A1B25"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:286",
+          "quote": ".ld-blog-card-22 {"
+        }
+      ]
+    },
+    "blog-meta-13": {
+      "$value": {
+        "fontFamily": "Inter Variable",
+        "fontSize": 13.0,
+        "lineHeight": 15.6,
+        "fontWeight": 400,
+        "letterSpacing": "normal",
+        "defaultColor": "#6B7280"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "src/index.css:287",
+          "quote": ".ld-blog-meta-13 {"
+        }
+      ]
+    },
+    "nav-menu-item-title": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 15,
+        "lineHeight": 18,
+        "fontWeight": 500,
+        "defaultColor": "#EDEDED"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:178",
+          "quote": "Title: Inter 15px / 18px / 500, #EDEDED."
+        }
+      ]
+    },
+    "nav-menu-item-desc": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 13,
+        "lineHeight": 15.6,
+        "fontWeight": 400,
+        "defaultColor": "#969696"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:179",
+          "quote": "Description: Inter 13px / 15.6px / 400, #969696."
+        }
+      ]
+    },
+    "nav-feature-card-title": {
+      "$value": {
+        "fontFamily": "Britti Sans Medium",
+        "fontSize": 17,
+        "lineHeight": 20.4,
+        "fontWeight": 400,
+        "defaultColor": "#FFFFFF"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:185",
+          "quote": "Britti Sans Medium **17px / 20.4px / 400**"
+        }
+      ]
+    },
+    "richtext-p": {
+      "$value": {
+        "fontFamily": "Inter",
+        "fontSize": 16,
+        "lineHeight": 30,
+        "fontWeight": 400,
+        "letterSpacing": "-0.32px",
+        "defaultColor": "#36394A"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "specs/cms-templates.md:206",
+          "quote": "| `p` | Inter | 16px / 30px | 400 | −0.32px | `#36394A` |"
+        }
+      ]
+    },
+    "richtext-h2": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 32,
+        "lineHeight": 32,
+        "fontWeight": 400,
+        "letterSpacing": "-0.64px",
+        "defaultColor": "#272835"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "specs/cms-templates.md:207",
+          "quote": "| `h2` | \"Britti Sans Trial Semibold\" | 32px / 32px (390: 28/28)"
+        }
+      ]
+    },
+    "richtext-h3": {
+      "$value": {
+        "fontFamily": "Britti Sans Medium",
+        "fontSize": 32,
+        "lineHeight": 36,
+        "fontWeight": 400,
+        "letterSpacing": "-0.64px",
+        "defaultColor": "#272835"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "specs/cms-templates.md:208",
+          "quote": "| `h3` | \"Britti Sans Medium\" | 32px / 36px"
+        }
+      ]
+    },
+    "legal-title-48": {
+      "$value": {
+        "fontFamily": "Britti Sans Trial Semibold",
+        "fontSize": 48,
+        "lineHeight": 52.8,
+        "fontWeight": 400,
+        "letterSpacing": "-0.96px",
+        "defaultColor": "#272835"
+      },
+      "$type": "typography",
+      "evidence": [
+        {
+          "ref": "specs/legal-pages.md:138",
+          "quote": "| Page title | `h1` | Britti Sans Trial Semibold | 48 / 52.8 (1.1)"
+        }
+      ]
+    }
+  }
+}

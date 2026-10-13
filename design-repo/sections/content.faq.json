@@ -1,0 +1,101 @@
+{
+  "id": "content.faq",
+  "category": "CONTENT",
+  "purpose": "Two-column FAQ: left column (heading, lead, \"Talk to our team\" button) and right column of independently toggling question/answer items with a plus icon that rotates 45 degrees. Answers are rich text (links purple, strong bold).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/Faq.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.faq.heading"
+      },
+      "lead": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "For any other questions, reach out to our team.",
+          "For any other questions, feel welcome to reach out to our team."
+        ]
+      },
+      "showCta": {
+        "type": "boolean",
+        "required": false
+      },
+      "items": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "question": {
+            "type": "text",
+            "required": true,
+            "maxWords": 17,
+            "observedMaxWords": 13,
+            "wcRef": "content.faq.items[].question"
+          },
+          "answer": {
+            "type": "text",
+            "required": true,
+            "maxWords": 135,
+            "observedMaxWords": 108,
+            "wcRef": "content.faq.items[].answer"
+          }
+        },
+        "minItems": 5,
+        "maxItems": 8
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "faq-accordion",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "faq-accordion": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "faq-accordion": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "two columns stack; left column keeps a bottom hairline instead of the right divider",
+      "cssCite": "src/components/shared/Faq.jsx:64"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/Faq.jsx:5",
+    "src/components/shared/Faq.jsx:55",
+    "src/components/shared/Faq.jsx:44"
+  ],
+  "notes": [
+    "Answers are rich JSX in the source data; the PageSpec carries plain text (links/strong are applied by the component). Counted words per answer come from tag-stripped JSX.",
+    "/fintech reproduces a live-site bug: its FAQ answers are mismatched with their questions (src/pages/data/fintech.jsx header comment). The PageSpec must not \"fix\" or propagate this silently."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "fintech",
+    "pricing",
+    "product-bi-as-code",
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-data-apps",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-metrics-catalog",
+    "product-self-improving-analytics"
+  ]
+}

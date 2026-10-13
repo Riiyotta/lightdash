@@ -1,0 +1,88 @@
+{
+  "id": "chrome.talk-modal",
+  "category": "CHROME",
+  "purpose": "\"Talk to our team\" modal: 1000x620 frame over the page with a 700x556 white card holding the lightdash/talk Cal.com inline embed. Opens from either navbar and from some in-page buttons.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/TalkModal.jsx",
+  "content": {
+    "fields": {
+      "booking": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "embed.booking-cal"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "modal-fade",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "modal-fade": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "modal-fade": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "modal top offset is 64 (phone nav) instead of 104",
+      "cssCite": "src/components/TalkModal.jsx:31"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/TalkModal.jsx:11-15",
+    "src/components/shared/useCalInline.js:8-9",
+    "src/index.css:246"
+  ],
+  "notes": [
+    "The booking slot is a LIVE third-party endpoint (lightdash.cal.com, app.cal.com/embed/embed.js). A generated PageSpec may only carry an assetRef slot for it; see assets/asset-roles.json embed.booking-cal (pinned must-not-reuse-live-endpoint).",
+    "Escape closes the modal; backdrop click closes; close is instant (src/components/TalkModal.jsx)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "about",
+    "beyond-copilots",
+    "blog-category",
+    "blog-index",
+    "blog-post",
+    "customer-stories",
+    "customer-story",
+    "event",
+    "fintech",
+    "home",
+    "integrations",
+    "jp",
+    "legal",
+    "lightdash-security",
+    "not-found",
+    "padel-apply",
+    "partnerships",
+    "playground",
+    "pricing",
+    "product-bi-as-code",
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-data-apps",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-metrics-catalog",
+    "product-self-improving-analytics",
+    "roadmap",
+    "start",
+    "startups"
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "id": "features.accordion-tabs",
+  "category": "FEATURES",
+  "purpose": "Heading + lead and 3-4 accordion tabs beside a 608px image well (row 609 tall at 1440). One tab open at a time; click swaps the image instantly and restarts a 1px purple progress line (8.8s, no auto-advance). Two stacked rows alternate image side.",
+  "status": "measured",
+  "composable": true,
+  "variantField": "imageSide",
+  "implementedBy": "src/components/shared/AccordionTabs.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 17,
+        "observedMaxWords": 13,
+        "wcRef": "features.accordion-tabs.heading"
+      },
+      "lead": {
+        "type": "text",
+        "required": true,
+        "maxWords": 34,
+        "observedMaxWords": 27,
+        "wcRef": "features.accordion-tabs.lead"
+      },
+      "pill": {
+        "type": "text",
+        "required": false,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "features.accordion-tabs.pill"
+      },
+      "imageSide": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "right",
+          "left"
+        ]
+      },
+      "tabs": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 10,
+            "observedMaxWords": 8,
+            "wcRef": "features.accordion-tabs.tabs[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 35,
+            "observedMaxWords": 28,
+            "wcRef": "features.accordion-tabs.tabs[].body"
+          },
+          "image": {
+            "type": "media",
+            "required": false,
+            "assetRoles": [
+              "screenshot.product-ui"
+            ]
+          }
+        },
+        "minItems": 3,
+        "maxItems": 4
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "accordion-progress",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "accordion-progress": "instant-swap",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "accordion-progress": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "row stacks header -> tabs -> image; heading 18/26 and lead 16/24 replace 32px/18px",
+      "cssCite": "src/components/shared/AccordionTabs.jsx:53"
+    },
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "on /context-layer the two accordion rows exist only below 1200 (min-[1200px]:hidden wrapper)",
+      "cssCite": "src/pages/ContextLayer.jsx:39"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/AccordionTabs.jsx:4",
+    "src/components/shared/AccordionTabs.jsx:34",
+    "src/index.css:324"
+  ],
+  "notes": [
+    "A tab may have no image: the well stays an empty #F7F8FA block, exactly like the live site (e.g. conversational-analytics \"Show me what I can ask\").",
+    "/data-apps also has an accordion row (\"sprint\") but only below 1200 (min-[1200px]:hidden); not modelled in templates (ia.json template.product-data-apps notes).",
+    "Screenshots are brand-owned product UI (screenshot.product-ui, must-reuse-exact)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-conversational-analytics",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-self-improving-analytics"
+  ]
+}

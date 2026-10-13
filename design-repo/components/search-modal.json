@@ -1,0 +1,16 @@
+{
+  "id": "search-modal",
+  "kind": "component",
+  "purpose": "Site-search modal: dim rgba(0,0,0,.8), 500px panel radius 16, client-side title search over blog + story titles.",
+  "props": [
+    "open",
+    "onClose"
+  ],
+  "usedBySections": [
+    "listing.blog-filter-bar"
+  ],
+  "measuredFrom": [
+    "src/components/cms/SearchModal.jsx:8"
+  ],
+  "schemaVersion": "1.0.0"
+}

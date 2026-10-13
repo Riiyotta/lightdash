@@ -1,0 +1,16 @@
+{
+  "id": "post-card",
+  "kind": "component",
+  "purpose": "CMS blog post card (472-tall cell): 217px thumbnail, category . date, 3-line H6 title, avatar + author; hover bg #F6F8FA.",
+  "props": [
+    "post"
+  ],
+  "usedBySections": [
+    "listing.blog-card-grid",
+    "listing.related-articles"
+  ],
+  "measuredFrom": [
+    "src/components/cms/PostCard.jsx:6"
+  ],
+  "schemaVersion": "1.0.0"
+}

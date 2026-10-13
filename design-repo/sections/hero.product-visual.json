@@ -1,0 +1,93 @@
+{
+  "id": "hero.product-visual",
+  "category": "HERO",
+  "purpose": "HeroImage block under the product hero: a lavender-glow well holding a product screenshot / SVG diagram, a Rive canvas, a live third-party demo iframe (data-apps) or the HTML context diagram (context-layer).",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/shared/SectionHero.jsx (image slot; page visuals incl. src/components/pages/embedding/RiveHero.jsx, src/components/pages/context-layer/ContextDiagram.jsx)",
+  "content": {
+    "fields": {
+      "visual": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "illustration.hero-diagram",
+          "screenshot.product-ui",
+          "animation.rive",
+          "embed.live-demo",
+          "illustration.html-diagram"
+        ]
+      },
+      "visualKind": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "image",
+          "rive",
+          "iframe-demo",
+          "html-diagram"
+        ]
+      },
+      "background": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "glow",
+          "none",
+          "custom-gradient",
+          "well"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowSection": "hero.centered-product"
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-fade-spring",
+      "rive-canvas",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "hero-fade-spring": "visible-no-transition",
+      "rive-canvas": "static-final-state",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "hero-fade-spring": "source-implemented",
+      "rive-canvas": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "the Rive hero image is not shown on embedding (imageClassName hidden tab:flex)",
+      "cssCite": "src/pages/Embedding.jsx:33"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/shared/SectionHero.jsx:79",
+    "src/pages/DataApps.jsx:38-42",
+    "src/components/pages/embedding/RiveHero.jsx:19",
+    "src/components/pages/context-layer/ContextDiagram.jsx:1"
+  ],
+  "notes": [
+    "data-apps hero image is an iframe to forecast-slider.vercel.app (src/pages/data/data-apps.jsx): a LIVE third-party demo. assets/asset-roles.json embed.live-demo is pinned must-not-reuse-live-endpoint.",
+    "ia.json splits SectionHero into hero.centered-product + hero.product-visual; they are one React component. The graph treats product-visual as the companion of centered-product, not a second hero."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-context-layer",
+    "product-conversational-analytics",
+    "product-data-apps",
+    "product-embedding",
+    "product-interactive-dashboards",
+    "product-metrics-catalog",
+    "product-self-improving-analytics"
+  ]
+}

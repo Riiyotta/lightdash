@@ -1,0 +1,93 @@
+{
+  "id": "features.integration-paths",
+  "category": "FEATURES",
+  "purpose": "Title + subtitle then two 640x295 columns (\"React SDK\" / \"iFrame\"): name, description and a bullet list, split by a 1px line. /embedding only.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/components/pages/embedding/IntegrationPaths.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 6,
+        "observedMaxWords": 4,
+        "wcRef": "features.integration-paths.heading"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "features.integration-paths.subtitle"
+      },
+      "columns": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "title": {
+            "type": "text",
+            "required": true,
+            "maxWords": 4,
+            "observedMaxWords": 2,
+            "wcRef": "features.integration-paths.columns[].title"
+          },
+          "body": {
+            "type": "text",
+            "required": true,
+            "maxWords": 13,
+            "observedMaxWords": 10,
+            "wcRef": "features.integration-paths.columns[].body"
+          },
+          "items": {
+            "type": "list",
+            "required": true,
+            "item": {
+              "type": "text",
+              "required": true,
+              "maxWords": 7,
+              "observedMaxWords": 5,
+              "wcRef": "features.integration-paths.columns[].items[]"
+            },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "two columns stack (grid-cols-1)",
+      "cssCite": "src/components/pages/embedding/IntegrationPaths.jsx:16"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/pages/embedding/IntegrationPaths.jsx:3",
+    "src/pages/data/embedding.jsx:83"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "product-embedding"
+  ]
+}

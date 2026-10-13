@@ -1,0 +1,70 @@
+{
+  "id": "features.fintech-reasons",
+  "category": "FEATURES",
+  "purpose": "\"Why does traditional BI fail fintechs?\": heading and three icon + sentence reasons on /fintech.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Fintech.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 8,
+        "observedMaxWords": 6,
+        "wcRef": "features.fintech-reasons.heading"
+      },
+      "reasons": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "icon": {
+            "type": "media",
+            "required": true,
+            "assetRoles": [
+              "icon.pixel-art"
+            ]
+          },
+          "text": {
+            "type": "text",
+            "required": true,
+            "maxWords": 14,
+            "observedMaxWords": 11,
+            "wcRef": "features.fintech-reasons.reasons[].text"
+          }
+        },
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [],
+  "measuredFrom": [
+    "src/pages/Fintech.jsx:113",
+    "src/pages/data/fintech.jsx:14"
+  ],
+  "notes": [
+    "No responsive change is separately specified in source for this block."
+  ],
+  "schemaVersion": "1.0.0",
+  "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
+  "usedByTemplates": [
+    "fintech"
+  ]
+}

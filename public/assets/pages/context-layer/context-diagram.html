@@ -1,0 +1,1200 @@
+<!-- Captured live from https://www.lightdash.com/context-layer (code component .cl-root) at 1440px. Box: [104,624.8125,1232,601.65625] parent: ["HeroImage",80,624.8125,1280,601.65625,"rgb(246, 248, 250)","0px 24px"] -->
+<style>
+/* =========================================================================
+   Context Layer — diagram styles
+   Editorial / technical, light mode, Lightdash violet accent.
+   ========================================================================= */
+
+/* Britti Sans (trial, Pangram Pangram) — self-hosted from /fonts/ */
+@font-face {
+  font-family: "Britti Sans";
+  src: url("/assets/pages/context-layer/diagram/fonts/BrittiSans-Semibold.otf") format("opentype");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.cl-root {
+  /* paper & ink */
+  --paper:        #F8FAFB;
+  --paper-edge:   oklch(95% 0.006 80);
+  --card:         oklch(100% 0 0);
+  --rule:         oklch(91% 0.012 280);
+  --rule-soft:    oklch(94% 0.008 280);
+  --card-stroke:  #5E4CFF;  /* brand violet outline for outer cards */
+  --ink:          oklch(22% 0.022 285);
+  --ink-soft:     oklch(38% 0.025 285);
+  --muted:        oklch(54% 0.020 285);
+  --label:        oklch(58% 0.025 285);
+
+  /* brand — locked to the brand hex #5E4CFF used in the new icons */
+  --violet:        #5E4CFF;
+  --violet-strong: #4B3BE6;
+  --violet-tint:   oklch(96% 0.025 290);
+
+  /* type */
+  --display: "Britti Sans", "Söhne", "Inter", system-ui, -apple-system, sans-serif;
+  --sans:    "Inter", system-ui, -apple-system, sans-serif;
+  /* Pixel face — used ONLY for literal code/identifiers inside the
+     feedback-loop card (the YAML pull-request diff and governed metric
+     names). Editorial copy and labels stay on --sans. */
+  --pixel:   "Silkscreen", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* scale */
+  --s-2:  4px;
+  --s-1:  8px;
+  --s0:   12px;
+  --s1:   16px;
+  --s2:   20px;
+  --s3:   24px;
+  --s4:   32px;
+  --s5:   40px;
+  --s6:   56px;
+  --s7:   72px;
+
+  --shadow-card:
+    0 1px 0 oklch(0% 0 0 / 0.02),
+    0 1px 2px oklch(0% 0 0 / 0.025);
+
+  --radius-card: 14px;
+  --radius-sub:  10px;
+  --radius-tile: 7px;
+
+  /* Square-pixel dashed border (rounded rect). Uniform px-sized dashes —
+     drawn as an SVG background so the dash size doesn't stretch with the
+     element. Used for the warehouse chips, platform subcards, and the
+     feedback-loop "house". rx matches --radius-sub (10px). */
+  --pixel-dash: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' fill='none' preserveAspectRatio='none'%3E%3Crect width='100%25' height='100%25' rx='10' ry='10' stroke='%23bdbbcb' stroke-width='4' stroke-dasharray='2 3'/%3E%3C/svg%3E");
+}
+
+.cl-root *,
+.cl-root *::before,
+.cl-root *::after { box-sizing: border-box; }
+
+.cl-root {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.cl-root img { display: block; max-width: 100%; height: auto; }
+
+.cl-root /* =========================================================================
+   Layout shell
+   ========================================================================= */
+
+.diagram {
+  position: relative;
+  max-width: 1180px;  /* hug the four columns (~1114px content + padding) */
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 64px) clamp(16px, 3vw, 32px) clamp(40px, 6vw, 80px);
+  isolation: isolate;
+  /* Centre the diagram vertically in the viewport. Done here (not on body)
+     so `.diagram` stays a normal block child whose width still resolves to
+     min(viewport, max-width) — the JS board-scaler measures clientWidth and
+     would mis-read it if `.diagram` became a shrink-to-fit flex item.
+     min-height (not fixed height) lets it grow and anchor to the top if the
+     content ever exceeds the viewport, instead of clipping. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* The desktop board scales as a single unit (JS-set transform) when the
+     viewport is narrower than its design width, so text never reflows or
+     truncates before the mobile breakpoint. Clip the unscaled layout-box
+     overflow so it can't produce a stray horizontal scrollbar. */
+  overflow-x: clip;
+}
+
+.cl-root /* =========================================================================
+   Header
+   ========================================================================= */
+
+/* Top-left page title. */
+.intro {
+  margin-bottom: clamp(22px, 3vw, 40px);
+}
+.cl-root .intro__title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(26px, 3.7vw, 39px);
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+  margin: 0;
+}
+.cl-root /* Second sentence sits inline on the same line,
+.cl-root in brand violet. */
+.intro__accent { color: var(--violet); }
+
+.cl-root .diagram__header {
+  text-align: center;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+.cl-root .diagram__title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(24px, 3.6vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  margin: 0;
+}
+.cl-root .diagram__title span { display: inline; }
+.cl-root .diagram__title .accent { color: var(--violet); }
+@container (max-width: 560px) {
+  .cl-root .diagram__title span { display: block; }
+}
+
+.cl-root /* =========================================================================
+   Board grid
+   ========================================================================= */
+
+.board {
+  position: relative;
+  display: grid;
+  /* Wide platform column in the middle (so "Business logic · internal docs"
+     sits on one line and the feedback lanes breathe). The consumption column
+     is reduced a touch, and the source column is set to one consumer-card
+     width (≈ half the consumption column) so the warehouse card matches a
+     single consumer card. Both consumer cards stay equal via .consumers. */
+  /* Source matches the Platform's hugged width; both Platform and Consumption
+     hug their content so the board saves space and the columns read even. */
+  grid-template-columns: max-content max-content max-content max-content;
+  /* Equal horizontal + vertical gaps: warehouse↔platform matches the
+     Context Layer↔Feedback loop gap. */
+  column-gap: var(--s2);
+  row-gap: var(--s2);
+  align-items: start;       /* every column / card hugs its own content */
+}
+
+/* Desktop placement: source and consumers span both rows (full height);
+   the platform column splits into the Context Layer (row 1) and the
+   Feedback loop (row 2) stacked beneath it. The Feedback loop is LAST in
+   the DOM so that on mobile it naturally falls below the consumption layer
+   — here we pin it back up into column 2. */
+@container (min-width: 701px) {
+  .cl-root /* Four columns across in one row,
+.cl-root every card stretched to equal height. */
+  .column--source { grid-column: 1; grid-row: 1; align-self: stretch; }
+  .cl-root .column--platform { grid-column: 2; grid-row: 1; align-self: stretch; }
+  .cl-root .column--consumers { grid-column: 3; grid-row: 1; align-self: stretch; }
+  .cl-root .column--feedback { grid-column: 4; grid-row: 1; align-self: stretch; }
+  .cl-root /* Subcards hug their content (no vertical stretch),
+.cl-root so the frame stays as
+     compact as the Context Layer card. */
+  .column--consumers .consumers {
+    grid-auto-rows: auto;
+  }
+  .cl-root /* Pin each card frame to its (stretched) column's full height EXPLICITLY,
+.cl-root instead of relying only on `flex: 1 1 auto` to distribute the column's
+     height onto the single card. The flex-fill path is fragile once these
+     equal-height rules run inside an @container query (the Framer build):
+     the consumption column — whose own content is the shortest of the four —
+     stops inheriting the grid row's stretched height through the flex chain
+     and the card collapses to content height. `height: 100%` resolves against
+     the column's definite grid-row height,
+.cl-root so the frame fills deterministically. */
+  .column--source .card--source,
+.cl-root .column--platform .card--platform,
+.cl-root .column--consumers .card--consumption,
+.cl-root .column--feedback .card--feedback { height: 100%; }
+}
+/* Three-column desktop down to ~920px, then single-column mobile. */
+@container (max-width: 700px) {
+  .cl-root /* Single column. Also neutralise the JS board-scaler's inline transform/width
+     when collapsed,
+.cl-root so the mobile layout is always full-size (the scaler can
+     leave a stale scale() behind on a frame resize,
+.cl-root which shrank the text). */
+  .board {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    transform: none !important;
+    width: auto !important;
+    margin-bottom: 0 !important;
+  }
+  .cl-root /* On mobile,
+.cl-root the warehouse card collapses to its natural height —
+     no need to stretch it to match the platform column. */
+  .source-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+    flex: 0 1 auto;
+  }
+  .cl-root .card--source {
+    padding: var(--s1);
+    align-content: start;
+  }
+  .cl-root .source-stack > .card--source:last-child {
+    flex: 0 1 auto;
+  }
+}
+
+.cl-root /* =========================================================================
+   Connectors (JS-drawn paths + pulses)
+   ========================================================================= */
+
+.connectors {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+  opacity: 0;
+  transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cl-root /* Dot overlay sits ABOVE the cards (z-index > .column's 1) so the
+   junction dots float on top of the chips rather than being clipped
+   behind them. Same fade-in timing as the line layer. */
+.connectors-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+  opacity: 0;
+  transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.cl-root .connectors-overlay[data-ready="true"] { opacity: 1; }
+
+.cl-root /* Each junction dot stays hidden until the connector reaches it: JS then
+   pops the solid core in first,
+.cl-root and its glow (halo) follows. Both start
+   hidden; the appear animations are set per-dot in JS (guarded against
+   resize replays). */
+.connectors-overlay .dots .dot-core,
+.cl-root .connectors-overlay .dots .dot-halo { opacity: 0; }
+@keyframes cl-dot-appear { from { opacity: 0; } to { opacity: 1; } }
+
+.cl-root /* Subtle breathe on the translucent halo (transform + fill-opacity only,
+.cl-root so
+   it composes with the opacity fade-in). JS sets the actual animation with
+   the per-dot delay; this just carries the transform settings. */
+.dot-halo {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes dot-halo-pulse {
+  0%, 100% { transform: scale(1);    fill-opacity: 0.36; }
+  50%      { transform: scale(1.12); fill-opacity: 0.52; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cl-root .dot-halo { animation: none; }
+}
+.cl-root .connectors[data-ready="true"] {
+  opacity: 1;
+}
+.cl-root .connectors .lines path {
+  fill: none;
+  stroke: var(--card-stroke);   /* same violet as the card outlines */
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.cl-root /* Hide the unused pulse paths and junction dots; the static lines stay. */
+.connectors .pulses,
+.cl-root .connectors-overlay .dots { display: none; }
+
+.cl-root /* =========================================================================
+   Flow cycle animation
+   ONE bright gradient sweeps the card purple strokes left → right; a soft
+   blurred dot runs the solid return leg; the Context Layer flourishes as the
+   cycle closes on it. Shared ~4.5s timeline (sweep is SMIL in the SVG defs).
+   ========================================================================= */
+
+/* The sweep rides the card strokes: SVG outline rects (one per card) stroked
+   with the animated #sweep gradient,
+.cl-root sitting on top of the violet borders. */
+/* The sweep rides BOTH the card outlines and the forward connector lines,
+.cl-root so
+   the one wave drifts continuously across the cards (connectors bridge the
+   gaps). Solid borders/lines sit underneath; this layer is the moving light. */
+.connectors-overlay .sweep rect,
+.cl-root .connectors-overlay .sweep path {
+  fill: none;
+  stroke: url(#sweep);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 2px rgba(94, 76, 255, 0.7));
+}
+.cl-root /* The return leg uses the right→left,
+.cl-root time-offset gradient. */
+.connectors-overlay .sweep-return {
+  fill: none;
+  stroke: url(#sweep-return);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 2px rgba(94, 76, 255, 0.7));
+}
+
+.cl-root /* Closing leg: the gradient continues up through the Context Layer's outline
+   (bottom→top) as the cycle returns to it — same look as the other sweeps,
+.cl-root replacing the old flourish glow. */
+.connectors-overlay .sweep-ctx {
+  fill: none;
+  stroke: url(#sweep-ctx);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 4px rgba(94, 76, 255, 0.85));
+}
+
+.cl-root /* Arrow nodes glow as the sweep reaches them (per-arrow delay set in JS). */
+.flow-on .flow-arrow { animation: cl-arrowFlow 12s ease-in-out infinite; }
+@keyframes cl-arrowFlow {
+  0%, 7%, 100% { filter: none; }
+  2.5%         { filter: drop-shadow(0 0 3px var(--violet))
+                         drop-shadow(0 0 5px rgba(94, 76, 255, 0.6)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cl-root .flow-arrow { animation: none; }
+  .cl-root .connectors-overlay .sweep rect,
+.cl-root .connectors-overlay .sweep path,
+.cl-root .connectors-overlay .sweep-return,
+.cl-root .connectors-overlay .sweep-ctx { stroke: none; }
+}
+
+.cl-root /* Animated highlight that traces each card's purple outline,
+.cl-root sequenced with
+   the connector pulses into one shared flow (see setupFlowAnimations). */
+.connectors-overlay .card-outlines path {
+  fill: none;
+  /* Lighter than the violet card border so the sweep reads as a bright pulse
+     ON the border (same-colour would be invisible where it overlaps, leaving
+     only the inward glow — which looked like an inner offset line). The soft
+     glow gives the band a fluid, flowing presence as it passes card → card. */
+  stroke: #c4baff;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 2px color-mix(in oklch, var(--violet) 42%, transparent));
+  opacity: 0;        /* keyframes fade each card's sweep in during its window */
+}
+.cl-root .connectors .pulses path {
+  fill: none;
+  stroke: var(--violet);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px color-mix(in oklch, var(--violet) 32%, transparent))
+          drop-shadow(0 0 2px color-mix(in oklch, var(--violet) 28%, transparent));
+  /* Stay hidden until the keyframes explicitly fade the pulse in.
+     Without this, the stroke-dasharray pattern is visible as a
+     static violet line during the animation-delay period. */
+  opacity: 0;
+}
+
+.cl-root /* =========================================================================
+   Column / label
+   ========================================================================= */
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);          /* tight spacing between label and content */
+  position: relative;
+  z-index: 1;
+  min-height: 0;
+}
+.cl-root .column__label {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--label);
+}
+/* "Auto-improve" label above the feedback loop — mobile only (on desktop the
+   feedback card sits inside the Platform column, so no label is shown). */
+@container (min-width: 701px) {
+  .cl-root .column__label--feedback { display: none; }
+}
+
+.cl-root /* Source column: stretches to match the platform card. The warehouse
+   card grows to fill the column so its bottom sits flush with the
+   Lightdash Context Layer card. Icon+title pin to the top and the chips
+   list pins to the bottom,
+.cl-root so top and bottom padding both equal the
+   card's intrinsic padding. */
+.column--source { align-self: stretch; }
+.cl-root .source-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  flex: 1;
+  min-height: 0;
+}
+.cl-root .source-stack > .card--source:last-child {
+  flex: 1;               /* fill the column so the warehouse matches card heights */
+  align-content: start;
+}
+.cl-root .card--source {
+  padding: var(--s1);
+  align-content: start;
+}
+
+.cl-root /* =========================================================================
+   Card — shared
+   ========================================================================= */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-stroke);
+  border-radius: var(--radius-card);
+  padding: var(--s1);
+  box-shadow: var(--shadow-card);
+  /* Stacked layout (matches the PDF): icon on its own row, title below
+     it, then the sub / chips. Single left-aligned column. The platform
+     and feedback cards override this with their own flex head. */
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  align-content: center;    /* vertically center content block; even padding top/bottom */
+  row-gap: var(--s-2);
+  position: relative;
+}
+.cl-root .card > .card__icon {
+  /* Tighter gap below the icon to the title. */
+  margin-bottom: var(--s-2);
+}
+.cl-root .card > .card__title {
+  margin: 0;
+  line-height: 1.25;
+}
+.cl-root .card > .card__sub {
+  margin: 0;
+}
+.cl-root .card > .chips {
+  /* Title→chips gap mirrors the Lightdash Context Layer card's
+     head→subgrid gap (var(--s1) = 16px). Card row-gap contributes
+     var(--s-2) = 4px, so 12px margin completes the total. */
+  margin: var(--s0) 0 0;
+  /* justify-self (not align-self) is the inline axis — stretch the chip
+     list full-width against the card's justify-items:start. */
+  justify-self: stretch;
+}
+
+.cl-root .card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 33.6px;        /* 28px + 20% */
+  height: 33.6px;
+  overflow: hidden;
+}
+.cl-root .card__icon img { width: 33.6px; height: 33.6px; }
+
+.cl-root /* The new Agents/Apps SVGs provide their own white tile via a masked
+   group; no extra CSS background needed. Keeping the class as a hook in
+   case future glyph-only SVGs land here. */
+.card__icon--tile {
+  background: transparent;
+}
+
+.cl-root .card__title {
+  font-family: var(--sans);
+  font-weight: 600;
+  /* Uniform with the subcard titles (Agents, Apps, Semantics…). */
+  font-size: clamp(11px, calc(5px + 1.6vw), 14px);
+  letter-spacing: -0.005em;
+  margin: 0;
+  color: var(--ink);
+}
+.cl-root .card__title--lg {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+.cl-root .card__sub {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.cl-root /* =========================================================================
+   Source-of-truth cards (chips inside warehouse)
+   ========================================================================= */
+
+.chips {
+  list-style: none;
+  margin: var(--s-1) 0 0;
+  padding: 0;
+  /* Vertical stack of warehouse chips, each filling the card width evenly. */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-1);
+}
+.cl-root .chips li {
+  /* Text matches the subcard sub ("Metrics · joins", "Business logic …"):
+     12.5px, regular weight, muted colour — centered in the chip. */
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--muted);
+  padding: var(--s-1) var(--s0);   /* tighter top/bottom than the s0 box */
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sub);
+  text-align: center;
+  white-space: nowrap;
+  /* Smooth the weight/colour shift on hover. */
+  transition: color 0.15s ease, font-weight 0.15s ease;
+}
+.cl-root /* Hover: chip text lifts to the title's weight/ink (like the card titles). */
+.chips li:hover {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Mobile: warehouse chips stack in a single vertical list, text centred. */
+@container (max-width: 700px) {
+  .cl-root .chips {
+    grid-template-columns: 1fr;
+  }
+  .cl-root .chips li {
+    text-align: center;
+  }
+  .cl-root /* Card-head titles read a little larger on mobile. */
+  .card__head .card__title { font-size: 17px; }
+  .cl-root /* The sweep runs top→bottom through the stacked cards on mobile. */
+  .connectors-overlay .sweep rect,
+.cl-root .connectors-overlay .sweep path { stroke: url(#sweep-down); }
+}
+
+.cl-root /* =========================================================================
+   Platform card (parent)
+   ========================================================================= */
+
+.column--platform { align-self: stretch; }
+.cl-root .card--platform,
+.cl-root .card--feedback,
+.cl-root .card--consumption {
+  display: flex;           /* override the grid layout used for other cards */
+  flex-direction: column;
+  /* Reset the inherited `.card { align-items: center }` so the head and
+     the content block fill the card width instead of shrinking to their
+     content and centering (most visible for the feedback lanes on mobile). */
+  align-items: stretch;
+  padding: var(--s1);
+  gap: var(--s1);
+}
+.cl-root /* Context Layer card hugs its content; the Feedback loop card below it
+   absorbs any remaining column height so the animation stage breathes. */
+/* Consumption + Context fill column 2 (they define its height); the warehouse
+   and feedback hug their content and centre vertically in their full-height
+   columns. */
+.card--source,
+.cl-root .card--platform,
+.cl-root .card--consumption,
+.cl-root .card--feedback { flex: 1 1 auto; }
+.cl-root .card--platform .card__head,
+.cl-root .card--feedback .card__head,
+.cl-root .card--source .card__head,
+.cl-root .card--consumption .card__head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--s-2);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+.cl-root .card--platform .card__head .card__icon,
+.cl-root .card--feedback .card__head .card__icon,
+.cl-root .card--source .card__head .card__icon,
+.cl-root .card--consumption .card__head .card__icon { margin-bottom: 0; }
+.cl-root .card--platform .card__title--lg {
+  margin: 0;
+  text-align: left;
+  flex: 0 1 auto;
+}
+
+.cl-root .subgrid {
+  display: grid;
+  /* minmax(0, 1fr) — without the explicit 0 min, `1fr` defaults to
+     minmax(auto, 1fr) and the auto floor is the subcard's min-content
+     width (long unbroken text like ".md · descriptions · ai_context").
+     That overflows the platform card on narrow viewports. minmax(0, 1fr)
+     lets the columns shrink so text wraps inside the card. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-auto-rows: auto;    /* subcards hug their content; no stretching */
+  gap: var(--s-1);
+  /* Fill the platform card's content width on every viewport, matching
+     the warehouse chip column above. Pairs with the minmax(0, 1fr) cols
+     so the subgrid spans full width without overflowing on narrow. */
+  width: 100%;
+}
+.cl-root /* Feedback loop subcards stack in a single vertical column; the Context Layer
+   uses the base 2-column subgrid (2×2). */
+.card--platform .subgrid,
+.cl-root .card--feedback .subgrid { grid-template-columns: minmax(0, 1fr); }
+
+.cl-root .subcard {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sub);
+  padding: var(--s0) var(--s0);
+  /* Iconless subcards: title on row 1, sub on row 2 — flex column.
+     2px gap (slightly tighter than var(--s-2)) per visual refinement. */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.cl-root .subcard > .subcard__title { margin: 0; }
+.cl-root .subcard > .subcard__sub { margin: 0; }
+.cl-root .subcard__title {
+  font-family: var(--sans);
+  font-weight: 600;
+  /* Smooth, viewport-driven shrink. clamp locks at 14px on wide
+     screens, scales down with vw as the window narrows, and floors at
+     11px to stay legible. No ellipsis — the title shrinks gradually
+     instead of truncating. */
+  font-size: clamp(11px, calc(5px + 1.6vw), 14px);
+  /* Match the consumer card title's line-height so the visual gap
+     between the title and the sub matches the consumer-card spacing. */
+  line-height: 1.25;
+  margin: 0;
+  color: var(--ink);
+  white-space: nowrap;
+  min-width: 0;
+}
+.cl-root .subcard__sub {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--muted);
+  /* Match the consumer card sub's inherited body line-height (1.45)
+     for visual spacing consistency between the two card families. */
+  line-height: 1.45;
+  /* Allow long unbreakable tokens (e.g. ai_context, row-level) to break
+     so the text never crosses the subcard's dashed border. */
+  overflow-wrap: break-word;
+}
+
+.cl-root /* Mobile-only loop-back card in the feedback column — stands in for the
+   return arc (which only exists on desktop). Filled violet,
+.cl-root lighter violet
+   outline,
+.cl-root white text. */
+.subcard--loop { display: none; }
+@container (max-width: 700px) {
+  .cl-root .subcard--loop {
+    display: flex;
+    background: var(--violet);
+    border-color: #9b8dff;
+  }
+  .cl-root .subcard--loop .subcard__title,
+.cl-root .subcard--loop .subcard__sub { color: #fff; }
+}
+
+.cl-root /* =========================================================================
+   Consumers (2 cols × 3 rows,
+.cl-root equal heights)
+   ========================================================================= */
+
+.consumers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: var(--s-1);
+}
+
+.cl-root .card--consumer {
+  /* Grey-outlined subcard inside the consumption frame (icon/title/sub block
+     pinned top-left), matching the Context Layer subcards exactly. */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* anchor the block to the top */
+  align-items: flex-start;       /* keep it left-aligned */
+  gap: 2px;                      /* same title→sub gap as .subcard */
+  padding: var(--s0);
+  align-self: stretch;
+  height: 100%;
+  border-color: var(--rule);     /* grey hairline, not the violet card stroke */
+  border-radius: var(--radius-sub);
+  box-shadow: none;
+}
+.cl-root .card--consumer .card__title { font-size: clamp(11px, calc(5px + 1.6vw), 14px); }   .cl-root /* match the Context Layer subcard titles */
+/* Icon tile sits just above each consumer title. */
+.card--consumer .card__icon { display: block; margin-bottom: -3px; line-height: 0; }
+.cl-root .card--consumer .card__icon img { width: 24px; height: 24px; border-radius: 4px; }
+.cl-root .card--consumer .card__sub { font-size: 12.5px; }
+
+.cl-root /* Accent variant: solid brand violet fill,
+.cl-root white type */
+.card--accent {
+  background: #5E4CFF;
+  border-color: transparent;
+  color: oklch(99% 0.005 285);
+}
+.cl-root .card--accent .card__title { color: oklch(99% 0.005 285); }
+.cl-root .card--accent .card__sub { color: oklch(94% 0.020 285); }
+
+.cl-root /* =========================================================================
+   Feedback loop card — sits below the Context Layer card in the platform
+   column. Three labelled lanes (Metrics used → Pull request → Governed
+   context) carry a looping animation: incoming metrics become a YAML pull
+   request,
+.cl-root get approved,
+.cl-root and land as governed context. The list grows,
+.cl-root so
+   the layer keeps improving itself.
+   ========================================================================= */
+
+.floop {
+  display: grid;
+  /* PR lane holds the code diff; the governed lane holds the longest
+     identifiers (median_profit, repeat_buyers) so both get a little extra
+     over the metrics lane. minmax(0,…) lets lanes shrink gracefully. */
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr) minmax(0, 1.1fr);
+  gap: var(--s1);
+  flex: 1 1 auto;          /* fill the card's remaining height */
+  min-height: 150px;
+  align-items: stretch;
+  /* Same outline as the Context Layer subcards: a hairline rule, no fill. */
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sub);
+  padding: var(--s1);
+}
+.cl-root .floop__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  min-width: 0;
+}
+.cl-root /* The PR lane is one connected unit: a status header bar sitting directly on
+   top of the dark .yml window,
+.cl-root split by a coloured divider,
+.cl-root all inside a
+   single rounded,
+.cl-root clipped frame. */
+.floop__col--pr {
+  gap: 0;
+  border-radius: var(--radius-sub);
+  overflow: hidden;
+  /* Grey hairline housing the whole PR window (header + .yml body). No fill —
+     the header and dark body each fill their own half; a container background
+     would bleed a dark fringe at the header's rounded top corners. */
+  border: 1px solid var(--rule);
+}
+
+.cl-root /* Lane labels reuse the editorial small-caps treatment of .column__label */
+.floop__label {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);   /* same ink as the card titles */
+  white-space: nowrap;
+}
+.cl-root /* Live status pill — sits above the code block where the "Pull request"
+   label used to be,
+.cl-root spanning the PR lane. Steps through the loop's phases;
+   colour shifts by state: violet (working) → amber (gap found) → green
+   (improved). Editorial small-caps treatment,
+.cl-root not pixel. */
+.floop__status {
+  align-self: stretch;        /* span the full PR-lane width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 7px 10px;
+  /* Fixed height so the header (and the whole PR window) never collapses while
+     the status text is empty between type-outs. */
+  min-height: 30px;
+  /* header bar of the connected PR window — divider sits below it, kept to
+     the same 1px hairline as every other line in the diagram */
+  border-radius: 0;
+  border-bottom: 1px solid var(--rule);
+  /* White header with dark (title-ink) text by default; only the "not in
+     semantics" warn state turns amber. */
+  color: var(--ink);
+  background: var(--card);
+  transition: color .35s ease, background-color .35s ease, border-color .35s ease;
+}
+.cl-root .floop__status-text { overflow: hidden; text-overflow: ellipsis; }
+.cl-root /* Fixed-width slot for the "Listening" dots so they fill in place without
+   pushing the word. */
+.fl-dots { display: inline-block; width: 1.4em; text-align: left; }
+.cl-root .floop__status[data-state="warn"] { color: #b8791f; background: #fbeed1; border-bottom-color: #e6c98f; }
+.cl-root .floop__status[data-state="ok"] { color: var(--ink); background: var(--card); }
+.cl-root .floop__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: 0 0 auto;
+  animation: fl-status-pulse 1s ease-in-out infinite;
+}
+@keyframes fl-status-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+@media (prefers-reduced-motion: reduce) {
+  .cl-root .floop__status-dot { animation: none; }
+}
+
+.cl-root /* ---- Metrics used lane (incoming natural-language questions) ---- */
+.floop__metrics,
+.cl-root .floop__governed {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  min-width: 0;
+  /* Reserve room for the full 4 chips so the lane — and therefore the whole
+     feedback-loop section — stays one fixed height for the entire loop, even
+     as the metrics list collapses and the governed list grows. (Sized for the
+     10px pixel chips.) */
+  min-height: 122px;
+}
+.cl-root .fl-metric {
+  position: relative;        /* so the drifting chip can lift above siblings */
+  font-family: var(--pixel);
+  font-size: 10px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--ink-soft);
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-tile);
+  padding: 5px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .4s ease, transform .4s ease,
+              border-color .35s ease, color .35s ease;
+}
+.cl-root .fl-metric.in { opacity: 1; transform: translateY(0); }
+.cl-root /* Flagged: this metric isn't in the semantic layer yet — amber highlight
+   with a brief attention pulse before it drifts into the .yml. */
+.fl-metric.active {
+  border-color: #e0962b;
+  color: #a9701f;
+  background: #fdf3df;
+  animation: fl-flag 1.3s ease-in-out 1;
+}
+/* A double flash — the amber fill brightens and a halo pulses twice — to draw
+   the eye to the flagged metric before it drags across. */
+@keyframes fl-flag {
+  0%, 100% { background: #fdf3df; box-shadow: 0 0 0 0 rgba(224, 150, 43, 0); }
+  18%, 54% { background: #f6d489; box-shadow: 0 0 0 4px rgba(224, 150, 43, 0.28); }
+  36%, 72% { background: #fdf3df; box-shadow: 0 0 0 0 rgba(224, 150, 43, 0); }
+}
+.cl-root .fl-metric.resolved { opacity: .4; }
+
+.cl-root /* ---- Pull request lane (the literal YAML diff — pixel face) ---- */
+.floop__pr {
+  position: relative;
+  flex: 1 1 auto;
+  /* Holds the full 4-line diff (10px pixel font) up front, so the box doesn't
+     grow as the lines type in. */
+  min-height: 104px;
+  background: #36394A;
+  /* No own border/radius — the .floop__col--pr frame provides the outline. */
+  padding: 10px 11px;
+  overflow: hidden;
+  transition: box-shadow .35s ease;
+}
+.cl-root .floop__pr.is-approved {
+  box-shadow: inset 0 0 0 2px color-mix(in oklch, #1fa971 40%, transparent);
+}
+.cl-root .floop__code {
+  display: block;
+  font-family: var(--pixel);
+  font-size: 10px;
+  line-height: 1.95;
+  letter-spacing: 0.01em;
+  color: #d4d4e2;
+  white-space: pre;
+}
+.cl-root .floop__code .ln {
+  display: block;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+.cl-root .fl-code__file { color: #f2f2f7; }
+.cl-root .fl-code__add { color: #3fbf8e; }
+.cl-root .fl-code__name { color: #e0962b; }
+
+.cl-root /* APPROVED stamp slams over the diff once the PR is merged */
+.floop__stamp {
+  position: absolute;
+  /* Fills the .yml body exactly; the .floop__col--pr frame clips the rounded
+     corners, so no dark slivers and the header stays uncovered. */
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--pixel);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #1fa971;
+  border-radius: 0;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  /* Fades back to the dark .yml when un-stamped (the slam-in opacity is driven
+     by the animation, so this transition only governs the fade-OUT). */
+  transition: opacity .7s ease;
+}
+.cl-root .floop__stamp-icon { width: 15px; height: 15px; flex: 0 0 auto; }
+.cl-root .floop__stamp.is-stamped {
+  opacity: 1;     /* held by the class so removing it fades via the transition */
+  animation: fl-stamp .45s cubic-bezier(.22, 0.9, 0.3, 1);
+}
+@keyframes fl-stamp {
+  0%   { opacity: 0; transform: scale(1.18); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.cl-root /* ---- Governed context lane (green ✓ rows — pixel identifiers) ---- */
+.fl-gov {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-family: var(--pixel);
+  font-size: 10px;
+  letter-spacing: 0.01em;
+  color: #1c9b6a;
+  background: #e8f7f0;
+  border: 1px solid #c6efdd;
+  border-radius: var(--radius-tile);
+  padding: 5px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+.cl-root .fl-gov.in { opacity: 1; transform: translateX(0); }
+.cl-root .fl-gov__tick { color: #1fa971; flex: 0 0 auto; }
+.cl-root .fl-gov.fresh { animation: fl-fresh .7s ease; }
+@keyframes fl-fresh {
+  0%   { background: #bfeed7; }
+  40%  { background: #a7e6c8; }
+  100% { background: #e8f7f0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cl-root .fl-metric,
+.cl-root .fl-gov { transition: none; }
+  .cl-root .floop__stamp.is-stamped { animation: none; opacity: 1; transform: scale(1); }
+  .cl-root .fl-gov.fresh { animation: none; }
+}
+
+/* On the single-column mobile board the three lanes stack vertically. */
+@container (max-width: 700px) {
+  .cl-root .floop {
+    grid-template-columns: 1fr;
+    gap: var(--s1);
+    min-height: 0;
+  }
+  .cl-root /* Left-aligned lane labels at the consumer-card sub size (12.5px),
+.cl-root inked
+     to match the card titles (e.g. "Embedding") rather than the muted grey. */
+  .floop__label {
+    text-align: left;
+    font-size: 12.5px;
+    color: var(--ink);
+  }
+  .cl-root /* Centre the chip text within the now full-width metrics + governed lanes,
+.cl-root and make the chips a touch bigger — reusing the existing 10px size (the
+     status pill) rather than introducing a new one,
+.cl-root with slightly more
+     padding. The .yml diff matches the same 10px on mobile. */
+  .fl-metric,
+.cl-root .fl-gov,
+.cl-root .floop__code { font-size: 10px; }
+  .cl-root .fl-metric,
+.cl-root .fl-gov { padding: 10px 12px; }
+  .cl-root /* Keep the .yml box roughly SQUARE on mobile (a wide-thin slab looks awkward
+     full-width) — height tracks width via aspect-ratio,
+.cl-root capped so wide tablets
+     don't balloon. The diff is centred vertically within it. */
+  .floop__pr {
+    flex: 0 0 auto;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cl-root .fl-metric { text-align: center; }
+  .cl-root .fl-gov { justify-content: center; }
+  .cl-root /* Lay the metrics + governed chips out in a 2×2 grid on mobile rather than
+     a single tall column — so reserve only 2 rows,
+.cl-root not the desktop column's 4. */
+  .floop__metrics,
+.cl-root .floop__governed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s-1);
+    min-height: 92px;
+  }
+}
+
+/* =========================================================================
+   Entrance motion
+   ========================================================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+  .cl-root .diagram__title,
+.cl-root .column {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: cl-rise 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .cl-root .diagram__title { animation-delay: 40ms; }
+  .cl-root .column--source { animation-delay: 160ms; }
+  .cl-root .column--platform { animation-delay: 240ms; }
+  .cl-root .column--consumers { animation-delay: 320ms; }
+  .cl-root .column--feedback { animation-delay: 400ms; }
+}
+@keyframes cl-rise { to { opacity: 1; transform: translateY(0); } }
+
+
+/* ── Framer host overrides ──────────────────────────────────────────────
+   The component fills its frame instead of centring in a 100vh viewport,
+   and the page background is left transparent (host frame owns it).
+   container-type makes .cl-root the size-query container the @container
+   breakpoints above resolve against, so the diagram responds to its own
+   frame width inside Framer rather than the browser viewport. */
+.cl-root { background: transparent; container-type: inline-size; }
+.cl-root .diagram { min-height: 0; justify-content: flex-start; }
+
+
+      @keyframes cl-pulse-0 {
+        0%       { stroke-dashoffset: 6; opacity: 0; }
+        11.5%   { stroke-dashoffset: 6; opacity: 0; }
+        12.4%  { opacity: 0.500; }
+        17.14%   { stroke-dashoffset: -20; opacity: 0.500; }
+        100%     { stroke-dashoffset: -20; opacity: 0.500; }
+      }
+
+      @keyframes cl-pulse-1 {
+        0%       { stroke-dashoffset: 6; opacity: 0; }
+        27.5%   { stroke-dashoffset: 6; opacity: 0; }
+        28.62%  { opacity: 0.500; }
+        34.5%   { stroke-dashoffset: -20; opacity: 0.500; }
+        100%     { stroke-dashoffset: -20; opacity: 0.500; }
+      }
+
+      @keyframes cl-pulse-2 {
+        0%       { stroke-dashoffset: 6; opacity: 0; }
+        57%   { stroke-dashoffset: 6; opacity: 0; }
+        57.9%  { opacity: 0.500; }
+        62.64%   { stroke-dashoffset: -20; opacity: 0.500; }
+        100%     { stroke-dashoffset: -20; opacity: 0.500; }
+      }
+
+      @keyframes cl-pulse-3 {
+        0%       { stroke-dashoffset: 218.61697998046876; opacity: 0; }
+        73%   { stroke-dashoffset: 218.61697998046876; opacity: 0; }
+        73.9%  { opacity: 0.500; }
+        78.64%   { stroke-dashoffset: -728.7232666015625; opacity: 0.500; }
+        100%     { stroke-dashoffset: -728.7232666015625; opacity: 0.500; }
+      }
+@keyframes cl-dot-core-0 {
+        0% { opacity: 0; }
+        16.12% { opacity: 0; }
+        17.72% { opacity: 1; }
+        92% { opacity: 1; }
+        99% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+@keyframes cl-dot-halo-0 {
+        0%      { opacity: 0; transform: scale(0.55); }
+        16.95%  { opacity: 0; transform: scale(0.55); }
+        18.15% { opacity: 1; transform: scale(1); }
+        23.95% { opacity: 0; transform: scale(1.3); }
+        100%    { opacity: 0; transform: scale(1.3); }
+      }
+@keyframes cl-dot-core-1 {
+        0% { opacity: 0; }
+        32.89% { opacity: 0; }
+        34.49% { opacity: 1; }
+        92% { opacity: 1; }
+        99% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+@keyframes cl-dot-halo-1 {
+        0%      { opacity: 0; transform: scale(0.55); }
+        33.72%  { opacity: 0; transform: scale(0.55); }
+        34.92% { opacity: 1; transform: scale(1); }
+        40.72% { opacity: 0; transform: scale(1.3); }
+        100%    { opacity: 0; transform: scale(1.3); }
+      }
+@keyframes cl-dot-core-2 {
+        0% { opacity: 0; }
+        61.62% { opacity: 0; }
+        63.22% { opacity: 1; }
+        92% { opacity: 1; }
+        99% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+@keyframes cl-dot-halo-2 {
+        0%      { opacity: 0; transform: scale(0.55); }
+        62.45%  { opacity: 0; transform: scale(0.55); }
+        63.65% { opacity: 1; transform: scale(1); }
+        69.45% { opacity: 0; transform: scale(1.3); }
+        100%    { opacity: 0; transform: scale(1.3); }
+      }
+@keyframes cl-dot-core-3 {
+        0% { opacity: 0; }
+        77.62% { opacity: 0; }
+        79.22% { opacity: 1; }
+        92% { opacity: 1; }
+        99% { opacity: 0; }
+        100% { opacity: 0; }
+      }
+@keyframes cl-dot-halo-3 {
+        0%      { opacity: 0; transform: scale(0.55); }
+        78.45%  { opacity: 0; transform: scale(0.55); }
+        79.65% { opacity: 1; transform: scale(1); }
+        85.45% { opacity: 0; transform: scale(1.3); }
+        100%    { opacity: 0; transform: scale(1.3); }
+      }
+
+        @keyframes cl-platform-glow {
+          0%        { box-shadow: 0 0 0 0 rgba(94, 76, 255, 0); }
+          82%  { box-shadow: 0 0 0 0 rgba(94, 76, 255, 0); }
+          89% { box-shadow: 0 0 22px 0 rgba(94, 76, 255, 0.34); }
+          96%  { box-shadow: 0 0 0 0 rgba(94, 76, 255, 0); }
+          100%      { box-shadow: 0 0 0 0 rgba(94, 76, 255, 0); }
+        }
+</style>
+<div class="cl-root" style="width:100%;height:100%"><main class="diagram"><div class="board flow-on" role="group" aria-label="Context Layer architecture diagram"><svg class="connectors" aria-hidden="true" viewBox="0 0 1116 458" width="1116" height="458" data-ready="true"><g class="lines"><path d="M 180.34375 240.796875 H 200.34375"></path><path d="M 435 240.796875 H 455"></path><path d="M 862.5625 240.796875 H 882.5625"></path><path d="M 998.40625 457.65625 V 473.65625 A 14 14 0 0 1 984.40625 487.65625 H 331.671875 A 14 14 0 0 1 317.671875 473.65625 V 457.65625"></path></g><g class="pulses"><path d="M 180.34375 240.796875 H 200.34375" stroke-dasharray="6 20" data-anim-name="cl-pulse-0" style="animation: 12000ms linear 94.3ms infinite normal none running cl-pulse-0;"></path><path d="M 435 240.796875 H 455" stroke-dasharray="6 20" data-anim-name="cl-pulse-1" style="animation: 12000ms linear 94.3ms infinite normal none running cl-pulse-1;"></path><path d="M 862.5625 240.796875 H 882.5625" stroke-dasharray="6 20" data-anim-name="cl-pulse-2" style="animation: 12000ms linear 94.3ms infinite normal none running cl-pulse-2;"></path><path d="M 998.40625 457.65625 V 473.65625 A 14 14 0 0 1 984.40625 487.65625 H 331.671875 A 14 14 0 0 1 317.671875 473.65625 V 457.65625" stroke-dasharray="218.61697998046876 728.7232666015625" data-anim-name="cl-pulse-3" style="animation: 12000ms linear 94.3ms infinite normal none running cl-pulse-3;"></path></g></svg><svg class="connectors-overlay" aria-hidden="true" viewBox="0 0 1116 458" width="1116" height="458" data-ready="true"><defs><linearGradient id="dot-halo-grad" x1="0.8" y1="0.075" x2="0.05" y2="1"><stop offset="0" stop-color="white"></stop><stop offset="1" stop-color="#5E4CFF"></stop></linearGradient><linearGradient id="sweep" gradientUnits="userSpaceOnUse" x1="-240" y1="0" x2="0" y2="0" spreadMethod="pad"><stop offset="0" stop-color="#bba6ff" stop-opacity="0"></stop><stop offset="0.5" stop-color="#bba6ff" stop-opacity="1"></stop><stop offset="1" stop-color="#bba6ff" stop-opacity="0"></stop><animateTransform id="sweepAnim" attributeName="gradientTransform" type="translate" values="0 0; 1380 0; 1380 0" keyTimes="0; 0.5; 1" dur="12s" begin="indefinite" repeatCount="indefinite"></animateTransform></linearGradient><linearGradient id="sweep-return" gradientUnits="userSpaceOnUse" x1="-240" y1="0" x2="0" y2="0" spreadMethod="pad"><stop offset="0" stop-color="#bba6ff" stop-opacity="0"></stop><stop offset="0.5" stop-color="#bba6ff" stop-opacity="1"></stop><stop offset="1" stop-color="#bba6ff" stop-opacity="0"></stop><animateTransform id="sweepReturnAnim" begin="sweepAnim.begin" attributeName="gradientTransform" type="translate" values="1620 0; 1620 0; 0 0; 0 0" keyTimes="0; 0.48; 0.82; 1" dur="12s" repeatCount="indefinite"></animateTransform></linearGradient><linearGradient id="sweep-ctx" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="240" spreadMethod="pad"><stop offset="0" stop-color="#bba6ff" stop-opacity="0"></stop><stop offset="0.5" stop-color="#bba6ff" stop-opacity="1"></stop><stop offset="1" stop-color="#bba6ff" stop-opacity="0"></stop><animateTransform id="sweepCtxAnim" begin="sweepAnim.begin" attributeName="gradientTransform" type="translate" values="0 540; 0 540; 0 -260; 0 -260" keyTimes="0; 0.82; 0.96; 1" dur="12s" repeatCount="indefinite"></animateTransform></linearGradient><linearGradient id="sweep-down" gradientUnits="userSpaceOnUse" x1="0" y1="-240" x2="0" y2="0" spreadMethod="pad"><stop offset="0" stop-color="#bba6ff" stop-opacity="0"></stop><stop offset="0.5" stop-color="#bba6ff" stop-opacity="1"></stop><stop offset="1" stop-color="#bba6ff" stop-opacity="0"></stop><animateTransform id="sweepDownAnim" begin="sweepAnim.begin" attributeName="gradientTransform" type="translate" values="0 -120; 0 1900; 0 1900" keyTimes="0; 0.5; 1" dur="12s" repeatCount="indefinite"></animateTransform></linearGradient><g id="circle-arrow" fill="none" stroke="#5E4CFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" fill="#fff"></circle><path d="M16 12l-4 -4"></path><path d="M16 12h-8"></path><path d="M12 16l4 -4"></path></g></defs><g class="card-outlines"></g><g class="sweep"><rect rx="13.5" ry="13.5" x="0.5" y="24.4375" width="179.34375" height="432.71875"></rect><rect rx="13.5" ry="13.5" x="200.84375" y="24.4375" width="233.65625" height="432.71875"></rect><rect rx="13.5" ry="13.5" x="455.5" y="24.4375" width="406.5625" height="432.71875"></rect><rect rx="13.5" ry="13.5" x="883.0625" y="24.4375" width="230.6875" height="432.71875"></rect><path d="M 180.34375 240.796875 H 200.34375"></path><path d="M 435 240.796875 H 455"></path><path d="M 862.5625 240.796875 H 882.5625"></path></g><path class="sweep-return" d="M 998.40625 457.65625 V 473.65625 A 14 14 0 0 1 984.40625 487.65625 H 331.671875 A 14 14 0 0 1 317.671875 473.65625 V 457.65625"></path><rect class="sweep-ctx" x="200.84375" y="24.4375" width="233.65625" height="432.71875" rx="13.5" ry="13.5"></rect><g class="dots"><g class="dot-marker" transform="translate(200.34375, 240.796875)" data-appear-set="1"><circle class="dot-halo" r="11" fill="url(#dot-halo-grad)" fill-opacity="0.36" style="animation: 12000ms ease-out 1174.8ms infinite normal none running cl-dot-halo-0;"></circle><circle class="dot-core" r="4.2" fill="#5E4CFF" style="animation: 12000ms linear 1174.8ms infinite normal none running cl-dot-core-0;"></circle></g><g class="dot-marker" transform="translate(472, 138.640625)" data-appear-set="1"><circle class="dot-halo" r="11" fill="url(#dot-halo-grad)" fill-opacity="0.36" style="animation: 12000ms ease-out 1174.8ms infinite normal none running cl-dot-halo-1;"></circle><circle class="dot-core" r="4.2" fill="#5E4CFF" style="animation: 12000ms linear 1174.8ms infinite normal none running cl-dot-core-1;"></circle></g><g class="dot-marker" transform="translate(1114.25, 347.078125)" data-appear-set="1"><circle class="dot-halo" r="11" fill="url(#dot-halo-grad)" fill-opacity="0.36" style="animation: 12000ms ease-out 1174.8ms infinite normal none running cl-dot-halo-2;"></circle><circle class="dot-core" r="4.2" fill="#5E4CFF" style="animation: 12000ms linear 1174.8ms infinite normal none running cl-dot-core-2;"></circle></g><g class="dot-marker" transform="translate(317.671875, 457.65625)" data-appear-set="1"><circle class="dot-halo" r="11" fill="url(#dot-halo-grad)" fill-opacity="0.36" style="animation: 12000ms ease-out 1174.8ms infinite normal none running cl-dot-halo-3;"></circle><circle class="dot-core" r="4.2" fill="#5E4CFF" style="animation: 12000ms linear 1174.8ms infinite normal none running cl-dot-core-3;"></circle></g></g><g class="arrows"><use href="#circle-arrow" class="flow-arrow" data-step="0" transform="translate(200.34375 240.796875) rotate(0) scale(1.0999999999999999) translate(-12 -12)" style="animation-delay: 1.09s;"></use><use href="#circle-arrow" class="flow-arrow" data-step="1" transform="translate(455 240.796875) rotate(0) scale(1.0999999999999999) translate(-12 -12)" style="animation-delay: 2.2s;"></use><use href="#circle-arrow" class="flow-arrow" data-step="2" transform="translate(882.5625 240.796875) rotate(0) scale(1.0999999999999999) translate(-12 -12)" style="animation-delay: 4.06s;"></use><use href="#circle-arrow" class="flow-arrow" data-step="3" transform="translate(317.671875 457.65625) rotate(-90) scale(1.0999999999999999) translate(-12 -12)" style="animation-delay: 8.7s;"></use></g></svg><section class="column column--source" aria-labelledby="col-source"><p id="col-source" class="column__label">Source of truth</p><div class="source-stack"><article class="card card--source" data-anchor="source-warehouse"><header class="card__head"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/warehouse.svg" alt="" width="28" height="28"></span><h2 class="card__title">Your warehouse</h2></header><ul class="chips" aria-label="Supported sources"><li>Amazon Redshift</li><li>BigQuery</li><li>ClickHouse</li><li>Databricks</li><li>MotherDuck</li><li>PostgreSQL</li><li>Snowflake</li><li>Trino</li></ul></article></div></section><section class="column column--platform" aria-labelledby="col-platform"><p id="col-platform" class="column__label">Platform</p><article class="card card--platform" data-anchor="platform" data-glow-set="1" style="animation: 12000ms ease-in-out 1174.8ms infinite normal none running cl-platform-glow;"><header class="card__head"><span class="card__icon card__icon--brand"><img src="/assets/pages/context-layer/diagram/icons/lightdash.svg" alt="" width="28" height="28"></span><h2 class="card__title">Lightdash Context Layer</h2></header><div class="subgrid"><div class="subcard"><h3 class="subcard__title">Semantics</h3><p class="subcard__sub">Metrics · joins</p></div><div class="subcard"><h3 class="subcard__title">Context</h3><p class="subcard__sub">Business logic · internal docs</p></div><div class="subcard"><h3 class="subcard__title">Caching</h3><p class="subcard__sub">Fast · consistent results</p></div><div class="subcard"><h3 class="subcard__title">Permissions</h3><p class="subcard__sub">Authentication</p></div></div></article></section><section class="column column--consumers" aria-labelledby="col-consumers"><p class="column__label">Activation</p><article class="card card--consumption" data-anchor="consumption"><header class="card__head"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/evaluation.svg" alt="" width="28" height="28"></span><h2 class="card__title" id="col-consumers">Consumption layer</h2></header><div class="consumers"><article class="card card--consumer" data-anchor="consumer-agents"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/agents.svg" alt="" width="28" height="28"></span><h2 class="card__title">Agents</h2><p class="card__sub">Governed autonomous AI</p></article><article class="card card--consumer" data-anchor="consumer-apps"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/apps.svg" alt="" width="28" height="28"></span><h2 class="card__title">Apps</h2><p class="card__sub">Data Products · Workflows</p></article><article class="card card--consumer" data-anchor="consumer-dashboards"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/dashboards.svg" alt="" width="28" height="28"></span><h2 class="card__title">Dashboards</h2><p class="card__sub">Interactive · drill-down</p></article><article class="card card--consumer" data-anchor="consumer-sdks"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/sdks.svg" alt="" width="28" height="28"></span><h2 class="card__title">SDKs</h2><p class="card__sub">Python · JS · API</p></article><article class="card card--consumer" data-anchor="consumer-embedding"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/embedding.svg" alt="" width="28" height="28"></span><h2 class="card__title">Embedding</h2><p class="card__sub">Customer-facing analytics</p></article><article class="card card--consumer" data-anchor="consumer-mcp"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/mcp.svg" alt="" width="28" height="28"></span><h2 class="card__title">MCP</h2><p class="card__sub">Internal / external</p></article></div></article></section><section class="column column--feedback" aria-label="Feedback loop"><p class="column__label">Evaluation</p><article class="card card--feedback" data-anchor="feedback"><header class="card__head"><span class="card__icon"><img src="/assets/pages/context-layer/diagram/icons/card/rotate.svg" alt="" width="28" height="28"></span><h2 class="card__title">Feedback loop</h2></header><div class="subgrid"><div class="subcard"><h3 class="subcard__title">Autopilot</h3><p class="subcard__sub">Scheduled health, zero effort</p></div><div class="subcard"><h3 class="subcard__title">Self-improving SL</h3><p class="subcard__sub">Metrics that never drift</p></div><div class="subcard"><h3 class="subcard__title">Caching</h3><p class="subcard__sub">S3 · Pre Aggs</p></div><div class="subcard"><h3 class="subcard__title">Context</h3><p class="subcard__sub">.md · .files</p></div><div class="subcard"><h3 class="subcard__title">Permissions</h3><p class="subcard__sub">RLS · Auth · SSO</p></div><div class="subcard subcard--loop"><h3 class="subcard__title">Sends to context layer</h3><p class="subcard__sub">Continuously refined</p></div></div></article></section></div></main></div>

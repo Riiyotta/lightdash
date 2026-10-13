@@ -1,0 +1,81 @@
+{
+  "id": "content.story-sidebar",
+  "category": "CONTENT",
+  "purpose": "Sticky 320px company card (desktop; inline after the CTA below 1100): logo, ~8-line blurb and three dashed fact rows (Industry, Location, Employees).",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "Industry, location and employee ranges are measured; the company blurb is placeholder lorem text (CustomerStory.jsx COMPANY_BLURB).",
+  "implementedBy": "src/pages/CustomerStory.jsx > CompanyCard",
+  "content": {
+    "fields": {
+      "logo": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "logo.customer-partner"
+        ],
+        "altMaxWords": 3
+      },
+      "industry": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "content.story-sidebar.industry"
+      },
+      "location": {
+        "type": "text",
+        "required": true,
+        "maxWords": 5,
+        "observedMaxWords": 3,
+        "wcRef": "content.story-sidebar.location"
+      },
+      "employees": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "content.story-sidebar.employees"
+      },
+      "blurbMode": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "placeholder"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 1099.98px)",
+      "change": "sidebar hidden (hidden desk:block); a second copy renders inline (desk:hidden)",
+      "cssCite": "src/pages/CustomerStory.jsx:99"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/CustomerStory.jsx:15",
+    "src/pages/CustomerStory.jsx:12"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "customer-story"
+  ]
+}

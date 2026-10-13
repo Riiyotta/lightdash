@@ -1,0 +1,19 @@
+{
+  "id": "snake-game",
+  "kind": "component",
+  "purpose": "Canvas Snake game: demo autoplay (190ms ticks) then interactive play (135ms), overlay messages with a 260ms pop.",
+  "props": [
+    "block",
+    "interactive",
+    "background"
+  ],
+  "usedBySections": [
+    "cta.snake-band",
+    "cta.snake-band-narrow"
+  ],
+  "measuredFrom": [
+    "src/components/shared/SnakeGame.jsx:96",
+    "src/components/shared/SnakeGame.jsx:10"
+  ],
+  "schemaVersion": "1.0.0"
+}

@@ -1,0 +1,99 @@
+{
+  "id": "hero.fintech-split",
+  "category": "HERO",
+  "purpose": "Boxed 604-tall split hero on /fintech: left column with buttons, display headline and lead; right column a 564x604 chat-widget illustration on a dot-grid background.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Fintech.jsx (inline)",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 10,
+        "observedMaxWords": 8,
+        "wcRef": "hero.fintech-split.heading"
+      },
+      "accent": {
+        "type": "text",
+        "required": false,
+        "maxWords": 3,
+        "observedMaxWords": 1,
+        "wcRef": "hero.fintech-split.accent"
+      },
+      "subtitle": {
+        "type": "text",
+        "required": true,
+        "maxWords": 38,
+        "observedMaxWords": 30,
+        "wcRef": "hero.fintech-split.subtitle"
+      },
+      "buttons": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "cta",
+          "required": true,
+          "actions": [
+            "navigate-route",
+            "open-external",
+            "open-talk-modal"
+          ],
+          "labelMaxWords": 6,
+          "observedLabelMaxWords": 4,
+          "labelRef": "hero.fintech-split.buttons[]Label"
+        },
+        "minItems": 0,
+        "maxItems": 2
+      },
+      "illustration": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "screenshot.product-ui"
+        ],
+        "altMaxWords": 30
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "button row moves above the heading (order-1) and the illustration stacks below",
+      "cssCite": "src/pages/Fintech.jsx:56"
+    },
+    {
+      "query": "(min-width: 1100px)",
+      "change": "illustration column is fixed 564 wide and pinned right",
+      "cssCite": "src/pages/Fintech.jsx:73"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Fintech.jsx:32",
+    "src/pages/Fintech.jsx:72"
+  ],
+  "notes": [
+    "Known gap (ia.json template.fintech): on live the illustration is a scripted chat animation; the clone shows a static render of its final state (src/pages/Fintech.jsx data-fintech-hero-illustration)."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "fintech"
+  ]
+}

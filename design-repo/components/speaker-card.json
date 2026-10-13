@@ -1,0 +1,18 @@
+{
+  "id": "speaker-card",
+  "kind": "component",
+  "purpose": "Speaker card: 124px grayscale photo on a strip, company logo, name, role, dashed border.",
+  "props": [
+    "name",
+    "role",
+    "photo",
+    "logo"
+  ],
+  "usedBySections": [
+    "proof.speakers-grid"
+  ],
+  "measuredFrom": [
+    "src/components/pages/beyond-copilots/Speakers.jsx:14"
+  ],
+  "schemaVersion": "1.0.0"
+}

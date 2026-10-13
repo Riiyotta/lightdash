@@ -1,0 +1,341 @@
+{
+  "$description": "Live-measured motion primitives. Springs are Framer springs pre-sampled into linear keyframes (src/motion/curves.js). QA corrections override CLONE_SPEC §3.5 (see extraction/measured-values.json).",
+  "motion": {
+    "easing.framer": {
+      "$value": "cubic-bezier(0.44, 0, 0.56, 1)",
+      "$type": "cubicBezier",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:95",
+          "quote": "framer: 'cubic-bezier(.44,0,.56,1)'"
+        },
+        {
+          "ref": "src/index.css:179",
+          "quote": "--nav-ease-framer: cubic-bezier(0.44, 0, 0.56, 1);"
+        }
+      ]
+    },
+    "easing.timeline-reveal": {
+      "$value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+      "$type": "cubicBezier",
+      "evidence": [
+        {
+          "ref": "src/components/pages/about/Timeline.jsx:38",
+          "quote": "transition: 'opacity 0.55s cubic-bezier(.2,.8,.2,1)'"
+        }
+      ]
+    },
+    "easing.snake-pop": {
+      "$value": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "$type": "cubicBezier",
+      "evidence": [
+        {
+          "ref": "src/index.css:382",
+          "quote": "snk-pop 260ms cubic-bezier(0.22, 1, 0.36, 1)"
+        }
+      ]
+    },
+    "spring.b02-d04": {
+      "$value": {
+        "bounce": 0.2,
+        "durationS": 0.4,
+        "keyframeCount": 41,
+        "stiffness": 505.6,
+        "damping": 35.98
+      },
+      "$type": "spring",
+      "evidence": [
+        {
+          "ref": "src/motion/curves.js:5",
+          "quote": "spring { bounce: 0.2, duration: 0.4 } → 41 keyframes over 400 ms"
+        },
+        {
+          "ref": "src/index.css:175",
+          "quote": "b2d4: {type:spring, bounce:.2, duration:.4} -> stiffness 505.6, damping 35.98"
+        }
+      ],
+      "usedBy": [
+        "hero fade (load)",
+        "button hover",
+        "mega-menu content fade",
+        "accordion tab open",
+        "FAQ icon"
+      ]
+    },
+    "spring.b0-d06": {
+      "$value": {
+        "bounce": 0,
+        "durationS": 0.6,
+        "keyframeCount": 61
+      },
+      "$type": "spring",
+      "evidence": [
+        {
+          "ref": "src/motion/curves.js:12",
+          "quote": "spring { bounce: 0, duration: 0.6 } → 61 keyframes over 600 ms"
+        }
+      ],
+      "usedBy": [
+        "hero pixel drop (load)"
+      ]
+    },
+    "spring.b0-d04": {
+      "$value": {
+        "bounce": 0,
+        "durationS": 0.4,
+        "keyframeCount": 41
+      },
+      "$type": "spring",
+      "evidence": [
+        {
+          "ref": "src/motion/curves.js:20",
+          "quote": "spring { bounce: 0, duration: 0.4 } → 41 keyframes over 400 ms"
+        }
+      ],
+      "usedBy": [
+        "roadmap strip slide (load)"
+      ]
+    },
+    "spring.b0-d03": {
+      "$value": {
+        "bounce": 0,
+        "durationS": 0.3,
+        "stiffness": 947.3,
+        "damping": 61.56
+      },
+      "$type": "spring",
+      "evidence": [
+        {
+          "ref": "src/index.css:176",
+          "quote": "b0d3: {type:spring, bounce:0,  duration:.3} -> stiffness 947.3, damping 61.56"
+        }
+      ],
+      "usedBy": [
+        "phone nav height",
+        "phone accordion",
+        "FAQ height"
+      ]
+    },
+    "spring.nav-open": {
+      "$value": {
+        "bounce": 0.2,
+        "durationS": 0.3,
+        "stiffness": 898.9,
+        "damping": 47.97
+      },
+      "$type": "spring",
+      "evidence": [
+        {
+          "ref": "src/components/Navbar.jsx:24",
+          "quote": "duration .3 (k 898.9, c 47.97 -> w 29.98, zeta .8)"
+        }
+      ],
+      "note": "mega-menu open to Product/Resources; peaks ~+5px, settles ~315 ms"
+    },
+    "spring.nav-soft": {
+      "$value": {
+        "stiffness": 400,
+        "damping": 40
+      },
+      "$type": "spring",
+      "evidence": [
+        {
+          "ref": "src/components/Navbar.jsx:26",
+          "quote": "spring k 400, c 40"
+        }
+      ],
+      "note": "mega-menu to Customers and close; no overshoot"
+    },
+    "duration.modal-frame": {
+      "$value": 150,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "src/index.css:247",
+          "quote": "animation: nav-fade-in 150ms var(--nav-ease-framer) both;"
+        }
+      ]
+    },
+    "duration.modal-card": {
+      "$value": 200,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "src/index.css:250",
+          "quote": "animation: nav-fade-in 200ms var(--nav-ease-framer) both;"
+        }
+      ]
+    },
+    "duration.footer-link": {
+      "$value": 200,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "src/index.css:361",
+          "quote": "transition: color 200ms var(--nav-ease-framer);"
+        }
+      ]
+    },
+    "duration.accordion-tab": {
+      "$value": 170,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "src/index.css:313",
+          "quote": "transition: grid-template-rows 170ms var(--nav-spring-b2d4);"
+        }
+      ]
+    },
+    "duration.faq-height": {
+      "$value": 150,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "src/index.css:338",
+          "quote": "transition: grid-template-rows 150ms var(--nav-spring-b0d3);"
+        }
+      ]
+    },
+    "duration.tab-progress": {
+      "$value": 8800,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "src/index.css:330",
+          "quote": "animation: ld-tab-progress 8.8s linear both;"
+        }
+      ]
+    },
+    "duration.hamburger": {
+      "$value": 300,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "src/index.css:204",
+          "quote": "top 300ms var(--nav-ease-framer),"
+        }
+      ]
+    },
+    "duration.timeline-reveal": {
+      "$value": 550,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "src/components/pages/about/Timeline.jsx:8",
+          "quote": "≈ 0.55s cubic-bezier(.2,.8,.2,1)"
+        }
+      ]
+    },
+    "duration.glitch-loop": {
+      "$value": 1500,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "specs/legal-pages.md:228",
+          "quote": "**duration 1500ms, `steps(23, jump-start)`, 23 keyframes, iterations Infinity**"
+        }
+      ]
+    },
+    "duration.snake-demo-tick": {
+      "$value": 190,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:288",
+          "quote": "Tick **190ms**"
+        }
+      ]
+    },
+    "duration.snake-play-tick": {
+      "$value": 135,
+      "$type": "durationMs",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:294",
+          "quote": "Tick **135ms**"
+        }
+      ]
+    },
+    "delay.pixel-drop": {
+      "$value": 1000,
+      "$type": "delayMs",
+      "evidence": [
+        {
+          "ref": "src/motion/useRouteMotion.js:94",
+          "quote": "{ duration: 600, delay: 1000 }"
+        }
+      ]
+    },
+    "delay.roadmap-left-start": {
+      "$value": 1000,
+      "$type": "delayMs",
+      "evidence": [
+        {
+          "ref": "src/motion/useRouteMotion.js:63",
+          "quote": "(t.right ? 1300 : 1000) + 100 * i"
+        }
+      ]
+    },
+    "delay.roadmap-right-start": {
+      "$value": 1300,
+      "$type": "delayMs",
+      "evidence": [
+        {
+          "ref": "src/motion/useRouteMotion.js:63",
+          "quote": "(t.right ? 1300 : 1000) + 100 * i"
+        }
+      ]
+    },
+    "delay.roadmap-step": {
+      "$value": 100,
+      "$type": "delayMs",
+      "evidence": [
+        {
+          "ref": "src/motion/useRouteMotion.js:63",
+          "quote": "(t.right ? 1300 : 1000) + 100 * i"
+        }
+      ]
+    },
+    "distance.pixel-drop": {
+      "$value": -32,
+      "$type": "translatePx",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:149",
+          "quote": "translateY **−32px** → 0"
+        }
+      ],
+      "note": "integrations: −30 top cluster / +30 bottom cluster"
+    },
+    "distance.pixel-drop-integrations-bottom": {
+      "$value": 30,
+      "$type": "translatePx",
+      "evidence": [
+        {
+          "ref": "specs/SHARED.md:149",
+          "quote": "Integrations: −30 (top cluster) / +30 (bottom cluster)"
+        }
+      ]
+    },
+    "distance.roadmap-strip": {
+      "$value": -16,
+      "$type": "translatePx",
+      "evidence": [
+        {
+          "ref": "src/motion/useRouteMotion.js:100",
+          "quote": "translateX(${(-16 * (1 - p)).toFixed(4)}px)"
+        }
+      ]
+    },
+    "opacity.appear-from": {
+      "$value": 0.001,
+      "$type": "number",
+      "evidence": [
+        {
+          "ref": "src/motion/useRouteMotion.js:87",
+          "quote": "opacity: 0.001 + 0.999 * p"
+        }
+      ]
+    }
+  }
+}

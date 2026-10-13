@@ -1,0 +1,70 @@
+{
+  "id": "listing.related-articles",
+  "category": "LISTING",
+  "purpose": "\"Related articles\": header block (58 spacer, 40 header row with H2 and a \"See all posts\" button, 48 spacer) and a 3-column grid of the 3 newest posts (the same 3 on every post).",
+  "status": "measured-structure-placeholder-body",
+  "composable": true,
+  "evidenceNote": "The block always shows the 3 newest posts site-wide (src/pages/data/cms.js RELATED_POSTS), which is a clone rule rather than an editorial relation.",
+  "implementedBy": "src/components/cms/RelatedHeader.jsx + src/components/cms/PostCard.jsx",
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 4,
+        "observedMaxWords": 2,
+        "wcRef": "listing.related-articles.heading"
+      },
+      "seeAll": {
+        "type": "cta",
+        "required": true,
+        "actions": [
+          "navigate-route"
+        ],
+        "labelMaxWords": 5,
+        "observedLabelMaxWords": 3,
+        "labelRef": "listing.related-articles.seeAllLabel"
+      },
+      "cardMode": {
+        "type": "enum",
+        "required": true,
+        "values": [
+          "three-newest"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "maxPerPage": 1
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "header row 96 tall: H2 40/40 with the button stacked below",
+      "cssCite": "src/components/cms/RelatedHeader.jsx:12"
+    }
+  ],
+  "measuredFrom": [
+    "src/components/cms/RelatedHeader.jsx:4",
+    "src/pages/data/cms.js:35",
+    "src/pages/BlogPost.jsx:99"
+  ],
+  "notes": [],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "blog-post"
+  ]
+}

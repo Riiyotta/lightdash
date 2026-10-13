@@ -1,0 +1,400 @@
+/* Fonts (CLONE_SPEC.md §1.3) */
+@font-face {
+  font-family: 'Britti Sans Medium';
+  src: url('/fonts/britti-sans-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Britti Sans Trial Regular';
+  src: url('/fonts/britti-sans-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Britti Sans Trial Semibold';
+  src: url('/fonts/britti-sans-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Britti Sans Trial Bold';
+  src: url('/fonts/britti-sans-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-400-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-500-latin.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-600-latin.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-700-latin.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter Variable';
+  src: url('/fonts/inter-variable-framer.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+/* Inner-page fonts (specs/SHARED.md §3, cms-templates.md §1.3, legal-pages.md §1) */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-400-italic-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter-700-italic-latin.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/pages/legal/inter-900-latin.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* /playground only: Framer Inter 400 latin-ext subset (Google Fonts latin-ext range) */
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/shared/fonts/inter-400-latin-ext-JeYwfu.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* "Inter Variable Variable Regular" is the same file as "Inter Variable" (SHARED §3) */
+@font-face {
+  font-family: 'Inter Variable Variable Regular';
+  src: url('/fonts/inter-variable-framer.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url('/fonts/pixelify-sans-400-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fragment Mono';
+  src: url('/fonts/fragment-mono-400-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/geist-var-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Framer metric-matched fallbacks */
+@font-face {
+  font-family: 'Britti Sans Medium Placeholder';
+  src: local('Arial');
+  ascent-override: 79.96%;
+  descent-override: 19.99%;
+  line-gap-override: 0%;
+  size-adjust: 100.05%;
+}
+@font-face {
+  font-family: 'Inter Placeholder';
+  src: local('Arial');
+  ascent-override: 89.79%;
+  descent-override: 22.36%;
+  line-gap-override: 0%;
+  size-adjust: 107.89%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    font: 12px sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-page-bg;
+  }
+}
+
+@layer components {
+  /* §1.4 root frame: one viewport tall, no page scroll */
+  .root-frame {
+    width: 100%;
+    height: 100vh;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* §3.1 grid lines: 1px dashed rgba(255,255,255,.1) */
+  .hline {
+    @apply h-0 w-full border-t border-dashed border-dashed-line;
+  }
+  .vline {
+    @apply pointer-events-none absolute inset-y-0 w-0 border-l border-dashed border-dashed-line;
+  }
+}
+
+/* nav motion ------------------------------------------------------------------------------------
+   Values measured on www.lightdash.com (computed-style + MutationObserver polling per rAF) and
+   confirmed against the Framer component transitions shipped in NavBar.*.mjs / Button / Modal.
+   Framer springs are encoded as CSS linear() samples of the exact motion spring curve:
+   - b2d4: {type:spring, bounce:.2, duration:.4} -> stiffness 505.6, damping 35.98 (w 22.49, zeta .8)
+   - b0d3: {type:spring, bounce:0,  duration:.3} -> stiffness 947.3, damping 61.56 (w 30.78, zeta 1)
+   ---------------------------------------------------------------------------------------------- */
+:root {
+  --nav-ease-framer: cubic-bezier(0.44, 0, 0.56, 1);
+  --nav-spring-b2d4: linear(0, 0.0225, 0.0795, 0.1582, 0.2487, 0.3436, 0.4376, 0.527, 0.6094, 0.6835, 0.7485, 0.8045, 0.8518, 0.8911, 0.9232, 0.9488, 0.9688, 0.9841, 0.9954, 1.0036, 1.0091, 1.0125, 1.0144, 1.0151, 1.015, 1.0142, 1.0131, 1.0118, 1.0104, 1.0089, 1.0075, 1.0063, 1.0051, 1.0041, 1.0032, 1.0024, 1.0018, 1.0013, 1.0009, 1.0006, 1);
+  --nav-spring-b0d3: linear(0, 0.0388, 0.1272, 0.2363, 0.3487, 0.4552, 0.551, 0.6343, 0.7049, 0.7639, 0.8123, 0.8516, 0.8832, 0.9085, 0.9286, 0.9445, 0.9569, 0.9667, 0.9743, 0.9802, 0.9848, 0.9884, 0.9911, 0.9932, 0.9948, 0.996, 0.997, 0.9977, 0.9983, 0.9987, 1);
+}
+
+/* Framer Button hover (Talk to our team / Book a demo / mobile menu buttons / View all customer
+   stories): backgroundColor via spring b2d4, same curve in and out. */
+.nav-btn-spring {
+  transition: background-color 400ms var(--nav-spring-b2d4);
+}
+
+/* Desktop mega-menu content card: appears with opacity .001 -> 1 (spring b2d4); the outgoing card
+   is unmounted instantly on switch/close (no crossfade). */
+.nav-panel {
+  opacity: 0;
+  transition: none;
+}
+.nav-panel[data-active='true'] {
+  opacity: 1;
+  transition: opacity 400ms var(--nav-spring-b2d4);
+}
+
+/* Phone nav (<1100): hamburger bars tween .3s [.44,0,.56,1] (top + rotate together). */
+.nav-hamburger-bar {
+  transition:
+    top 300ms var(--nav-ease-framer),
+    transform 300ms var(--nav-ease-framer);
+}
+/* Phone nav height 64 <-> 100vh: spring b0d3 (content clipped, removed instantly on close). */
+.nav-phone {
+  transition: height 300ms var(--nav-spring-b0d3);
+}
+/* Accordion section 48 -> content height (and back) + chevron 0 <-> 180deg: spring b0d3. */
+.nav-acc {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms var(--nav-spring-b0d3);
+}
+.nav-acc[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+.nav-acc > * {
+  min-height: 0;
+  overflow: hidden;
+}
+.nav-chevron {
+  transition: transform 300ms var(--nav-spring-b0d3);
+}
+
+/* Customer logo hover (Dark / Mobile Dark variants): "Read case study" pill turns white with a
+   #0C0C0C label, instantly (no transition on the live site). */
+.nav-logo-cell a:hover > span > span {
+  background-color: #ffffff;
+  color: #0c0c0c;
+  --tw-ring-color: #ffffff;
+}
+
+/* Talk modal: backdrop appears/disappears instantly; frame opacity tween .15s and white card
+   opacity tween .2s, both cubic-bezier(.44,0,.56,1), no scale. Close is instant. */
+@keyframes nav-fade-in {
+  from {
+    opacity: 0.001;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.talk-frame {
+  animation: nav-fade-in 150ms var(--nav-ease-framer) both;
+}
+.talk-card {
+  animation: nav-fade-in 200ms var(--nav-ease-framer) both;
+}
+
+/* =================================================================================================
+   Inner pages: shared type tokens (specs/SHARED.md §3). Raw CSS on purpose: these classes work on
+   the running dev server without a Tailwind config reload. Each class carries the token's default
+   colour; override with a text-* utility (utilities layer wins over components).
+   Breakpoints: phone <810, tablet 810–1199.98 (SHARED §0 content breakpoint), desktop ≥1200.
+   ================================================================================================= */
+@layer components {
+  .ld-display-72 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 72px; line-height: 68.4px; font-weight: 600; letter-spacing: -1.44px; color: #1c0000; }
+  .ld-display-56 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 56px; line-height: 50.4px; font-weight: 600; letter-spacing: -0.27px; color: #272835; }
+  .ld-cta-56 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 56px; line-height: 53.2px; font-weight: 600; letter-spacing: -1.12px; color: #ffffff; }
+  .ld-h2-48 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 48px; line-height: 48px; font-weight: 400; letter-spacing: -0.96px; color: #36394a; }
+  .ld-faq-h-48 { font-family: 'Britti Sans Medium', 'Britti Sans Medium Placeholder', sans-serif; font-size: 48px; line-height: 43.2px; font-weight: 500; letter-spacing: -0.96px; color: #36394a; }
+  .ld-stat-48 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 48px; line-height: 48px; font-weight: 600; letter-spacing: -0.96px; color: #5e4cff; }
+  .ld-quote-40 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 40px; line-height: 50px; font-weight: 600; letter-spacing: -0.8px; color: #1a1b25; }
+  .ld-quote-32 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.64px; color: #1a1b25; }
+  .ld-h3-38 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 38px; line-height: 41.8px; font-weight: 600; letter-spacing: -0.76px; color: #272835; }
+  .ld-h3-32 { font-family: 'Britti Sans Medium', 'Britti Sans Medium Placeholder', sans-serif; font-size: 32px; line-height: 40px; font-weight: 400; letter-spacing: -0.32px; color: #36394a; }
+  .ld-card-title-24 { font-family: 'Britti Sans Medium', 'Britti Sans Medium Placeholder', sans-serif; font-size: 24px; line-height: 26.4px; font-weight: 500; letter-spacing: normal; color: #000000; }
+  .ld-faq-q-20 { font-family: 'Britti Sans Medium', 'Britti Sans Medium Placeholder', sans-serif; font-size: 20px; line-height: 20px; font-weight: 400; letter-spacing: -0.4px; color: #36394a; }
+  .ld-tab-title-18 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 18px; line-height: 28px; font-weight: 400; letter-spacing: normal; color: #36394a; }
+  .ld-tab-pill-14 { font-family: 'Britti Sans Trial Semibold', 'Britti Sans Medium Placeholder', sans-serif; font-size: 14px; line-height: 16.8px; font-weight: 600; letter-spacing: normal; }
+  .ld-lead-18 { font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 18px; line-height: 32px; font-weight: 400; letter-spacing: -0.18px; color: #666d80; }
+  .ld-tab-body-18 { font-family: 'Inter Variable', 'Inter', 'Inter Placeholder', sans-serif; font-size: 18px; line-height: 30.6px; font-weight: 400; letter-spacing: -0.18px; color: #666d80; }
+  .ld-tabbed-lead-18 { font-family: 'Inter Variable', 'Inter', 'Inter Placeholder', sans-serif; font-size: 18px; line-height: 27.9px; font-weight: 400; letter-spacing: -0.18px; color: #818898; }
+  .ld-caption-18 { font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 18px; line-height: 23.4px; font-weight: 400; letter-spacing: -0.36px; color: #666d80; }
+  .ld-card-body-16 { font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 16px; line-height: 25.6px; font-weight: 500; letter-spacing: -0.16px; color: #818898; }
+  .ld-sub-16 { font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 16px; line-height: 24px; font-weight: 400; letter-spacing: normal; color: #6b7280; }
+  .ld-name-20 { font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 20px; line-height: 26px; font-weight: 700; letter-spacing: -0.4px; color: #36394a; }
+  .ld-btn-15 { font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 15px; line-height: 18px; font-weight: 500; letter-spacing: normal; }
+  .ld-faq-a-14 { font-family: 'Inter', 'Inter Placeholder', sans-serif; font-size: 14px; line-height: 24px; font-weight: 400; letter-spacing: -0.28px; color: #36394a; }
+  .ld-faq-a-14 a { color: #5e4cff; text-decoration: none; }
+  .ld-faq-a-14 strong { font-weight: 700; }
+  .ld-blog-h2 { font-family: 'Inter Variable', 'Inter', 'Inter Placeholder', sans-serif; font-size: 40px; line-height: 47.2px; font-weight: 400; letter-spacing: -1.2px; color: #1a1b25; }
+  .ld-blog-card-22 { font-family: 'Inter Variable', 'Inter', 'Inter Placeholder', sans-serif; font-size: 22px; line-height: 27.5px; font-weight: 400; letter-spacing: -0.44px; color: #1a1b25; }
+  .ld-blog-meta-13 { font-family: 'Inter Variable', 'Inter', 'Inter Placeholder', sans-serif; font-size: 13px; line-height: 15.6px; font-weight: 400; letter-spacing: normal; color: #6b7280; }
+
+  /* SHARED §3 responsive type (measured at 810 and 390) */
+  @media (min-width: 810px) and (max-width: 1199.98px) {
+    .ld-h2-48 { font-size: 40px; line-height: 40px; letter-spacing: -0.8px; }
+  }
+  @media (max-width: 809.98px) {
+    .ld-display-72 { font-size: 42px; line-height: 39.9px; }
+    .ld-h2-48 { font-size: 32px; line-height: 35.2px; letter-spacing: -0.64px; }
+    .ld-faq-h-48 { font-size: 36px; line-height: 32.4px; }
+    .ld-cta-56 { font-size: 32px; line-height: 35.2px; letter-spacing: -0.64px; }
+  }
+}
+
+/* SHARED §5 / §6: button hover = spring bounce .2 duration .4 (same curve token as the nav buttons) */
+.ld-btn-spring {
+  transition:
+    background-color 400ms var(--nav-spring-b2d4),
+    color 400ms var(--nav-spring-b2d4),
+    box-shadow 400ms var(--nav-spring-b2d4);
+}
+
+/* SHARED §6 accordion tab open/close: spring ~150–170 ms with ~1px overshoot (b2d4 curve shape) */
+.ld-acc {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 170ms var(--nav-spring-b2d4);
+}
+.ld-acc[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+.ld-acc > * {
+  min-height: 0;
+  overflow: hidden;
+}
+/* SHARED §7.3 tab progress line: scaleY 0 -> 1, tween 8.8 s linear, origin top; restarts on click
+   (the element is re-keyed). No auto-advance. */
+@keyframes ld-tab-progress {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+.ld-tab-progress {
+  transform-origin: 50% 0;
+  animation: ld-tab-progress 8.8s linear both;
+}
+
+/* SHARED §6 FAQ: height spring ~150 ms; plus icon rotates 0 -> 45deg with overshoot (~45.6deg),
+   settles ~380 ms (b2d4 curve). Items toggle independently. */
+.ld-faq-acc {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 150ms var(--nav-spring-b0d3);
+}
+.ld-faq-acc[data-open='true'] {
+  grid-template-rows: 1fr;
+}
+.ld-faq-acc > * {
+  min-height: 0;
+  overflow: hidden;
+}
+.ld-faq-icon {
+  transition: transform 400ms var(--nav-spring-b2d4);
+}
+
+/* SHARED §9 CTA band grid: 1px #CDD2D9 lines every 8px on #F6F8FA */
+.ld-cta-grid {
+  background-color: #cdd2d9;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 1px, #f6f8fa 0), linear-gradient(90deg, rgba(0, 0, 0, 0) 1px, #f6f8fa 0);
+  background-size: 8px 8px;
+}
+
+/* SHARED §10 footer link hover #A4ABB8 -> #ECEFF3 ("Framer link transition"; duration not measured,
+   uses the cms breadcrumb link transition .2s cubic-bezier(.44,0,.56,1)) */
+.ld-footer-link {
+  transition: color 200ms var(--nav-ease-framer);
+}
+
+/* Snake game (SHARED §9, legal-pages §4.1: class names + values from the live DOM dump) */
+.snk-stage { position: relative; overflow: hidden; cursor: pointer; touch-action: none; user-select: none; outline: none; -webkit-tap-highlight-color: transparent; font-family: 'Pixelify Sans', ui-monospace, monospace; }
+.snk-stage:focus, .snk-stage:focus-visible { outline: none; }
+.snk-board { position: absolute; inset: 0; overflow: hidden; transition: opacity 200ms ease; }
+.snk-board.snk-faded { opacity: 0.5; }
+.snk-seg, .snk-food { position: absolute; top: 0; left: 0; width: var(--cw); height: var(--ch); background-size: 100% 100%; background-repeat: no-repeat; transition: opacity 320ms ease; }
+.snk-seg.snk-head { z-index: 3; }
+.snk-seg.snk-gone { opacity: 0; }
+.snk-food { z-index: 1; transition: opacity 240ms ease; }
+.snk-food.snk-spawning, .snk-food.snk-eaten { opacity: 0; }
+.snk-ui { color: #fff; font-weight: 400; pointer-events: none; }
+.snk-score { position: absolute; top: 10px; right: 14px; font-size: 16px; letter-spacing: 1px; z-index: 7; opacity: 0; transition: opacity 240ms ease; }
+.snk-score.snk-show { opacity: 0.9; }
+.snk-message { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; z-index: 6; opacity: 0; pointer-events: none; transition: opacity 180ms ease; }
+.snk-message.snk-show { opacity: 1; }
+.snk-message.snk-dim { backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); }
+.snk-big { font-size: 34px; line-height: 1.1; letter-spacing: 1px; }
+.snk-small { font-size: 16px; line-height: 1.5; opacity: 0.82; }
+.snk-pop { animation: snk-pop 260ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes snk-pop {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .snk-pop { animation: none; }
+}
+
+/* Light nav variant (inner pages, SHARED §2; colours measured live on /conversational-analytics). */
+[data-nav-variant='light'] .vline {
+  border-color: #e5e7eb;
+}
+/* Light "Read case study" pill hover: bg + 1px border #272835, label #FFF, instant. */
+[data-nav-variant='light'] .nav-logo-cell a:hover > span > span {
+  background-color: #272835;
+  color: #ffffff;
+  --tw-ring-color: #272835;
+}

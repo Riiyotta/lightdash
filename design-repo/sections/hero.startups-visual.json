@@ -1,0 +1,78 @@
+{
+  "id": "hero.startups-visual",
+  "category": "HERO",
+  "purpose": "Image block under the /startups hero (hidden on phone): glow background, a 956x547 Rive dashboard device frame, and a white \"To qualify, your company must:\" card with two icon criteria.",
+  "status": "measured",
+  "composable": true,
+  "implementedBy": "src/pages/Startups.jsx (inline) + src/components/pages/startups/RiveDashboard.jsx",
+  "content": {
+    "fields": {
+      "qualifyHeading": {
+        "type": "text",
+        "required": true,
+        "maxWords": 7,
+        "observedMaxWords": 5,
+        "wcRef": "hero.startups-visual.qualifyHeading"
+      },
+      "criteria": {
+        "type": "list",
+        "required": true,
+        "item": {
+          "type": "text",
+          "required": true,
+          "maxWords": 8,
+          "observedMaxWords": 6,
+          "wcRef": "hero.startups-visual.criteria[]"
+        },
+        "minItems": 2,
+        "maxItems": 3
+      },
+      "visual": {
+        "type": "media",
+        "required": true,
+        "assetRoles": [
+          "animation.rive"
+        ]
+      }
+    },
+    "additionalProperties": false
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowSection": "hero.company-centered"
+  },
+  "motion": {
+    "allowedPatterns": [
+      "rive-canvas",
+      "none"
+    ],
+    "reducedMotionFallbackRequired": true,
+    "reducedMotionFallbacks": {
+      "rive-canvas": "static-final-state",
+      "none": "not-applicable"
+    },
+    "reducedMotionBases": {
+      "rive-canvas": "recommended-not-implemented",
+      "none": "recommended-not-implemented"
+    }
+  },
+  "responsive": [
+    {
+      "query": "(max-width: 809.98px)",
+      "change": "whole block is hidden below 810 (hidden ... tab:flex)",
+      "cssCite": "src/pages/Startups.jsx:121"
+    }
+  ],
+  "measuredFrom": [
+    "src/pages/Startups.jsx:120",
+    "src/pages/Startups.jsx:9",
+    "src/components/pages/startups/RiveDashboard.jsx:23"
+  ],
+  "notes": [
+    "The Rive file is brand-owned (public/assets/pages/startups/*.riv), pointer events are handled inside the file."
+  ],
+  "schemaVersion": "1.0.0",
+  "usedByTemplates": [
+    "startups"
+  ]
+}
