@@ -40,7 +40,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "photo.person-avatar"
+          "photo.person-avatar",
+          "avatar.fictional-person",
+          "asset.operator-supplied"
         ]
       }
     },
@@ -79,5 +81,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "customer-story"
+  ],
+  "source": {
+    "id": "CustomerStory.jsx@55",
+    "tag": "Row",
+    "file": "src/pages/CustomerStory.jsx",
+    "lines": "55-71"
+  },
+  "semantic": {
+    "id": "content.story-header",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person"
   ]
 }

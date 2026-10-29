@@ -344,6 +344,28 @@
         }
       ]
     },
+    "content.faq.lead": {
+      "observedMax": 12,
+      "sampleCount": 2,
+      "samples": [
+        {
+          "file": "src/components/shared/Faq.jsx",
+          "line": 45,
+          "text": "For any other questions, reach out to our team.",
+          "kind": "key",
+          "key": "short",
+          "words": 9
+        },
+        {
+          "file": "src/components/shared/Faq.jsx",
+          "line": 46,
+          "text": "For any other questions, feel welcome to reach out to our team.",
+          "kind": "key",
+          "key": "long",
+          "words": 12
+        }
+      ]
+    },
     "content.hiring-callout.ctaLabel": {
       "observedMax": 3,
       "sampleCount": 1,

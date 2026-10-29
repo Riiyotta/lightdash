@@ -86,5 +86,17 @@
     "product-interactive-dashboards",
     "product-metrics-catalog",
     "product-self-improving-analytics"
-  ]
+  ],
+  "source": {
+    "id": "AnnouncementBar.jsx@41",
+    "tag": "SmartLink",
+    "file": "src/components/shared/AnnouncementBar.jsx",
+    "lines": "41-54"
+  },
+  "semantic": {
+    "id": "chrome.announcement-bar",
+    "category": "CHROME"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

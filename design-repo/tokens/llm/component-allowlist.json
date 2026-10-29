@@ -1,6 +1,6 @@
 {
   "$description": "Closed list of what a generator may instantiate or set. allowlistVersion is machine-checked by extraction/verify_all.py against registry.manifest.json, token-catalog.json and token-policy.json.",
-  "allowlistVersion": "1.0.0",
+  "allowlistVersion": "1.1.0",
   "primitives": [
     "button",
     "carousel-dots",
@@ -176,17 +176,19 @@
     "startups"
   ],
   "pageSpecRootProperties": [
-    "pageSpecVersion",
-    "template",
-    "route",
-    "theme",
     "chrome",
-    "nodes"
+    "mode",
+    "nodes",
+    "pageSpecVersion",
+    "route",
+    "template",
+    "theme"
   ],
   "sectionNodeProperties": [
-    "section",
     "content",
-    "motion"
+    "motion",
+    "section",
+    "style"
   ],
   "motionFields": [
     "pattern",
@@ -221,23 +223,37 @@
     "tab-swap-instant"
   ],
   "assetRoles": [
+    "animation.placeholder",
     "animation.rive",
+    "app.iframe-bundle",
+    "asset.operator-supplied",
+    "avatar.fictional-person",
     "badge.compliance",
+    "brand.lightdash-wordmark",
+    "brand.placeholder-mark",
+    "content.lightdash-chrome-data",
+    "content.operator-supplied-chrome",
     "decor.pixel-tile",
     "decor.sticker",
     "embed.booking-cal",
     "embed.live-demo",
+    "embed.operator-supplied",
     "embed.youtube",
+    "endpoint.operator-supplied",
     "form.submission-endpoint",
     "icon.pixel-art",
+    "illustration.generated",
     "illustration.hero-diagram",
     "illustration.html-diagram",
     "image.cms-cover",
     "logo.customer-partner",
     "logo.integration",
+    "logo.placeholder-company",
     "photo.person-avatar",
     "photo.team-member",
+    "screenshot.placeholder",
     "screenshot.product-ui",
+    "video.placeholder",
     "video.self-hosted"
   ],
   "ctaActions": [
@@ -255,5 +271,44 @@
     "light-banner-cta",
     "light-cta",
     "light-no-cta"
+  ],
+  "modes": [
+    "clone",
+    "generation"
+  ],
+  "styleFields": [
+    "accentColor",
+    "borderColor",
+    "fontFamily",
+    "spacingAfter",
+    "spacingBefore",
+    "surfaceColor",
+    "textColor"
+  ],
+  "retrievalIneligibleSections": [
+    "app.view-customers",
+    "app.view-governance",
+    "app.view-migration",
+    "app.view-pricing",
+    "app.view-product",
+    "chrome.mobile-nav-dark",
+    "chrome.mobile-nav-light",
+    "chrome.talk-modal"
+  ],
+  "generationSafeAssetRoles": [
+    "animation.placeholder",
+    "asset.operator-supplied",
+    "avatar.fictional-person",
+    "brand.placeholder-mark",
+    "content.operator-supplied-chrome",
+    "decor.pixel-tile",
+    "decor.sticker",
+    "embed.operator-supplied",
+    "endpoint.operator-supplied",
+    "icon.pixel-art",
+    "illustration.generated",
+    "logo.placeholder-company",
+    "screenshot.placeholder",
+    "video.placeholder"
   ]
 }

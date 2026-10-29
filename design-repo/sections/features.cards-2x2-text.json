@@ -75,5 +75,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "product-conversational-analytics"
-  ]
+  ],
+  "source": {
+    "id": "FeatureCards.jsx@37",
+    "tag": "section",
+    "file": "src/components/shared/FeatureCards.jsx",
+    "lines": "37"
+  },
+  "semantic": {
+    "id": "features.cards-2x2-text",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

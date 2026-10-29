@@ -1,0 +1,201 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generation",
+  "template": "blog-post",
+  "route": "/blogpost/pruning-schedules-without-spreadsheets",
+  "theme": "light",
+  "chrome": "light-no-cta",
+  "nodes": [
+    {
+      "section": "chrome.navbar-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-navbar-light-brandmark-0"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-navbar-light-chromedata-0"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.mobile-nav-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-mobile-nav-light-brandmark-1"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-mobile-nav-light-chromedata-1"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.post-header",
+      "content": {
+        "category": "Field notes · Orchard",
+        "title": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from",
+        "authorName": "Marisol Quenby",
+        "date": "March 4, 2031",
+        "authorAvatar": {
+          "assetRole": "avatar.fictional-person",
+          "assetRef": "slot-post-header-authoravatar-2"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "content": {
+        "bodyMode": "placeholder"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "content": {
+        "bodyMode": "placeholder"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "content": {
+        "bodyMode": "placeholder"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "content": {
+        "bodyMode": "placeholder"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.rich-text",
+      "content": {
+        "bodyMode": "placeholder"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "cta.inline-post",
+      "content": {
+        "headline": "Prune smarter with three seasons of notes",
+        "support": "Plan every harvest crew before the frost",
+        "primary": {
+          "label": "Read the field notes",
+          "action": "navigate-route",
+          "target": "/contact"
+        },
+        "secondary": {
+          "label": "Read the field notes",
+          "action": "open-external",
+          "target": "https://www.quillpine.example/start"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.post-toc",
+      "content": {
+        "bodyMode": "derived-from-headings"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "listing.related-articles",
+      "content": {
+        "heading": "Orchard ledgers that settle",
+        "seeAll": {
+          "label": "See sample orchards",
+          "action": "navigate-route",
+          "target": "/contact"
+        },
+        "cardMode": "three-newest"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-footer-brandmark-11"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-footer-chromedata-11"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.talk-modal",
+      "content": {
+        "booking": {
+          "assetRole": "embed.operator-supplied",
+          "assetRef": "slot-talk-modal-booking-12"
+        }
+      },
+      "motion": {
+        "pattern": "modal-fade",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    }
+  ]
+}

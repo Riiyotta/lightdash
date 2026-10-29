@@ -16,7 +16,8 @@
             "required": true,
             "assetRoles": [
               "icon.pixel-art",
-              "badge.compliance"
+              "badge.compliance",
+              "asset.operator-supplied"
             ]
           },
           "title": {
@@ -72,5 +73,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "startups"
+  ],
+  "source": {
+    "id": "Startups.jsx@169",
+    "tag": "section",
+    "file": "src/pages/Startups.jsx",
+    "lines": "169"
+  },
+  "semantic": {
+    "id": "features.startups-benefits-grid",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "icon.pixel-art"
   ]
 }

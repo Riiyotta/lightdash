@@ -1,0 +1,4 @@
+{
+  "$description": "Reviewed exceptions for extraction/wrapper_gate.py. Entry shape: {template, section, rule: HERO_HEIGHT | PAGE_SHARE, maxHeightPx (above the measured height), justification (30+ chars), reviewedBy}. An agent reviewer must write \"agent attestation, not a human sign-off\". Stale or over-cap entries fail the gate. Empty on purpose: after decomposing content.rich-text and content.legal-body into heading-bounded parts no measured node exceeds an error threshold (three pages still WARN between 50% and 60%, see extraction/measured-values.json sectionHeights).",
+  "entries": []
+}

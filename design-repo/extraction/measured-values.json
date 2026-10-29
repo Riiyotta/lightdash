@@ -3078,6 +3078,3423 @@
       "contains": [
         "import react from '@vitejs/plugin-react'"
       ]
+    },
+    {
+      "ref": "src/components/Navbar.jsx:476",
+      "contains": [
+        "rootRef"
+      ]
+    },
+    {
+      "ref": "src/components/shared/Footer.jsx:141",
+      "contains": [
+        "<footer"
+      ]
+    },
+    {
+      "ref": "src/pages/data/pricing.jsx:35",
+      "contains": [
+        "Cloud Pro"
+      ]
+    },
+    {
+      "ref": "src/pages/data/pricing.jsx:64",
+      "contains": [
+        "Enterprise"
+      ]
+    },
+    {
+      "ref": "src/components/shared/CtaBand.jsx:7",
+      "contains": [
+        "app.lightdash.cloud/register"
+      ]
+    },
+    {
+      "ref": "src/navData.js:28",
+      "contains": [
+        "Interactive dashboards"
+      ]
+    },
+    {
+      "ref": "src/pages/data/integrations.js:24",
+      "contains": [
+        "BigQuery"
+      ]
+    },
+    {
+      "ref": "src/pages/data/conversational-analytics.jsx:33",
+      "contains": [
+        "data teams"
+      ]
     }
-  ]
+  ],
+  "sectionHeights": {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "measuredOn": "the built clone (npx vite build into a scratch folder, served with npx vite preview), headless Chromium via Playwright, after networkidle + 1.5 s settle, scroll position 0",
+    "mappingMethod": "Each template's first route was loaded once in the React development build; every DOM element's _debugSource (the JSX file:line that created it, or the file:line where its owning component was called) was matched against the section contract's source range (sections/*.json source.file + source.lines, plus documented alternative render sites), in template node order. The resulting DOM path (child indices from #root) is identical in the production build and is what extraction/measure_sections.mjs re-measures. Heading-bounded parts (content.rich-text: h2 chapters; content.legal-body: h5 parts) are split at the boundary headings inside the body element.",
+    "inFlowNote": "inFlow false = SHELL chrome (fixed nav, hidden phone nav, closed modal, footer) or a block that sits beside / inside another node (hero companion visual, sticky aside columns). Only inFlow nodes count for the page-share rule of extraction/wrapper_gate.py.",
+    "templates": {
+      "home": {
+        "route": "/",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-dark",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-dark",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.gameboy-app",
+            "inFlow": true,
+            "note": "full-viewport iframe app (absolutely positioned inside main); the page does not scroll",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 796,
+            "topPx": 104
+          },
+          {
+            "index": 3,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 3
+          }
+        ],
+        "documentHeightPx": 900
+      },
+      "product-conversational-analytics": {
+        "route": "/conversational-analytics",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.announcement-bar",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed announcement bar",
+            "domPath": "1.1.1.1",
+            "templateNode": 0,
+            "heightPx": 16,
+            "topPx": 12
+          },
+          {
+            "index": 1,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 206,
+            "topPx": 40
+          },
+          {
+            "index": 2,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 3,
+            "section": "hero.centered-product",
+            "inFlow": true,
+            "domPath": "1.4.1.1",
+            "templateNode": 3,
+            "heightPx": 1152.8,
+            "topPx": 146
+          },
+          {
+            "index": 4,
+            "section": "hero.product-visual",
+            "inFlow": false,
+            "note": "companion visual nested inside the hero.centered-product section (measured, but not a separate in-flow block)",
+            "domPath": "1.4.1.1.6",
+            "templateNode": 4,
+            "heightPx": 707,
+            "topPx": 591.8
+          },
+          {
+            "index": 5,
+            "section": "proof.logos-row",
+            "inFlow": true,
+            "domPath": "1.4.1.2",
+            "templateNode": 5,
+            "heightPx": 199.4,
+            "topPx": 1298.8
+          },
+          {
+            "index": 6,
+            "section": "features.accordion-tabs",
+            "inFlow": true,
+            "domPath": "1.4.1.3",
+            "templateNode": 6,
+            "heightPx": 609,
+            "topPx": 1498.2
+          },
+          {
+            "index": 7,
+            "section": "features.accordion-tabs",
+            "inFlow": true,
+            "domPath": "1.4.1.4",
+            "templateNode": 7,
+            "heightPx": 609,
+            "topPx": 2107.2
+          },
+          {
+            "index": 8,
+            "section": "features.cards-2x2-text",
+            "inFlow": true,
+            "domPath": "1.4.1.5",
+            "templateNode": 8,
+            "heightPx": 606.8,
+            "topPx": 2716.2
+          },
+          {
+            "index": 9,
+            "section": "features.icon-benefits-grid",
+            "inFlow": true,
+            "domPath": "1.4.1.6",
+            "templateNode": 9,
+            "heightPx": 634,
+            "topPx": 3323
+          },
+          {
+            "index": 10,
+            "section": "proof.customer-quote-stats",
+            "inFlow": true,
+            "domPath": "1.4.1.7",
+            "templateNode": 10,
+            "heightPx": 913.4,
+            "topPx": 3957
+          },
+          {
+            "index": 11,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.4.1.8",
+            "templateNode": 11,
+            "heightPx": 604,
+            "topPx": 4870.4
+          },
+          {
+            "index": 12,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.4.1.9",
+            "templateNode": 12,
+            "heightPx": 473,
+            "topPx": 5474.4
+          },
+          {
+            "index": 13,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.5",
+            "templateNode": 13,
+            "heightPx": 600,
+            "topPx": 5947.4
+          },
+          {
+            "index": 14,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 14
+          }
+        ],
+        "documentHeightPx": 6547
+      },
+      "product-data-apps": {
+        "route": "/data-apps",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.announcement-bar",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed announcement bar",
+            "domPath": "1.1.1.1",
+            "templateNode": 0,
+            "heightPx": 16,
+            "topPx": 12
+          },
+          {
+            "index": 1,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 206,
+            "topPx": 40
+          },
+          {
+            "index": 2,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 3,
+            "section": "hero.centered-product",
+            "inFlow": true,
+            "domPath": "1.4.1.1",
+            "templateNode": 3,
+            "heightPx": 998.8,
+            "topPx": 146
+          },
+          {
+            "index": 4,
+            "section": "hero.product-visual",
+            "inFlow": false,
+            "note": "companion visual nested inside the hero.centered-product section (measured, but not a separate in-flow block)",
+            "domPath": "1.4.1.1.5",
+            "templateNode": 4,
+            "heightPx": 609,
+            "topPx": 535.8
+          },
+          {
+            "index": 5,
+            "section": "proof.logos-row",
+            "inFlow": true,
+            "domPath": "1.4.1.2",
+            "templateNode": 5,
+            "heightPx": 199.4,
+            "topPx": 1144.8
+          },
+          {
+            "index": 6,
+            "section": "features.cards-1x3",
+            "inFlow": true,
+            "domPath": "1.4.1.5",
+            "templateNode": 6,
+            "heightPx": 478.8,
+            "topPx": 1344.2
+          },
+          {
+            "index": 7,
+            "section": "features.pill-tabs-visual",
+            "inFlow": true,
+            "domPath": "1.4.1.6",
+            "templateNode": 7,
+            "heightPx": 1049.9,
+            "topPx": 1823
+          },
+          {
+            "index": 8,
+            "section": "features.cards-1x3",
+            "inFlow": true,
+            "domPath": "1.4.1.7",
+            "templateNode": 8,
+            "heightPx": 478.8,
+            "topPx": 2872.9
+          },
+          {
+            "index": 9,
+            "section": "proof.customer-quote",
+            "inFlow": true,
+            "domPath": "1.4.1.9",
+            "templateNode": 9,
+            "heightPx": 570,
+            "topPx": 3351.7
+          },
+          {
+            "index": 10,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.4.1.10",
+            "templateNode": 10,
+            "heightPx": 536,
+            "topPx": 3921.7
+          },
+          {
+            "index": 11,
+            "section": "content.blog-posts",
+            "inFlow": true,
+            "domPath": "1.4.1.11",
+            "templateNode": 11,
+            "heightPx": 634.6,
+            "topPx": 4457.7
+          },
+          {
+            "index": 12,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.4.1.12",
+            "templateNode": 12,
+            "heightPx": 473,
+            "topPx": 5092.3
+          },
+          {
+            "index": 13,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.5",
+            "templateNode": 13,
+            "heightPx": 600,
+            "topPx": 5565.3
+          },
+          {
+            "index": 14,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 14
+          }
+        ],
+        "documentHeightPx": 6165
+      },
+      "product-metrics-catalog": {
+        "route": "/metrics-catalog",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.announcement-bar",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed announcement bar",
+            "domPath": "1.1.1.1",
+            "templateNode": 0,
+            "heightPx": 16,
+            "topPx": 12
+          },
+          {
+            "index": 1,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 206,
+            "topPx": 40
+          },
+          {
+            "index": 2,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 3,
+            "section": "hero.centered-product",
+            "inFlow": true,
+            "domPath": "1.4.1.1",
+            "templateNode": 3,
+            "heightPx": 1066.4,
+            "topPx": 146
+          },
+          {
+            "index": 4,
+            "section": "hero.product-visual",
+            "inFlow": false,
+            "note": "companion visual nested inside the hero.centered-product section (measured, but not a separate in-flow block)",
+            "domPath": "1.4.1.1.6",
+            "templateNode": 4,
+            "heightPx": 625,
+            "topPx": 587.4
+          },
+          {
+            "index": 5,
+            "section": "proof.logos-row",
+            "inFlow": true,
+            "domPath": "1.4.1.2",
+            "templateNode": 5,
+            "heightPx": 199.4,
+            "topPx": 1212.4
+          },
+          {
+            "index": 6,
+            "section": "features.pill-tabs-visual",
+            "inFlow": true,
+            "domPath": "1.4.1.3",
+            "templateNode": 6,
+            "heightPx": 936.5,
+            "topPx": 1411.8
+          },
+          {
+            "index": 7,
+            "section": "features.cards-1x3",
+            "inFlow": true,
+            "domPath": "1.4.1.4",
+            "templateNode": 7,
+            "heightPx": 454,
+            "topPx": 2348.3
+          },
+          {
+            "index": 8,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.4.1.5",
+            "templateNode": 8,
+            "heightPx": 692,
+            "topPx": 2802.3
+          },
+          {
+            "index": 9,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.4.1.6",
+            "templateNode": 9,
+            "heightPx": 473,
+            "topPx": 3494.3
+          },
+          {
+            "index": 10,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.5",
+            "templateNode": 10,
+            "heightPx": 600,
+            "topPx": 3967.3
+          },
+          {
+            "index": 11,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 11
+          }
+        ],
+        "documentHeightPx": 4567
+      },
+      "product-embedding": {
+        "route": "/embedding",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.announcement-bar",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed announcement bar",
+            "domPath": "1.1.1.1",
+            "templateNode": 0,
+            "heightPx": 16,
+            "topPx": 12
+          },
+          {
+            "index": 1,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 206,
+            "topPx": 40
+          },
+          {
+            "index": 2,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 3,
+            "section": "hero.centered-product",
+            "inFlow": true,
+            "domPath": "1.4.1.1",
+            "templateNode": 3,
+            "heightPx": 1217.8,
+            "topPx": 146
+          },
+          {
+            "index": 4,
+            "section": "hero.product-visual",
+            "inFlow": false,
+            "note": "companion visual nested inside the hero.centered-product section (measured, but not a separate in-flow block)",
+            "domPath": "1.4.1.1.6",
+            "templateNode": 4,
+            "heightPx": 776,
+            "topPx": 587.8
+          },
+          {
+            "index": 5,
+            "section": "proof.logos-row",
+            "inFlow": true,
+            "domPath": "1.4.1.2",
+            "templateNode": 5,
+            "heightPx": 199.4,
+            "topPx": 1363.8
+          },
+          {
+            "index": 6,
+            "section": "features.accordion-tabs",
+            "inFlow": true,
+            "domPath": "1.4.1.3",
+            "templateNode": 6,
+            "heightPx": 609,
+            "topPx": 1563.2
+          },
+          {
+            "index": 7,
+            "section": "features.cards-3x2",
+            "inFlow": true,
+            "domPath": "1.4.1.4",
+            "templateNode": 7,
+            "heightPx": 642.4,
+            "topPx": 2172.2
+          },
+          {
+            "index": 8,
+            "section": "features.integration-paths",
+            "inFlow": true,
+            "domPath": "1.4.1.5",
+            "templateNode": 8,
+            "heightPx": 447.1,
+            "topPx": 2814.6
+          },
+          {
+            "index": 9,
+            "section": "decor.hatched-band",
+            "inFlow": true,
+            "domPath": "1.4.1.6",
+            "templateNode": 9,
+            "heightPx": 80,
+            "topPx": 3261.7
+          },
+          {
+            "index": 10,
+            "section": "proof.testimonial-avatar",
+            "inFlow": true,
+            "domPath": "1.4.1.7",
+            "templateNode": 10,
+            "heightPx": 424,
+            "topPx": 3341.7
+          },
+          {
+            "index": 11,
+            "section": "decor.hatched-band",
+            "inFlow": true,
+            "domPath": "1.4.1.8",
+            "templateNode": 11,
+            "heightPx": 80,
+            "topPx": 3765.7
+          },
+          {
+            "index": 12,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.4.1.9",
+            "templateNode": 12,
+            "heightPx": 468,
+            "topPx": 3845.7
+          },
+          {
+            "index": 13,
+            "section": "decor.hatched-band",
+            "inFlow": true,
+            "domPath": "1.4.1.10",
+            "templateNode": 13,
+            "heightPx": 80,
+            "topPx": 4313.7
+          },
+          {
+            "index": 14,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.4.1.11",
+            "templateNode": 14,
+            "heightPx": 473,
+            "topPx": 4393.7
+          },
+          {
+            "index": 15,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.5",
+            "templateNode": 15,
+            "heightPx": 600,
+            "topPx": 4866.7
+          },
+          {
+            "index": 16,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 16
+          }
+        ],
+        "documentHeightPx": 5467
+      },
+      "product-interactive-dashboards": {
+        "route": "/interactive-dashboards",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.announcement-bar",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed announcement bar",
+            "domPath": "1.1.1.1",
+            "templateNode": 0,
+            "heightPx": 16,
+            "topPx": 12
+          },
+          {
+            "index": 1,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 206,
+            "topPx": 40
+          },
+          {
+            "index": 2,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 3,
+            "section": "hero.centered-product",
+            "inFlow": true,
+            "domPath": "1.4.1.1",
+            "templateNode": 3,
+            "heightPx": 1208.8,
+            "topPx": 146
+          },
+          {
+            "index": 4,
+            "section": "hero.product-visual",
+            "inFlow": false,
+            "note": "companion visual nested inside the hero.centered-product section (measured, but not a separate in-flow block)",
+            "domPath": "1.4.1.1.6",
+            "templateNode": 4,
+            "heightPx": 763,
+            "topPx": 591.8
+          },
+          {
+            "index": 5,
+            "section": "proof.logos-row",
+            "inFlow": true,
+            "domPath": "1.4.1.2",
+            "templateNode": 5,
+            "heightPx": 199.4,
+            "topPx": 1354.8
+          },
+          {
+            "index": 6,
+            "section": "features.accordion-tabs",
+            "inFlow": true,
+            "domPath": "1.4.1.3",
+            "templateNode": 6,
+            "heightPx": 609,
+            "topPx": 1554.2
+          },
+          {
+            "index": 7,
+            "section": "features.cards-3x2-image",
+            "inFlow": true,
+            "domPath": "1.4.1.4",
+            "templateNode": 7,
+            "heightPx": 1007.2,
+            "topPx": 2163.2
+          },
+          {
+            "index": 8,
+            "section": "features.cards-1x3",
+            "inFlow": true,
+            "domPath": "1.4.1.5",
+            "templateNode": 8,
+            "heightPx": 413.2,
+            "topPx": 3170.4
+          },
+          {
+            "index": 9,
+            "section": "proof.customer-quote-stats",
+            "inFlow": true,
+            "domPath": "1.4.1.6",
+            "templateNode": 9,
+            "heightPx": 913.4,
+            "topPx": 3583.6
+          },
+          {
+            "index": 10,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.4.1.7",
+            "templateNode": 10,
+            "heightPx": 536,
+            "topPx": 4497
+          },
+          {
+            "index": 11,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.4.1.8",
+            "templateNode": 11,
+            "heightPx": 473,
+            "topPx": 5033
+          },
+          {
+            "index": 12,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.5",
+            "templateNode": 12,
+            "heightPx": 600,
+            "topPx": 5506
+          },
+          {
+            "index": 13,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 13
+          }
+        ],
+        "documentHeightPx": 6106
+      },
+      "product-context-layer": {
+        "route": "/context-layer",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.announcement-bar",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed announcement bar",
+            "domPath": "1.1.1.1",
+            "templateNode": 0,
+            "heightPx": 16,
+            "topPx": 12
+          },
+          {
+            "index": 1,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 206,
+            "topPx": 40
+          },
+          {
+            "index": 2,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 3,
+            "section": "hero.centered-product",
+            "inFlow": true,
+            "domPath": "1.4.1.1",
+            "templateNode": 3,
+            "heightPx": 1079.5,
+            "topPx": 146
+          },
+          {
+            "index": 4,
+            "section": "hero.product-visual",
+            "inFlow": false,
+            "note": "companion visual nested inside the hero.centered-product section (measured, but not a separate in-flow block)",
+            "domPath": "1.4.1.1.6",
+            "templateNode": 4,
+            "heightPx": 601.7,
+            "topPx": 623.8
+          },
+          {
+            "index": 5,
+            "section": "proof.logos-row",
+            "inFlow": true,
+            "domPath": "1.4.1.2",
+            "templateNode": 5,
+            "heightPx": 199.4,
+            "topPx": 1225.5
+          },
+          {
+            "index": 6,
+            "section": "features.split-content",
+            "inFlow": true,
+            "domPath": "1.4.1.3",
+            "templateNode": 6,
+            "heightPx": 464,
+            "topPx": 1424.9
+          },
+          {
+            "index": 7,
+            "section": "features.cards-1x3",
+            "inFlow": true,
+            "domPath": "1.4.1.4",
+            "templateNode": 7,
+            "heightPx": 313.2,
+            "topPx": 1888.9
+          },
+          {
+            "index": 8,
+            "section": "features.icon-benefits-grid",
+            "inFlow": true,
+            "domPath": "1.4.1.6",
+            "templateNode": 8,
+            "heightPx": 611.6,
+            "topPx": 2202.1
+          },
+          {
+            "index": 9,
+            "section": "features.comparison-table",
+            "inFlow": true,
+            "domPath": "1.4.1.7",
+            "templateNode": 9,
+            "heightPx": 838,
+            "topPx": 2813.6
+          },
+          {
+            "index": 10,
+            "section": "proof.customer-quote-stats",
+            "inFlow": true,
+            "domPath": "1.4.1.8",
+            "templateNode": 10,
+            "heightPx": 886.4,
+            "topPx": 3651.6
+          },
+          {
+            "index": 11,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.4.1.9",
+            "templateNode": 11,
+            "heightPx": 604,
+            "topPx": 4538
+          },
+          {
+            "index": 12,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.4.1.10",
+            "templateNode": 12,
+            "heightPx": 473,
+            "topPx": 5142
+          },
+          {
+            "index": 13,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.5",
+            "templateNode": 13,
+            "heightPx": 600,
+            "topPx": 5615
+          },
+          {
+            "index": 14,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 14
+          }
+        ],
+        "documentHeightPx": 6215
+      },
+      "product-self-improving-analytics": {
+        "route": "/self-improving-analytics",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.announcement-bar",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed announcement bar",
+            "domPath": "1.1.1.1",
+            "templateNode": 0,
+            "heightPx": 16,
+            "topPx": 12
+          },
+          {
+            "index": 1,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 206,
+            "topPx": 40
+          },
+          {
+            "index": 2,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 3,
+            "section": "hero.centered-product",
+            "inFlow": true,
+            "domPath": "1.4.1.1",
+            "templateNode": 3,
+            "heightPx": 1313.8,
+            "topPx": 146
+          },
+          {
+            "index": 4,
+            "section": "hero.product-visual",
+            "inFlow": false,
+            "note": "companion visual nested inside the hero.centered-product section (measured, but not a separate in-flow block)",
+            "domPath": "1.4.1.1.6",
+            "templateNode": 4,
+            "heightPx": 836,
+            "topPx": 623.8
+          },
+          {
+            "index": 5,
+            "section": "proof.logos-row",
+            "inFlow": true,
+            "domPath": "1.4.1.2",
+            "templateNode": 5,
+            "heightPx": 199.4,
+            "topPx": 1459.8
+          },
+          {
+            "index": 6,
+            "section": "content.statement-heading",
+            "inFlow": true,
+            "domPath": "1.4.1.3",
+            "templateNode": 6,
+            "heightPx": 326,
+            "topPx": 1659.2
+          },
+          {
+            "index": 7,
+            "section": "features.accordion-tabs",
+            "inFlow": true,
+            "domPath": "1.4.1.4",
+            "templateNode": 7,
+            "heightPx": 609,
+            "topPx": 1985.2
+          },
+          {
+            "index": 8,
+            "section": "features.accordion-tabs",
+            "inFlow": true,
+            "domPath": "1.4.1.5",
+            "templateNode": 8,
+            "heightPx": 637.2,
+            "topPx": 2594.2
+          },
+          {
+            "index": 9,
+            "section": "features.comparison-table",
+            "inFlow": true,
+            "domPath": "1.4.1.6",
+            "templateNode": 9,
+            "heightPx": 634,
+            "topPx": 3231.4
+          },
+          {
+            "index": 10,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.4.1.7",
+            "templateNode": 10,
+            "heightPx": 556,
+            "topPx": 3865.4
+          },
+          {
+            "index": 11,
+            "section": "content.blog-posts",
+            "inFlow": true,
+            "domPath": "1.4.1.8",
+            "templateNode": 11,
+            "heightPx": 634.6,
+            "topPx": 4421.4
+          },
+          {
+            "index": 12,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.4.1.9",
+            "templateNode": 12,
+            "heightPx": 473,
+            "topPx": 5056
+          },
+          {
+            "index": 13,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.5",
+            "templateNode": 13,
+            "heightPx": 600,
+            "topPx": 5529
+          },
+          {
+            "index": 14,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 14
+          }
+        ],
+        "documentHeightPx": 6129
+      },
+      "product-bi-as-code": {
+        "route": "/bi-as-code",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.announcement-bar",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed announcement bar",
+            "domPath": "1.1.1.1",
+            "templateNode": 0,
+            "heightPx": 16,
+            "topPx": 12
+          },
+          {
+            "index": 1,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 206,
+            "topPx": 40
+          },
+          {
+            "index": 2,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.3",
+            "templateNode": 2,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 3,
+            "section": "hero.bi-as-code",
+            "inFlow": true,
+            "domPath": "1.4.1.1",
+            "templateNode": 3,
+            "heightPx": 604,
+            "topPx": 146
+          },
+          {
+            "index": 4,
+            "section": "content.video-section",
+            "inFlow": true,
+            "domPath": "1.4.1.2",
+            "templateNode": 4,
+            "heightPx": 821,
+            "topPx": 750
+          },
+          {
+            "index": 5,
+            "section": "proof.logos-row",
+            "inFlow": true,
+            "domPath": "1.4.1.3",
+            "templateNode": 5,
+            "heightPx": 199.4,
+            "topPx": 1571
+          },
+          {
+            "index": 6,
+            "section": "features.alternating-rows",
+            "inFlow": true,
+            "domPath": "1.4.1.4",
+            "templateNode": 6,
+            "heightPx": 1620,
+            "topPx": 1770.4
+          },
+          {
+            "index": 7,
+            "section": "features.icon-benefits-grid",
+            "inFlow": true,
+            "domPath": "1.4.1.5.1",
+            "templateNode": 7,
+            "heightPx": 560.4,
+            "topPx": 3390.4
+          },
+          {
+            "index": 8,
+            "section": "proof.dark-testimonial-stats",
+            "inFlow": true,
+            "domPath": "1.4.1.6",
+            "templateNode": 8,
+            "heightPx": 530,
+            "topPx": 3950.8
+          },
+          {
+            "index": 9,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.4.1.7.1",
+            "templateNode": 9,
+            "heightPx": 604,
+            "topPx": 4480.8
+          },
+          {
+            "index": 10,
+            "section": "content.blog-posts",
+            "inFlow": true,
+            "domPath": "1.4.1.8.1",
+            "templateNode": 10,
+            "heightPx": 634.6,
+            "topPx": 5084.8
+          },
+          {
+            "index": 11,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.4.1.9",
+            "templateNode": 11,
+            "heightPx": 473,
+            "topPx": 5719.4
+          },
+          {
+            "index": 12,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.5",
+            "templateNode": 12,
+            "heightPx": 600,
+            "topPx": 6192.4
+          },
+          {
+            "index": 13,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 13
+          }
+        ],
+        "documentHeightPx": 6792
+      },
+      "integrations": {
+        "route": "/integrations",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.integrations",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 295,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "listing.integrations-directory",
+            "inFlow": true,
+            "domPath": "1.3.1.3",
+            "templateNode": 3,
+            "heightPx": 1680,
+            "topPx": 441
+          },
+          {
+            "index": 4,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "templateNode": 4,
+            "heightPx": 473,
+            "topPx": 2121
+          },
+          {
+            "index": 5,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 5,
+            "heightPx": 600,
+            "topPx": 2594
+          },
+          {
+            "index": 6,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 6
+          }
+        ],
+        "documentHeightPx": 3194
+      },
+      "beyond-copilots": {
+        "route": "/beyond-copilots",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.event-ondemand",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 526.4,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "content.youtube-replay",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "templateNode": 3,
+            "heightPx": 902.4,
+            "topPx": 632.4
+          },
+          {
+            "index": 4,
+            "section": "features.split-content",
+            "inFlow": true,
+            "domPath": "1.3.1.3",
+            "templateNode": 4,
+            "heightPx": 464,
+            "topPx": 1534.8
+          },
+          {
+            "index": 5,
+            "section": "features.numbered-guide-cards",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "templateNode": 5,
+            "heightPx": 612,
+            "topPx": 1998.8
+          },
+          {
+            "index": 6,
+            "section": "decor.hatched-band",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "templateNode": 6,
+            "heightPx": 80,
+            "topPx": 2610.8
+          },
+          {
+            "index": 7,
+            "section": "proof.speakers-grid",
+            "inFlow": true,
+            "domPath": "1.3.1.6",
+            "templateNode": 7,
+            "heightPx": 508,
+            "topPx": 2690.8
+          },
+          {
+            "index": 8,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.7",
+            "templateNode": 8,
+            "heightPx": 473,
+            "topPx": 3198.8
+          },
+          {
+            "index": 9,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 9,
+            "heightPx": 600,
+            "topPx": 3671.8
+          },
+          {
+            "index": 10,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 10
+          }
+        ],
+        "documentHeightPx": 4272
+      },
+      "playground": {
+        "route": "/playground",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.playground",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 407.8,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "content.playground-empty-blocks",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "templateNode": 3,
+            "heightPx": 629,
+            "topPx": 513.8
+          },
+          {
+            "index": 4,
+            "section": "proof.logos-grid-12",
+            "inFlow": true,
+            "domPath": "1.3.1.3",
+            "templateNode": 4,
+            "heightPx": 212,
+            "topPx": 1142.8
+          },
+          {
+            "index": 5,
+            "section": "content.playground-empty-blocks",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "domPathLast": "1.3.1.8",
+            "templateNode": 5,
+            "heightPx": 3303,
+            "topPx": 1354.8
+          },
+          {
+            "index": 6,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.9",
+            "templateNode": 6,
+            "heightPx": 473,
+            "topPx": 4657.8
+          },
+          {
+            "index": 7,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 7,
+            "heightPx": 600,
+            "topPx": 5130.8
+          },
+          {
+            "index": 8,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 8
+          }
+        ],
+        "documentHeightPx": 5731
+      },
+      "pricing": {
+        "route": "/pricing",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.pricing",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 209,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "conversion.plan-cards",
+            "inFlow": true,
+            "domPath": "1.3.1.3",
+            "templateNode": 3,
+            "heightPx": 998,
+            "topPx": 403
+          },
+          {
+            "index": 4,
+            "section": "proof.logos-grid-12",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "templateNode": 4,
+            "heightPx": 212,
+            "topPx": 1401
+          },
+          {
+            "index": 5,
+            "section": "conversion.plan-comparison",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "domPathLast": "1.3.1.6",
+            "templateNode": 5,
+            "heightPx": 2567.2,
+            "topPx": 1613
+          },
+          {
+            "index": 6,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.3.1.7.1",
+            "templateNode": 6,
+            "heightPx": 672,
+            "topPx": 4180.2
+          },
+          {
+            "index": 7,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.8",
+            "templateNode": 7,
+            "heightPx": 473,
+            "topPx": 4852.2
+          },
+          {
+            "index": 8,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 8,
+            "heightPx": 600,
+            "topPx": 5325.2
+          },
+          {
+            "index": 9,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 9
+          }
+        ],
+        "documentHeightPx": 5925
+      },
+      "start": {
+        "route": "/start",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "conversion.booking-split",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 747,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 3,
+            "heightPx": 600,
+            "topPx": 853
+          },
+          {
+            "index": 4,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 4
+          }
+        ],
+        "documentHeightPx": 1453
+      },
+      "startups": {
+        "route": "/startups",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.company-centered",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 361.4,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "hero.startups-visual",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "templateNode": 3,
+            "heightPx": 881.3,
+            "topPx": 467.4
+          },
+          {
+            "index": 4,
+            "section": "content.two-tone-heading",
+            "inFlow": true,
+            "domPath": "1.3.1.3",
+            "templateNode": 4,
+            "heightPx": 361.9,
+            "topPx": 1348.7
+          },
+          {
+            "index": 5,
+            "section": "features.startups-benefits-grid",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "templateNode": 5,
+            "heightPx": 396,
+            "topPx": 1710.6
+          },
+          {
+            "index": 6,
+            "section": "decor.hatched-band",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "templateNode": 6,
+            "heightPx": 80,
+            "topPx": 2106.6
+          },
+          {
+            "index": 7,
+            "section": "content.two-tone-heading",
+            "inFlow": true,
+            "domPath": "1.3.1.6",
+            "templateNode": 7,
+            "heightPx": 206.9,
+            "topPx": 2186.6
+          },
+          {
+            "index": 8,
+            "section": "features.startups-cards-2x2",
+            "inFlow": true,
+            "domPath": "1.3.1.7",
+            "templateNode": 8,
+            "heightPx": 1169,
+            "topPx": 2393.6
+          },
+          {
+            "index": 9,
+            "section": "decor.hatched-band",
+            "inFlow": true,
+            "domPath": "1.3.1.8",
+            "templateNode": 9,
+            "heightPx": 80,
+            "topPx": 3562.5
+          },
+          {
+            "index": 10,
+            "section": "proof.testimonial-avatar",
+            "inFlow": true,
+            "domPath": "1.3.1.9",
+            "templateNode": 10,
+            "heightPx": 424,
+            "topPx": 3642.5
+          },
+          {
+            "index": 11,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.10",
+            "templateNode": 11,
+            "heightPx": 473,
+            "topPx": 4066.5
+          },
+          {
+            "index": 12,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 12,
+            "heightPx": 600,
+            "topPx": 4539.5
+          },
+          {
+            "index": 13,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 13
+          }
+        ],
+        "documentHeightPx": 5140
+      },
+      "fintech": {
+        "route": "/fintech",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.fintech-split",
+            "inFlow": true,
+            "domPath": "1.3.1.1.1",
+            "templateNode": 2,
+            "heightPx": 604,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "proof.logos-strip-5",
+            "inFlow": true,
+            "domPath": "1.3.1.1.2",
+            "templateNode": 3,
+            "heightPx": 209.4,
+            "topPx": 710
+          },
+          {
+            "index": 4,
+            "section": "features.fintech-reasons",
+            "inFlow": true,
+            "domPath": "1.3.1.1.3",
+            "templateNode": 4,
+            "heightPx": 390.2,
+            "topPx": 919.4
+          },
+          {
+            "index": 5,
+            "section": "features.fintech-benefit-cards",
+            "inFlow": true,
+            "domPath": "1.3.1.1.4",
+            "templateNode": 5,
+            "heightPx": 1258,
+            "topPx": 1309.6
+          },
+          {
+            "index": 6,
+            "section": "proof.dark-testimonial-stats",
+            "inFlow": true,
+            "domPath": "1.3.1.1.5",
+            "templateNode": 6,
+            "heightPx": 578,
+            "topPx": 2567.6
+          },
+          {
+            "index": 7,
+            "section": "features.fintech-dark-band",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "templateNode": 7,
+            "heightPx": 822,
+            "topPx": 3145.6
+          },
+          {
+            "index": 8,
+            "section": "decor.pixel-border-band",
+            "inFlow": true,
+            "domPath": "1.3.1.3",
+            "templateNode": 8,
+            "heightPx": 60,
+            "topPx": 3967.6
+          },
+          {
+            "index": 9,
+            "section": "content.faq",
+            "inFlow": true,
+            "domPath": "1.3.1.4.2.1",
+            "templateNode": 9,
+            "heightPx": 604,
+            "topPx": 4087.6
+          },
+          {
+            "index": 10,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.5.1",
+            "templateNode": 10,
+            "heightPx": 473,
+            "topPx": 4691.6
+          },
+          {
+            "index": 11,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 11,
+            "heightPx": 600,
+            "topPx": 5164.6
+          },
+          {
+            "index": 12,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 12
+          }
+        ],
+        "documentHeightPx": 5765
+      },
+      "partnerships": {
+        "route": "/partnerships",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.partnerships",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 604,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "proof.partner-logos",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "templateNode": 3,
+            "heightPx": 167.4,
+            "topPx": 710
+          },
+          {
+            "index": 4,
+            "section": "features.why-lightdash-split",
+            "inFlow": true,
+            "domPath": "1.3.1.3",
+            "templateNode": 4,
+            "heightPx": 920,
+            "topPx": 877.4
+          },
+          {
+            "index": 5,
+            "section": "proof.partner-testimonial-carousel",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "templateNode": 5,
+            "heightPx": 602,
+            "topPx": 1797.4
+          },
+          {
+            "index": 6,
+            "section": "features.partner-benefits-grid",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "templateNode": 6,
+            "heightPx": 720,
+            "topPx": 2399.4
+          },
+          {
+            "index": 7,
+            "section": "conversion.partner-form",
+            "inFlow": true,
+            "domPath": "1.3.1.6",
+            "templateNode": 7,
+            "heightPx": 1070.8,
+            "topPx": 3119.4
+          },
+          {
+            "index": 8,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 8,
+            "heightPx": 600,
+            "topPx": 4190.2
+          },
+          {
+            "index": 9,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 9
+          }
+        ],
+        "documentHeightPx": 4790
+      },
+      "about": {
+        "route": "/about",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.about-stickers",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 306.4,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "content.team-grid",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "domPathLast": "1.3.1.4",
+            "templateNode": 3,
+            "heightPx": 1310,
+            "topPx": 412.4
+          },
+          {
+            "index": 4,
+            "section": "content.story-timeline",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "templateNode": 4,
+            "heightPx": 2839.3,
+            "topPx": 1722.4
+          },
+          {
+            "index": 5,
+            "section": "content.hiring-callout",
+            "inFlow": true,
+            "domPath": "1.3.1.6",
+            "templateNode": 5,
+            "heightPx": 223.2,
+            "topPx": 4561.7
+          },
+          {
+            "index": 6,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.7",
+            "templateNode": 6,
+            "heightPx": 473,
+            "topPx": 4784.9
+          },
+          {
+            "index": 7,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 7,
+            "heightPx": 600,
+            "topPx": 5257.9
+          },
+          {
+            "index": 8,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 8
+          }
+        ],
+        "documentHeightPx": 5858
+      },
+      "roadmap": {
+        "route": "/roadmap",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.company-centered",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "domPathLast": "1.3.1.5",
+            "templateNode": 2,
+            "heightPx": 318.1,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "content.roadmap-board",
+            "inFlow": true,
+            "domPath": "1.3.1.6",
+            "templateNode": 3,
+            "heightPx": 610,
+            "topPx": 424.1
+          },
+          {
+            "index": 4,
+            "section": "content.roadmap-community",
+            "inFlow": true,
+            "domPath": "1.3.1.7",
+            "templateNode": 4,
+            "heightPx": 292,
+            "topPx": 1034.1
+          },
+          {
+            "index": 5,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.8",
+            "templateNode": 5,
+            "heightPx": 473,
+            "topPx": 1326.1
+          },
+          {
+            "index": 6,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 6,
+            "heightPx": 600,
+            "topPx": 1799.1
+          },
+          {
+            "index": 7,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 7
+          }
+        ],
+        "documentHeightPx": 2399
+      },
+      "lightdash-security": {
+        "route": "/lightdash-security",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.company-centered",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "domPathLast": "1.3.1.4",
+            "templateNode": 2,
+            "heightPx": 350.8,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "proof.compliance-badges",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "templateNode": 3,
+            "heightPx": 208,
+            "topPx": 456.8
+          },
+          {
+            "index": 4,
+            "section": "proof.logo-tiles-named",
+            "inFlow": true,
+            "domPath": "1.3.1.6",
+            "templateNode": 4,
+            "heightPx": 565.6,
+            "topPx": 664.8
+          },
+          {
+            "index": 5,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.7",
+            "templateNode": 5,
+            "heightPx": 473,
+            "topPx": 1230.5
+          },
+          {
+            "index": 6,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 6,
+            "heightPx": 600,
+            "topPx": 1703.5
+          },
+          {
+            "index": 7,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 7
+          }
+        ],
+        "documentHeightPx": 2303
+      },
+      "jp": {
+        "route": "/jp",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "hero.company-centered",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "templateNode": 2,
+            "heightPx": 428,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "proof.logo-tiles-named",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "templateNode": 3,
+            "heightPx": 234.9,
+            "topPx": 534
+          },
+          {
+            "index": 4,
+            "section": "content.jp-intro",
+            "inFlow": true,
+            "domPath": "1.3.1.3",
+            "templateNode": 4,
+            "heightPx": 577,
+            "topPx": 768.9
+          },
+          {
+            "index": 5,
+            "section": "features.jp-link-cards",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "templateNode": 5,
+            "heightPx": 638.8,
+            "topPx": 1345.9
+          },
+          {
+            "index": 6,
+            "section": "proof.testimonial-avatar",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "templateNode": 6,
+            "heightPx": 424,
+            "topPx": 1984.7
+          },
+          {
+            "index": 7,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 7,
+            "heightPx": 600,
+            "topPx": 2408.7
+          },
+          {
+            "index": 8,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 8
+          }
+        ],
+        "documentHeightPx": 3009
+      },
+      "blog-index": {
+        "route": "/blog",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "listing.blog-header",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "domPathLast": "1.3.1.2",
+            "templateNode": 2,
+            "heightPx": 218,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "listing.blog-filter-bar",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "templateNode": 3,
+            "heightPx": 56,
+            "topPx": 364
+          },
+          {
+            "index": 4,
+            "section": "listing.blog-card-grid",
+            "inFlow": true,
+            "domPath": "1.3.1.6",
+            "domPathLast": "1.3.1.7",
+            "templateNode": 4,
+            "heightPx": 1516,
+            "topPx": 452
+          },
+          {
+            "index": 5,
+            "section": "cta.snake-band-narrow",
+            "inFlow": true,
+            "domPath": "1.3.1.8",
+            "templateNode": 5,
+            "heightPx": 473,
+            "topPx": 1968
+          },
+          {
+            "index": 6,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 6,
+            "heightPx": 600,
+            "topPx": 2441
+          },
+          {
+            "index": 7,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 7
+          }
+        ],
+        "documentHeightPx": 3041
+      },
+      "blog-category": {
+        "route": "/blog-categories/marketplace",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "listing.blog-header",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "domPathLast": "1.3.1.2",
+            "templateNode": 2,
+            "heightPx": 218,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "listing.blog-filter-bar",
+            "inFlow": true,
+            "domPath": "1.3.1.4",
+            "templateNode": 3,
+            "heightPx": 56,
+            "topPx": 364
+          },
+          {
+            "index": 4,
+            "section": "listing.blog-card-grid",
+            "inFlow": true,
+            "domPath": "1.3.1.6",
+            "templateNode": 4,
+            "heightPx": 100,
+            "topPx": 452
+          },
+          {
+            "index": 5,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.7",
+            "templateNode": 5,
+            "heightPx": 473,
+            "topPx": 552
+          },
+          {
+            "index": 6,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 6,
+            "heightPx": 600,
+            "topPx": 1025
+          },
+          {
+            "index": 7,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 7
+          }
+        ],
+        "documentHeightPx": 1625
+      },
+      "blog-post": {
+        "route": "/blogpost/build-unlimited-chart-types-with-chart-studio",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "content.post-header",
+            "inFlow": true,
+            "domPath": "1.3.1.9",
+            "domPathLast": "1.3.1.13",
+            "templateNode": 2,
+            "heightPx": 214.6,
+            "topPx": 172
+          },
+          {
+            "index": 3,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.15.1.1",
+            "part": 0,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 560.1,
+            "topPx": 426.6
+          },
+          {
+            "index": 4,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.15.1.1",
+            "part": 1,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 989,
+            "topPx": 986.7
+          },
+          {
+            "index": 5,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.15.1.1",
+            "part": 2,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 941.4,
+            "topPx": 1975.7
+          },
+          {
+            "index": 6,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.15.1.1",
+            "part": 3,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 368,
+            "topPx": 2917
+          },
+          {
+            "index": 7,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.15.1.1",
+            "part": 4,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 138,
+            "topPx": 3285
+          },
+          {
+            "index": 8,
+            "section": "cta.inline-post",
+            "inFlow": true,
+            "domPath": "1.3.1.15.1.2",
+            "templateNode": 4,
+            "heightPx": 216,
+            "topPx": 3463
+          },
+          {
+            "index": 9,
+            "section": "content.post-toc",
+            "inFlow": false,
+            "note": "sticky table of contents in the article aside column (beside the body, takes no extra page height)",
+            "domPath": "1.3.1.15.2.1",
+            "templateNode": 5,
+            "heightPx": 242,
+            "topPx": 426.6
+          },
+          {
+            "index": 10,
+            "section": "listing.related-articles",
+            "inFlow": true,
+            "domPath": "1.3.1.16",
+            "templateNode": 6,
+            "heightPx": 146,
+            "topPx": 3743
+          },
+          {
+            "index": 11,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 7,
+            "heightPx": 600,
+            "topPx": 4425
+          },
+          {
+            "index": 12,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 8
+          }
+        ],
+        "documentHeightPx": 5025
+      },
+      "customer-stories": {
+        "route": "/customer-stories",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "listing.stories-header",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "domPathLast": "1.3.1.3",
+            "templateNode": 2,
+            "heightPx": 149,
+            "topPx": 206
+          },
+          {
+            "index": 3,
+            "section": "listing.story-card-grid",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "domPathLast": "1.3.1.6",
+            "templateNode": 3,
+            "heightPx": 2005,
+            "topPx": 443
+          },
+          {
+            "index": 4,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.7",
+            "templateNode": 4,
+            "heightPx": 473,
+            "topPx": 2448
+          },
+          {
+            "index": 5,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 5,
+            "heightPx": 600,
+            "topPx": 2921
+          },
+          {
+            "index": 6,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 6
+          }
+        ],
+        "documentHeightPx": 3521
+      },
+      "customer-story": {
+        "route": "/customer-story/ollie",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "content.story-header",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "domPathLast": "1.3.1.6",
+            "templateNode": 2,
+            "heightPx": 237.6,
+            "topPx": 206
+          },
+          {
+            "index": 3,
+            "section": "content.story-stats-row",
+            "inFlow": true,
+            "domPath": "1.3.1.8.2.1.1",
+            "templateNode": 3,
+            "heightPx": 112,
+            "topPx": 643.6
+          },
+          {
+            "index": 4,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.8.2.1.2",
+            "part": 0,
+            "partBoundary": "h2",
+            "templateNode": 4,
+            "heightPx": 640,
+            "topPx": 755.6
+          },
+          {
+            "index": 5,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.8.2.1.2",
+            "part": 1,
+            "partBoundary": "h2",
+            "templateNode": 4,
+            "heightPx": 967,
+            "topPx": 1395.6
+          },
+          {
+            "index": 6,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.8.2.1.2",
+            "part": 2,
+            "partBoundary": "h2",
+            "templateNode": 4,
+            "heightPx": 617.3,
+            "topPx": 2362.6
+          },
+          {
+            "index": 7,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.8.2.1.2",
+            "part": 3,
+            "partBoundary": "h2",
+            "templateNode": 4,
+            "heightPx": 368,
+            "topPx": 2979.9
+          },
+          {
+            "index": 8,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.8.2.1.2",
+            "part": 4,
+            "partBoundary": "h2",
+            "templateNode": 4,
+            "heightPx": 254,
+            "topPx": 3347.9
+          },
+          {
+            "index": 9,
+            "section": "cta.inline-post",
+            "inFlow": true,
+            "domPath": "1.3.1.8.2.1.3",
+            "templateNode": 5,
+            "heightPx": 216,
+            "topPx": 3601.9
+          },
+          {
+            "index": 10,
+            "section": "content.story-sidebar",
+            "inFlow": false,
+            "note": "sticky company card in the story aside column (beside the body)",
+            "domPath": "1.3.1.8.2.2.1",
+            "templateNode": 6,
+            "heightPx": 610.1,
+            "topPx": 643.6
+          },
+          {
+            "index": 11,
+            "section": "listing.related-stories",
+            "inFlow": true,
+            "domPath": "1.3.1.9",
+            "templateNode": 7,
+            "heightPx": 146,
+            "topPx": 3881.9
+          },
+          {
+            "index": 12,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 8,
+            "heightPx": 600,
+            "topPx": 4449.9
+          },
+          {
+            "index": 13,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 9
+          }
+        ],
+        "documentHeightPx": 5050
+      },
+      "event": {
+        "route": "/events/padel",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "content.event-header",
+            "inFlow": true,
+            "domPath": "1.3.1.2",
+            "templateNode": 2,
+            "heightPx": 289.4,
+            "topPx": 206
+          },
+          {
+            "index": 3,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.4.2.1",
+            "part": 0,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 537.6,
+            "topPx": 575.4
+          },
+          {
+            "index": 4,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.4.2.1",
+            "part": 1,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 1109,
+            "topPx": 1113
+          },
+          {
+            "index": 5,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.4.2.1",
+            "part": 2,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 1240,
+            "topPx": 2222
+          },
+          {
+            "index": 6,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.4.2.1",
+            "part": 3,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 458,
+            "topPx": 3461.9
+          },
+          {
+            "index": 7,
+            "section": "content.rich-text",
+            "inFlow": true,
+            "domPath": "1.3.1.4.2.1",
+            "part": 4,
+            "partBoundary": "h2",
+            "templateNode": 3,
+            "heightPx": 138,
+            "topPx": 3919.9
+          },
+          {
+            "index": 8,
+            "section": "content.event-details-card",
+            "inFlow": false,
+            "note": "details card in the event aside column (beside the body)",
+            "domPath": "1.3.1.4.3",
+            "templateNode": 4,
+            "heightPx": 360,
+            "topPx": 555.4
+          },
+          {
+            "index": 9,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.5",
+            "templateNode": 5,
+            "heightPx": 473,
+            "topPx": 4117.9
+          },
+          {
+            "index": 10,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 6,
+            "heightPx": 600,
+            "topPx": 4590.9
+          },
+          {
+            "index": 11,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 7
+          }
+        ],
+        "documentHeightPx": 5191
+      },
+      "legal": {
+        "route": "/terms-of-service",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "content.legal-header",
+            "inFlow": true,
+            "domPath": "1.3.1.1",
+            "domPathLast": "1.3.1.4",
+            "templateNode": 2,
+            "heightPx": 162.8,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 0,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 2126.4,
+            "topPx": 328.8
+          },
+          {
+            "index": 4,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 1,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 65.2,
+            "topPx": 2455.2
+          },
+          {
+            "index": 5,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 2,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 819.2,
+            "topPx": 2520.4
+          },
+          {
+            "index": 6,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 3,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 973.2,
+            "topPx": 3339.6
+          },
+          {
+            "index": 7,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 4,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 837.2,
+            "topPx": 4312.8
+          },
+          {
+            "index": 8,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 5,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 683.2,
+            "topPx": 5150
+          },
+          {
+            "index": 9,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 6,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 927.2,
+            "topPx": 5833.2
+          },
+          {
+            "index": 10,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 7,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 1347.2,
+            "topPx": 6760.4
+          },
+          {
+            "index": 11,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 8,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 807.2,
+            "topPx": 8107.6
+          },
+          {
+            "index": 12,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 9,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 65.2,
+            "topPx": 8914.8
+          },
+          {
+            "index": 13,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 10,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 457.2,
+            "topPx": 8980
+          },
+          {
+            "index": 14,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 11,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 1512.4,
+            "topPx": 9437.2
+          },
+          {
+            "index": 15,
+            "section": "content.legal-body",
+            "inFlow": true,
+            "domPath": "1.3.1.6.1.2.1",
+            "part": 12,
+            "partBoundary": "h5",
+            "templateNode": 3,
+            "heightPx": 991.2,
+            "topPx": 10949.6
+          },
+          {
+            "index": 16,
+            "section": "cta.snake-band",
+            "inFlow": true,
+            "domPath": "1.3.1.7",
+            "templateNode": 4,
+            "heightPx": 473,
+            "topPx": 12044.8
+          },
+          {
+            "index": 17,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 5,
+            "heightPx": 600,
+            "topPx": 12517.8
+          },
+          {
+            "index": 18,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 6
+          }
+        ],
+        "documentHeightPx": 13118
+      },
+      "not-found": {
+        "route": "/404",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "content.not-found",
+            "inFlow": true,
+            "domPath": "1.3.1",
+            "templateNode": 2,
+            "heightPx": 800.8,
+            "topPx": 106
+          },
+          {
+            "index": 3,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 3,
+            "heightPx": 600,
+            "topPx": 906.8
+          },
+          {
+            "index": 4,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 4
+          }
+        ],
+        "documentHeightPx": 1507
+      },
+      "padel-apply": {
+        "route": "/padel-apply",
+        "nodes": [
+          {
+            "index": 0,
+            "section": "chrome.navbar-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "fixed navbar",
+            "domPath": "1.1",
+            "templateNode": 0,
+            "heightPx": 206,
+            "topPx": 0
+          },
+          {
+            "index": 1,
+            "section": "chrome.mobile-nav-light",
+            "shell": true,
+            "inFlow": false,
+            "note": "phone navigation, hidden at 1440",
+            "domPath": "1.2",
+            "templateNode": 1,
+            "heightPx": 0,
+            "topPx": 0
+          },
+          {
+            "index": 2,
+            "section": "content.padel-apply",
+            "inFlow": true,
+            "domPath": "1.3.1.1.1",
+            "templateNode": 2,
+            "heightPx": 164.8,
+            "topPx": 202
+          },
+          {
+            "index": 3,
+            "section": "conversion.padel-form",
+            "inFlow": true,
+            "domPath": "1.3.1.1.2",
+            "templateNode": 3,
+            "heightPx": 463.9,
+            "topPx": 398.8
+          },
+          {
+            "index": 4,
+            "section": "chrome.footer",
+            "shell": true,
+            "inFlow": false,
+            "note": "footer (SHELL, excluded from the share rule)",
+            "domPath": "1.4",
+            "templateNode": 4,
+            "heightPx": 600,
+            "topPx": 974.7
+          },
+          {
+            "index": 5,
+            "section": "chrome.talk-modal",
+            "shell": true,
+            "inFlow": false,
+            "note": "closed modal, not rendered until opened",
+            "templateNode": 5
+          }
+        ],
+        "documentHeightPx": 1575
+      }
+    }
+  }
 }

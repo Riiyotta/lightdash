@@ -87,5 +87,17 @@
   "usedByTemplates": [
     "product-context-layer",
     "product-self-improving-analytics"
-  ]
+  ],
+  "source": {
+    "id": "ComparisonTable.jsx@22",
+    "tag": "section",
+    "file": "src/components/shared/ComparisonTable.jsx",
+    "lines": "22"
+  },
+  "semantic": {
+    "id": "features.comparison-table",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

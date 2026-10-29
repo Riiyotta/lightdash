@@ -54,5 +54,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "product-self-improving-analytics"
-  ]
+  ],
+  "source": {
+    "id": "SelfImprovingAnalytics.jsx@36",
+    "tag": "section",
+    "file": "src/pages/SelfImprovingAnalytics.jsx",
+    "lines": "36"
+  },
+  "semantic": {
+    "id": "content.statement-heading",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

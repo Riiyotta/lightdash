@@ -1,6 +1,6 @@
 {
   "$description": "Curated view of referenceable tokens, generated from tokens/00-foundation .. 20-component. verify_all.py checks parity with the token files. Reference tokens as category.name (for example color.brand-purple, typography.h2-48); never a raw value.",
-  "allowlistVersion": "1.0.0",
+  "allowlistVersion": "1.1.0",
   "categories": {
     "color": {
       "nav-bg": {

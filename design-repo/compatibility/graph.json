@@ -95,7 +95,12 @@
     {
       "id": "NO_ADJACENT_DUPLICATE",
       "severity": "error",
-      "params": {},
+      "params": {
+        "collapseHeadingBoundedParts": [
+          "content.rich-text",
+          "content.legal-body"
+        ]
+      },
       "description": "The same (section, variant) never appears twice in a row. Variant = the content field named by the contract variantField (features.accordion-tabs imageSide, content.playground-empty-blocks blockMode), so two stacked accordion rows must alternate image side.",
       "exceptions": []
     },
@@ -129,6 +134,10 @@
         "maxRun": 3,
         "ignoreCategories": [
           "CHROME"
+        ],
+        "collapseHeadingBoundedParts": [
+          "content.rich-text",
+          "content.legal-body"
         ]
       },
       "description": "No more than three consecutive nodes of the same category (CHROME ignored).",

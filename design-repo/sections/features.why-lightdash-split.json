@@ -66,5 +66,17 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "partnerships"
-  ]
+  ],
+  "source": {
+    "id": "Partnerships.jsx@190",
+    "tag": "Box",
+    "file": "src/pages/Partnerships.jsx",
+    "lines": "190"
+  },
+  "semantic": {
+    "id": "features.why-lightdash-split",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

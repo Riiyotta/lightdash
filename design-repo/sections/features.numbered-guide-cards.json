@@ -93,5 +93,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "beyond-copilots"
-  ]
+  ],
+  "source": {
+    "id": "BuildSteps.jsx@12",
+    "tag": "section",
+    "file": "src/components/pages/beyond-copilots/BuildSteps.jsx",
+    "lines": "12"
+  },
+  "semantic": {
+    "id": "features.numbered-guide-cards",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

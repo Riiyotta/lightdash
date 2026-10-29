@@ -36,7 +36,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "photo.person-avatar"
+              "photo.person-avatar",
+              "avatar.fictional-person",
+              "asset.operator-supplied"
             ],
             "altMaxWords": 3
           },
@@ -44,7 +46,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "logo.customer-partner"
+              "logo.customer-partner",
+              "logo.placeholder-company",
+              "asset.operator-supplied"
             ],
             "altMaxWords": 2
           }
@@ -87,5 +91,21 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "beyond-copilots"
+  ],
+  "source": {
+    "id": "Speakers.jsx@9",
+    "tag": "section",
+    "file": "src/components/pages/beyond-copilots/Speakers.jsx",
+    "lines": "9"
+  },
+  "semantic": {
+    "id": "proof.speakers-grid",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person",
+    "logo.placeholder-company"
   ]
 }

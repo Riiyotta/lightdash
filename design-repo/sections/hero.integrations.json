@@ -60,5 +60,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "integrations"
-  ]
+  ],
+  "source": {
+    "id": "IntegrationsHero.jsx@10",
+    "tag": "section",
+    "file": "src/components/pages/integrations/IntegrationsHero.jsx",
+    "lines": "10"
+  },
+  "semantic": {
+    "id": "hero.integrations",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

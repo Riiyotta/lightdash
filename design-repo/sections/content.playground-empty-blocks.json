@@ -56,5 +56,24 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "playground"
-  ]
+  ],
+  "source": {
+    "id": "PlaygroundBlocks.jsx@13",
+    "tag": "section",
+    "file": "src/components/pages/playground/PlaygroundBlocks.jsx",
+    "lines": "13",
+    "alsoRenderedAt": [
+      {
+        "file": "src/components/pages/playground/PlaygroundBlocks.jsx",
+        "lines": "57-72",
+        "tag": "div"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.playground-empty-blocks",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

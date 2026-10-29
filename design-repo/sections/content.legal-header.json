@@ -56,5 +56,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "legal"
-  ]
+  ],
+  "source": {
+    "id": "LegalPage.jsx@64",
+    "tag": "Row",
+    "file": "src/components/legal/LegalPage.jsx",
+    "lines": "64-89"
+  },
+  "semantic": {
+    "id": "content.legal-header",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

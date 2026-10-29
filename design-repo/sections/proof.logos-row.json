@@ -21,7 +21,9 @@
           "type": "media",
           "required": true,
           "assetRoles": [
-            "logo.customer-partner"
+            "logo.customer-partner",
+            "logo.placeholder-company",
+            "asset.operator-supplied"
           ],
           "altMaxWords": 3
         },
@@ -79,5 +81,20 @@
     "product-interactive-dashboards",
     "product-metrics-catalog",
     "product-self-improving-analytics"
+  ],
+  "source": {
+    "id": "LogosRow.jsx@43",
+    "tag": "div",
+    "file": "src/components/shared/LogosRow.jsx",
+    "lines": "43"
+  },
+  "semantic": {
+    "id": "proof.logos-row",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "logo.placeholder-company"
   ]
 }

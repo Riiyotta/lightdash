@@ -1,7 +1,7 @@
 {
   "id": "content.legal-body",
   "category": "CONTENT",
-  "purpose": "Legal document body inside a dashed-left column (max 768, 20px gap) with an empty 320px sticky TOC spacer at >=1000: rich-text with separators. The bodies in the clone are placeholder text.",
+  "purpose": "One heading-bounded part of a legal document (Terms of Service: one node per h5 clause heading; Privacy Policy: per section heading) inside the dashed-left column (max 768, 20px gap) with the empty 320px sticky TOC spacer at >=1000. Repeatable; bodies in the clone are placeholder text.",
   "status": "measured-structure-placeholder-body",
   "composable": true,
   "evidenceNote": "src/components/legal/placeholder.js states that only titles, dates and heading text come from the spec; every body is written for the clone and is not the live text.",
@@ -19,7 +19,7 @@
     "additionalProperties": false
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 30
   },
   "motion": {
     "allowedPatterns": [
@@ -47,10 +47,23 @@
   ],
   "notes": [
     "Terms of Service headings (e.g. \"RIGHT TO ACCESS AND USE THE SOFTWARE\") are real; all paragraphs are lorem-style placeholders. A PageSpec therefore carries no legal text; bodies must be supplied by the site owner.",
-    "Sub-processors body lists \"Vendor A..M\" placeholders, not the real vendor list (src/pages/SubProcessors.jsx)."
+    "Sub-processors body lists \"Vendor A..M\" placeholders, not the real vendor list (src/pages/SubProcessors.jsx).",
+    "Decomposed per heading-bounded part (R6): measured at 1440 the single body was 11672 / 13118 px of /terms-of-service (89%). /terms-of-service has 13 parts (src/pages/TermsOfService.jsx SECTIONS, 2 of them deliberately empty); the PageSpec carries one node per part."
   ],
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "legal"
-  ]
+  ],
+  "source": {
+    "id": "LegalPage.jsx@100",
+    "tag": "div",
+    "file": "src/components/legal/LegalPage.jsx",
+    "lines": "100"
+  },
+  "semantic": {
+    "id": "content.legal-body",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

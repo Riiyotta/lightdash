@@ -7,7 +7,25 @@
   "fixedContent": true,
   "implementedBy": "src/components/Navbar.jsx (variant=\"light\")",
   "content": {
-    "fields": {},
+    "fields": {
+      "brandMark": {
+        "type": "media",
+        "required": false,
+        "assetRoles": [
+          "brand.lightdash-wordmark",
+          "brand.placeholder-mark",
+          "asset.operator-supplied"
+        ]
+      },
+      "chromeData": {
+        "type": "media",
+        "required": false,
+        "assetRoles": [
+          "content.lightdash-chrome-data",
+          "content.operator-supplied-chrome"
+        ]
+      }
+    },
     "additionalProperties": false
   },
   "constraints": {
@@ -47,7 +65,8 @@
   ],
   "notes": [
     "Menu copy, icons and hrefs are fixed data in src/navData.js (PRODUCT_ITEMS, PLATFORM_ITEMS, CUSTOMER_GROUPS, RESOURCE_*). A PageSpec cannot override them.",
-    "The wordmark is a Rive state machine (@rive-app/canvas) on the live site; the static SVG shows until it loads."
+    "The wordmark is a Rive state machine (@rive-app/canvas) on the live site; the static SVG shows until it loads.",
+    "Optional slot field(s) brandMark, chromeData added for modes: omitted (or bound to the clone-only role) the fixed Lightdash chrome / app renders, which only clone mode allows; generation mode requires each slot bound to a generation-safe role (semantic_validate.py GENERATION_MODE_LOGO / _COPY / _EMBED)."
   ],
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
@@ -80,5 +99,21 @@
     "roadmap",
     "start",
     "startups"
+  ],
+  "source": {
+    "id": "Navbar.jsx@476",
+    "tag": "div",
+    "file": "src/components/Navbar.jsx",
+    "lines": "476"
+  },
+  "semantic": {
+    "id": "chrome.navbar-light",
+    "category": "CHROME"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "brand.placeholder-mark",
+    "content.operator-supplied-chrome"
   ]
 }

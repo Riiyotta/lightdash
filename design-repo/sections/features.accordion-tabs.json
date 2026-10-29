@@ -59,7 +59,9 @@
             "type": "media",
             "required": false,
             "assetRoles": [
-              "screenshot.product-ui"
+              "screenshot.product-ui",
+              "screenshot.placeholder",
+              "asset.operator-supplied"
             ]
           }
         },
@@ -115,5 +117,20 @@
     "product-embedding",
     "product-interactive-dashboards",
     "product-self-improving-analytics"
+  ],
+  "source": {
+    "id": "AccordionTabs.jsx@113",
+    "tag": "section",
+    "file": "src/components/shared/AccordionTabs.jsx",
+    "lines": "113"
+  },
+  "semantic": {
+    "id": "features.accordion-tabs",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "screenshot.placeholder"
   ]
 }

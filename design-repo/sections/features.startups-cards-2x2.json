@@ -62,5 +62,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "startups"
-  ]
+  ],
+  "source": {
+    "id": "Startups.jsx@229",
+    "tag": "section",
+    "file": "src/pages/Startups.jsx",
+    "lines": "229"
+  },
+  "semantic": {
+    "id": "features.startups-cards-2x2",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

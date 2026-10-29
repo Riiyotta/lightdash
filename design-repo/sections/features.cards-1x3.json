@@ -94,5 +94,17 @@
     "product-data-apps",
     "product-interactive-dashboards",
     "product-metrics-catalog"
-  ]
+  ],
+  "source": {
+    "id": "FeatureCards.jsx@37",
+    "tag": "section",
+    "file": "src/components/shared/FeatureCards.jsx",
+    "lines": "37"
+  },
+  "semantic": {
+    "id": "features.cards-1x3",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

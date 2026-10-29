@@ -21,7 +21,9 @@
           "type": "media",
           "required": true,
           "assetRoles": [
-            "logo.customer-partner"
+            "logo.customer-partner",
+            "logo.placeholder-company",
+            "asset.operator-supplied"
           ],
           "altMaxWords": 3
         },
@@ -114,5 +116,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "beyond-copilots"
+  ],
+  "source": {
+    "id": "EventHero.jsx@11",
+    "tag": "section",
+    "file": "src/components/pages/beyond-copilots/EventHero.jsx",
+    "lines": "11"
+  },
+  "semantic": {
+    "id": "hero.event-ondemand",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "logo.placeholder-company"
   ]
 }

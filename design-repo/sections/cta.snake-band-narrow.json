@@ -81,5 +81,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "blog-index"
-  ]
+  ],
+  "source": {
+    "id": "CtaBand.jsx@41",
+    "tag": "section",
+    "file": "src/components/shared/CtaBand.jsx",
+    "lines": "41"
+  },
+  "semantic": {
+    "id": "cta.snake-band-narrow",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

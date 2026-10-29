@@ -25,14 +25,18 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "embed.youtube"
+          "embed.youtube",
+          "video.placeholder",
+          "embed.operator-supplied"
         ]
       },
       "poster": {
         "type": "media",
         "required": true,
         "assetRoles": [
-          "image.cms-cover"
+          "image.cms-cover",
+          "illustration.generated",
+          "asset.operator-supplied"
         ]
       },
       "bookingText": {
@@ -92,5 +96,22 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "beyond-copilots"
+  ],
+  "source": {
+    "id": "Replay.jsx@13",
+    "tag": "section",
+    "file": "src/components/pages/beyond-copilots/Replay.jsx",
+    "lines": "13"
+  },
+  "semantic": {
+    "id": "content.youtube-replay",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "embed.operator-supplied",
+    "illustration.generated",
+    "video.placeholder"
   ]
 }

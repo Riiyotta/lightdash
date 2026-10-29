@@ -1,0 +1,224 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generation",
+  "template": "integrations",
+  "route": "/connectors",
+  "theme": "light",
+  "chrome": "light-cta",
+  "nodes": [
+    {
+      "section": "chrome.navbar-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-navbar-light-brandmark-0"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-navbar-light-chromedata-0"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.mobile-nav-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-mobile-nav-light-brandmark-1"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-mobile-nav-light-chromedata-1"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "hero.integrations",
+      "content": {
+        "heading": "Orchard ledgers that settle by",
+        "subtitle": "Each block of trees keeps its own history of yields, pruning dates and soil notes,"
+      },
+      "motion": {
+        "pattern": "pixel-drop",
+        "reducedMotionFallback": "static-final-state",
+        "reducedMotionBasis": "source-implemented"
+      }
+    },
+    {
+      "section": "listing.integrations-directory",
+      "content": {
+        "categories": [
+          "Field notes · Orchard planning",
+          "Field notes · Orchard planning",
+          "Field notes · Orchard planning",
+          "Field notes · Orchard planning",
+          "Field notes · Orchard planning",
+          "Field notes · Orchard planning"
+        ],
+        "integrations": [
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-1"
+            },
+            "body": "Cooperative managers compare twelve farms on one board and spot the grove that needs extra hands three days before the fruit softens."
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-2"
+            },
+            "body": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of"
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-3"
+            },
+            "body": "Growers sketch a picking route on a tablet, and the planner reshuffles every crew when a frost warning or a late delivery changes"
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-4"
+            },
+            "body": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the"
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-5"
+            },
+            "body": "Cooperative managers compare twelve farms on one board and spot the grove that needs extra hands three days before the fruit softens."
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-6"
+            },
+            "body": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of"
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-7"
+            },
+            "body": "Growers sketch a picking route on a tablet, and the planner reshuffles every crew when a frost warning or a late delivery changes"
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-8"
+            },
+            "body": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the"
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-9"
+            },
+            "body": "Cooperative managers compare twelve farms on one board and spot the grove that needs extra hands three days before the fruit softens."
+          },
+          {
+            "name": "Marisol Quenby",
+            "category": "Field notes · Orchard planning",
+            "logo": {
+              "assetRole": "logo.placeholder-company",
+              "assetRef": "slot-integrations-directory-integrations-3-logo-10"
+            },
+            "body": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "cta.snake-band",
+      "content": {
+        "title": [
+          "Field notes your whole cooperative trusts",
+          "Forecast picking days from soil to"
+        ],
+        "primary": {
+          "label": "Book a walkthrough",
+          "action": "navigate-route",
+          "target": "/contact"
+        },
+        "secondary": {
+          "label": "Book a walkthrough",
+          "action": "open-external",
+          "target": "https://www.quillpine.example/start"
+        }
+      },
+      "motion": {
+        "pattern": "snake-game",
+        "reducedMotionFallback": "no-autoplay",
+        "reducedMotionBasis": "source-partial"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-footer-brandmark-5"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-footer-chromedata-5"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.talk-modal",
+      "content": {
+        "booking": {
+          "assetRole": "embed.operator-supplied",
+          "assetRef": "slot-talk-modal-booking-6"
+        }
+      },
+      "motion": {
+        "pattern": "modal-fade",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    }
+  ]
+}

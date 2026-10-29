@@ -98,5 +98,34 @@
     "lightdash-security",
     "roadmap",
     "startups"
-  ]
+  ],
+  "source": {
+    "id": "Startups.jsx@95",
+    "tag": "section",
+    "file": "src/pages/Startups.jsx",
+    "lines": "95",
+    "alsoRenderedAt": [
+      {
+        "file": "src/pages/Roadmap.jsx",
+        "lines": "109-125",
+        "tag": "div"
+      },
+      {
+        "file": "src/pages/LightdashSecurity.jsx",
+        "lines": "39-54",
+        "tag": "div"
+      },
+      {
+        "file": "src/pages/Jp.jsx",
+        "lines": "66",
+        "tag": "section"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "hero.company-centered",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

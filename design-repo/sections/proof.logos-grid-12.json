@@ -14,7 +14,9 @@
           "type": "media",
           "required": true,
           "assetRoles": [
-            "logo.customer-partner"
+            "logo.customer-partner",
+            "logo.placeholder-company",
+            "asset.operator-supplied"
           ],
           "altMaxWords": 3
         },
@@ -63,5 +65,27 @@
   "usedByTemplates": [
     "playground",
     "pricing"
+  ],
+  "source": {
+    "id": "PlaygroundBlocks.jsx@33",
+    "tag": "section",
+    "file": "src/components/pages/playground/PlaygroundBlocks.jsx",
+    "lines": "33",
+    "alsoRenderedAt": [
+      {
+        "file": "src/pages/Pricing.jsx",
+        "lines": "51",
+        "tag": "section"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.logos-grid-12",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "logo.placeholder-company"
   ]
 }

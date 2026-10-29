@@ -22,7 +22,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "logo.customer-partner"
+              "logo.customer-partner",
+              "logo.placeholder-company",
+              "asset.operator-supplied"
             ]
           },
           "name": {
@@ -78,5 +80,27 @@
   "usedByTemplates": [
     "jp",
     "lightdash-security"
+  ],
+  "source": {
+    "id": "LightdashSecurity.jsx@67",
+    "tag": "section",
+    "file": "src/pages/LightdashSecurity.jsx",
+    "lines": "67",
+    "alsoRenderedAt": [
+      {
+        "file": "src/pages/Jp.jsx",
+        "lines": "92",
+        "tag": "section"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.logo-tiles-named",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "logo.placeholder-company"
   ]
 }

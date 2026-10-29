@@ -11,7 +11,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "video.self-hosted"
+          "video.self-hosted",
+          "video.placeholder",
+          "asset.operator-supplied"
         ]
       }
     },
@@ -53,5 +55,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "product-bi-as-code"
+  ],
+  "source": {
+    "id": "VideoSection.jsx@8",
+    "tag": "Block",
+    "file": "src/components/pages/bi-as-code/VideoSection.jsx",
+    "lines": "8"
+  },
+  "semantic": {
+    "id": "content.video-section",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "video.placeholder"
   ]
 }

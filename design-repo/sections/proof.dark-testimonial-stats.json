@@ -11,7 +11,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "photo.person-avatar"
+          "photo.person-avatar",
+          "avatar.fictional-person",
+          "asset.operator-supplied"
         ],
         "altMaxWords": 3
       },
@@ -113,5 +115,27 @@
   "usedByTemplates": [
     "fintech",
     "product-bi-as-code"
+  ],
+  "source": {
+    "id": "DarkTestimonial.jsx@24",
+    "tag": "Block",
+    "file": "src/components/pages/bi-as-code/DarkTestimonial.jsx",
+    "lines": "24",
+    "alsoRenderedAt": [
+      {
+        "file": "src/pages/Fintech.jsx",
+        "lines": "167",
+        "tag": "Box"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.dark-testimonial-stats",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person"
   ]
 }

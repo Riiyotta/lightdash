@@ -66,5 +66,19 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "fintech"
+  ],
+  "source": {
+    "id": "Fintech.jsx@114",
+    "tag": "Box",
+    "file": "src/pages/Fintech.jsx",
+    "lines": "114"
+  },
+  "semantic": {
+    "id": "features.fintech-reasons",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "icon.pixel-art"
   ]
 }

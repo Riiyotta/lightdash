@@ -66,5 +66,17 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "partnerships"
-  ]
+  ],
+  "source": {
+    "id": "Partnerships.jsx@246",
+    "tag": "Box",
+    "file": "src/pages/Partnerships.jsx",
+    "lines": "246"
+  },
+  "semantic": {
+    "id": "features.partner-benefits-grid",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

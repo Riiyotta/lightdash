@@ -89,5 +89,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "product-embedding"
-  ]
+  ],
+  "source": {
+    "id": "IntegrationPaths.jsx@10",
+    "tag": "section",
+    "file": "src/components/pages/embedding/IntegrationPaths.jsx",
+    "lines": "10"
+  },
+  "semantic": {
+    "id": "features.integration-paths",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

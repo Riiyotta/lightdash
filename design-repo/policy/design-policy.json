@@ -1,0 +1,47 @@
+{
+  "policyId": "n0-saas-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "bindingType": "bound-to-common-policy",
+  "title": "Binding of the Lightdash marketing design-repo to the N0 common SaaS design-constraint policy",
+  "classification": {
+    "productCategory": "saas",
+    "productDomain": "business-intelligence-and-analytics",
+    "marketModel": "B2B SaaS (self-serve cloud plans, enterprise sales, open-source self-hosted tier)",
+    "isSaaS": true,
+    "surfaces": ["marketing-site"],
+    "audiences": ["data teams", "analytics engineers", "business users of BI", "partners / consultancies", "startups"],
+    "evidence": [
+      {"ref": "src/pages/data/pricing.jsx:35", "claim": "tiered subscription plans (Cloud Pro, monthly price)"},
+      {"ref": "src/pages/data/pricing.jsx:64", "claim": "Enterprise tier sold via sales"},
+      {"ref": "src/components/shared/CtaBand.jsx:7", "claim": "self-serve product sign-up on app.lightdash.cloud/register"},
+      {"ref": "src/navData.js:28", "claim": "product = interactive dashboards / BI"},
+      {"ref": "src/pages/data/integrations.js:24", "claim": "data-warehouse integrations (BigQuery, Snowflake ...)"},
+      {"ref": "src/pages/LightdashSecurity.jsx:62", "claim": "B2B trust surface: SOC2 compliance page"},
+      {"ref": "src/pages/data/conversational-analytics.jsx:33", "claim": "audience is data teams (B2B)"}
+    ]
+  },
+  "generationRules": [
+    "PageSpecs declare mode clone | generation; generation pages may not contain Lightdash identity, copy, claims, people, customers, URLs, embeds or clone-only / blocked assets (schema/semantic_validate.py GENERATION_MODE_*; patterns in schema/source-identity.json; availability pinned in code).",
+    "Pages are composed only from the 30 templates and 95 composable section contracts; template node lists, chrome axis and theme are enforced (TEMPLATE_NODE_MATCH, ROUTE_RESTRICTION, compatibility/graph.json rules).",
+    "Pricing / plan / comparison sections are CONVERSION-classed; compliance badges and numeric proof are never fabricated: generation mode only accepts operator-supplied badges (badge.compliance is blocked-for-generation).",
+    "Style references are catalog tokens only (TOKEN_* rules); motion uses the closed motion patterns with const-locked reduced-motion fallbacks.",
+    "Runtime UI (modal, drawers, iframe app states) is never retrievable page content (PINNED_RETRIEVAL); no section may hold most of a page (extraction/wrapper_gate.py over measured heights)."
+  ],
+  "enforcedBy": [
+    "schema/pagespec.schema.json",
+    "schema/semantic_validate.py",
+    "schema/section-contract.schema.json",
+    "schema/source-identity.json",
+    "assets/asset-roles.json",
+    "compatibility/graph.json",
+    "tokens/llm/token-policy.json",
+    "extraction/wrapper_gate.py"
+  ],
+  "contentHashNote": "registry.manifest.json designPolicy.contentHash = sha256 over the files listed in enforcedBy (sorted by path; each contributes its path, a NUL byte, its bytes and a NUL byte). verify_all.py recomputes it. The text of the common policy n0-saas-design-constraints-common itself is not shipped in this repo and was not available to this build; the hash covers this repo's enforcing files, not the common policy document.",
+  "approval": {
+    "policyDecision": "bound-pending-architecture-review",
+    "architectureDecisionRecorded": false,
+    "note": "Classification (B2B SaaS) is an agent decision from the evidence above (agent attestation, not a human sign-off). A human architecture owner must ratify the binding."
+  }
+}

@@ -37,7 +37,10 @@
             "required": true,
             "assetRoles": [
               "illustration.hero-diagram",
-              "screenshot.product-ui"
+              "screenshot.product-ui",
+              "illustration.generated",
+              "asset.operator-supplied",
+              "screenshot.placeholder"
             ]
           }
         },
@@ -74,5 +77,21 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "fintech"
+  ],
+  "source": {
+    "id": "Fintech.jsx@139",
+    "tag": "Box",
+    "file": "src/pages/Fintech.jsx",
+    "lines": "139"
+  },
+  "semantic": {
+    "id": "features.fintech-benefit-cards",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "illustration.generated",
+    "screenshot.placeholder"
   ]
 }

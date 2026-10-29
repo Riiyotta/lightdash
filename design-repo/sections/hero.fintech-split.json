@@ -50,7 +50,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "screenshot.product-ui"
+          "screenshot.product-ui",
+          "screenshot.placeholder",
+          "asset.operator-supplied"
         ],
         "altMaxWords": 30
       }
@@ -95,5 +97,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "fintech"
+  ],
+  "source": {
+    "id": "Fintech.jsx@33",
+    "tag": "Box",
+    "file": "src/pages/Fintech.jsx",
+    "lines": "33"
+  },
+  "semantic": {
+    "id": "hero.fintech-split",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "screenshot.placeholder"
   ]
 }

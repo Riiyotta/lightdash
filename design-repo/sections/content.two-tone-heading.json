@@ -58,5 +58,24 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "startups"
-  ]
+  ],
+  "source": {
+    "id": "Startups.jsx@151",
+    "tag": "section",
+    "file": "src/pages/Startups.jsx",
+    "lines": "151",
+    "alsoRenderedAt": [
+      {
+        "file": "src/pages/Startups.jsx",
+        "lines": "216",
+        "tag": "section"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.two-tone-heading",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

@@ -109,5 +109,17 @@
     "product-self-improving-analytics",
     "roadmap",
     "startups"
-  ]
+  ],
+  "source": {
+    "id": "CtaBand.jsx@41",
+    "tag": "section",
+    "file": "src/components/shared/CtaBand.jsx",
+    "lines": "41"
+  },
+  "semantic": {
+    "id": "cta.snake-band",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

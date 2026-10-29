@@ -47,7 +47,9 @@
                 "type": "media",
                 "required": false,
                 "assetRoles": [
-                  "image.cms-cover"
+                  "image.cms-cover",
+                  "illustration.generated",
+                  "asset.operator-supplied"
                 ]
               }
             },
@@ -97,5 +99,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "about"
+  ],
+  "source": {
+    "id": "About.jsx@83",
+    "tag": "section",
+    "file": "src/pages/About.jsx",
+    "lines": "83"
+  },
+  "semantic": {
+    "id": "content.story-timeline",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "illustration.generated"
   ]
 }

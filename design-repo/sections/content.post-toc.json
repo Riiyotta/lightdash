@@ -48,5 +48,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "blog-post"
-  ]
+  ],
+  "source": {
+    "id": "Toc.jsx@29",
+    "tag": "nav",
+    "file": "src/components/cms/Toc.jsx",
+    "lines": "29"
+  },
+  "semantic": {
+    "id": "content.post-toc",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

@@ -38,5 +38,18 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "home"
-  ]
+  ],
+  "source": {
+    "id": "Hero.jsx@62",
+    "tag": "iframe",
+    "file": "src/components/Hero.jsx",
+    "lines": "62"
+  },
+  "semantic": {
+    "id": "app.view-pricing",
+    "category": "APP"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Interactive iframe state of the home Game Boy app, reached only by in-app interaction; not a composable page section.",
+  "generatedAssetRoles": []
 }

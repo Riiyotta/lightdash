@@ -48,5 +48,19 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "fintech"
+  ],
+  "source": {
+    "id": "Fintech.jsx@271",
+    "tag": "div",
+    "file": "src/pages/Fintech.jsx",
+    "lines": "271"
+  },
+  "semantic": {
+    "id": "decor.pixel-border-band",
+    "category": "DECOR"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "decor.pixel-tile"
   ]
 }

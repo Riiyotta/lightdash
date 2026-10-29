@@ -56,5 +56,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "jp"
-  ]
+  ],
+  "source": {
+    "id": "Jp.jsx@103",
+    "tag": "section",
+    "file": "src/pages/Jp.jsx",
+    "lines": "103"
+  },
+  "semantic": {
+    "id": "content.jp-intro",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

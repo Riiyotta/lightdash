@@ -11,7 +11,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "photo.person-avatar"
+          "photo.person-avatar",
+          "avatar.fictional-person",
+          "asset.operator-supplied"
         ],
         "altMaxWords": 3
       },
@@ -75,5 +77,32 @@
     "jp",
     "product-embedding",
     "startups"
+  ],
+  "source": {
+    "id": "Testimonial.jsx@9",
+    "tag": "section",
+    "file": "src/components/pages/embedding/Testimonial.jsx",
+    "lines": "9",
+    "alsoRenderedAt": [
+      {
+        "file": "src/pages/Startups.jsx",
+        "lines": "260",
+        "tag": "section"
+      },
+      {
+        "file": "src/pages/Jp.jsx",
+        "lines": "129",
+        "tag": "section"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.testimonial-avatar",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person"
   ]
 }

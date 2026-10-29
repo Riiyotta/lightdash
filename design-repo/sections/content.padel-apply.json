@@ -63,5 +63,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "padel-apply"
-  ]
+  ],
+  "source": {
+    "id": "PadelApply.jsx@45",
+    "tag": "div",
+    "file": "src/pages/PadelApply.jsx",
+    "lines": "45"
+  },
+  "semantic": {
+    "id": "content.padel-apply",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

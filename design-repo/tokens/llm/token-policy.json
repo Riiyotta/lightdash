@@ -1,14 +1,14 @@
 {
   "$description": "What is enforced vs convention for token use. Category keys are real token-catalog.json keys (checked by verify_all.py).",
-  "allowlistVersion": "1.0.0",
+  "allowlistVersion": "1.1.0",
   "rawValueRestrictions": {
     "color": {
       "rule": "reference-tokens-only",
-      "enforcement": "convention"
+      "enforcement": "semantic-validator"
     },
     "fontFamily": {
       "rule": "reference-tokens-only",
-      "enforcement": "convention"
+      "enforcement": "semantic-validator"
     },
     "typography": {
       "rule": "reference-tokens-only",
@@ -20,7 +20,7 @@
     },
     "spacing": {
       "rule": "reference-tokens-only",
-      "enforcement": "convention"
+      "enforcement": "semantic-validator"
     },
     "breakpoint": {
       "rule": "reference-tokens-only",
@@ -60,13 +60,55 @@
     }
   },
   "overrides": {
-    "perInstanceTokenOverrides": "not-supported",
-    "note": "PageSpec nodes carry only section, content and motion (the structural variant of a section is a content enum field named by the variantField key of its contract). There is no style / token-override field, so styling is owned entirely by the section and component contracts and there is nothing to validate or mutate at PageSpec level. Token drift is guarded at the catalog / policy layer (verify_all.py parity checks), not per page."
+    "perInstanceTokenOverrides": "catalog-tokens-only",
+    "field": "node.style (schema/pagespec.schema.json definitions.style, optional, closed)",
+    "styleFields": {
+      "accentColor": "color",
+      "textColor": "color",
+      "surfaceColor": "color",
+      "borderColor": "color",
+      "fontFamily": "fontFamily",
+      "spacingBefore": "spacing",
+      "spacingAfter": "spacing"
+    },
+    "referenceFormat": "\"<catalog category>.<token name>\", e.g. \"color.brand-purple\", \"semantic.color.text.accent\", \"spacing.24\", \"fontFamily.inter\"",
+    "note": "Earlier versions had no per-instance style field (\"not-supported\"). Version 1.1.0 adds an optional, closed node.style object whose values must be catalog token references so a generated page can restyle a section within the system; raw values are rejected by name. Section and component contracts still own all default styling."
   },
   "enforced": [
     "motion.pattern is a closed enum per section; reducedMotionFallback and reducedMotionBasis are const-locked per pattern (schema + semantic_validate.py against tokens/00-foundation/motion-patterns.json)",
     "media assetRole is a closed enum per field and assetRef must be a slot id (^slot-[a-z0-9-]+$), never a URL (schema)",
-    "no live third-party endpoint string anywhere in a PageSpec (semantic_validate.py NO_LIVE_ENDPOINT, patterns in assets/asset-roles.json)"
+    "no live third-party endpoint string anywhere in a PageSpec (semantic_validate.py NO_LIVE_ENDPOINT, patterns in assets/asset-roles.json)",
+    "node.style token references: TOKEN_* rules in schema/semantic_validate.py (see semanticRules)"
   ],
-  "scopeNote": "The nine color.local-* tokens are page-local (scope \"page-local\" in color.json): they exist for fidelity to specific pages and should not be used to restyle other templates."
+  "scopeNote": "The nine color.local-* tokens are page-local (scope \"page-local\" in color.json): they exist for fidelity to specific pages and should not be used to restyle other templates.",
+  "semanticRules": [
+    {
+      "id": "TOKEN_UNKNOWN",
+      "rejects": "a style value that is not \"category.name\" of a catalog token"
+    },
+    {
+      "id": "TOKEN_RAW_COLOR",
+      "rejects": "a raw hex / rgb(a) / hsl(a) / named colour in a colour field"
+    },
+    {
+      "id": "TOKEN_ARBITRARY_SPACING",
+      "rejects": "a raw length (px, rem, em, %, vh, vw) in a spacing field instead of a spacing.* token"
+    },
+    {
+      "id": "TOKEN_UNSUPPORTED_FONT",
+      "rejects": "a fontFamily value that is not one of the 10 fontFamily.* tokens"
+    },
+    {
+      "id": "TOKEN_THEME_MISMATCH",
+      "rejects": "a colour token that only the other theme resolves (derived from tokens/themes/*.json, e.g. color.nav-bg on a light page)"
+    },
+    {
+      "id": "TOKEN_SCOPE",
+      "rejects": "a page-local colour token (color.json scope page-local) used outside its page"
+    },
+    {
+      "id": "TOKEN_CATEGORY",
+      "rejects": "a token of the wrong category for the field (e.g. spacing.24 as accentColor)"
+    }
+  ]
 }

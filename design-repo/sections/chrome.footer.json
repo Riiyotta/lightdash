@@ -7,7 +7,25 @@
   "fixedContent": true,
   "implementedBy": "src/components/shared/Footer.jsx (mounted by src/layouts/InnerLayout.jsx)",
   "content": {
-    "fields": {},
+    "fields": {
+      "brandMark": {
+        "type": "media",
+        "required": false,
+        "assetRoles": [
+          "brand.lightdash-wordmark",
+          "brand.placeholder-mark",
+          "asset.operator-supplied"
+        ]
+      },
+      "chromeData": {
+        "type": "media",
+        "required": false,
+        "assetRoles": [
+          "content.lightdash-chrome-data",
+          "content.operator-supplied-chrome"
+        ]
+      }
+    },
     "additionalProperties": false
   },
   "constraints": {
@@ -41,7 +59,8 @@
     "src/components/shared/Footer.jsx:65-70"
   ],
   "notes": [
-    "The newsletter form is UI only: Footer.jsx comments that the live HubSpot endpoint was not inspected, so onSubmit just calls preventDefault. Footer links include live third-party endpoints (jobs.ashbyhq.com careers board, YouTube channel, Slack invite); they are fixed chrome data, never PageSpec content."
+    "The newsletter form is UI only: Footer.jsx comments that the live HubSpot endpoint was not inspected, so onSubmit just calls preventDefault. Footer links include live third-party endpoints (jobs.ashbyhq.com careers board, YouTube channel, Slack invite); they are fixed chrome data, never PageSpec content.",
+    "Optional slot field(s) brandMark, chromeData added for modes: omitted (or bound to the clone-only role) the fixed Lightdash chrome / app renders, which only clone mode allows; generation mode requires each slot bound to a generation-safe role (semantic_validate.py GENERATION_MODE_LOGO / _COPY / _EMBED)."
   ],
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
@@ -74,5 +93,21 @@
     "roadmap",
     "start",
     "startups"
+  ],
+  "source": {
+    "id": "Footer.jsx@141",
+    "tag": "footer",
+    "file": "src/components/shared/Footer.jsx",
+    "lines": "141"
+  },
+  "semantic": {
+    "id": "chrome.footer",
+    "category": "CHROME"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "brand.placeholder-mark",
+    "content.operator-supplied-chrome"
   ]
 }

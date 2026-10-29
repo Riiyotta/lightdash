@@ -31,7 +31,10 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "animation.rive"
+          "animation.rive",
+          "animation.placeholder",
+          "illustration.generated",
+          "asset.operator-supplied"
         ]
       }
     },
@@ -74,5 +77,21 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "startups"
+  ],
+  "source": {
+    "id": "Startups.jsx@121",
+    "tag": "section",
+    "file": "src/pages/Startups.jsx",
+    "lines": "121"
+  },
+  "semantic": {
+    "id": "hero.startups-visual",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "animation.placeholder",
+    "asset.operator-supplied",
+    "illustration.generated"
   ]
 }

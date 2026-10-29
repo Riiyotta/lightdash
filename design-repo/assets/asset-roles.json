@@ -4,7 +4,8 @@
     "may-generate-new": "Abstract decoration with no real referent; new generation allowed within tokens.",
     "must-reuse-exact": "Brand-owned library asset; reuse the exact approved file, never regenerate or alter.",
     "must-not-fabricate": "Real third-party trademark or personal-identity / proprietary editorial asset; never generate, alter or reproduce from memory. Only a human-supplied licensed reference, else a neutral placeholder.",
-    "must-not-reuse-live-endpoint": "Never bind to a live third-party endpoint / id / host from the source site; leave an assetRef slot for a human to fill."
+    "must-not-reuse-live-endpoint": "Never bind to a live third-party endpoint / id / host from the source site; leave an assetRef slot for a human to fill.",
+    "must-be-operator-supplied": "Slot is filled only with an asset (or embed / endpoint / chrome data) that the operator or user of the new site owns or has licensed; nothing from the source site."
   },
   "pinnedPolicies": {
     "animation.rive": "must-reuse-exact",
@@ -25,9 +26,24 @@
     "photo.team-member": "must-not-fabricate",
     "screenshot.product-ui": "must-reuse-exact",
     "video.self-hosted": "must-reuse-exact",
-    "app.iframe-bundle": "must-reuse-exact"
+    "app.iframe-bundle": "must-reuse-exact",
+    "brand.lightdash-wordmark": "must-reuse-exact",
+    "content.lightdash-chrome-data": "must-reuse-exact",
+    "brand.placeholder-mark": "may-generate-new",
+    "asset.operator-supplied": "must-be-operator-supplied",
+    "illustration.generated": "may-generate-new",
+    "screenshot.placeholder": "may-generate-new",
+    "animation.placeholder": "may-generate-new",
+    "video.placeholder": "may-generate-new",
+    "embed.operator-supplied": "must-be-operator-supplied",
+    "endpoint.operator-supplied": "must-be-operator-supplied",
+    "content.operator-supplied-chrome": "must-be-operator-supplied",
+    "avatar.fictional-person": "may-generate-new",
+    "logo.placeholder-company": "may-generate-new",
+    "link.placeholder-url": "may-generate-new",
+    "copy.original": "may-generate-new"
   },
-  "pinNote": "Every role is pinned to one specific policy, not merely to membership in the 4-value set: verify_all.py fails if any role is changed to a different valid value (proven by prove_drift.sh pinned_asset_role_changed).",
+  "pinNote": "Every role is pinned to one specific policy, not merely to membership in the closed policy set: verify_all.py fails if any role is changed to a different valid value (proven by prove_drift.py pinned_asset_role_changed).",
   "forbiddenLiveHostPatterns": [
     {
       "pattern": "cal\\.com",
@@ -86,7 +102,15 @@
         "src/components/pages/embedding/RiveHero.jsx:19",
         "src/components/pages/startups/RiveDashboard.jsx:11"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "animation.placeholder",
+        "illustration.generated",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_ANIMATION); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_ANIMATION"
     },
     "badge.compliance": {
       "generationPolicy": "must-not-fabricate",
@@ -100,7 +124,13 @@
         "src/pages/LightdashSecurity.jsx:62",
         "src/components/shared/Footer.jsx:36"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Blocked for generation: never bound to its live value in either mode (clone mode keeps an unfilled slot). Generation mode: the role itself is REJECTED (rule GENERATION_MODE_CLAIM); bind one of generationSafeSubstitutes.",
+      "generationModeRule": "GENERATION_MODE_CLAIM"
     },
     "decor.pixel-tile": {
       "generationPolicy": "may-generate-new",
@@ -114,7 +144,10 @@
         "src/components/shared/SectionHero.jsx:33",
         "src/components/pages/pricing/PlanCard.jsx:16"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
     },
     "decor.sticker": {
       "generationPolicy": "may-generate-new",
@@ -126,7 +159,10 @@
       "evidence": [
         "src/pages/data/about.jsx:7"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
     },
     "embed.booking-cal": {
       "generationPolicy": "must-not-reuse-live-endpoint",
@@ -140,7 +176,13 @@
         "src/components/shared/useCalInline.js:9",
         "src/navData.js:19"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "embed.operator-supplied"
+      ],
+      "generatedModeGuidance": "Blocked for generation: never bound to its live value in either mode (clone mode keeps an unfilled slot). Generation mode: the role itself is REJECTED (rule GENERATION_MODE_EMBED); bind one of generationSafeSubstitutes.",
+      "generationModeRule": "GENERATION_MODE_EMBED"
     },
     "embed.live-demo": {
       "generationPolicy": "must-not-reuse-live-endpoint",
@@ -152,7 +194,14 @@
       "evidence": [
         "src/pages/data/data-apps.jsx:37"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "embed.operator-supplied",
+        "screenshot.placeholder"
+      ],
+      "generatedModeGuidance": "Blocked for generation: never bound to its live value in either mode (clone mode keeps an unfilled slot). Generation mode: the role itself is REJECTED (rule GENERATION_MODE_EMBED); bind one of generationSafeSubstitutes.",
+      "generationModeRule": "GENERATION_MODE_EMBED"
     },
     "embed.youtube": {
       "generationPolicy": "must-not-reuse-live-endpoint",
@@ -164,7 +213,14 @@
       "evidence": [
         "src/pages/data/beyond-copilots.js:33"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "video.placeholder",
+        "embed.operator-supplied"
+      ],
+      "generatedModeGuidance": "Blocked for generation: never bound to its live value in either mode (clone mode keeps an unfilled slot). Generation mode: the role itself is REJECTED (rule GENERATION_MODE_EMBED); bind one of generationSafeSubstitutes.",
+      "generationModeRule": "GENERATION_MODE_EMBED"
     },
     "form.submission-endpoint": {
       "generationPolicy": "must-not-reuse-live-endpoint",
@@ -179,7 +235,13 @@
         "src/pages/PadelApply.jsx:7",
         "src/components/shared/Footer.jsx:66"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "endpoint.operator-supplied"
+      ],
+      "generatedModeGuidance": "Blocked for generation: never bound to its live value in either mode (clone mode keeps an unfilled slot). Generation mode: the role itself is REJECTED (rule GENERATION_MODE_URL); bind one of generationSafeSubstitutes.",
+      "generationModeRule": "GENERATION_MODE_URL"
     },
     "icon.pixel-art": {
       "generationPolicy": "may-generate-new",
@@ -197,7 +259,10 @@
         "src/components/shared/IconBenefits.jsx:29",
         "src/pages/data/roadmap.js:6"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
     },
     "illustration.hero-diagram": {
       "generationPolicy": "must-reuse-exact",
@@ -212,7 +277,14 @@
         "src/pages/data/conversational-analytics.jsx:30",
         "src/pages/data/fintech.jsx:24"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "illustration.generated",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_DIAGRAM); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_DIAGRAM"
     },
     "illustration.html-diagram": {
       "generationPolicy": "must-reuse-exact",
@@ -224,7 +296,14 @@
       "evidence": [
         "src/components/pages/context-layer/ContextDiagram.jsx:1"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "illustration.generated",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_DIAGRAM); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_DIAGRAM"
     },
     "image.cms-cover": {
       "generationPolicy": "must-not-fabricate",
@@ -240,7 +319,14 @@
         "src/pages/data/cms.js:12",
         "src/components/cms/PostCard.jsx:12"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "illustration.generated",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_ASSET); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_ASSET"
     },
     "logo.customer-partner": {
       "generationPolicy": "must-not-fabricate",
@@ -263,7 +349,14 @@
         "src/pages/data/fintech.jsx:6",
         "src/pages/data/pricing.jsx:85"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "logo.placeholder-company",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_CUSTOMER); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_CUSTOMER"
     },
     "logo.integration": {
       "generationPolicy": "must-not-fabricate",
@@ -275,7 +368,14 @@
       "evidence": [
         "src/pages/data/integrations.js:20"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "logo.placeholder-company",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_CUSTOMER); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_CUSTOMER"
     },
     "photo.person-avatar": {
       "generationPolicy": "must-not-fabricate",
@@ -297,7 +397,14 @@
         "src/components/pages/beyond-copilots/Speakers.jsx:5",
         "src/components/pages/partnerships/TestimonialCarousel.jsx:13"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "avatar.fictional-person",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_PERSON); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_PERSON"
     },
     "photo.team-member": {
       "generationPolicy": "must-not-fabricate",
@@ -311,7 +418,14 @@
         "src/pages/About.jsx:11",
         "src/pages/data/about.jsx:22"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "avatar.fictional-person",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_PERSON); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_PERSON"
     },
     "screenshot.product-ui": {
       "generationPolicy": "must-reuse-exact",
@@ -332,7 +446,14 @@
         "src/components/shared/AccordionTabs.jsx:105",
         "src/pages/data/interactive-dashboards.jsx:57"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "screenshot.placeholder",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_SCREENSHOT); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_SCREENSHOT"
     },
     "video.self-hosted": {
       "generationPolicy": "must-reuse-exact",
@@ -344,18 +465,381 @@
       "evidence": [
         "src/components/pages/bi-as-code/VideoSection.jsx:5"
       ],
-      "usedInPageSpec": true
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "video.placeholder",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_VIDEO); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_VIDEO"
     },
     "app.iframe-bundle": {
       "generationPolicy": "must-reuse-exact",
       "pinned": true,
-      "usedByFields": [],
+      "usedByFields": [
+        "hero.gameboy-app.app"
+      ],
       "guidance": "The Three.js Game Boy app bundle under public/gameboy/ (3.4 MB: index.html, GLB model, textures, sounds, vendor scripts, people/logo images of real customers). Not referenced by any PageSpec field (the homepage is an opaque iframe); documented so it is never regenerated. Its internal customer logos / people images fall under logo.customer-partner / photo.person-avatar rules.",
       "evidence": [
         "src/components/Hero.jsx:58",
         "CLONE_SPEC.md:277"
       ],
-      "usedInPageSpec": false
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "embed.operator-supplied",
+        "animation.placeholder"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_EMBED); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_EMBED"
+    },
+    "brand.lightdash-wordmark": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "usedByFields": [
+        "chrome.footer.brandMark",
+        "chrome.mobile-nav-dark.brandMark",
+        "chrome.mobile-nav-light.brandMark",
+        "chrome.navbar-dark.brandMark",
+        "chrome.navbar-light.brandMark"
+      ],
+      "guidance": "The Lightdash wordmark / logo rendered by the navbar (static SVG + Rive state machine) and the footer. Clone mode reuses the exact file; a generated page never shows it: it carries brand.placeholder-mark or asset.operator-supplied instead.",
+      "evidence": [
+        "src/components/Navbar.jsx:476",
+        "src/components/shared/Footer.jsx:141"
+      ],
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark",
+        "asset.operator-supplied"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_LOGO); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_LOGO"
+    },
+    "content.lightdash-chrome-data": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "usedByFields": [
+        "chrome.footer.chromeData",
+        "chrome.mobile-nav-dark.chromeData",
+        "chrome.mobile-nav-light.chromeData",
+        "chrome.navbar-dark.chromeData",
+        "chrome.navbar-light.chromeData"
+      ],
+      "guidance": "The fixed navigation / footer data of the clone (menu copy, customer cells, footer columns, G2 badges, newsletter copy, social and careers links from src/navData.js and Footer.jsx). Clone mode renders it unchanged; generation mode must bind content.operator-supplied-chrome.",
+      "evidence": [
+        "src/navData.js:23-71",
+        "src/components/shared/Footer.jsx:6-47"
+      ],
+      "usedInPageSpec": true,
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "content.operator-supplied-chrome"
+      ],
+      "generatedModeGuidance": "Clone mode: may be reused exactly as in the source for fidelity. Generation mode: REJECTED by semantic_validate.py (rule GENERATION_MODE_COPY); bind one of generationSafeSubstitutes instead.",
+      "generationModeRule": "GENERATION_MODE_COPY"
+    },
+    "brand.placeholder-mark": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "chrome.footer.brandMark",
+        "chrome.mobile-nav-dark.brandMark",
+        "chrome.mobile-nav-light.brandMark",
+        "chrome.navbar-dark.brandMark",
+        "chrome.navbar-light.brandMark"
+      ],
+      "guidance": "A neutral placeholder or newly generated brand mark for a fictional / new brand (simple geometric mark plus the new brand name). Never derived from, traced from or styled after the Lightdash mark.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "asset.operator-supplied": {
+      "generationPolicy": "must-be-operator-supplied",
+      "pinned": true,
+      "usedByFields": [
+        "chrome.footer.brandMark",
+        "chrome.mobile-nav-dark.brandMark",
+        "chrome.mobile-nav-light.brandMark",
+        "chrome.navbar-dark.brandMark",
+        "chrome.navbar-light.brandMark",
+        "content.blog-posts.posts[].authorAvatar",
+        "content.blog-posts.posts[].thumbnail",
+        "content.post-header.authorAvatar",
+        "content.story-header.personAvatar",
+        "content.story-sidebar.logo",
+        "content.story-timeline.years[].entries[].photo",
+        "content.team-grid.members[].photo",
+        "content.team-grid.members[].photoHover",
+        "content.video-section.video",
+        "content.youtube-replay.poster",
+        "features.accordion-tabs.tabs[].image",
+        "features.alternating-rows.rows[].image",
+        "features.cards-3x2-image.cards[].image",
+        "features.fintech-benefit-cards.cards[].image",
+        "features.jp-link-cards.cards[].image",
+        "features.pill-tabs-visual.tabs[].image",
+        "features.split-content.image",
+        "features.startups-benefits-grid.items[].icon",
+        "hero.event-ondemand.cohostLogos[]",
+        "hero.fintech-split.illustration",
+        "hero.product-visual.visual",
+        "hero.startups-visual.visual",
+        "listing.integrations-directory.integrations[].logo",
+        "proof.compliance-badges.badges[]",
+        "proof.customer-quote-stats.logo",
+        "proof.customer-quote-stats.photo",
+        "proof.customer-quote.logo",
+        "proof.customer-quote.photo",
+        "proof.dark-testimonial-stats.avatar",
+        "proof.logo-tiles-named.tiles[].logo",
+        "proof.logos-grid-12.logos[]",
+        "proof.logos-row.logos[]",
+        "proof.logos-strip-5.logos[]",
+        "proof.partner-logos.logos[]",
+        "proof.partner-testimonial-carousel.items[].portrait",
+        "proof.speakers-grid.speakers[].companyLogo",
+        "proof.speakers-grid.speakers[].photo",
+        "proof.testimonial-avatar.avatar"
+      ],
+      "guidance": "Any image, logo, badge or photo the operator / user of the new site supplies and owns or has licensed. The design-repo only reserves the slot.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "illustration.generated": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "content.blog-posts.posts[].thumbnail",
+        "content.story-timeline.years[].entries[].photo",
+        "content.youtube-replay.poster",
+        "features.fintech-benefit-cards.cards[].image",
+        "features.jp-link-cards.cards[].image",
+        "features.split-content.image",
+        "hero.product-visual.visual",
+        "hero.startups-visual.visual"
+      ],
+      "guidance": "Newly generated illustration / diagram drawn from the token palette (no Lightdash diagram, screenshot or product UI as input or reference).",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "screenshot.placeholder": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "features.accordion-tabs.tabs[].image",
+        "features.alternating-rows.rows[].image",
+        "features.cards-3x2-image.cards[].image",
+        "features.fintech-benefit-cards.cards[].image",
+        "features.jp-link-cards.cards[].image",
+        "features.pill-tabs-visual.tabs[].image",
+        "features.split-content.image",
+        "hero.fintech-split.illustration",
+        "hero.product-visual.visual"
+      ],
+      "guidance": "Neutral placeholder product-UI frame (grey blocks, fictional labels) standing in for a product screenshot until the operator supplies their own.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "animation.placeholder": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "hero.gameboy-app.app",
+        "hero.product-visual.visual",
+        "hero.startups-visual.visual"
+      ],
+      "guidance": "Placeholder for a Rive / canvas animation slot: a static generated illustration or an operator-supplied animation file. Never a Lightdash .riv file or state machine.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "video.placeholder": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "content.video-section.video",
+        "content.youtube-replay.video"
+      ],
+      "guidance": "Placeholder video frame (poster with a play glyph) or an operator-supplied video; never the Lightdash product video or a YouTube id from the source.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "embed.operator-supplied": {
+      "generationPolicy": "must-be-operator-supplied",
+      "pinned": true,
+      "usedByFields": [
+        "chrome.talk-modal.booking",
+        "content.youtube-replay.video",
+        "conversion.booking-split.booking",
+        "hero.gameboy-app.app",
+        "hero.product-visual.visual"
+      ],
+      "guidance": "Slot for an iframe / booking / demo / app embed the operator supplies (their own booking page, demo or app). Until filled it renders an empty placeholder frame. Never a Lightdash iframe bundle, Cal.com handle, vercel demo or YouTube id.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "endpoint.operator-supplied": {
+      "generationPolicy": "must-be-operator-supplied",
+      "pinned": true,
+      "usedByFields": [
+        "conversion.padel-form.submission",
+        "conversion.partner-form.submission"
+      ],
+      "guidance": "Form submission endpoint configured by the operator. Placeholder URLs may only use reserved .example / .invalid hosts.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "content.operator-supplied-chrome": {
+      "generationPolicy": "must-be-operator-supplied",
+      "pinned": true,
+      "usedByFields": [
+        "chrome.footer.chromeData",
+        "chrome.mobile-nav-dark.chromeData",
+        "chrome.mobile-nav-light.chromeData",
+        "chrome.navbar-dark.chromeData",
+        "chrome.navbar-light.chromeData"
+      ],
+      "guidance": "Navigation / footer data supplied by the operator for the new brand (menu labels, footer columns, social links), written as original copy with placeholder (.example / .invalid) or operator-owned URLs.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "avatar.fictional-person": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "content.blog-posts.posts[].authorAvatar",
+        "content.post-header.authorAvatar",
+        "content.story-header.personAvatar",
+        "content.team-grid.members[].photo",
+        "content.team-grid.members[].photoHover",
+        "proof.customer-quote-stats.photo",
+        "proof.customer-quote.photo",
+        "proof.dark-testimonial-stats.avatar",
+        "proof.partner-testimonial-carousel.items[].portrait",
+        "proof.speakers-grid.speakers[].photo",
+        "proof.testimonial-avatar.avatar"
+      ],
+      "guidance": "A neutral silhouette or clearly synthetic avatar for a fictional person with a fictional name; never a real employee, customer, speaker or author, and never a generated likeness of one.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "logo.placeholder-company": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [
+        "content.story-sidebar.logo",
+        "hero.event-ondemand.cohostLogos[]",
+        "listing.integrations-directory.integrations[].logo",
+        "proof.customer-quote-stats.logo",
+        "proof.customer-quote.logo",
+        "proof.logo-tiles-named.tiles[].logo",
+        "proof.logos-grid-12.logos[]",
+        "proof.logos-row.logos[]",
+        "proof.logos-strip-5.logos[]",
+        "proof.partner-logos.logos[]",
+        "proof.speakers-grid.speakers[].companyLogo"
+      ],
+      "guidance": "A neutral placeholder logo tile for a fictional company (generic shape + fictional name); never a real customer, partner or integration trademark.",
+      "evidence": [],
+      "usedInPageSpec": true,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "link.placeholder-url": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [],
+      "guidance": "Placeholder external URL on a reserved host (*.example, *.invalid per RFC 2606 / RFC 6761). Enforced on every string by semantic_validate.py GENERATION_MODE_URL.",
+      "evidence": [],
+      "usedInPageSpec": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
+    },
+    "copy.original": {
+      "generationPolicy": "may-generate-new",
+      "pinned": true,
+      "usedByFields": [],
+      "guidance": "Original copy written for the new brand. Enforced by GENERATION_MODE_COPY / _CLAIM / _BRAND / _PERSON / _CUSTOMER (patterns in schema/source-identity.json).",
+      "evidence": [],
+      "usedInPageSpec": false,
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generation-safe: allowed in both modes. Must not reproduce, trace or imitate any Lightdash asset."
     }
-  }
+  },
+  "availabilityValues": {
+    "clone-only": "A real Lightdash (or Lightdash-cited third-party) asset. Clone mode may reuse it for fidelity; generation mode rejects it.",
+    "generation-safe": "Allowed in both modes; contains nothing from the source site.",
+    "blocked-for-generation": "A live endpoint or certification / identity claim. Never bound to its live value in either mode; generation mode rejects the role."
+  },
+  "pinnedAvailability": {
+    "animation.placeholder": "generation-safe",
+    "animation.rive": "clone-only",
+    "app.iframe-bundle": "clone-only",
+    "asset.operator-supplied": "generation-safe",
+    "avatar.fictional-person": "generation-safe",
+    "badge.compliance": "blocked-for-generation",
+    "brand.lightdash-wordmark": "clone-only",
+    "brand.placeholder-mark": "generation-safe",
+    "content.lightdash-chrome-data": "clone-only",
+    "content.operator-supplied-chrome": "generation-safe",
+    "copy.original": "generation-safe",
+    "decor.pixel-tile": "generation-safe",
+    "decor.sticker": "generation-safe",
+    "embed.booking-cal": "blocked-for-generation",
+    "embed.live-demo": "blocked-for-generation",
+    "embed.operator-supplied": "generation-safe",
+    "embed.youtube": "blocked-for-generation",
+    "endpoint.operator-supplied": "generation-safe",
+    "form.submission-endpoint": "blocked-for-generation",
+    "icon.pixel-art": "generation-safe",
+    "illustration.generated": "generation-safe",
+    "illustration.hero-diagram": "clone-only",
+    "illustration.html-diagram": "clone-only",
+    "image.cms-cover": "clone-only",
+    "link.placeholder-url": "generation-safe",
+    "logo.customer-partner": "clone-only",
+    "logo.integration": "clone-only",
+    "logo.placeholder-company": "generation-safe",
+    "photo.person-avatar": "clone-only",
+    "photo.team-member": "clone-only",
+    "screenshot.placeholder": "generation-safe",
+    "screenshot.product-ui": "clone-only",
+    "video.placeholder": "generation-safe",
+    "video.self-hosted": "clone-only"
+  },
+  "availabilityNote": "availability is pinned three times: here (pinnedAvailability), in extraction/verify_all.py PINNED_AVAILABILITY and in schema/semantic_validate.py PINNED_AVAILABILITY. Editing the registry alone cannot loosen a role (prove_drift.py availability_* cases). A real logo / wordmark is clone-only and never must-reuse-exact in generation mode."
 }

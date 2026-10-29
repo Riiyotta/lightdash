@@ -55,5 +55,17 @@
   "usedByTemplates": [
     "blog-category",
     "blog-index"
-  ]
+  ],
+  "source": {
+    "id": "BlogListing.jsx@19",
+    "tag": "Row",
+    "file": "src/components/cms/BlogListing.jsx",
+    "lines": "19-30"
+  },
+  "semantic": {
+    "id": "listing.blog-header",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

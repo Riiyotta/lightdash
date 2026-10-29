@@ -43,7 +43,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "photo.person-avatar"
+              "photo.person-avatar",
+              "avatar.fictional-person",
+              "asset.operator-supplied"
             ],
             "altMaxWords": 3
           }
@@ -90,5 +92,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "partnerships"
+  ],
+  "source": {
+    "id": "Partnerships.jsx@241",
+    "tag": "Box",
+    "file": "src/pages/Partnerships.jsx",
+    "lines": "241"
+  },
+  "semantic": {
+    "id": "proof.partner-testimonial-carousel",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person"
   ]
 }

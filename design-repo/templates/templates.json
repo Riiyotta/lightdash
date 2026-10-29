@@ -1950,7 +1950,7 @@
         {
           "section": "content.rich-text",
           "required": true,
-          "repeatable": false
+          "repeatable": true
         },
         {
           "section": "cta.inline-post",
@@ -2079,7 +2079,7 @@
         {
           "section": "content.rich-text",
           "required": true,
-          "repeatable": false
+          "repeatable": true
         },
         {
           "section": "cta.inline-post",
@@ -2144,7 +2144,7 @@
         {
           "section": "content.rich-text",
           "required": true,
-          "repeatable": false
+          "repeatable": true
         },
         {
           "section": "content.event-details-card",
@@ -2203,7 +2203,7 @@
         {
           "section": "content.legal-body",
           "required": true,
-          "repeatable": false
+          "repeatable": true
         },
         {
           "section": "cta.snake-band",

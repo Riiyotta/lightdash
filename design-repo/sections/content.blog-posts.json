@@ -34,9 +34,7 @@
           },
           "target": {
             "type": "link",
-            "required": [
-              "navigate-route"
-            ],
+            "required": true,
             "actions": [
               "navigate-route",
               "open-external"
@@ -46,7 +44,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "image.cms-cover"
+              "image.cms-cover",
+              "illustration.generated",
+              "asset.operator-supplied"
             ]
           },
           "authorName": {
@@ -60,7 +60,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "photo.person-avatar"
+              "photo.person-avatar",
+              "avatar.fictional-person",
+              "asset.operator-supplied"
             ]
           }
         },
@@ -97,12 +99,29 @@
     "src/pages/data/data-apps.jsx:153"
   ],
   "notes": [
-    "Posts reference real blog posts of the company (titles, authors): real content."
+    "Posts reference real blog posts of the company (titles, authors): real content.",
+    "posts[].target.required was the list [\"navigate-route\"] instead of a boolean (found by the new closed schema/section-contract.schema.json); corrected to true."
   ],
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "product-bi-as-code",
     "product-data-apps",
     "product-self-improving-analytics"
+  ],
+  "source": {
+    "id": "BlogCards.jsx@13",
+    "tag": "section",
+    "file": "src/components/shared/BlogCards.jsx",
+    "lines": "13"
+  },
+  "semantic": {
+    "id": "content.blog-posts",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person",
+    "illustration.generated"
   ]
 }

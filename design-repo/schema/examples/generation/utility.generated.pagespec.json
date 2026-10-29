@@ -1,0 +1,95 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generation",
+  "template": "not-found",
+  "route": "/404",
+  "theme": "light",
+  "chrome": "light-no-cta",
+  "nodes": [
+    {
+      "section": "chrome.navbar-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-navbar-light-brandmark-0"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-navbar-light-chromedata-0"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.mobile-nav-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-mobile-nav-light-brandmark-1"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-mobile-nav-light-chromedata-1"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.not-found",
+      "content": {
+        "title": "Orchard ledgers that settle",
+        "body": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season",
+        "cta": {
+          "label": "Read the field notes",
+          "action": "navigate-route",
+          "target": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "glitch-loop",
+        "reducedMotionFallback": "static-final-state",
+        "reducedMotionBasis": "source-implemented"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-footer-brandmark-3"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-footer-chromedata-3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.talk-modal",
+      "content": {
+        "booking": {
+          "assetRole": "embed.operator-supplied",
+          "assetRef": "slot-talk-modal-booking-4"
+        }
+      },
+      "motion": {
+        "pattern": "modal-fade",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    }
+  ]
+}

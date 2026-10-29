@@ -84,5 +84,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "playground"
-  ]
+  ],
+  "source": {
+    "id": "PlaygroundHero.jsx@31",
+    "tag": "section",
+    "file": "src/components/pages/playground/PlaygroundHero.jsx",
+    "lines": "31"
+  },
+  "semantic": {
+    "id": "hero.playground",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

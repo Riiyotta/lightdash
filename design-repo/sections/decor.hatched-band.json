@@ -53,5 +53,17 @@
     "beyond-copilots",
     "product-embedding",
     "startups"
-  ]
+  ],
+  "source": {
+    "id": "HatchedSpacer.jsx@9",
+    "tag": "div",
+    "file": "src/components/shared/HatchedSpacer.jsx",
+    "lines": "9"
+  },
+  "semantic": {
+    "id": "decor.hatched-band",
+    "category": "DECOR"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

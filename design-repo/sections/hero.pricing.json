@@ -55,5 +55,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "pricing"
-  ]
+  ],
+  "source": {
+    "id": "Pricing.jsx@18",
+    "tag": "section",
+    "file": "src/pages/Pricing.jsx",
+    "lines": "18"
+  },
+  "semantic": {
+    "id": "hero.pricing",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

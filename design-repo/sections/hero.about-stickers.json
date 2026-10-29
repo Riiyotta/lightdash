@@ -79,5 +79,19 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "about"
+  ],
+  "source": {
+    "id": "About.jsx@44",
+    "tag": "section",
+    "file": "src/pages/About.jsx",
+    "lines": "44"
+  },
+  "semantic": {
+    "id": "hero.about-stickers",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "decor.sticker"
   ]
 }

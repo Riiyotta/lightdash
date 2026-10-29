@@ -1,7 +1,7 @@
 {
   "id": "content.rich-text",
   "category": "CONTENT",
-  "purpose": "Article body rich-text column (681 wide on posts, 641 on events, 832-col on stories) exercising h2/h3/h4, p, strong/em, links, lists, blockquote, inline code, a code block, an image, a table and a 16:9 embed. In the clone it is neutral placeholder text.",
+  "purpose": "One heading-bounded chapter of an article body (the intro before the first h2, then one node per h2 chapter): rich-text column (681 wide on posts, 641 on events, 832-col on stories) exercising h2/h3/h4, p, strong/em, links, lists, blockquote, inline code, a code block, an image, a table and a 16:9 embed. Repeatable; in the clone the text is neutral placeholder copy.",
   "status": "measured-structure-placeholder-body",
   "composable": true,
   "evidenceNote": "cms-templates.md line 9: article, story and event bodies were not copied; PlaceholderBody renders lorem text with the measured rich-text styles.",
@@ -19,7 +19,7 @@
     "additionalProperties": false
   },
   "constraints": {
-    "maxPerPage": 1
+    "maxPerPage": 12
   },
   "motion": {
     "allowedPatterns": [
@@ -46,12 +46,25 @@
     "specs/cms-templates.md:9"
   ],
   "notes": [
-    "Used by 78 routes (62 posts, 12 stories, 4 events). The real article/story/event copy is intentionally absent from the source project, so no word budget can be derived; PageSpec carries bodyMode \"placeholder\" only."
+    "Used by 78 routes (62 posts, 12 stories, 4 events). The real article/story/event copy is intentionally absent from the source project, so no word budget can be derived; PageSpec carries bodyMode \"placeholder\" only.",
+    "Decomposed per chapter (R6): measured at 1440 the whole body was 2996 / 5025 px on a blog post (60%) and 3482 / 5191 px on an event (67%). Each node now stands for one heading-bounded chapter (5 on every measured page: intro + 4 h2 chapters, src/components/cms/PlaceholderBody.jsx PLACEHOLDER_HEADINGS)."
   ],
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "blog-post",
     "customer-story",
     "event"
-  ]
+  ],
+  "source": {
+    "id": "PlaceholderBody.jsx@92",
+    "tag": "div",
+    "file": "src/components/cms/PlaceholderBody.jsx",
+    "lines": "92"
+  },
+  "semantic": {
+    "id": "content.rich-text",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

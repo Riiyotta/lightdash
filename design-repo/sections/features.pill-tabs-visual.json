@@ -43,7 +43,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "screenshot.product-ui"
+              "screenshot.product-ui",
+              "screenshot.placeholder",
+              "asset.operator-supplied"
             ]
           }
         },
@@ -88,5 +90,20 @@
   "usedByTemplates": [
     "product-data-apps",
     "product-metrics-catalog"
+  ],
+  "source": {
+    "id": "PillTabs.jsx@18",
+    "tag": "section",
+    "file": "src/components/shared/PillTabs.jsx",
+    "lines": "18"
+  },
+  "semantic": {
+    "id": "features.pill-tabs-visual",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "screenshot.placeholder"
   ]
 }

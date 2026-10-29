@@ -42,7 +42,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "logo.integration"
+              "logo.integration",
+              "logo.placeholder-company",
+              "asset.operator-supplied"
             ]
           },
           "body": {
@@ -92,5 +94,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "integrations"
+  ],
+  "source": {
+    "id": "IntegrationsDirectory.jsx@26",
+    "tag": "section",
+    "file": "src/components/pages/integrations/IntegrationsDirectory.jsx",
+    "lines": "26"
+  },
+  "semantic": {
+    "id": "listing.integrations-directory",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "logo.placeholder-company"
   ]
 }

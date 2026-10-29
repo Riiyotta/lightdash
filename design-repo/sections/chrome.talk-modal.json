@@ -11,7 +11,8 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "embed.booking-cal"
+          "embed.booking-cal",
+          "embed.operator-supplied"
         ]
       }
     },
@@ -84,5 +85,20 @@
     "roadmap",
     "start",
     "startups"
+  ],
+  "source": {
+    "id": "TalkModal.jsx@29",
+    "tag": "div",
+    "file": "src/components/TalkModal.jsx",
+    "lines": "29"
+  },
+  "semantic": {
+    "id": "chrome.talk-modal",
+    "category": "CHROME"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Booking modal dialog opened on demand (fixed overlay + Cal.com embed); runtime UI, not page content.",
+  "generatedAssetRoles": [
+    "embed.operator-supplied"
   ]
 }

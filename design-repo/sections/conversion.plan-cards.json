@@ -115,5 +115,19 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "pricing"
+  ],
+  "source": {
+    "id": "Pricing.jsx@42",
+    "tag": "section",
+    "file": "src/pages/Pricing.jsx",
+    "lines": "42"
+  },
+  "semantic": {
+    "id": "conversion.plan-cards",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "decor.pixel-tile"
   ]
 }

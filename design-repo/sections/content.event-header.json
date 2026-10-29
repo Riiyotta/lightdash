@@ -66,5 +66,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "event"
-  ]
+  ],
+  "source": {
+    "id": "Event.jsx@47",
+    "tag": "div",
+    "file": "src/pages/Event.jsx",
+    "lines": "47"
+  },
+  "semantic": {
+    "id": "content.event-header",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

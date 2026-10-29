@@ -85,5 +85,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "product-bi-as-code"
-  ]
+  ],
+  "source": {
+    "id": "BiHero.jsx@12",
+    "tag": "Block",
+    "file": "src/components/pages/bi-as-code/BiHero.jsx",
+    "lines": "12"
+  },
+  "semantic": {
+    "id": "hero.bi-as-code",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

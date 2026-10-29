@@ -66,5 +66,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "about"
-  ]
+  ],
+  "source": {
+    "id": "About.jsx@97",
+    "tag": "section",
+    "file": "src/pages/About.jsx",
+    "lines": "97"
+  },
+  "semantic": {
+    "id": "content.hiring-callout",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

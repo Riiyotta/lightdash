@@ -81,5 +81,19 @@
     "product-bi-as-code",
     "product-context-layer",
     "product-conversational-analytics"
+  ],
+  "source": {
+    "id": "IconBenefits.jsx@15",
+    "tag": "section",
+    "file": "src/components/shared/IconBenefits.jsx",
+    "lines": "15"
+  },
+  "semantic": {
+    "id": "features.icon-benefits-grid",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "icon.pixel-art"
   ]
 }

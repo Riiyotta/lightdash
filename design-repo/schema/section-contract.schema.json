@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Lightdash design-repo section contract",
+  "description": "Closed shape of every sections/*.json contract. verify_all.py validates all contracts against it (check 'contracts'). source = provenance (what DOM / JSX renders it, re-read from the real file); semantic = taxonomy the AI sees (semantic.id == contract id, source.id never equals it).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "category", "purpose", "status", "composable", "implementedBy", "content", "constraints", "motion", "responsive", "measuredFrom", "notes", "schemaVersion", "usedByTemplates", "source", "semantic", "retrievalEligible", "generatedAssetRoles"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z]+\\.[a-z0-9-]+$"},
+    "category": {"enum": ["CHROME", "HERO", "APP", "PROOF", "FEATURES", "CONTENT", "CONVERSION", "LISTING", "CTA", "DECOR"]},
+    "purpose": {"type": "string", "minLength": 10},
+    "status": {"enum": ["measured", "measured-structure-placeholder-body", "iframe-opaque", "unfinished-live-page"]},
+    "composable": {"type": "boolean"},
+    "implementedBy": {"type": "string", "minLength": 3},
+    "content": {
+      "type": "object", "additionalProperties": false, "required": ["fields", "additionalProperties"],
+      "properties": {
+        "fields": {"type": "object", "additionalProperties": {"$ref": "#/definitions/field"}},
+        "additionalProperties": {"const": false}
+      }
+    },
+    "constraints": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "maxPerPage": {"type": "integer", "minimum": 1},
+        "onePerPage": {"type": "boolean"},
+        "mustFollowNav": {"type": "boolean"},
+        "chromeAxis": {"type": "array", "items": {"type": "string"}},
+        "iframeStateOf": {"type": "string"},
+        "mustPrecedeFooter": {"type": "boolean"},
+        "routeOnly": {"type": "array", "items": {"type": "string", "pattern": "^/"}},
+        "mustFollowSection": {"type": "string"},
+        "mustBeFirst": {"type": "boolean"},
+        "homeRouteOnly": {"type": "boolean"},
+        "mustBeLast": {"type": "boolean"},
+        "mustPrecedeTalkModal": {"type": "boolean"},
+        "excludedFromChrome": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "motion": {
+      "type": "object", "additionalProperties": false, "required": ["allowedPatterns", "reducedMotionFallbackRequired", "reducedMotionFallbacks", "reducedMotionBases"],
+      "properties": {
+        "allowedPatterns": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "reducedMotionFallbackRequired": {"const": true},
+        "reducedMotionFallbacks": {"type": "object", "additionalProperties": {"type": "string"}},
+        "reducedMotionBases": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    },
+    "responsive": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["query", "change", "cssCite"], "properties": {"query": {"type": "string"}, "change": {"type": "string"}, "cssCite": {"type": "string"}}}},
+    "responsiveNote": {"type": "string"},
+    "measuredFrom": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "notes": {"type": "array", "items": {"type": "string"}},
+    "evidenceNote": {"type": "string"},
+    "fixedContent": {"type": "boolean"},
+    "variantField": {"type": "string"},
+    "schemaVersion": {"const": "1.0.0"},
+    "usedByTemplates": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "source": {
+      "type": "object", "additionalProperties": false, "required": ["id", "tag", "file", "lines"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+@[0-9]+$"},
+        "tag": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9.]*$"},
+        "file": {"type": "string", "pattern": "^src/[A-Za-z0-9_./-]+\\.(jsx|js)$"},
+        "lines": {"type": "string", "pattern": "^[0-9]+(-[0-9]+)?$"},
+        "alsoRenderedAt": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["file", "lines", "tag"], "properties": {"file": {"type": "string", "pattern": "^src/"}, "lines": {"type": "string", "pattern": "^[0-9]+(-[0-9]+)?$"}, "tag": {"type": "string"}}}}
+      }
+    },
+    "semantic": {
+      "type": "object", "additionalProperties": false, "required": ["id", "category"],
+      "properties": {"id": {"type": "string"}, "category": {"enum": ["CHROME", "HERO", "APP", "PROOF", "FEATURES", "CONTENT", "CONVERSION", "LISTING", "CTA", "DECOR"]}}
+    },
+    "retrievalEligible": {"type": "boolean"},
+    "retrievalReason": {"type": "string", "minLength": 30},
+    "generatedAssetRoles": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+  },
+  "allOf": [
+    {"if": {"properties": {"retrievalEligible": {"const": false}}}, "then": {"required": ["retrievalReason"]}}
+  ],
+  "definitions": {
+    "field": {
+      "type": "object",
+      "required": ["type", "required"],
+      "oneOf": [
+        {"additionalProperties": false, "properties": {"type": {"const": "text"}, "required": {"type": "boolean"}, "maxWords": {"type": "integer", "minimum": 1}, "observedMaxWords": {"type": "integer"}, "wcRef": {"type": "string"}}, "required": ["maxWords", "wcRef"]},
+        {"additionalProperties": false, "properties": {"type": {"const": "paragraphs"}, "required": {"type": "boolean"}, "maxWords": {"type": "integer"}, "observedMaxWords": {"type": "integer"}, "wcRef": {"type": "string"}}},
+        {"additionalProperties": false, "properties": {"type": {"const": "cta"}, "required": {"type": "boolean"}, "actions": {"type": "array", "items": {"type": "string"}}, "labelMaxWords": {"type": "integer"}, "observedLabelMaxWords": {"type": "integer"}, "labelRef": {"type": "string"}}, "required": ["actions", "labelMaxWords"]},
+        {"additionalProperties": false, "properties": {"type": {"const": "link"}, "required": {"type": "boolean"}, "actions": {"type": "array", "items": {"type": "string"}}}, "required": ["actions"]},
+        {"additionalProperties": false, "properties": {"type": {"const": "media"}, "required": {"type": "boolean"}, "assetRoles": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "altMaxWords": {"type": "integer"}}, "required": ["assetRoles"]},
+        {"additionalProperties": false, "properties": {"type": {"const": "enum"}, "required": {"type": "boolean"}, "values": {"type": "array", "minItems": 1}}, "required": ["values"]},
+        {"additionalProperties": false, "properties": {"type": {"const": "boolean"}, "required": {"type": "boolean"}}},
+        {"additionalProperties": false, "properties": {"type": {"const": "list"}, "required": {"type": "boolean"}, "minItems": {"type": "integer"}, "maxItems": {"type": "integer"}, "item": {"oneOf": [{"$ref": "#/definitions/field"}, {"type": "object", "not": {"required": ["type"]}, "additionalProperties": {"$ref": "#/definitions/field"}}]}}, "required": ["item", "minItems", "maxItems"]}
+      ]
+    }
+  }
+}

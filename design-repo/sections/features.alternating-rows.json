@@ -36,7 +36,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "screenshot.product-ui"
+              "screenshot.product-ui",
+              "screenshot.placeholder",
+              "asset.operator-supplied"
             ]
           },
           "imageSide": {
@@ -84,5 +86,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "product-bi-as-code"
+  ],
+  "source": {
+    "id": "AlternatingRows.jsx@12",
+    "tag": "Block",
+    "file": "src/components/pages/bi-as-code/AlternatingRows.jsx",
+    "lines": "12"
+  },
+  "semantic": {
+    "id": "features.alternating-rows",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "screenshot.placeholder"
   ]
 }

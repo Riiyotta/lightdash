@@ -100,5 +100,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "pricing"
-  ]
+  ],
+  "source": {
+    "id": "Pricing.jsx@69",
+    "tag": "section",
+    "file": "src/pages/Pricing.jsx",
+    "lines": "69-75"
+  },
+  "semantic": {
+    "id": "conversion.plan-comparison",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

@@ -87,5 +87,17 @@
   "usedByTemplates": [
     "blog-post",
     "customer-story"
-  ]
+  ],
+  "source": {
+    "id": "InlineCta.jsx@8",
+    "tag": "div",
+    "file": "src/components/cms/InlineCta.jsx",
+    "lines": "8"
+  },
+  "semantic": {
+    "id": "cta.inline-post",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

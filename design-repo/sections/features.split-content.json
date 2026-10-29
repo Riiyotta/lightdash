@@ -26,7 +26,10 @@
         "required": true,
         "assetRoles": [
           "screenshot.product-ui",
-          "illustration.hero-diagram"
+          "illustration.hero-diagram",
+          "screenshot.placeholder",
+          "asset.operator-supplied",
+          "illustration.generated"
         ]
       }
     },
@@ -63,5 +66,21 @@
   "usedByTemplates": [
     "beyond-copilots",
     "product-context-layer"
+  ],
+  "source": {
+    "id": "SplitRow.jsx@13",
+    "tag": "section",
+    "file": "src/components/shared/SplitRow.jsx",
+    "lines": "13"
+  },
+  "semantic": {
+    "id": "features.split-content",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "illustration.generated",
+    "screenshot.placeholder"
   ]
 }

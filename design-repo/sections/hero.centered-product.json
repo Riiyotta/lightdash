@@ -122,5 +122,17 @@
     "product-interactive-dashboards",
     "product-metrics-catalog",
     "product-self-improving-analytics"
-  ]
+  ],
+  "source": {
+    "id": "SectionHero.jsx@104",
+    "tag": "section",
+    "file": "src/components/shared/SectionHero.jsx",
+    "lines": "104"
+  },
+  "semantic": {
+    "id": "hero.centered-product",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

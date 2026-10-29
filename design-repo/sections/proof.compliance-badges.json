@@ -14,7 +14,8 @@
           "type": "media",
           "required": true,
           "assetRoles": [
-            "badge.compliance"
+            "badge.compliance",
+            "asset.operator-supplied"
           ],
           "altMaxWords": 3
         },
@@ -51,5 +52,19 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "lightdash-security"
+  ],
+  "source": {
+    "id": "LightdashSecurity.jsx@61",
+    "tag": "div",
+    "file": "src/pages/LightdashSecurity.jsx",
+    "lines": "61"
+  },
+  "semantic": {
+    "id": "proof.compliance-badges",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied"
   ]
 }

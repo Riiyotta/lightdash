@@ -76,5 +76,17 @@
   "usedByTemplates": [
     "blog-category",
     "blog-index"
-  ]
+  ],
+  "source": {
+    "id": "BlogListing.jsx@82",
+    "tag": "div",
+    "file": "src/components/cms/BlogListing.jsx",
+    "lines": "82-90"
+  },
+  "semantic": {
+    "id": "listing.blog-card-grid",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

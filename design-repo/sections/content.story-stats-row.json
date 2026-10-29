@@ -65,5 +65,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "customer-story"
-  ]
+  ],
+  "source": {
+    "id": "CustomerStory.jsx@88",
+    "tag": "div",
+    "file": "src/pages/CustomerStory.jsx",
+    "lines": "88"
+  },
+  "semantic": {
+    "id": "content.story-stats-row",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

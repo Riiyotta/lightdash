@@ -18,13 +18,22 @@ Checks (each prints PASS / FAIL / WARN):
   tokens             catalog parity with token files; policy keys are real catalog keys; themes resolve; component tokensUsed resolve; tokens vs tailwind.config.js / src/index.css when present
   motion             motion-patterns.json: closed enums; every contract fallback / basis equals its pattern; schema const-locks equal the patterns
   citations          every path:line[-line] resolves in-range AND its anchor text is in the cited lines; every citation in the repo is covered by extraction/measured-values.json
-  packaging          every script / file the docs mention exists, prove_drift.sh exists and is executable, no zip / .DS_Store / __MACOSX inside the repo
+  packaging          every script / file the docs mention exists, prove_drift.py exists, no zip / .DS_Store / __MACOSX inside the repo
   source-claims      framework versions in measured-values.json == package.json; documented anomalies still reproduce (keyword greps)
+  contracts          sections/*.json valid against schema/section-contract.schema.json; source {id, tag, file, lines} re-read from
+                     the real file (range in file, tag at the start line); semantic.id == id; retrievalEligible == PINNED_RETRIEVAL;
+                     generatedAssetRoles == the generation-safe roles of the contract's media fields
+  generation         asset availability == PINNED_AVAILABILITY here, in semantic_validate.py and in the registry; substitutes are
+                     generation-safe; one mode "generation" example per template family passes with 0 errors / 0 warnings;
+                     schema/source-identity.json matches a fresh build from the source tree
+  wrapper gate       extraction/wrapper_gate.py over measured sectionHeights (HERO 1800 / 3000 px, page share 50% / 60%)
+  policy             registry.manifest.json category + designPolicy binding; policy file exists; contentHash recomputed
 
 Source-tree checks need a sibling project (parent folder with src/ and a package.json named lightdash-clone). Without one they WARN
 and are skipped; they never fail. The repo root is derived from __file__.
 """
 import glob
+import hashlib
 import json
 import math
 import os
@@ -34,11 +43,36 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO0 = os.path.dirname(HERE)
 CITE = re.compile(r'^([A-Za-z0-9_@./\[\]%-]+\.[A-Za-z0-9]+):(\d+)(?:-(\d+))?$')
-PIN_POLICIES = ['may-generate-new', 'must-reuse-exact', 'must-not-fabricate', 'must-not-reuse-live-endpoint']
+PIN_POLICIES = ['may-generate-new', 'must-reuse-exact', 'must-not-fabricate', 'must-not-reuse-live-endpoint', 'must-be-operator-supplied']
+# pinned in code, independent of assets/asset-roles.json (semantic_validate.py holds the same table; both are cross-checked)
+PINNED_AVAILABILITY = {
+    'animation.rive': 'clone-only', 'app.iframe-bundle': 'clone-only', 'brand.lightdash-wordmark': 'clone-only',
+    'content.lightdash-chrome-data': 'clone-only', 'illustration.hero-diagram': 'clone-only', 'illustration.html-diagram': 'clone-only',
+    'image.cms-cover': 'clone-only', 'logo.customer-partner': 'clone-only', 'logo.integration': 'clone-only',
+    'photo.person-avatar': 'clone-only', 'photo.team-member': 'clone-only', 'screenshot.product-ui': 'clone-only', 'video.self-hosted': 'clone-only',
+    'badge.compliance': 'blocked-for-generation', 'embed.booking-cal': 'blocked-for-generation', 'embed.live-demo': 'blocked-for-generation',
+    'embed.youtube': 'blocked-for-generation', 'form.submission-endpoint': 'blocked-for-generation',
+    'animation.placeholder': 'generation-safe', 'asset.operator-supplied': 'generation-safe', 'avatar.fictional-person': 'generation-safe',
+    'brand.placeholder-mark': 'generation-safe', 'content.operator-supplied-chrome': 'generation-safe', 'copy.original': 'generation-safe',
+    'decor.pixel-tile': 'generation-safe', 'decor.sticker': 'generation-safe', 'embed.operator-supplied': 'generation-safe',
+    'endpoint.operator-supplied': 'generation-safe', 'icon.pixel-art': 'generation-safe', 'illustration.generated': 'generation-safe',
+    'link.placeholder-url': 'generation-safe', 'logo.placeholder-company': 'generation-safe', 'screenshot.placeholder': 'generation-safe',
+    'video.placeholder': 'generation-safe',
+}
+PINNED_RETRIEVAL = {
+    'chrome.talk-modal': False, 'chrome.mobile-nav-light': False, 'chrome.mobile-nav-dark': False,
+    'app.view-customers': False, 'app.view-governance': False, 'app.view-migration': False, 'app.view-pricing': False, 'app.view-product': False,
+}
+RUNTIME_UI_RE = re.compile(r'modal|dialog|drawer|popup|pop-up|cookie|consent|preloader|toast|overlay|mobile-nav|app\.view-')
+SAAS_POLICY = ('n0-saas-design-constraints-common', '0.1.0')
 REQUIRED_DIRS = ['tokens/00-foundation', 'tokens/10-semantic', 'tokens/20-component', 'tokens/30-layout', 'tokens/themes', 'tokens/llm', 'primitives', 'components', 'sections',
                  'templates', 'compatibility', 'schema/tests', 'assets', 'extraction']
 ENTRY_KEYS = ['readme', 'changelog', 'schema', 'example', 'semanticValidator', 'adversarialTests', 'verifyAll', 'driftProof', 'wordcountDerivation', 'measuredValues',
-              'wordcountSpec', 'templates', 'compatibilityGraph', 'assetRoles', 'tokenCatalog', 'tokenPolicy', 'componentAllowlist', 'motionPatterns', 'sections', 'primitives', 'components']
+              'wordcountSpec', 'templates', 'compatibilityGraph', 'assetRoles', 'tokenCatalog', 'tokenPolicy', 'componentAllowlist', 'motionPatterns', 'sections', 'primitives', 'components',
+              'generationExamples', 'sectionContractSchema', 'sourceIdentity', 'sourceIdentityBuilder', 'generationExampleBuilder', 'wrapperGate', 'wrapperGateWhitelist',
+              'measureSections', 'designPolicy']
+FAMILY_EXAMPLES = {'home': 'home', 'T1 product': 'product', 'T1b product': 'product-code', 'T2 directory': 'directory', 'T3 event landing': 'event-landing',
+                   'T4 draft': 'draft', 'company A': 'company-a', 'company B': 'company-b', 'cms': 'cms', 'legal': 'legal', 'utility': 'utility'}
 
 
 class Ctx:
@@ -138,6 +172,8 @@ def compute_counts(root):
         'wordcountSpecEntries': len(c.j('extraction/wordcount_spec.json')['entries']),
         'citationChecks': len(mv['citationChecks']),
         'catalogEntries': sum(len(v) for v in cat.values()),
+        'generationExamples': len(c.files('schema/examples/generation/*.pagespec.json')),
+        'measuredSectionHeights': sum(len([n for n in t['nodes'] if n.get('heightPx') is not None]) for t in mv.get('sectionHeights', {}).get('templates', {}).values()),
     }
 
 
@@ -413,6 +449,12 @@ def chk_allowlist(c):
         fails.append(f'allowlist assetRoles != roles in schema ({sorted(set(a["assetRoles"]) ^ used_roles)})')
     if sorted(a['ctaActions']) != sorted(used_actions):
         fails.append('allowlist ctaActions != schema action enums')
+    if a.get('modes') != sch['properties'].get('mode', {}).get('enum'):
+        fails.append('allowlist modes != schema mode enum')
+    if sorted(a.get('styleFields', [])) != sorted(sch['definitions'].get('style', {}).get('properties', {})):
+        fails.append('allowlist styleFields != schema style properties')
+    if sorted(a.get('generationSafeAssetRoles', [])) != sorted(r for r in used_roles if PINNED_AVAILABILITY.get(r) == 'generation-safe'):
+        fails.append('allowlist generationSafeAssetRoles != generation-safe roles used by the schema')
     if sorted(a['themes']) != sorted(sch['properties']['theme']['enum']) or sorted(a['chromeAxis']) != sorted(sch['properties']['chrome']['enum']):
         fails.append('allowlist themes / chromeAxis != schema enums')
     return fails, []
@@ -438,8 +480,12 @@ def chk_versions(c):
     if sorted(m['schemaValidatedThemes']) != sorted(sch_themes):
         fails.append('schemaValidatedThemes != schema theme enum')
     note2 = m.get('sourceProject', {}).get('note', '')
-    if 'not a git repository' not in note2.lower() or 'design-repo.zip' not in note2 or 'gitignore' not in note2.lower():
-        fails.append('sourceProject.note must say the project is not a git repository and design-repo.zip must be gitignored')
+    if 'design-repo.zip' not in note2 or 'gitignore' not in note2.lower():
+        fails.append('sourceProject.note must say design-repo.zip is a build artifact that is gitignored')
+    if c.src and os.path.isdir(os.path.join(c.src, '.git')):
+        gi = os.path.join(c.src, '.gitignore')
+        if not os.path.isfile(gi) or 'design-repo.zip' not in open(gi, encoding='utf8').read():
+            fails.append('the project is a git repository but .gitignore does not list design-repo.zip')
     return fails, []
 
 
@@ -651,7 +697,12 @@ def chk_assets(c):
         'photo.team-member': 'must-not-fabricate', 'image.cms-cover': 'must-not-fabricate', 'screenshot.product-ui': 'must-reuse-exact', 'illustration.hero-diagram': 'must-reuse-exact',
         'illustration.html-diagram': 'must-reuse-exact', 'animation.rive': 'must-reuse-exact', 'video.self-hosted': 'must-reuse-exact', 'app.iframe-bundle': 'must-reuse-exact',
         'icon.pixel-art': 'may-generate-new', 'decor.pixel-tile': 'may-generate-new', 'decor.sticker': 'may-generate-new', 'embed.booking-cal': 'must-not-reuse-live-endpoint',
-        'embed.live-demo': 'must-not-reuse-live-endpoint', 'embed.youtube': 'must-not-reuse-live-endpoint', 'form.submission-endpoint': 'must-not-reuse-live-endpoint'}
+        'embed.live-demo': 'must-not-reuse-live-endpoint', 'embed.youtube': 'must-not-reuse-live-endpoint', 'form.submission-endpoint': 'must-not-reuse-live-endpoint',
+        'brand.lightdash-wordmark': 'must-reuse-exact', 'content.lightdash-chrome-data': 'must-reuse-exact', 'brand.placeholder-mark': 'may-generate-new',
+        'asset.operator-supplied': 'must-be-operator-supplied', 'illustration.generated': 'may-generate-new', 'screenshot.placeholder': 'may-generate-new',
+        'animation.placeholder': 'may-generate-new', 'video.placeholder': 'may-generate-new', 'embed.operator-supplied': 'must-be-operator-supplied',
+        'endpoint.operator-supplied': 'must-be-operator-supplied', 'content.operator-supplied-chrome': 'must-be-operator-supplied',
+        'avatar.fictional-person': 'may-generate-new', 'logo.placeholder-company': 'may-generate-new', 'link.placeholder-url': 'may-generate-new', 'copy.original': 'may-generate-new'}
     for r, pol in expect.items():
         if roles.get(r, {}).get('generationPolicy') != pol:
             fails.append(f'role {r}: must be pinned to {pol} (this verifier hard-codes the intended policy, independent of the file)')
@@ -740,8 +791,19 @@ def chk_tokens(c):
     for k in pol['rawValueRestrictions']:
         if k not in cat:
             fails.append(f'token-policy category {k} is not a real catalog key')
-    if pol['overrides']['perInstanceTokenOverrides'] != 'not-supported':
-        fails.append('token-policy must record that PageSpec has no per-instance token overrides')
+    if pol['overrides']['perInstanceTokenOverrides'] != 'catalog-tokens-only':
+        fails.append('token-policy must record that node.style accepts catalog token references only')
+    sch_style = c.j('schema/pagespec.schema.json')['definitions'].get('style', {}).get('properties', {})
+    if sorted(pol['overrides'].get('styleFields', {})) != sorted(sch_style):
+        fails.append('token-policy overrides.styleFields != schema definitions.style properties')
+    sv_text = open(os.path.join(c.root, 'schema', 'semantic_validate.py'), encoding='utf8').read()
+    need_rules = {'TOKEN_UNKNOWN', 'TOKEN_RAW_COLOR', 'TOKEN_ARBITRARY_SPACING', 'TOKEN_UNSUPPORTED_FONT', 'TOKEN_THEME_MISMATCH', 'TOKEN_SCOPE', 'TOKEN_CATEGORY'}
+    have_rules = {r['id'] for r in pol.get('semanticRules', [])}
+    if have_rules != need_rules:
+        fails.append(f'token-policy semanticRules {sorted(have_rules)} != {sorted(need_rules)}')
+    for r in need_rules:
+        if f"'{r}: " not in sv_text and f'{r}: ' not in sv_text:
+            fails.append(f'token rule {r} is declared but not implemented in semantic_validate.py')
     # themes
     sem = set(lj('10-semantic/semantic.json')['semantic'])
     def resolves(ref):
@@ -927,12 +989,12 @@ def chk_packaging(c):
         for n in fn + dn:
             if n in ('.DS_Store',) or n == '__MACOSX' or n.endswith('.zip'):
                 fails.append(f'{os.path.relpath(os.path.join(dp, n), c.root)}: must not ship inside the repo')
-    ps = os.path.join(c.root, 'extraction/prove_drift.sh')
+    ps = os.path.join(c.root, 'extraction/prove_drift.py')
     if not os.path.isfile(ps):
-        fails.append('extraction/prove_drift.sh does not exist')
-    elif not os.access(ps, os.X_OK):
-        fails.append('extraction/prove_drift.sh is not executable')
-    ref_re = re.compile(r'\b((?:extraction|schema|tokens|assets|compatibility|templates|sections|primitives|components)/[A-Za-z0-9_./*-]+\.(?:py|sh|json))\b')
+        fails.append('extraction/prove_drift.py does not exist')
+    elif '--scratch' not in open(ps, encoding='utf8').read():
+        fails.append('extraction/prove_drift.py does not support --scratch')
+    ref_re = re.compile(r'\b((?:extraction|schema|tokens|assets|compatibility|templates|sections|primitives|components|policy)/[A-Za-z0-9_./*-]+\.(?:py|sh|json|mjs))\b')
     for p in list(all_text_files(c.root)):
         rel = os.path.relpath(p, c.root)
         if rel.startswith(('sections/', 'primitives/', 'components/')):
@@ -971,9 +1033,237 @@ def chk_source_claims(c):
     return fails, warns
 
 
+def _media_roles(f, acc):
+    if f['type'] == 'media':
+        acc.extend(f['assetRoles'])
+    elif f['type'] == 'list':
+        it = f['item']
+        if 'type' in it:
+            _media_roles(it, acc)
+        else:
+            for v in it.values():
+                _media_roles(v, acc)
+    return acc
+
+
+def chk_contracts(c):
+    fails, warns = [], []
+    try:
+        from jsonschema import Draft7Validator
+    except ModuleNotFoundError:
+        return ['jsonschema is not installed (pip install jsonschema)'], []
+    cs = c.j('schema/section-contract.schema.json')
+    Draft7Validator.check_schema(cs)
+    v = Draft7Validator(cs)
+    if cs.get('additionalProperties') is not False:
+        fails.append('section-contract.schema.json root is not closed')
+    al = c.j('tokens/llm/component-allowlist.json')
+    inel = []
+    for sid, s in c.sections().items():
+        for e in v.iter_errors(s):
+            fails.append(f'{sid}: section-contract schema: {"/".join(str(x) for x in e.absolute_path)}: {e.message[:120]}')
+        src, sem = s.get('source', {}), s.get('semantic', {})
+        if sem.get('id') != sid:
+            fails.append(f'{sid}: semantic.id {sem.get("id")} != contract id')
+        if sem.get('category') != s.get('category'):
+            fails.append(f'{sid}: semantic.category {sem.get("category")} != category {s.get("category")}')
+        if src.get('id') == sid:
+            fails.append(f'{sid}: source.id must not equal the contract id (provenance is not taxonomy)')
+        want = PINNED_RETRIEVAL.get(sid, True)
+        if s.get('retrievalEligible') is not want:
+            fails.append(f'{sid}: retrievalEligible {s.get("retrievalEligible")} != pinned {want} (PINNED_RETRIEVAL)')
+        if RUNTIME_UI_RE.search(sid) and sid not in PINNED_RETRIEVAL:
+            fails.append(f'{sid}: looks like runtime UI (modal / drawer / overlay ...) but is not in PINNED_RETRIEVAL')
+        if s.get('retrievalEligible') is False:
+            inel.append(sid)
+        roles = _media_roles({'type': 'list', 'item': s['content']['fields'], 'minItems': 0, 'maxItems': 0}, []) if s['content']['fields'] else []
+        gen = sorted({r for r in roles if PINNED_AVAILABILITY.get(r) == 'generation-safe'})
+        if sorted(s.get('generatedAssetRoles', [])) != gen:
+            fails.append(f'{sid}: generatedAssetRoles {s.get("generatedAssetRoles")} != generation-safe roles of its media fields {gen}')
+        for r in roles:
+            if PINNED_AVAILABILITY.get(r) != 'generation-safe':
+                alts = [x for x in roles if PINNED_AVAILABILITY.get(x) == 'generation-safe']
+                if not alts:
+                    fails.append(f'{sid}: a media field allows {r} but offers no generation-safe substitute')
+        if c.src:
+            locs = [src] + src.get('alsoRenderedAt', [])
+            for loc in locs:
+                f = os.path.join(c.src, loc.get('file', ''))
+                if not os.path.isfile(f):
+                    fails.append(f'{sid}: source file {loc.get("file")} does not exist'); continue
+                L = open(f, encoding='utf8').read().split('\n')
+                a, _, b = loc['lines'].partition('-')
+                a, b = int(a), int(b or a)
+                if not (1 <= a <= b <= len(L)):
+                    fails.append(f'{sid}: source lines {loc["lines"]} outside {loc["file"]} ({len(L)} lines)'); continue
+                if not re.search(r'<' + re.escape(loc['tag']) + r'\b', L[a - 1]):
+                    fails.append(f'{sid}: source tag <{loc["tag"]}> is not at {loc["file"]}:{a}')
+    if sorted(al.get('retrievalIneligibleSections', [])) != sorted(inel):
+        fails.append('allowlist retrievalIneligibleSections != contracts with retrievalEligible false')
+    if not c.src:
+        warns.append('no sibling source tree: contract source ranges / tags not re-read (graceful skip)')
+    return fails, warns
+
+
+def chk_generation(c):
+    fails, warns = [], []
+    d = c.j('assets/asset-roles.json')
+    roles = d['roles']
+    for r, v in roles.items():
+        pin = PINNED_AVAILABILITY.get(r)
+        if pin is None:
+            fails.append(f'role {r} has no PINNED_AVAILABILITY entry in verify_all.py')
+            continue
+        if v.get('availability') != pin:
+            fails.append(f'role {r}: availability {v.get("availability")} != pinned {pin}')
+        if d.get('pinnedAvailability', {}).get(r) != pin:
+            fails.append(f'role {r}: asset-roles.json pinnedAvailability {d.get("pinnedAvailability", {}).get(r)} != pinned {pin}')
+        subs = v.get('generationSafeSubstitutes')
+        if subs is None or not v.get('generatedModeGuidance'):
+            fails.append(f'role {r}: missing generationSafeSubstitutes / generatedModeGuidance')
+            continue
+        if pin != 'generation-safe' and not subs:
+            fails.append(f'role {r}: {pin} role without generationSafeSubstitutes')
+        for x in subs:
+            if PINNED_AVAILABILITY.get(x) != 'generation-safe':
+                fails.append(f'role {r}: substitute {x} is not generation-safe')
+        if pin != 'generation-safe' and v['generationPolicy'] == 'must-reuse-exact' and 'REJECTED' not in v['generatedModeGuidance']:
+            fails.append(f'role {r}: must-reuse-exact clone asset must say it is REJECTED in generation mode')
+    for r in PINNED_AVAILABILITY:
+        if r not in roles:
+            fails.append(f'PINNED_AVAILABILITY names {r} which is not in asset-roles.json')
+    if roles.get('brand.lightdash-wordmark', {}).get('availability') == 'generation-safe':
+        fails.append('the real Lightdash wordmark can never be generation-safe')
+    need_safe = {'brand.placeholder-mark', 'asset.operator-supplied', 'illustration.generated', 'screenshot.placeholder', 'avatar.fictional-person',
+                 'logo.placeholder-company', 'link.placeholder-url', 'copy.original', 'animation.placeholder', 'embed.operator-supplied'}
+    for r in need_safe:
+        if PINNED_AVAILABILITY.get(r) != 'generation-safe' or r not in roles:
+            fails.append(f'required generation-safe role {r} missing')
+    sys.path.insert(0, os.path.join(c.root, 'schema'))
+    import importlib
+    import semantic_validate as sv
+    importlib.reload(sv)
+    if sv.PINNED_AVAILABILITY != PINNED_AVAILABILITY:
+        fails.append(f'semantic_validate.py PINNED_AVAILABILITY differs from verify_all.py: {sorted(set(sv.PINNED_AVAILABILITY.items()) ^ set(PINNED_AVAILABILITY.items()))[:3]}')
+    if sv.PINNED_RETRIEVAL != PINNED_RETRIEVAL:
+        fails.append('semantic_validate.py PINNED_RETRIEVAL differs from verify_all.py')
+    for r, a in PINNED_AVAILABILITY.items():
+        if a != 'generation-safe' and r not in sv.ROLE_RULE:
+            fails.append(f'semantic_validate.py ROLE_RULE has no generation rule for {r}')
+    sch = c.j('schema/pagespec.schema.json')
+    if sch['properties'].get('mode', {}).get('enum') != ['clone', 'generation'] or 'mode' not in sch.get('required', []):
+        fails.append('schema: mode must be a required closed enum [clone, generation]')
+    ex = c.j('schema/example.pagespec.json')
+    if ex.get('mode') != 'clone':
+        fails.append('schema/example.pagespec.json must be mode clone')
+    repo = sv.Repo(c.root)
+    tj = c.j('templates/templates.json')['templates']
+    groups = {t.get('group') for t in tj.values()}
+    if set(FAMILY_EXAMPLES) != groups:
+        fails.append(f'FAMILY_EXAMPLES {sorted(FAMILY_EXAMPLES)} != template groups {sorted(groups)}')
+    for grp, fam in FAMILY_EXAMPLES.items():
+        rel = f'schema/examples/generation/{fam}.generated.pagespec.json'
+        if not os.path.isfile(os.path.join(c.root, rel)):
+            fails.append(f'{rel} missing (template family {grp})')
+            continue
+        spec = c.j(rel)
+        if spec.get('mode') != 'generation':
+            fails.append(f'{rel}: mode must be generation')
+        if tj.get(spec.get('template'), {}).get('group') != grp:
+            fails.append(f'{rel}: template {spec.get("template")} is not in family {grp}')
+        errs, ws = sv.validate(spec, repo)
+        for e in errs[:5]:
+            fails.append(f'{rel}: {e}')
+        if ws:
+            fails.append(f'{rel}: {len(ws)} warning(s): {ws[:2]}')
+    idt = c.j('schema/source-identity.json')
+    for k in ('brand', 'hosts', 'people', 'customers', 'claims', 'numericClaims'):
+        if not idt.get(k):
+            fails.append(f'schema/source-identity.json has no {k} patterns')
+    if not idt.get('copyShingles', {}).get('hashes'):
+        fails.append('schema/source-identity.json has no copy shingles')
+    if c.src:
+        sys.path.insert(0, os.path.join(c.root, 'extraction'))
+        import build_source_identity as bsi
+        importlib.reload(bsi)
+        fresh = json.dumps(bsi.build(c.src), indent=1, ensure_ascii=False) + '\n'
+        if open(os.path.join(c.root, 'schema/source-identity.json'), encoding='utf8').read() != fresh:
+            fails.append('schema/source-identity.json is stale: it differs from a fresh build from the source tree (run extraction/build_source_identity.py)')
+        for k in ('brand', 'hosts', 'people', 'customers', 'claims', 'numericClaims'):
+            for e in idt[k][:400]:
+                for ref in e['evidence'][:1]:
+                    f, ln = ref.rsplit(':', 1)
+                    p = os.path.join(c.src, f)
+                    if not os.path.isfile(p) or int(ln) > len(open(p, encoding='utf8', errors='ignore').read().split('\n')):
+                        fails.append(f'source-identity {k} evidence {ref} does not resolve')
+    else:
+        warns.append('no sibling source tree: schema/source-identity.json not rebuilt from source (graceful skip)')
+    return fails, warns
+
+
+def chk_wrapper_gate(c):
+    sys.path.insert(0, os.path.join(c.root, 'extraction'))
+    import importlib
+    import wrapper_gate as wg
+    importlib.reload(wg)
+    fails, warns = wg.run(c.root)
+    pins = {'VIEWPORT_WIDTH': 1440, 'HERO_WARN_PX': 1800, 'HERO_ERROR_PX': 3000, 'SHARE_WARN': 0.50, 'SHARE_ERROR': 0.60, 'MIN_INFLOW_FOR_SHARE': 3}
+    for k, val in pins.items():
+        if getattr(wg, k, None) != val:
+            fails.append(f'wrapper_gate.py {k} = {getattr(wg, k, None)} but the pinned threshold is {val}')
+    return fails, warns
+
+
+def policy_hash(root, files):
+    h = hashlib.sha256()
+    for rel in sorted(files):
+        h.update(rel.encode() + b'\0' + open(os.path.join(root, rel), 'rb').read() + b'\0')
+    return 'sha256:' + h.hexdigest()
+
+
+def chk_policy(c):
+    fails = []
+    m = c.j('registry.manifest.json')
+    dp = m.get('designPolicy')
+    if m.get('category') != 'saas':
+        fails.append(f'manifest category {m.get("category")} != saas (B2B SaaS evidence in policy/design-policy.json)')
+    if not dp:
+        return fails + ['manifest has no designPolicy binding'], []
+    if (dp.get('policyId'), dp.get('policyVersion')) != SAAS_POLICY:
+        fails.append(f'designPolicy binds {dp.get("policyId")}@{dp.get("policyVersion")}, expected {SAAS_POLICY[0]}@{SAAS_POLICY[1]}')
+    if dp.get('commonIrVersion') != '0.5' or dp.get('enforcementMode') != 'hard-and-soft':
+        fails.append('designPolicy commonIrVersion must be 0.5 and enforcementMode hard-and-soft')
+    ref = dp.get('ref', '')
+    if not os.path.isfile(os.path.join(c.root, ref)):
+        return fails + [f'designPolicy.ref {ref} does not exist'], []
+    pol = c.j(ref)
+    if (pol.get('policyId'), pol.get('policyVersion'), pol.get('commonIrVersion')) != (SAAS_POLICY[0], SAAS_POLICY[1], '0.5'):
+        fails.append(f'{ref} policyId / version / commonIrVersion disagree with the manifest binding')
+    if pol.get('classification', {}).get('isSaaS') is not True or not pol.get('classification', {}).get('evidence'):
+        fails.append(f'{ref} must classify the product as SaaS with evidence')
+    for e in pol.get('classification', {}).get('evidence', []):
+        if c.src:
+            f, ln = e['ref'].rsplit(':', 1)
+            p = os.path.join(c.src, f)
+            if not os.path.isfile(p) or int(ln) > len(open(p, encoding='utf8').read().split('\n')):
+                fails.append(f'{ref}: evidence {e["ref"]} does not resolve')
+    files = pol.get('enforcedBy', [])
+    for f in files:
+        if not os.path.isfile(os.path.join(c.root, f)):
+            fails.append(f'{ref}: enforcedBy {f} does not exist')
+    if not fails:
+        want = policy_hash(c.root, files)
+        if dp.get('contentHash') != want:
+            fails.append(f'designPolicy.contentHash {dp.get("contentHash")} != recomputed {want}')
+    if pol.get('approval', {}).get('architectureDecisionRecorded') is not False:
+        fails.append(f'{ref}: approval.architectureDecisionRecorded must stay false until a human records it')
+    return fails, []
+
+
 CHECKS = [('self-containment', chk_self), ('json', chk_json), ('schema', chk_schema), ('structure', chk_structure), ('maxwords', chk_maxwords), ('allowlist parity', chk_allowlist),
           ('allowlistVersion', chk_versions), ('manifest counts', chk_counts), ('routes', chk_routes), ('graph', chk_graph), ('assets', chk_assets), ('tokens', chk_tokens),
-          ('motion', chk_motion), ('citations', chk_citations), ('packaging', chk_packaging), ('source-claims', chk_source_claims)]
+          ('motion', chk_motion), ('citations', chk_citations), ('packaging', chk_packaging), ('source-claims', chk_source_claims),
+          ('contracts', chk_contracts), ('generation', chk_generation), ('wrapper gate', chk_wrapper_gate), ('policy', chk_policy)]
 ALIASES = {'assets': 'assets', 'counts': 'manifest counts'}
 
 

@@ -30,7 +30,10 @@
             "required": true,
             "assetRoles": [
               "screenshot.product-ui",
-              "image.cms-cover"
+              "image.cms-cover",
+              "screenshot.placeholder",
+              "asset.operator-supplied",
+              "illustration.generated"
             ]
           },
           "target": {
@@ -80,5 +83,21 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "jp"
+  ],
+  "source": {
+    "id": "Jp.jsx@111",
+    "tag": "section",
+    "file": "src/pages/Jp.jsx",
+    "lines": "111"
+  },
+  "semantic": {
+    "id": "features.jp-link-cards",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "illustration.generated",
+    "screenshot.placeholder"
   ]
 }

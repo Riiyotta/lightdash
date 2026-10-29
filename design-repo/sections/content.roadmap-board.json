@@ -106,5 +106,19 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "roadmap"
+  ],
+  "source": {
+    "id": "Roadmap.jsx@130",
+    "tag": "section",
+    "file": "src/pages/Roadmap.jsx",
+    "lines": "130"
+  },
+  "semantic": {
+    "id": "content.roadmap-board",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "icon.pixel-art"
   ]
 }

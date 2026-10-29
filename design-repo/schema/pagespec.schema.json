@@ -6,6 +6,7 @@
   "additionalProperties": false,
   "required": [
     "pageSpecVersion",
+    "mode",
     "template",
     "route",
     "theme",
@@ -14,7 +15,14 @@
   ],
   "properties": {
     "pageSpecVersion": {
-      "const": "1.0.0"
+      "const": "1.1.0"
+    },
+    "mode": {
+      "enum": [
+        "clone",
+        "generation"
+      ],
+      "description": "clone = faithful reconstruction of the Lightdash clone (real assets and copy allowed as evidence); generation = a new page for another brand: semantic_validate.py rejects every clone-only / blocked asset role and all Lightdash identity, copy, claims, URLs and embeds (GENERATION_MODE_* rules)."
     },
     "template": {
       "enum": [
@@ -778,6 +786,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -798,7 +809,47 @@
               "type": "object",
               "additionalProperties": false,
               "required": [],
-              "properties": {}
+              "properties": {
+                "brandMark": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.lightdash-wordmark",
+                        "brand.placeholder-mark",
+                        "asset.operator-supplied"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                },
+                "chromeData": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "content.lightdash-chrome-data",
+                        "content.operator-supplied-chrome"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                }
+              }
             },
             "motion": {
               "allOf": [
@@ -815,6 +866,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -835,7 +889,47 @@
               "type": "object",
               "additionalProperties": false,
               "required": [],
-              "properties": {}
+              "properties": {
+                "brandMark": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.lightdash-wordmark",
+                        "brand.placeholder-mark",
+                        "asset.operator-supplied"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                },
+                "chromeData": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "content.lightdash-chrome-data",
+                        "content.operator-supplied-chrome"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                }
+              }
             },
             "motion": {
               "allOf": [
@@ -853,6 +947,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -873,7 +970,47 @@
               "type": "object",
               "additionalProperties": false,
               "required": [],
-              "properties": {}
+              "properties": {
+                "brandMark": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.lightdash-wordmark",
+                        "brand.placeholder-mark",
+                        "asset.operator-supplied"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                },
+                "chromeData": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "content.lightdash-chrome-data",
+                        "content.operator-supplied-chrome"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                }
+              }
             },
             "motion": {
               "allOf": [
@@ -891,6 +1028,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -911,7 +1051,47 @@
               "type": "object",
               "additionalProperties": false,
               "required": [],
-              "properties": {}
+              "properties": {
+                "brandMark": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.lightdash-wordmark",
+                        "brand.placeholder-mark",
+                        "asset.operator-supplied"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                },
+                "chromeData": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "content.lightdash-chrome-data",
+                        "content.operator-supplied-chrome"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                }
+              }
             },
             "motion": {
               "allOf": [
@@ -929,6 +1109,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -949,7 +1132,47 @@
               "type": "object",
               "additionalProperties": false,
               "required": [],
-              "properties": {}
+              "properties": {
+                "brandMark": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.lightdash-wordmark",
+                        "brand.placeholder-mark",
+                        "asset.operator-supplied"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                },
+                "chromeData": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "content.lightdash-chrome-data",
+                        "content.operator-supplied-chrome"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                }
+              }
             },
             "motion": {
               "allOf": [
@@ -967,6 +1190,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1000,7 +1226,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "embed.booking-cal"
+                        "embed.booking-cal",
+                        "embed.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -1026,6 +1253,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1115,7 +1345,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "image.cms-cover"
+                              "image.cms-cover",
+                              "illustration.generated",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -1138,7 +1370,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "photo.person-avatar"
+                              "photo.person-avatar",
+                              "avatar.fictional-person",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -1166,6 +1400,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1244,6 +1481,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1327,6 +1567,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1358,10 +1601,9 @@
                   "x-maxWords": 5
                 },
                 "lead": {
-                  "enum": [
-                    "For any other questions, reach out to our team.",
-                    "For any other questions, feel welcome to reach out to our team."
-                  ]
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 15
                 },
                 "showCta": {
                   "type": "boolean"
@@ -1409,6 +1651,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1492,6 +1737,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1543,6 +1791,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1588,6 +1839,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1639,6 +1893,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1722,6 +1979,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1779,6 +2039,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1825,6 +2088,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1882,7 +2148,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "photo.person-avatar"
+                        "photo.person-avatar",
+                        "avatar.fictional-person",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -1907,6 +2175,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1952,6 +2223,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -1997,6 +2271,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2133,6 +2410,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2248,6 +2528,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2298,6 +2581,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2354,7 +2640,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "photo.person-avatar"
+                        "photo.person-avatar",
+                        "avatar.fictional-person",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -2379,6 +2667,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2416,7 +2707,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "logo.customer-partner"
+                        "logo.customer-partner",
+                        "logo.placeholder-company",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -2466,6 +2759,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2531,6 +2827,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2609,7 +2908,9 @@
                               "properties": {
                                 "assetRole": {
                                   "enum": [
-                                    "image.cms-cover"
+                                    "image.cms-cover",
+                                    "illustration.generated",
+                                    "asset.operator-supplied"
                                   ]
                                 },
                                 "assetRef": {
@@ -2641,6 +2942,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2703,7 +3007,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "photo.team-member"
+                              "photo.team-member",
+                              "avatar.fictional-person",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -2726,7 +3032,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "photo.team-member"
+                              "photo.team-member",
+                              "avatar.fictional-person",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -2755,6 +3063,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2810,6 +3121,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2843,7 +3157,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "video.self-hosted"
+                        "video.self-hosted",
+                        "video.placeholder",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -2869,6 +3185,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -2917,7 +3236,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "embed.youtube"
+                        "embed.youtube",
+                        "video.placeholder",
+                        "embed.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -2935,7 +3256,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "image.cms-cover"
+                        "image.cms-cover",
+                        "illustration.generated",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -2997,6 +3320,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3097,7 +3423,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "embed.booking-cal"
+                        "embed.booking-cal",
+                        "embed.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -3122,6 +3449,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3189,7 +3519,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "form.submission-endpoint"
+                        "form.submission-endpoint",
+                        "endpoint.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -3214,6 +3545,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3276,7 +3610,8 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "form.submission-endpoint"
+                        "form.submission-endpoint",
+                        "endpoint.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -3301,6 +3636,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3443,6 +3781,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3544,6 +3885,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3659,6 +4003,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3774,6 +4121,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3889,6 +4239,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3935,6 +4288,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -3993,6 +4349,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4072,7 +4431,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "screenshot.product-ui"
+                              "screenshot.product-ui",
+                              "screenshot.placeholder",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -4101,6 +4462,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4164,7 +4528,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "screenshot.product-ui"
+                              "screenshot.product-ui",
+                              "screenshot.placeholder",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -4198,6 +4564,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4280,6 +4649,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4352,6 +4724,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4435,6 +4810,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4496,7 +4874,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "screenshot.product-ui"
+                              "screenshot.product-ui",
+                              "screenshot.placeholder",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -4531,6 +4911,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4606,6 +4989,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4669,7 +5055,10 @@
                           "assetRole": {
                             "enum": [
                               "illustration.hero-diagram",
-                              "screenshot.product-ui"
+                              "screenshot.product-ui",
+                              "illustration.generated",
+                              "asset.operator-supplied",
+                              "screenshot.placeholder"
                             ]
                           },
                           "assetRef": {
@@ -4697,6 +5086,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4765,6 +5157,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4849,6 +5244,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -4939,6 +5337,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5027,6 +5428,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5085,7 +5489,10 @@
                           "assetRole": {
                             "enum": [
                               "screenshot.product-ui",
-                              "image.cms-cover"
+                              "image.cms-cover",
+                              "screenshot.placeholder",
+                              "asset.operator-supplied",
+                              "illustration.generated"
                             ]
                           },
                           "assetRef": {
@@ -5138,6 +5545,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5246,6 +5656,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5317,6 +5730,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5383,7 +5799,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "screenshot.product-ui"
+                              "screenshot.product-ui",
+                              "screenshot.placeholder",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -5412,6 +5830,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5458,7 +5879,10 @@
                     "assetRole": {
                       "enum": [
                         "screenshot.product-ui",
-                        "illustration.hero-diagram"
+                        "illustration.hero-diagram",
+                        "screenshot.placeholder",
+                        "asset.operator-supplied",
+                        "illustration.generated"
                       ]
                     },
                     "assetRef": {
@@ -5483,6 +5907,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5529,7 +5956,8 @@
                           "assetRole": {
                             "enum": [
                               "icon.pixel-art",
-                              "badge.compliance"
+                              "badge.compliance",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -5567,6 +5995,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5632,6 +6063,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5703,6 +6137,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5779,6 +6216,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5874,6 +6314,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -5984,6 +6427,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6078,6 +6524,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6125,7 +6574,9 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "logo.customer-partner"
+                          "logo.customer-partner",
+                          "logo.placeholder-company",
+                          "asset.operator-supplied"
                         ]
                       },
                       "assetRef": {
@@ -6214,6 +6665,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6302,7 +6756,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "screenshot.product-ui"
+                        "screenshot.product-ui",
+                        "screenshot.placeholder",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -6332,6 +6788,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6352,7 +6811,28 @@
               "type": "object",
               "additionalProperties": false,
               "required": [],
-              "properties": {}
+              "properties": {
+                "app": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "assetRole",
+                    "assetRef"
+                  ],
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "app.iframe-bundle",
+                        "embed.operator-supplied",
+                        "animation.placeholder"
+                      ]
+                    },
+                    "assetRef": {
+                      "$ref": "#/definitions/assetRef"
+                    }
+                  }
+                }
+              }
             },
             "motion": {
               "allOf": [
@@ -6369,6 +6849,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6421,6 +6904,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6503,6 +6989,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6598,6 +7087,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6643,6 +7135,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6682,7 +7177,12 @@
                         "screenshot.product-ui",
                         "animation.rive",
                         "embed.live-demo",
-                        "illustration.html-diagram"
+                        "illustration.html-diagram",
+                        "illustration.generated",
+                        "asset.operator-supplied",
+                        "screenshot.placeholder",
+                        "animation.placeholder",
+                        "embed.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -6725,6 +7225,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6775,7 +7278,10 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "animation.rive"
+                        "animation.rive",
+                        "animation.placeholder",
+                        "illustration.generated",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -6801,6 +7307,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6866,6 +7375,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6934,6 +7446,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -6984,6 +7499,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7052,7 +7570,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "logo.integration"
+                              "logo.integration",
+                              "logo.placeholder-company",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -7085,6 +7605,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7167,6 +7690,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7249,6 +7775,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7300,6 +7829,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7351,6 +7883,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7388,7 +7923,8 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "badge.compliance"
+                          "badge.compliance",
+                          "asset.operator-supplied"
                         ]
                       },
                       "assetRef": {
@@ -7419,6 +7955,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7457,7 +7996,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "logo.customer-partner"
+                        "logo.customer-partner",
+                        "logo.placeholder-company",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -7495,7 +8036,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "photo.person-avatar"
+                        "photo.person-avatar",
+                        "avatar.fictional-person",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -7531,6 +8074,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7571,7 +8117,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "logo.customer-partner"
+                        "logo.customer-partner",
+                        "logo.placeholder-company",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -7609,7 +8157,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "photo.person-avatar"
+                        "photo.person-avatar",
+                        "avatar.fictional-person",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -7698,6 +8248,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7737,7 +8290,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "photo.person-avatar"
+                        "photo.person-avatar",
+                        "avatar.fictional-person",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -7842,6 +8397,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7893,7 +8451,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "logo.customer-partner"
+                              "logo.customer-partner",
+                              "logo.placeholder-company",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -7926,6 +8486,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -7963,7 +8526,9 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "logo.customer-partner"
+                          "logo.customer-partner",
+                          "logo.placeholder-company",
+                          "asset.operator-supplied"
                         ]
                       },
                       "assetRef": {
@@ -7994,6 +8559,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -8037,7 +8605,9 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "logo.customer-partner"
+                          "logo.customer-partner",
+                          "logo.placeholder-company",
+                          "asset.operator-supplied"
                         ]
                       },
                       "assetRef": {
@@ -8072,6 +8642,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -8115,7 +8688,9 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "logo.customer-partner"
+                          "logo.customer-partner",
+                          "logo.placeholder-company",
+                          "asset.operator-supplied"
                         ]
                       },
                       "assetRef": {
@@ -8146,6 +8721,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -8189,7 +8767,9 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "logo.customer-partner"
+                          "logo.customer-partner",
+                          "logo.placeholder-company",
+                          "asset.operator-supplied"
                         ]
                       },
                       "assetRef": {
@@ -8220,6 +8800,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -8288,7 +8871,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "photo.person-avatar"
+                              "photo.person-avatar",
+                              "avatar.fictional-person",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -8322,6 +8907,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -8385,7 +8973,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "photo.person-avatar"
+                              "photo.person-avatar",
+                              "avatar.fictional-person",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -8408,7 +8998,9 @@
                         "properties": {
                           "assetRole": {
                             "enum": [
-                              "logo.customer-partner"
+                              "logo.customer-partner",
+                              "logo.placeholder-company",
+                              "asset.operator-supplied"
                             ]
                           },
                           "assetRef": {
@@ -8441,6 +9033,9 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         },
@@ -8477,7 +9072,9 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "photo.person-avatar"
+                        "photo.person-avatar",
+                        "avatar.fictional-person",
+                        "asset.operator-supplied"
                       ]
                     },
                     "assetRef": {
@@ -8522,10 +9119,55 @@
                   }
                 }
               ]
+            },
+            "style": {
+              "$ref": "#/definitions/style"
             }
           }
         }
       ]
+    },
+    "style": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional per-node token references (catalog ids \"category.name\" from tokens/llm/token-catalog.json, e.g. \"color.brand-purple\", \"spacing.24\", \"fontFamily.inter\"). Never raw values. semantic_validate.py checks TOKEN_UNKNOWN / TOKEN_RAW_COLOR / TOKEN_ARBITRARY_SPACING / TOKEN_UNSUPPORTED_FONT / TOKEN_THEME_MISMATCH / TOKEN_SCOPE / TOKEN_CATEGORY.",
+      "properties": {
+        "accentColor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "textColor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "surfaceColor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "borderColor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "fontFamily": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "spacingBefore": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "spacingAfter": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        }
+      }
     }
   }
 }

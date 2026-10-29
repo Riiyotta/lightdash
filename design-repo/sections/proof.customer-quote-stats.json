@@ -11,7 +11,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "logo.customer-partner"
+          "logo.customer-partner",
+          "logo.placeholder-company",
+          "asset.operator-supplied"
         ],
         "altMaxWords": 3
       },
@@ -40,7 +42,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "photo.person-avatar"
+          "photo.person-avatar",
+          "avatar.fictional-person",
+          "asset.operator-supplied"
         ],
         "altMaxWords": 3
       },
@@ -135,5 +139,21 @@
     "product-context-layer",
     "product-conversational-analytics",
     "product-interactive-dashboards"
+  ],
+  "source": {
+    "id": "CustomerQuote.jsx@52",
+    "tag": "section",
+    "file": "src/components/shared/CustomerQuote.jsx",
+    "lines": "52"
+  },
+  "semantic": {
+    "id": "proof.customer-quote-stats",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person",
+    "logo.placeholder-company"
   ]
 }

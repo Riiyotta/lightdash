@@ -63,7 +63,8 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "embed.booking-cal"
+          "embed.booking-cal",
+          "embed.operator-supplied"
         ]
       }
     },
@@ -103,5 +104,19 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "start"
+  ],
+  "source": {
+    "id": "Start.jsx@29",
+    "tag": "section",
+    "file": "src/pages/Start.jsx",
+    "lines": "29"
+  },
+  "semantic": {
+    "id": "conversion.booking-split",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "embed.operator-supplied"
   ]
 }

@@ -15,7 +15,12 @@
           "screenshot.product-ui",
           "animation.rive",
           "embed.live-demo",
-          "illustration.html-diagram"
+          "illustration.html-diagram",
+          "illustration.generated",
+          "asset.operator-supplied",
+          "screenshot.placeholder",
+          "animation.placeholder",
+          "embed.operator-supplied"
         ]
       },
       "visualKind": {
@@ -89,5 +94,23 @@
     "product-interactive-dashboards",
     "product-metrics-catalog",
     "product-self-improving-analytics"
+  ],
+  "source": {
+    "id": "SectionHero.jsx@149",
+    "tag": "div",
+    "file": "src/components/shared/SectionHero.jsx",
+    "lines": "149"
+  },
+  "semantic": {
+    "id": "hero.product-visual",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "animation.placeholder",
+    "asset.operator-supplied",
+    "embed.operator-supplied",
+    "illustration.generated",
+    "screenshot.placeholder"
   ]
 }

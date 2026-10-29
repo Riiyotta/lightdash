@@ -21,7 +21,9 @@
           "type": "media",
           "required": true,
           "assetRoles": [
-            "logo.customer-partner"
+            "logo.customer-partner",
+            "logo.placeholder-company",
+            "asset.operator-supplied"
           ],
           "altMaxWords": 3
         },
@@ -63,5 +65,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "fintech"
+  ],
+  "source": {
+    "id": "Fintech.jsx@91",
+    "tag": "Box",
+    "file": "src/pages/Fintech.jsx",
+    "lines": "91"
+  },
+  "semantic": {
+    "id": "proof.logos-strip-5",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "logo.placeholder-company"
   ]
 }

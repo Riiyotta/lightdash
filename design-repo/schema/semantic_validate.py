@@ -15,14 +15,23 @@ Checks, in order:
      reducedMotionBasis equal tokens/00-foundation/motion-patterns.json       -> "MOTION"
   6. per-instance maxWords / list bounds / CTA targets from the contracts     -> "MAX_WORDS", "CONTENT"
   7. live third-party endpoint scan (patterns in assets/asset-roles.json)     -> "NO_LIVE_ENDPOINT"
+  8. node.style token references against tokens/llm/token-catalog.json + themes -> "TOKEN_UNKNOWN", "TOKEN_RAW_COLOR",
+     "TOKEN_ARBITRARY_SPACING", "TOKEN_UNSUPPORTED_FONT", "TOKEN_THEME_MISMATCH", "TOKEN_SCOPE", "TOKEN_CATEGORY"
+  9. mode = "generation": nothing that identifies or reproduces Lightdash (one rule per category, patterns derived
+     from the real source in schema/source-identity.json, asset availability pinned in PINNED_AVAILABILITY below):
+     GENERATION_MODE_BRAND / _LOGO / _SCREENSHOT / _DIAGRAM / _ANIMATION / _VIDEO / _EMBED / _ASSET / _URL / _COPY /
+     _CLAIM / _PERSON / _CUSTOMER.  mode = "clone" may reuse real assets and copy (still subject to 1-8).
+ 10. retrieval eligibility of the section contracts is pinned in PINNED_RETRIEVAL (runtime UI is never retrievable)
 
 The repo root is derived from __file__; nothing here depends on an absolute path.
 Exit status is 1 if any error-severity finding exists (warnings never fail the run).
 """
+import hashlib
 import json
 import os
 import re
 import sys
+import unicodedata
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INVIS = re.compile('[​-‏⁠-⁤﻿]+')
@@ -47,6 +56,7 @@ class Repo:
         tj = load_json('templates/templates.json', self.root)
         self.templates = tj['templates']
         self.routes = tj['routes']
+        self.blocked_routes = set(tj['excludedRoutes']['urls']) | set(tj['devOnlyRoutes']['urls'])
         self.graph = load_json('compatibility/graph.json', self.root)
         self.sections = {}
         sdir = os.path.join(self.root, 'sections')
@@ -58,6 +68,12 @@ class Repo:
         self.motion = load_json('tokens/00-foundation/motion-patterns.json', self.root)['patterns']
         roles = load_json('assets/asset-roles.json', self.root)
         self.live = [re.compile(p['pattern'], re.I) for p in roles['forbiddenLiveHostPatterns']]
+        self.roles = roles['roles']
+        self.ident = load_json('schema/source-identity.json', self.root)
+        self.copy_hashes = set(self.ident['copyShingles']['hashes'])
+        self.catalog = load_json('tokens/llm/token-catalog.json', self.root)['categories']
+        self.color_scope = {k: v.get('scope') for k, v in load_json('tokens/00-foundation/color.json', self.root)['color'].items()}
+        self.themes = {th: load_json(f'tokens/themes/{th}.json', self.root)['resolves'] for th in ('light', 'dark-home')}
 
     def cat(self, section):
         return self.sections[section]['category']
@@ -141,9 +157,11 @@ def rule_SECTION_CONSTRAINTS(ctx, params):
             out.append(f'{s} is onePerPage but appears {c} times')
         if con.get('maxPerPage') is not None and c > con['maxPerPage']:
             out.append(f'{s} allows at most {con["maxPerPage"]} per page but appears {c} times')
-        if con.get('homeRouteOnly') and ctx['route'] != '/':
+        # generation mode: the page lives on the new site's own path, so route-bound sections are bound to the template that owns that route
+        own = set(repo.templates[ctx['template']]['routes']) if ctx.get('mode') == 'generation' and ctx['template'] in repo.templates else {ctx['route']}
+        if con.get('homeRouteOnly') and '/' not in own:
             out.append(f'{s} is home-route-only but route is {ctx["route"]}')
-        if con.get('routeOnly') and ctx['route'] not in con['routeOnly'] and not any(ctx['route'] == r for r in con['routeOnly']):
+        if con.get('routeOnly') and not (own & set(con['routeOnly'])):
             out.append(f'{s} is only allowed on {con["routeOnly"]} but route is {ctx["route"]}')
         if con.get('chromeAxis') and ctx['chrome'] not in con['chromeAxis']:
             out.append(f'{s} requires chrome in {con["chromeAxis"]} but chrome is {ctx["chrome"]}')
@@ -222,8 +240,19 @@ def rule_ONE_HERO_PER_PAGE(ctx, params):
     return out
 
 
+def _collapse(ns, params):
+    """Consecutive nodes of a heading-bounded-part section (one node per chapter / legal part) count as one block."""
+    keep = set(params.get('collapseHeadingBoundedParts', []))
+    out = []
+    for x in ns:
+        if out and x[0] in keep and out[-1][0] == x[0]:
+            continue
+        out.append(x)
+    return out
+
+
 def rule_NO_ADJACENT_DUPLICATE(ctx, params):
-    ns = _n(ctx)
+    ns = _collapse(_n(ctx), params)
     return [f'node[{i}] repeats {label(ns[i][0], ns[i][1])} directly after itself' for i in range(1, len(ns)) if ns[i][:2] == ns[i - 1][:2]]
 
 
@@ -239,7 +268,7 @@ def rule_BLOG_POSTS_AFTER_FAQ(ctx, params):
 
 def rule_MAX_RUN_SAME_CATEGORY(ctx, params):
     repo = ctx['repo']
-    cats = [repo.cat(n[0]) for n in _n(ctx)]
+    cats = [repo.cat(n[0]) for n in _collapse(_n(ctx), params)]
     out, run, prev = [], 0, None
     for i, c in enumerate(cats):
         if c in params['ignoreCategories']:
@@ -325,6 +354,228 @@ def scan_strings(obj, path, out, patterns):
             scan_strings(v, f'{path}[{i}]', out, patterns)
 
 
+# ----------------------------------------------------------------------------- pins (independent of the registries)
+# Asset availability is pinned HERE, in extraction/verify_all.py PINNED_AVAILABILITY and in assets/asset-roles.json;
+# the validator enforces this table, so loosening the registry alone changes nothing (prove_drift.py).
+PINNED_AVAILABILITY = {
+    'animation.rive': 'clone-only', 'app.iframe-bundle': 'clone-only', 'brand.lightdash-wordmark': 'clone-only',
+    'content.lightdash-chrome-data': 'clone-only', 'illustration.hero-diagram': 'clone-only', 'illustration.html-diagram': 'clone-only',
+    'image.cms-cover': 'clone-only', 'logo.customer-partner': 'clone-only', 'logo.integration': 'clone-only',
+    'photo.person-avatar': 'clone-only', 'photo.team-member': 'clone-only', 'screenshot.product-ui': 'clone-only', 'video.self-hosted': 'clone-only',
+    'badge.compliance': 'blocked-for-generation', 'embed.booking-cal': 'blocked-for-generation', 'embed.live-demo': 'blocked-for-generation',
+    'embed.youtube': 'blocked-for-generation', 'form.submission-endpoint': 'blocked-for-generation',
+    'animation.placeholder': 'generation-safe', 'asset.operator-supplied': 'generation-safe', 'avatar.fictional-person': 'generation-safe',
+    'brand.placeholder-mark': 'generation-safe', 'content.operator-supplied-chrome': 'generation-safe', 'copy.original': 'generation-safe',
+    'decor.pixel-tile': 'generation-safe', 'decor.sticker': 'generation-safe', 'embed.operator-supplied': 'generation-safe',
+    'endpoint.operator-supplied': 'generation-safe', 'icon.pixel-art': 'generation-safe', 'illustration.generated': 'generation-safe',
+    'link.placeholder-url': 'generation-safe', 'logo.placeholder-company': 'generation-safe', 'screenshot.placeholder': 'generation-safe',
+    'video.placeholder': 'generation-safe',
+}
+# which named generation rule rejects a non-generation-safe role (one rule per category)
+ROLE_RULE = {
+    'brand.lightdash-wordmark': 'GENERATION_MODE_LOGO', 'screenshot.product-ui': 'GENERATION_MODE_SCREENSHOT',
+    'illustration.hero-diagram': 'GENERATION_MODE_DIAGRAM', 'illustration.html-diagram': 'GENERATION_MODE_DIAGRAM',
+    'animation.rive': 'GENERATION_MODE_ANIMATION', 'video.self-hosted': 'GENERATION_MODE_VIDEO',
+    'app.iframe-bundle': 'GENERATION_MODE_EMBED', 'embed.booking-cal': 'GENERATION_MODE_EMBED', 'embed.live-demo': 'GENERATION_MODE_EMBED',
+    'embed.youtube': 'GENERATION_MODE_EMBED', 'form.submission-endpoint': 'GENERATION_MODE_URL', 'content.lightdash-chrome-data': 'GENERATION_MODE_COPY',
+    'logo.customer-partner': 'GENERATION_MODE_CUSTOMER', 'logo.integration': 'GENERATION_MODE_CUSTOMER', 'photo.person-avatar': 'GENERATION_MODE_PERSON',
+    'photo.team-member': 'GENERATION_MODE_PERSON', 'badge.compliance': 'GENERATION_MODE_CLAIM', 'image.cms-cover': 'GENERATION_MODE_ASSET',
+}
+# runtime / utility UI is never retrievable as page content (pinned; verify_all.py holds the same table)
+PINNED_RETRIEVAL = {
+    'chrome.talk-modal': False, 'chrome.mobile-nav-light': False, 'chrome.mobile-nav-dark': False,
+    'app.view-customers': False, 'app.view-governance': False, 'app.view-migration': False, 'app.view-pricing': False, 'app.view-product': False,
+}
+RUNTIME_UI_RE = re.compile(r'modal|dialog|drawer|popup|pop-up|cookie|consent|preloader|toast|overlay|mobile-nav|app\.view-')
+# chrome / app nodes that render fixed Lightdash brand, copy or an app bundle unless a generation-safe slot is bound
+GENERATION_SLOTS = {
+    'chrome.navbar-light': {'brandMark': 'GENERATION_MODE_LOGO', 'chromeData': 'GENERATION_MODE_COPY'},
+    'chrome.navbar-dark': {'brandMark': 'GENERATION_MODE_LOGO', 'chromeData': 'GENERATION_MODE_COPY'},
+    'chrome.mobile-nav-light': {'brandMark': 'GENERATION_MODE_LOGO', 'chromeData': 'GENERATION_MODE_COPY'},
+    'chrome.mobile-nav-dark': {'brandMark': 'GENERATION_MODE_LOGO', 'chromeData': 'GENERATION_MODE_COPY'},
+    'chrome.footer': {'brandMark': 'GENERATION_MODE_LOGO', 'chromeData': 'GENERATION_MODE_COPY'},
+    'hero.gameboy-app': {'app': 'GENERATION_MODE_EMBED'},
+}
+PLACEHOLDER_HOST = re.compile(r'(^|\.)(example|invalid)$')
+
+# ----------------------------------------------------------------------------- normalisation (same as extraction/build_source_identity.py)
+ZW = re.compile('[​-‏⁠-⁤﻿­]')
+DASH = re.compile('[‐-―−]')
+QUOTES = {'‘': "'", '’': "'", '‚': "'", '‛': "'", '“': '"', '”': '"', '„': '"', '«': '"', '»': '"'}
+
+
+def norm_keep_case(s):
+    s = ZW.sub('', unicodedata.normalize('NFKC', s))
+    for a, b in QUOTES.items():
+        s = s.replace(a, b)
+    return re.sub(r'\s+', ' ', DASH.sub('-', s)).strip()
+
+
+def norm(s):
+    return norm_keep_case(s).lower()
+
+
+def shingle_hashes(s, n=5):
+    w = re.findall(r"[0-9a-zÀ-ɏ぀-ヿ一-鿿]+(?:'[a-z]+)?", norm(s))
+    return {hashlib.sha256(' '.join(w[i:i + n]).encode('utf8')).hexdigest()[:16] for i in range(len(w) - n + 1)}
+
+
+HOST_TOKEN = re.compile(r'(?:[a-z][a-z0-9+.-]*://)?((?:[a-z0-9-]+\.)+[a-z][a-z0-9-]{1,})(?=[/:?#\s"\')]|$)', re.I)
+EMAIL = re.compile(r'[A-Za-z0-9._%+-]+@((?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,})')
+FILEISH = re.compile(r'\.(?:png|jpe?g|svg|webp|gif|mp4|webm|riv|json|js|css|html?|pdf)$', re.I)
+
+
+def iter_strings(obj, path):
+    if isinstance(obj, str):
+        yield path, obj
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            if k in ('assetRole', 'assetRef', 'action', 'section', 'pattern', 'reducedMotionFallback', 'reducedMotionBasis', 'easing', 'trigger'):
+                continue
+            yield from iter_strings(v, f'{path}.{k}')
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from iter_strings(v, f'{path}[{i}]')
+
+
+def iter_media(obj, path):
+    if isinstance(obj, dict):
+        if 'assetRole' in obj:
+            yield path, obj
+        for k, v in obj.items():
+            yield from iter_media(v, f'{path}.{k}')
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from iter_media(v, f'{path}[{i}]')
+
+
+def generation_findings(spec, repo):
+    """mode = generation: return ['RULE: message', ...] for every Lightdash identity / content leak."""
+    out = []
+    idt = repo.ident
+    brand = [re.compile(b['pattern'], re.I) for b in idt['brand']]
+    src_hosts = {h['host'] for h in idt['hosts']}
+    people = [(p['name'], re.compile(r'(?<![\w])' + re.escape(norm(p['name'])) + r'(?![\w])')) for p in idt['people']]
+    customers = [(c['name'], re.compile(r'(?<![\w])' + re.escape(norm_keep_case(c['name'])) + r'(?![\w])')) for c in idt['customers']]
+    claims = [c['term'] for c in idt['claims']]
+    nclaims = [c['phrase'] for c in idt['numericClaims']]
+    # assets (availability pinned in code)
+    for i, n in enumerate(spec['nodes']):
+        for path, m in iter_media(n.get('content', {}), f'node[{i}].content'):
+            role = m.get('assetRole')
+            av = PINNED_AVAILABILITY.get(role)
+            if av != 'generation-safe':
+                out.append(f'{ROLE_RULE.get(role, "GENERATION_MODE_ASSET")}: {path} uses {role} ({av or "unknown"} asset); generation mode needs one of its generationSafeSubstitutes')
+        for field, rule in GENERATION_SLOTS.get(n['section'], {}).items():
+            v = n.get('content', {}).get(field)
+            if not isinstance(v, dict) or PINNED_AVAILABILITY.get(v.get('assetRole')) != 'generation-safe':
+                what = {'brandMark': 'the fixed Lightdash wordmark', 'chromeData': 'the fixed Lightdash navigation / footer copy and links', 'app': 'the Lightdash Game Boy iframe bundle'}[field]
+                out.append(f'{rule}: node[{i}] {n["section"]} renders {what} unless content.{field} is bound to a generation-safe role')
+    # route + navigate targets: real CMS member slugs are Lightdash content
+    def real_slug(r):
+        r0 = r.split('#')[0]
+        info = repo.routes.get(r0)
+        return info is not None and repo.templates[info['template']].get('newRoutePattern')
+    if real_slug(spec['route']):
+        out.append(f'GENERATION_MODE_URL: route {spec["route"]} is a real Lightdash CMS page (use a new slug under the template newRoutePattern)')
+    # strings
+    strings = [('route', spec['route'])]
+    for i, n in enumerate(spec['nodes']):
+        strings += list(iter_strings(n.get('content', {}), f'node[{i}].content'))
+    for path, s in strings:
+        ns, nk = norm(s), norm_keep_case(s)
+        for b in brand:
+            if b.search(ns):
+                out.append(f'GENERATION_MODE_BRAND: {path} contains the Lightdash brand name ("{s[:48]}")')
+                break
+        hosts = [h.lower().rstrip('.') for h in HOST_TOKEN.findall(s)] + [h.lower() for h in EMAIL.findall(s)]
+        for h in hosts:
+            if FILEISH.search(h) or re.fullmatch(r'[\d.]+', h):
+                continue
+            if not PLACEHOLDER_HOST.search(h):
+                why = 'a real host found in the Lightdash source' if h in src_hosts or any(h.endswith('.' + x) for x in src_hosts) else 'not a reserved placeholder host'
+                out.append(f'GENERATION_MODE_URL: {path} references {h} ({why}; only *.example / *.invalid are allowed)')
+        if path.endswith('.target') and s.startswith('/') and real_slug(s):
+            out.append(f'GENERATION_MODE_URL: {path} targets the real Lightdash CMS page {s}')
+        for name, rx in people:
+            if rx.search(ns):
+                out.append(f'GENERATION_MODE_PERSON: {path} names a real person from the source ({name})')
+        for name, rx in customers:
+            if rx.search(nk):
+                out.append(f'GENERATION_MODE_CUSTOMER: {path} names a real customer / partner / integration from the source ({name})')
+        for t in claims:
+            if re.search(r'(?<![\w])' + re.escape(t) + r'(?![\w])', ns):
+                out.append(f'GENERATION_MODE_CLAIM: {path} repeats a certification / award claim of the source ("{t}")')
+        for t in nclaims:
+            if t in ns:
+                out.append(f'GENERATION_MODE_CLAIM: {path} repeats a numeric marketing claim of the source ("{t}")')
+        hit = shingle_hashes(s) & repo.copy_hashes
+        if hit:
+            out.append(f'GENERATION_MODE_COPY: {path} reuses Lightdash source copy ({len(hit)} matching 5-word shingle(s): "{s[:48]}")')
+    return out
+
+
+# ----------------------------------------------------------------------------- style tokens
+STYLE_KIND = {'accentColor': 'color', 'textColor': 'color', 'surfaceColor': 'color', 'borderColor': 'color', 'fontFamily': 'fontFamily', 'spacingBefore': 'spacing', 'spacingAfter': 'spacing'}
+RAW_COLOR = re.compile(r'^\s*(#[0-9a-f]{3,8}\s*$|rgba?\(|hsla?\(|(black|white|red|green|blue|purple|violet|orange|yellow|pink|gray|grey|navy|teal|transparent|currentcolor)\s*$)', re.I)
+RAW_LEN = re.compile(r'^\s*-?\d+(\.\d+)?\s*(px|rem|em|vh|vw|%|pt)?\s*$', re.I)
+TOKEN_REF = re.compile(r'^([A-Za-z]+)\.(.+)$')
+
+
+def token_findings(spec, repo):
+    out = []
+    theme = spec.get('theme')
+    other = 'dark-home' if theme == 'light' else 'light'
+    def colour_refs(th):
+        return {v.strip('{}').split('.', 1)[1] for v in repo.themes[th].values() if v.startswith('{color.')}
+    exclusive_other = colour_refs(other) - colour_refs(theme)
+    for i, n in enumerate(spec['nodes']):
+        st = n.get('style')
+        if not isinstance(st, dict):
+            continue
+        for k, v in st.items():
+            kind = STYLE_KIND.get(k)
+            path = f'node[{i}].style.{k}'
+            m = TOKEN_REF.match(v) if isinstance(v, str) else None
+            if not m or m.group(1) not in repo.catalog:
+                if kind == 'color' and RAW_COLOR.match(v) and not m:
+                    out.append(f'TOKEN_RAW_COLOR: {path} = "{v}" is a raw colour value; reference a color.* / semantic.color.* token')
+                elif kind == 'spacing' and RAW_LEN.match(v):
+                    out.append(f'TOKEN_ARBITRARY_SPACING: {path} = "{v}" is an arbitrary length; use a spacing.* token ({", ".join(sorted(repo.catalog["spacing"], key=int))})')
+                elif kind == 'fontFamily':
+                    out.append(f'TOKEN_UNSUPPORTED_FONT: {path} = "{v}" is not a fontFamily.* token ({", ".join(repo.catalog["fontFamily"])})')
+                else:
+                    out.append(f'TOKEN_UNKNOWN: {path} = "{v}" is not a token reference "category.name" of tokens/llm/token-catalog.json')
+                continue
+            cat, name = m.group(1), m.group(2)
+            if name not in repo.catalog[cat]:
+                if kind == 'fontFamily':
+                    out.append(f'TOKEN_UNSUPPORTED_FONT: {path} = "{v}": no such font token')
+                else:
+                    out.append(f'TOKEN_UNKNOWN: {path} = "{v}" is not in tokens/llm/token-catalog.json')
+                continue
+            ok_cat = {'color': cat == 'color' or (cat == 'semantic' and name.startswith('color.')), 'fontFamily': cat == 'fontFamily', 'spacing': cat == 'spacing'}[kind]
+            if not ok_cat:
+                out.append(f'TOKEN_CATEGORY: {path} = "{v}" is a {cat} token; {k} needs a {kind} token')
+                continue
+            if cat == 'color' and repo.color_scope.get(name) == 'page-local':
+                out.append(f'TOKEN_SCOPE: {path} = "{v}" is a page-local colour (tokens/00-foundation/color.json scope page-local); not reusable on other templates')
+            if cat == 'color' and name in exclusive_other:
+                out.append(f'TOKEN_THEME_MISMATCH: {path} = "{v}" only resolves in theme {other} (tokens/themes/{other}.json), not in this page theme {theme}')
+    return out
+
+
+def retrieval_findings(repo):
+    out = []
+    for sid, sec in repo.sections.items():
+        want = PINNED_RETRIEVAL.get(sid, True)
+        if sec.get('retrievalEligible') is not want:
+            out.append(f'RETRIEVAL: {sid} retrievalEligible {sec.get("retrievalEligible")} != pinned {want}')
+        if RUNTIME_UI_RE.search(sid) and sid not in PINNED_RETRIEVAL:
+            out.append(f'RETRIEVAL: {sid} looks like runtime UI but is not in PINNED_RETRIEVAL')
+    return out
+
+
 # ----------------------------------------------------------------------------- main API
 def schema_errors(spec, repo):
     """Draft7Validator errors. oneOf failures on a node are re-validated against the alternative whose
@@ -362,7 +613,14 @@ def validate(spec, repo=None, graph=None, with_schema=True):
     tpl = repo.templates.get(tid)
     if tpl is None:
         return errors + [f'ROUTE_RESTRICTION: unknown template {tid}'], warnings
-    if route in repo.routes:
+    gen = spec.get('mode') == 'generation'
+    if gen:
+        # a generated page lives on the new site's own path; only unpublished / dev-only paths and other templates' real routes are refused
+        if route in repo.blocked_routes:
+            errors.append(f'ROUTE_RESTRICTION: route {route} is an unpublished / dev-only path of the source')
+        elif route in repo.routes and repo.routes[route]['template'] != tid:
+            errors.append(f'ROUTE_RESTRICTION: route {route} belongs to template {repo.routes[route]["template"]}, not {tid}')
+    elif route in repo.routes:
         if repo.routes[route]['template'] != tid:
             errors.append(f'ROUTE_RESTRICTION: route {route} belongs to template {repo.routes[route]["template"]}, not {tid}')
     else:
@@ -379,7 +637,7 @@ def validate(spec, repo=None, graph=None, with_schema=True):
             return errors + [f'TEMPLATE_NODE_MATCH: unknown section {n["section"]}'], warnings
     terrs, _ = match_template(repo, tpl, nodes)
     errors += ['TEMPLATE_NODE_MATCH: ' + e for e in terrs]
-    ctx_base = {'repo': repo, 'nodes': nodes, 'route': route, 'template': tid, 'chrome': spec['chrome']}
+    ctx_base = {'repo': repo, 'nodes': nodes, 'route': route, 'template': tid, 'chrome': spec['chrome'], 'mode': spec.get('mode')}
     for r in graph['rules']:
         fn = RULES.get(r['id'])
         if fn is None:
@@ -413,11 +671,18 @@ def validate(spec, repo=None, graph=None, with_schema=True):
             if fdef is None:
                 out.append(f'node[{i}].content.{k}: not a field of {n["section"]}')
                 continue
-            check_field(fdef, val, f'node[{i}].content.{k}', out, repo.route_known)
+            check_field(fdef, val, f'node[{i}].content.{k}', out, (lambda r: r not in repo.blocked_routes) if gen else repo.route_known)
         errors += [('MAX_WORDS: ' if 'words' in o else 'CONTENT: ') + o for o in out]
     leaks = []
     scan_strings(spec, 'spec', leaks, repo.live)
     errors += ['NO_LIVE_ENDPOINT: ' + m for m in leaks]
+    errors += token_findings(spec, repo)
+    for nd in nodes:
+        if repo.sections[nd['section']].get('retrievalEligible') is False and PINNED_RETRIEVAL.get(nd['section']) is not False:
+            errors.append(f'RETRIEVAL: {nd["section"]} is retrievalEligible false but not pinned')
+    errors += retrieval_findings(repo)
+    if spec.get('mode') == 'generation':
+        errors += generation_findings(spec, repo)
     return errors, warnings
 
 

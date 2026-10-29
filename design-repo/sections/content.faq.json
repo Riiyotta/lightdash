@@ -15,12 +15,11 @@
         "wcRef": "content.faq.heading"
       },
       "lead": {
-        "type": "enum",
+        "type": "text",
         "required": true,
-        "values": [
-          "For any other questions, reach out to our team.",
-          "For any other questions, feel welcome to reach out to our team."
-        ]
+        "maxWords": 15,
+        "observedMaxWords": 12,
+        "wcRef": "content.faq.lead"
       },
       "showCta": {
         "type": "boolean",
@@ -83,7 +82,8 @@
   ],
   "notes": [
     "Answers are rich JSX in the source data; the PageSpec carries plain text (links/strong are applied by the component). Counted words per answer come from tag-stripped JSX.",
-    "/fintech reproduces a live-site bug: its FAQ answers are mismatched with their questions (src/pages/data/fintech.jsx header comment). The PageSpec must not \"fix\" or propagate this silently."
+    "/fintech reproduces a live-site bug: its FAQ answers are mismatched with their questions (src/pages/data/fintech.jsx header comment). The PageSpec must not \"fix\" or propagate this silently.",
+    "lead was a closed enum of the two FAQ_LEADS strings (src/components/shared/Faq.jsx:44-47); it is now a text field (budget from those two real strings) so a generation-mode page can write its own lead instead of reusing Lightdash copy."
   ],
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
@@ -97,5 +97,17 @@
     "product-interactive-dashboards",
     "product-metrics-catalog",
     "product-self-improving-analytics"
-  ]
+  ],
+  "source": {
+    "id": "Faq.jsx@63",
+    "tag": "section",
+    "file": "src/components/shared/Faq.jsx",
+    "lines": "63"
+  },
+  "semantic": {
+    "id": "content.faq",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

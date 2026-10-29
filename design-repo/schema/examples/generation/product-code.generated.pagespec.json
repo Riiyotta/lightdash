@@ -1,0 +1,418 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generation",
+  "template": "product-bi-as-code",
+  "route": "/planner-as-code",
+  "theme": "light",
+  "chrome": "light-banner-cta",
+  "nodes": [
+    {
+      "section": "chrome.announcement-bar",
+      "content": {
+        "text": "Orchard ledgers that settle by sundown",
+        "mobileText": "Bins, ladders and crews on one board",
+        "linkLabel": "See sample orchards",
+        "target": {
+          "action": "navigate-route",
+          "target": "/contact"
+        }
+      },
+      "motion": {
+        "pattern": "scroll-linked-offset",
+        "reducedMotionFallback": "static-final-state",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.navbar-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-navbar-light-brandmark-1"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-navbar-light-chromedata-1"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.mobile-nav-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-mobile-nav-light-brandmark-2"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-mobile-nav-light-chromedata-2"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "hero.bi-as-code",
+      "content": {
+        "heading": "Forecast picking days from soil to shed",
+        "subtitle": "Growers sketch a picking route on a tablet, and the planner reshuffles every crew when a frost warning or a late delivery changes the morning.",
+        "buttons": [
+          {
+            "label": "Open the planner",
+            "action": "navigate-route",
+            "target": "/contact"
+          },
+          {
+            "label": "Open the planner",
+            "action": "navigate-route",
+            "target": "/contact"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "hero-fade-spring",
+        "reducedMotionFallback": "visible-no-transition",
+        "reducedMotionBasis": "source-implemented"
+      }
+    },
+    {
+      "section": "content.video-section",
+      "content": {
+        "video": {
+          "assetRole": "video.placeholder",
+          "assetRef": "slot-video-section-video-4"
+        }
+      },
+      "motion": {
+        "pattern": "manual-only",
+        "reducedMotionFallback": "manual-only",
+        "reducedMotionBasis": "source-implemented"
+      }
+    },
+    {
+      "section": "proof.logos-row",
+      "content": {
+        "caption": "Plan every harvest crew before the frost",
+        "logos": [
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-row-logos-5-1",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-row-logos-5-2",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-row-logos-5-3",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-row-logos-5-4",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-row-logos-5-5",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-row-logos-5-6",
+            "alt": "Placeholder company logo"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "hero-fade-spring",
+        "reducedMotionFallback": "visible-no-transition",
+        "reducedMotionBasis": "source-implemented"
+      }
+    },
+    {
+      "section": "features.alternating-rows",
+      "content": {
+        "heading": "Orchard ledgers that settle by sundown",
+        "rows": [
+          {
+            "title": "Bins, ladders and crews on one board",
+            "body": "Growers sketch a picking route on a tablet, and the planner reshuffles every crew when a frost warning or a late delivery changes the morning.",
+            "image": {
+              "assetRole": "screenshot.placeholder",
+              "assetRef": "slot-alternating-rows-rows-6-image-1"
+            },
+            "imageSide": "left"
+          },
+          {
+            "title": "Forecast picking days from soil to shed",
+            "body": "Cooperative managers compare twelve farms on one board and spot the grove that needs extra hands three days before the fruit softens.",
+            "image": {
+              "assetRole": "screenshot.placeholder",
+              "assetRef": "slot-alternating-rows-rows-6-image-2"
+            },
+            "imageSide": "left"
+          },
+          {
+            "title": "Plan every harvest crew before the frost",
+            "body": "Growers sketch a picking route on a tablet, and the planner reshuffles every crew when a frost warning or a late delivery changes the morning.",
+            "image": {
+              "assetRole": "screenshot.placeholder",
+              "assetRef": "slot-alternating-rows-rows-6-image-3"
+            },
+            "imageSide": "left"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "features.icon-benefits-grid",
+      "content": {
+        "heading": "Bins, ladders and crews on one",
+        "items": [
+          {
+            "icon": {
+              "assetRole": "icon.pixel-art",
+              "assetRef": "slot-icon-benefits-grid-items-7-icon-1"
+            },
+            "title": "Field notes your whole cooperative trusts",
+            "body": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the yard."
+          },
+          {
+            "icon": {
+              "assetRole": "icon.pixel-art",
+              "assetRef": "slot-icon-benefits-grid-items-7-icon-2"
+            },
+            "title": "Prune smarter with three seasons of",
+            "body": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of memory."
+          },
+          {
+            "icon": {
+              "assetRole": "icon.pixel-art",
+              "assetRef": "slot-icon-benefits-grid-items-7-icon-3"
+            },
+            "title": "Orchard ledgers that settle by sundown",
+            "body": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the yard."
+          },
+          {
+            "icon": {
+              "assetRole": "icon.pixel-art",
+              "assetRef": "slot-icon-benefits-grid-items-7-icon-4"
+            },
+            "title": "Field notes your whole cooperative trusts",
+            "body": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of memory."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "proof.dark-testimonial-stats",
+      "content": {
+        "avatar": {
+          "assetRole": "avatar.fictional-person",
+          "assetRef": "slot-dark-testimonial-stats-avatar-8",
+          "alt": "Placeholder Quillpine illustration"
+        },
+        "personName": "Ines Vardeman",
+        "company": "Fernhollow Growers",
+        "personRole": "Cooperative treasurer",
+        "quote": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of memory.",
+        "cta": {
+          "label": "Read the field notes",
+          "action": "navigate-route",
+          "target": "/contact"
+        },
+        "stats": [
+          {
+            "value": "$90 / grove",
+            "label": "Book a walkthrough"
+          },
+          {
+            "value": "3 seasons",
+            "label": "Read the field notes"
+          },
+          {
+            "value": "17 farms",
+            "label": "Book a walkthrough"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.faq",
+      "content": {
+        "heading": "Field notes your whole cooperative",
+        "lead": "Each block of trees keeps its own history of yields, pruning dates and soil notes,",
+        "items": [
+          {
+            "question": "How does Quillpine price seasonal crews?",
+            "answer": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the yard."
+          },
+          {
+            "question": "Does the planner work without signal in the hills?",
+            "answer": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of memory."
+          },
+          {
+            "question": "How quickly can a new cooperative start?",
+            "answer": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the yard."
+          },
+          {
+            "question": "Can we import last year’s yield sheets?",
+            "answer": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of memory."
+          },
+          {
+            "question": "Who owns the orchard records we upload?",
+            "answer": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the yard."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "faq-accordion",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.blog-posts",
+      "content": {
+        "heading": "Field notes your whole cooperative trusts",
+        "posts": [
+          {
+            "title": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season",
+            "target": {
+              "action": "navigate-route",
+              "target": "/contact"
+            },
+            "thumbnail": {
+              "assetRole": "illustration.generated",
+              "assetRef": "slot-blog-posts-posts-10-thumbnail-1"
+            },
+            "authorName": "Ines Vardeman",
+            "authorAvatar": {
+              "assetRole": "avatar.fictional-person",
+              "assetRef": "slot-blog-posts-posts-10-authoravatar-1"
+            }
+          },
+          {
+            "title": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before",
+            "target": {
+              "action": "navigate-route",
+              "target": "/contact"
+            },
+            "thumbnail": {
+              "assetRole": "illustration.generated",
+              "assetRef": "slot-blog-posts-posts-10-thumbnail-2"
+            },
+            "authorName": "Teodor Ashgrove",
+            "authorAvatar": {
+              "assetRole": "avatar.fictional-person",
+              "assetRef": "slot-blog-posts-posts-10-authoravatar-2"
+            }
+          },
+          {
+            "title": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season",
+            "target": {
+              "action": "navigate-route",
+              "target": "/contact"
+            },
+            "thumbnail": {
+              "assetRole": "illustration.generated",
+              "assetRef": "slot-blog-posts-posts-10-thumbnail-3"
+            },
+            "authorName": "Marisol Quenby",
+            "authorAvatar": {
+              "assetRole": "avatar.fictional-person",
+              "assetRef": "slot-blog-posts-posts-10-authoravatar-3"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "cta.snake-band",
+      "content": {
+        "title": [
+          "Forecast picking days from soil to",
+          "Prune smarter with three seasons of"
+        ],
+        "primary": {
+          "label": "Open the planner",
+          "action": "navigate-route",
+          "target": "/contact"
+        },
+        "secondary": {
+          "label": "Open the planner",
+          "action": "open-external",
+          "target": "https://www.quillpine.example/start"
+        }
+      },
+      "motion": {
+        "pattern": "snake-game",
+        "reducedMotionFallback": "no-autoplay",
+        "reducedMotionBasis": "source-partial"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-footer-brandmark-12"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-footer-chromedata-12"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.talk-modal",
+      "content": {
+        "booking": {
+          "assetRole": "embed.operator-supplied",
+          "assetRef": "slot-talk-modal-booking-13"
+        }
+      },
+      "motion": {
+        "pattern": "modal-fade",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    }
+  ]
+}

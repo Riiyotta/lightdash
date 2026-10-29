@@ -65,5 +65,24 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "customer-story"
-  ]
+  ],
+  "source": {
+    "id": "RelatedHeader.jsx@9",
+    "tag": "div",
+    "file": "src/components/cms/RelatedHeader.jsx",
+    "lines": "9",
+    "alsoRenderedAt": [
+      {
+        "file": "src/pages/CustomerStory.jsx",
+        "lines": "112",
+        "tag": "div"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "listing.related-stories",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

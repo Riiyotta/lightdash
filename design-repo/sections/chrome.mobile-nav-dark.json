@@ -7,7 +7,25 @@
   "fixedContent": true,
   "implementedBy": "src/components/MobileNav.jsx",
   "content": {
-    "fields": {},
+    "fields": {
+      "brandMark": {
+        "type": "media",
+        "required": false,
+        "assetRoles": [
+          "brand.lightdash-wordmark",
+          "brand.placeholder-mark",
+          "asset.operator-supplied"
+        ]
+      },
+      "chromeData": {
+        "type": "media",
+        "required": false,
+        "assetRoles": [
+          "content.lightdash-chrome-data",
+          "content.operator-supplied-chrome"
+        ]
+      }
+    },
     "additionalProperties": false
   },
   "constraints": {
@@ -44,10 +62,28 @@
     "CLONE_SPEC.md:240"
   ],
   "notes": [
-    "Mobile copy differs from desktop (e.g. \"Explore the story behind every number\"); see navData.js MOBILE_PRODUCT_ITEMS."
+    "Mobile copy differs from desktop (e.g. \"Explore the story behind every number\"); see navData.js MOBILE_PRODUCT_ITEMS.",
+    "Optional slot field(s) brandMark, chromeData added for modes: omitted (or bound to the clone-only role) the fixed Lightdash chrome / app renders, which only clone mode allows; generation mode requires each slot bound to a generation-safe role (semantic_validate.py GENERATION_MODE_LOGO / _COPY / _EMBED)."
   ],
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "home"
+  ],
+  "source": {
+    "id": "MobileNav.jsx@206",
+    "tag": "nav",
+    "file": "src/components/MobileNav.jsx",
+    "lines": "206-294"
+  },
+  "semantic": {
+    "id": "chrome.mobile-nav-dark",
+    "category": "CHROME"
+  },
+  "retrievalEligible": false,
+  "retrievalReason": "Phone navigation drawer (hamburger menu panel) hidden at desktop widths; runtime navigation UI, not page content.",
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "brand.placeholder-mark",
+    "content.operator-supplied-chrome"
   ]
 }

@@ -36,7 +36,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "photo.team-member"
+              "photo.team-member",
+              "avatar.fictional-person",
+              "asset.operator-supplied"
             ],
             "altMaxWords": 3
           },
@@ -44,7 +46,9 @@
             "type": "media",
             "required": false,
             "assetRoles": [
-              "photo.team-member"
+              "photo.team-member",
+              "avatar.fictional-person",
+              "asset.operator-supplied"
             ]
           }
         },
@@ -90,5 +94,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "about"
+  ],
+  "source": {
+    "id": "About.jsx@61",
+    "tag": "div",
+    "file": "src/pages/About.jsx",
+    "lines": "61-74"
+  },
+  "semantic": {
+    "id": "content.team-grid",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person"
   ]
 }

@@ -36,7 +36,9 @@
             "type": "media",
             "required": true,
             "assetRoles": [
-              "screenshot.product-ui"
+              "screenshot.product-ui",
+              "screenshot.placeholder",
+              "asset.operator-supplied"
             ]
           }
         },
@@ -90,5 +92,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "product-interactive-dashboards"
+  ],
+  "source": {
+    "id": "FeatureCards.jsx@37",
+    "tag": "section",
+    "file": "src/components/shared/FeatureCards.jsx",
+    "lines": "37"
+  },
+  "semantic": {
+    "id": "features.cards-3x2-image",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "screenshot.placeholder"
   ]
 }

@@ -8,7 +8,17 @@
   "evidenceNote": "Only the iframe placement is measured from the parent DOM; the app internals are documented from CLONE_SPEC section 6 screenshots and are not re-derivable from DOM.",
   "implementedBy": "src/components/Hero.jsx",
   "content": {
-    "fields": {},
+    "fields": {
+      "app": {
+        "type": "media",
+        "required": false,
+        "assetRoles": [
+          "app.iframe-bundle",
+          "embed.operator-supplied",
+          "animation.placeholder"
+        ]
+      }
+    },
     "additionalProperties": false
   },
   "constraints": {
@@ -59,10 +69,26 @@
   "notes": [
     "A visually-hidden SeoContent block (src/components/Hero.jsx) carries the h1 and customer copy for crawlers; it is not part of the visible design.",
     "The Three.js bundle and assets live under public/gameboy/ (3.4 MB). Per CLONE_SPEC section 0 the iframe still loads three.js / three-mesh-bvh / three-bvh-csg from jsDelivr: an external dependency of the original design.",
-    "The sixth planet \"Book a demo\" opens /start in a new tab instead of an app view (ia.json template.home notes)."
+    "The sixth planet \"Book a demo\" opens /start in a new tab instead of an app view (ia.json template.home notes).",
+    "Optional slot field(s) app added for modes: omitted (or bound to the clone-only role) the fixed Lightdash chrome / app renders, which only clone mode allows; generation mode requires each slot bound to a generation-safe role (semantic_validate.py GENERATION_MODE_LOGO / _COPY / _EMBED)."
   ],
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "home"
+  ],
+  "source": {
+    "id": "Hero.jsx@61",
+    "tag": "section",
+    "file": "src/components/Hero.jsx",
+    "lines": "61"
+  },
+  "semantic": {
+    "id": "hero.gameboy-app",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "animation.placeholder",
+    "embed.operator-supplied"
   ]
 }

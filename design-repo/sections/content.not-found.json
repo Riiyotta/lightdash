@@ -79,5 +79,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "not-found"
-  ]
+  ],
+  "source": {
+    "id": "NotFound.jsx@15",
+    "tag": "div",
+    "file": "src/pages/NotFound.jsx",
+    "lines": "15-40"
+  },
+  "semantic": {
+    "id": "content.not-found",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

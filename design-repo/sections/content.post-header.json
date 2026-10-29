@@ -40,7 +40,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "photo.person-avatar"
+          "photo.person-avatar",
+          "avatar.fictional-person",
+          "asset.operator-supplied"
         ]
       }
     },
@@ -84,5 +86,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "blog-post"
+  ],
+  "source": {
+    "id": "BlogPost.jsx@52",
+    "tag": "Row",
+    "file": "src/pages/BlogPost.jsx",
+    "lines": "52-70"
+  },
+  "semantic": {
+    "id": "content.post-header",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "avatar.fictional-person"
   ]
 }

@@ -1,0 +1,455 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "mode": "generation",
+  "template": "pricing",
+  "route": "/plans",
+  "theme": "light",
+  "chrome": "light-cta",
+  "nodes": [
+    {
+      "section": "chrome.navbar-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-navbar-light-brandmark-0"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-navbar-light-chromedata-0"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.mobile-nav-light",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-mobile-nav-light-brandmark-1"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-mobile-nav-light-chromedata-1"
+        }
+      },
+      "motion": {
+        "pattern": "nav-spring",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "hero.pricing",
+      "content": {
+        "heading": "Orchard ledgers that settle by sundown"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "conversion.plan-cards",
+      "content": {
+        "plans": [
+          {
+            "label": "Read the field notes",
+            "price": "$90 / grove",
+            "description": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows",
+            "button": {
+              "label": "Book a walkthrough",
+              "action": "navigate-route",
+              "target": "/contact"
+            },
+            "eyebrow": "Field notes · Orchard planning",
+            "features": [
+              "Each block of trees keeps its own history of yields, pruning dates and soil notes,",
+              "Cooperative managers compare twelve farms on one board and spot the grove that needs extra",
+              "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows",
+              "Growers sketch a picking route on a tablet, and the planner reshuffles every crew when"
+            ],
+            "corner": {
+              "assetRole": "decor.pixel-tile",
+              "assetRef": "slot-plan-cards-plans-3-corner-1"
+            }
+          },
+          {
+            "label": "Read the field notes",
+            "price": "3 seasons",
+            "description": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows",
+            "button": {
+              "label": "Book a walkthrough",
+              "action": "navigate-route",
+              "target": "/contact"
+            },
+            "eyebrow": "Field notes · Orchard planning",
+            "features": [
+              "Each block of trees keeps its own history of yields, pruning dates and soil notes,",
+              "Cooperative managers compare twelve farms on one board and spot the grove that needs extra",
+              "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows",
+              "Growers sketch a picking route on a tablet, and the planner reshuffles every crew when"
+            ],
+            "corner": {
+              "assetRole": "decor.pixel-tile",
+              "assetRef": "slot-plan-cards-plans-3-corner-2"
+            }
+          },
+          {
+            "label": "Read the field notes",
+            "price": "17 farms",
+            "description": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows",
+            "button": {
+              "label": "Book a walkthrough",
+              "action": "navigate-route",
+              "target": "/contact"
+            },
+            "eyebrow": "Field notes · Orchard planning",
+            "features": [
+              "Each block of trees keeps its own history of yields, pruning dates and soil notes,",
+              "Cooperative managers compare twelve farms on one board and spot the grove that needs extra",
+              "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows",
+              "Growers sketch a picking route on a tablet, and the planner reshuffles every crew when"
+            ],
+            "corner": {
+              "assetRole": "decor.pixel-tile",
+              "assetRef": "slot-plan-cards-plans-3-corner-3"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "proof.logos-grid-12",
+      "content": {
+        "logos": [
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-1",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-2",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-3",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-4",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-5",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-6",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-7",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-8",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-9",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-10",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-11",
+            "alt": "Placeholder company logo"
+          },
+          {
+            "assetRole": "logo.placeholder-company",
+            "assetRef": "slot-logos-grid-12-logos-4-12",
+            "alt": "Placeholder company logo"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "conversion.plan-comparison",
+      "content": {
+        "heading": "Bins, ladders and crews on",
+        "tables": [
+          {
+            "title": "Field notes your whole cooperative",
+            "rows": [
+              {
+                "label": "Book a walkthrough",
+                "values": [
+                  "Prune smarter with three seasons of notes",
+                  "Plan every harvest crew before the frost",
+                  "Orchard ledgers that settle by sundown"
+                ]
+              },
+              {
+                "label": "Book a walkthrough",
+                "values": [
+                  "Field notes your whole cooperative trusts",
+                  "Forecast picking days from soil to shed",
+                  "Prune smarter with three seasons of notes"
+                ]
+              },
+              {
+                "label": "Book a walkthrough",
+                "values": [
+                  "Orchard ledgers that settle by sundown",
+                  "Bins, ladders and crews on one board",
+                  "Field notes your whole cooperative trusts"
+                ]
+              },
+              {
+                "label": "Book a walkthrough",
+                "values": [
+                  "Prune smarter with three seasons of notes",
+                  "Plan every harvest crew before the frost",
+                  "Orchard ledgers that settle by sundown"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Bins, ladders and crews on",
+            "rows": [
+              {
+                "label": "Open the planner",
+                "values": [
+                  "Forecast picking days from soil to shed",
+                  "Prune smarter with three seasons of notes",
+                  "Plan every harvest crew before the frost"
+                ]
+              },
+              {
+                "label": "Open the planner",
+                "values": [
+                  "Bins, ladders and crews on one board",
+                  "Field notes your whole cooperative trusts",
+                  "Forecast picking days from soil to shed"
+                ]
+              },
+              {
+                "label": "Open the planner",
+                "values": [
+                  "Plan every harvest crew before the frost",
+                  "Orchard ledgers that settle by sundown",
+                  "Bins, ladders and crews on one board"
+                ]
+              },
+              {
+                "label": "Open the planner",
+                "values": [
+                  "Forecast picking days from soil to shed",
+                  "Prune smarter with three seasons of notes",
+                  "Plan every harvest crew before the frost"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Orchard ledgers that settle by",
+            "rows": [
+              {
+                "label": "Read the field notes",
+                "values": [
+                  "Field notes your whole cooperative trusts",
+                  "Forecast picking days from soil to shed",
+                  "Prune smarter with three seasons of notes"
+                ]
+              },
+              {
+                "label": "Read the field notes",
+                "values": [
+                  "Orchard ledgers that settle by sundown",
+                  "Bins, ladders and crews on one board",
+                  "Field notes your whole cooperative trusts"
+                ]
+              },
+              {
+                "label": "Read the field notes",
+                "values": [
+                  "Prune smarter with three seasons of notes",
+                  "Plan every harvest crew before the frost",
+                  "Orchard ledgers that settle by sundown"
+                ]
+              },
+              {
+                "label": "Read the field notes",
+                "values": [
+                  "Field notes your whole cooperative trusts",
+                  "Forecast picking days from soil to shed",
+                  "Prune smarter with three seasons of notes"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Plan every harvest crew before",
+            "rows": [
+              {
+                "label": "See sample orchards",
+                "values": [
+                  "Bins, ladders and crews on one board",
+                  "Field notes your whole cooperative trusts",
+                  "Forecast picking days from soil to shed"
+                ]
+              },
+              {
+                "label": "See sample orchards",
+                "values": [
+                  "Plan every harvest crew before the frost",
+                  "Orchard ledgers that settle by sundown",
+                  "Bins, ladders and crews on one board"
+                ]
+              },
+              {
+                "label": "See sample orchards",
+                "values": [
+                  "Forecast picking days from soil to shed",
+                  "Prune smarter with three seasons of notes",
+                  "Plan every harvest crew before the frost"
+                ]
+              },
+              {
+                "label": "See sample orchards",
+                "values": [
+                  "Bins, ladders and crews on one board",
+                  "Field notes your whole cooperative trusts",
+                  "Forecast picking days from soil to shed"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "content.faq",
+      "content": {
+        "heading": "Prune smarter with three seasons",
+        "lead": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows",
+        "items": [
+          {
+            "question": "Does the planner work without signal in the hills?",
+            "answer": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of memory."
+          },
+          {
+            "question": "How quickly can a new cooperative start?",
+            "answer": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the yard."
+          },
+          {
+            "question": "Can we import last year’s yield sheets?",
+            "answer": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of memory."
+          },
+          {
+            "question": "Who owns the orchard records we upload?",
+            "answer": "Quillpine turns the orchard notebook into a live plan: crews, ladders, bins and weather windows line up before the first truck leaves the yard."
+          },
+          {
+            "question": "How does Quillpine price seasonal crews?",
+            "answer": "Each block of trees keeps its own history of yields, pruning dates and soil notes, so next season starts from evidence instead of memory."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "faq-accordion",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "cta.snake-band",
+      "content": {
+        "title": [
+          "Prune smarter with three seasons of",
+          "Plan every harvest crew before the"
+        ],
+        "primary": {
+          "label": "Book a walkthrough",
+          "action": "navigate-route",
+          "target": "/contact"
+        },
+        "secondary": {
+          "label": "Book a walkthrough",
+          "action": "open-external",
+          "target": "https://www.quillpine.example/start"
+        }
+      },
+      "motion": {
+        "pattern": "snake-game",
+        "reducedMotionFallback": "no-autoplay",
+        "reducedMotionBasis": "source-partial"
+      }
+    },
+    {
+      "section": "chrome.footer",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "slot-footer-brandmark-8"
+        },
+        "chromeData": {
+          "assetRole": "content.operator-supplied-chrome",
+          "assetRef": "slot-footer-chromedata-8"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "not-applicable",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    },
+    {
+      "section": "chrome.talk-modal",
+      "content": {
+        "booking": {
+          "assetRole": "embed.operator-supplied",
+          "assetRef": "slot-talk-modal-booking-9"
+        }
+      },
+      "motion": {
+        "pattern": "modal-fade",
+        "reducedMotionFallback": "instant-swap",
+        "reducedMotionBasis": "recommended-not-implemented"
+      }
+    }
+  ]
+}

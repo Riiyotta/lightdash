@@ -12,7 +12,9 @@
         "type": "media",
         "required": true,
         "assetRoles": [
-          "logo.customer-partner"
+          "logo.customer-partner",
+          "logo.placeholder-company",
+          "asset.operator-supplied"
         ],
         "altMaxWords": 3
       },
@@ -77,5 +79,20 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "customer-story"
+  ],
+  "source": {
+    "id": "CustomerStory.jsx@23",
+    "tag": "div",
+    "file": "src/pages/CustomerStory.jsx",
+    "lines": "23"
+  },
+  "semantic": {
+    "id": "content.story-sidebar",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "asset.operator-supplied",
+    "logo.placeholder-company"
   ]
 }

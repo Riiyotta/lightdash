@@ -75,5 +75,17 @@
   "responsiveNote": "No breakpoint-specific behaviour is specified for this section in the source CSS/JSX.",
   "usedByTemplates": [
     "fintech"
-  ]
+  ],
+  "source": {
+    "id": "Fintech.jsx@225",
+    "tag": "div",
+    "file": "src/pages/Fintech.jsx",
+    "lines": "225"
+  },
+  "semantic": {
+    "id": "features.fintech-dark-band",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

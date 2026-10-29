@@ -54,5 +54,17 @@
   "schemaVersion": "1.0.0",
   "usedByTemplates": [
     "customer-stories"
-  ]
+  ],
+  "source": {
+    "id": "CustomerStories.jsx@13",
+    "tag": "Row",
+    "file": "src/pages/CustomerStories.jsx",
+    "lines": "13-18"
+  },
+  "semantic": {
+    "id": "listing.stories-header",
+    "category": "LISTING"
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }
